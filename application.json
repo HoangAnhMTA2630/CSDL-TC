@@ -115,6 +115,10 @@
     {
       "id": "Public.bo_ke_hoach",
       "isDefault": false
+    },
+    {
+      "id": "Public.e_thiet_bi_mang",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

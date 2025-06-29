@@ -1,0 +1,18 @@
+SELECT 'id thiet bi' AS thuoc_tinh, tb.id::text AS gia_tri FROM public.e_thiet_bi_mang tb WHERE tb.id = 1
+UNION ALL
+SELECT 'ten thiet bi', tb.ten_thiet_bi FROM public.e_thiet_bi_mang tb WHERE tb.id = 80
+UNION ALL
+SELECT 'ten loai thiet bi', ltb.ten_loai_thiet_bi 
+FROM public.e_thiet_bi_mang tb 
+LEFT JOIN public.loai_thiet_bi ltb ON tb.loai_thiet_bi_id = ltb.id 
+WHERE tb.id = 80
+UNION ALL
+SELECT 'ten don vi', dv.ten_don_vi 
+FROM public.e_thiet_bi_mang tb 
+LEFT JOIN public.don_vi dv ON tb.don_vi_id = dv.id 
+WHERE tb.id = 80
+UNION ALL
+SELECT atb.ten_thuoc_tinh, vtb.gia_tri 
+FROM public.v_thiet_bi_mang vtb
+JOIN public.a_thiet_bi_mang atb ON vtb.a_thiet_bi_mang_id = atb.id
+WHERE vtb.e_thiet_bi_mang_id = 80;

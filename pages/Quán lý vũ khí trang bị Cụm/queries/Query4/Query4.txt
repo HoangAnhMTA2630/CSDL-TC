@@ -1,0 +1,28 @@
+SELECT 
+    tb.id AS id_thiet_bi,
+    tb.ten_thiet_bi,
+    ltb.ten_loai_thiet_bi,
+    dv.ten_don_vi,
+    MAX(CASE WHEN atb.ten_thuoc_tinh = 'CPU' THEN vtb.gia_tri END) AS cpu,
+    MAX(CASE WHEN atb.ten_thuoc_tinh = 'Ram' THEN vtb.gia_tri END) AS ram,
+    MAX(CASE WHEN atb.ten_thuoc_tinh = 'Rom' THEN vtb.gia_tri END) AS rom,
+    MAX(CASE WHEN atb.ten_thuoc_tinh = 'IP Public' THEN vtb.gia_tri END) AS ip_public,
+    MAX(CASE WHEN atb.ten_thuoc_tinh = 'IP Private' THEN vtb.gia_tri END) AS ip_private,
+    MAX(CASE WHEN atb.ten_thuoc_tinh = 'HDH' THEN vtb.gia_tri END) AS hdh,
+		MAX(CASE WHEN atb.ten_thuoc_tinh = 'Ports' THEN vtb.gia_tri END) AS ports,
+    MAX(CASE WHEN atb.ten_thuoc_tinh = 'Protocol' THEN vtb.gia_tri END) AS protocol,
+    MAX(CASE WHEN atb.ten_thuoc_tinh = 'SSID' THEN vtb.gia_tri END) AS ssid
+FROM 
+    public.e_thiet_bi_mang tb
+LEFT JOIN 
+    public.loai_thiet_bi ltb ON tb.loai_thiet_bi_id = ltb.id
+LEFT JOIN 
+    public.don_vi dv ON tb.don_vi_id = dv.id
+LEFT JOIN 
+    public.v_thiet_bi_mang vtb ON tb.id = vtb.e_thiet_bi_mang_id
+LEFT JOIN 
+    public.a_thiet_bi_mang atb ON vtb.a_thiet_bi_mang_id = atb.id
+WHERE 
+    tb.id = {{TableQNTB.triggeredRow.id_thiet_bi}}  -- <-- Thay bằng ID bạn muốn, hoặc bỏ để lấy tất cả
+GROUP BY 
+    tb.id, tb.ten_thiet_bi, ltb.ten_loai_thiet_bi, dv.ten_don_vi;

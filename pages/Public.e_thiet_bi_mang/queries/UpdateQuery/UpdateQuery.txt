@@ -1,0 +1,10 @@
+UPDATE public."e_thiet_bi_mang" SET
+		"ten_thiet_bi" = '{{update_form.fieldState.ten_thiet_bi.isVisible ? update_form.formData.ten_thiet_bi : update_form.sourceData.ten_thiet_bi}}',
+		"loai_thiet_bi_id" = '{{update_form.fieldState.loai_thiet_bi_id.isVisible ? update_form.formData.loai_thiet_bi_id : update_form.sourceData.loai_thiet_bi_id}}',
+    "ho_so_phong_thu_id" = '{{update_form.fieldState.ho_so_phong_thu_id.isVisible ? update_form.formData.ho_so_phong_thu_id : update_form.sourceData.ho_so_phong_thu_id}}',
+		"don_vi_id" = '{{update_form.fieldState.don_vi_id.isVisible ? update_form.formData.don_vi_id : update_form.sourceData.don_vi_id}}',
+		"quanh_nhan_id" = '{{update_form.fieldState.quanh_nhan_id.isVisible ? update_form.formData.quanh_nhan_id : update_form.sourceData.quanh_nhan_id}}',
+		"nhom" = '{{update_form.fieldState.nhom.isVisible ? update_form.formData.nhom : update_form.sourceData.nhom}}',
+		"cap_trang_bi" = '{{update_form.fieldState.cap_trang_bi.isVisible ? update_form.formData.cap_trang_bi : update_form.sourceData.cap_trang_bi}}',
+		"tinh_trang" = '{{update_form.fieldState.tinh_trang.isVisible ? update_form.formData.tinh_trang : update_form.sourceData.tinh_trang}}'
+WHERE "id" = {{data_table.selectedRow.id}};

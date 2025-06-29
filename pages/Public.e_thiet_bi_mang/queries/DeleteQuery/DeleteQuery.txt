@@ -1,0 +1,2 @@
+DELETE FROM public."e_thiet_bi_mang"
+  WHERE "id" = {{data_table.triggeredRow.id}};

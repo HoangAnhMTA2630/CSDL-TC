@@ -1,0 +1,18 @@
+INSERT INTO public."e_thiet_bi_mang" (
+	"ten_thiet_bi",
+	"loai_thiet_bi_id",
+	"ho_so_phong_thu_id",
+	"don_vi_id",
+	"quanh_nhan_id",
+	"nhom",
+	"cap_trang_bi",
+	"tinh_trang")
+VALUES (
+	'{{insert_form.formData.ten_thiet_bi}}',
+	'{{insert_form.formData.loai_thiet_bi_id}}',
+	'{{insert_form.formData.ho_so_phong_thu_id}}',
+	'{{insert_form.formData.don_vi_id}}',
+	'{{insert_form.formData.quanh_nhan_id}}',
+	'{{insert_form.formData.nhom}}',
+	'{{insert_form.formData.cap_trang_bi}}',
+	'{{insert_form.formData.tinh_trang}}');

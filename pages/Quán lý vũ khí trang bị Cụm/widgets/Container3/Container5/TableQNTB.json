@@ -141,6 +141,9 @@
     },
     {
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "tableData"
     }
   ],
   "dynamicTriggerPathList": [
@@ -317,7 +320,7 @@
       "label": "View",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{SelectTBDoQNQuanLy.run();\nshowModal(Modal_QN_TB.name);}}",
+      "onClick": "{{Query4.run();\nshowModal(Modal_ThietBi.name);}}",
       "originalId": "customColumn1",
       "sticky": "right",
       "textSize": "0.875rem",
