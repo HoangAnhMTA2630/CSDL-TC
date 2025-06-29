@@ -1,0 +1,5 @@
+SELECT * FROM public."tai_khoan_lo_lot"
+WHERE "username" ilike '%{{data_tableTKLL.searchText || ""}}%'
+ORDER BY "{{data_tableTKLL.sortOrder.column || 'id'}}" {{data_tableTKLL.sortOrder.order || 'ASC'}}
+LIMIT {{data_tableTKLL.pageSize}}
+OFFSET {{(data_tableTKLL.pageNo - 1) * data_tableTKLL.pageSize}};

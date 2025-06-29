@@ -1,0 +1,11 @@
+SELECT 
+    h.ten_huong AS Huong,
+    COUNT(mt.id) AS So_luong_muc_tieu
+FROM 
+    muc_tieu mt
+JOIN 
+    huong h ON mt.huong_id = h.id
+GROUP BY 
+    h.ten_huong
+ORDER BY 
+    So_luong_muc_tieu DESC;

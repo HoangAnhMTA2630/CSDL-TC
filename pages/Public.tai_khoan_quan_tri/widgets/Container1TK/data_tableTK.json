@@ -1,0 +1,321 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 85,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "childStylesheet": {
+    "button": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "iconButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "menuButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "columnOrder": [
+    "id",
+    "mat_khau",
+    "tai_khoan_quan_tri",
+    "thiet_bi_mang_id",
+    "customColumn1"
+  ],
+  "columnSizeMap": {
+    "status": 75,
+    "step": 62,
+    "task": 245
+  },
+  "columnUpdatedAt": 1750259642576,
+  "defaultPageSize": 0,
+  "defaultSelectedRowIndex": "0",
+  "delimiter": ",",
+  "derivedColumns": {
+    "customColumn1": {
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "buttonColor": "#DD4B34",
+      "buttonLabel": "{{data_tableTK.processedTableData.map((currentRow, currentIndex) => ( 'Delete'))}}",
+      "buttonLabelColor": "#FFFFFF",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "button",
+      "computedValue": "",
+      "enableFilter": true,
+      "enableSort": true,
+      "id": "customColumn1",
+      "index": 5,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Delete",
+      "labelColor": "#FFFFFF",
+      "menuColor": "#03B365",
+      "onClick": "{{showModal('Delete_Modal')}}",
+      "width": 150
+    }
+  },
+  "displayName": "Table",
+  "dynamicBindingPathList": [
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "derivedColumns.customColumn1.buttonLabel"
+    },
+    {
+      "key": "primaryColumns.customColumn1.buttonLabel"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn1.borderRadius"
+    },
+    {
+      "key": "primaryColumns.id.computedValue"
+    },
+    {
+      "key": "primaryColumns.mat_khau.computedValue"
+    },
+    {
+      "key": "primaryColumns.tai_khoan_quan_tri.computedValue"
+    },
+    {
+      "key": "primaryColumns.thiet_bi_mang_id.computedValue"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "primaryColumns.customColumn1.borderRadius"
+    },
+    {
+      "key": "tableData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "onPageChange"
+    },
+    {
+      "key": "onSearchTextChanged"
+    },
+    {
+      "key": "onSort"
+    }
+  ],
+  "enableClientSideSearch": true,
+  "enableServerSideFiltering": false,
+  "hideCard": false,
+  "horizontalAlignment": "LEFT",
+  "iconSVG": "/static/media/icon.db8a9cbd.svg",
+  "isLoading": false,
+  "isSortable": true,
+  "isVisible": "true",
+  "isVisibleDownload": true,
+  "isVisibleFilters": true,
+  "isVisiblePagination": true,
+  "isVisibleSearch": true,
+  "key": "zba5qel0au",
+  "label": "Data",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 0,
+  "onPageChange": "{{SelectQueryTK.run()}}",
+  "onSearchTextChanged": "{{SelectQueryTK.run()}}",
+  "onSort": "{{SelectQueryTK.run()}}",
+  "parentColumnSpace": 16.3125,
+  "parentId": "59rw5mx0bq",
+  "parentRowSpace": 10,
+  "primaryColumnId": "id",
+  "primaryColumns": {
+    "customColumn1": {
+      "borderRadius": "{{data_tableTK.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+      "boxShadow": "none",
+      "buttonColor": "#DD4B34",
+      "buttonLabel": "{{data_tableTK.processedTableData.map((currentRow, currentIndex) => ( 'Delete'))}}",
+      "buttonLabelColor": "#FFFFFF",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "button",
+      "computedValue": "",
+      "enableFilter": true,
+      "enableSort": true,
+      "id": "customColumn1",
+      "index": 5,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Delete",
+      "labelColor": "#FFFFFF",
+      "menuColor": "#03B365",
+      "onClick": "{{showModal('Delete_Modal')}}",
+      "sticky": "right",
+      "width": 150
+    },
+    "id": {
+      "alias": "id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{data_tableTK.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "id",
+      "index": 0,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "id",
+      "notation": "standard",
+      "originalId": "id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "mat_khau": {
+      "alias": "mat_khau",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{data_tableTK.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"mat_khau\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "mat_khau",
+      "index": 1,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "mat_khau",
+      "notation": "standard",
+      "originalId": "mat_khau",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "tai_khoan_quan_tri": {
+      "alias": "tai_khoan_quan_tri",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{data_tableTK.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"tai_khoan_quan_tri\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "tai_khoan_quan_tri",
+      "index": 2,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "tai_khoan_quan_tri",
+      "notation": "standard",
+      "originalId": "tai_khoan_quan_tri",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "thiet_bi_mang_id": {
+      "alias": "thiet_bi_mang_id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{data_tableTK.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"thiet_bi_mang_id\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "thiet_bi_mang_id",
+      "index": 3,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "thiet_bi_mang_id",
+      "notation": "standard",
+      "originalId": "thiet_bi_mang_id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    }
+  },
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "searchKey": "",
+  "serverSidePaginationEnabled": true,
+  "tableData": "{{SelectQueryTK.data}}",
+  "textSize": "0.875rem",
+  "topRow": 6,
+  "totalRecordsCount": 0,
+  "type": "TABLE_WIDGET_V2",
+  "version": 3,
+  "verticalAlignment": "CENTER",
+  "widgetId": "hpy3pb4xft",
+  "widgetName": "data_tableTK"
+}

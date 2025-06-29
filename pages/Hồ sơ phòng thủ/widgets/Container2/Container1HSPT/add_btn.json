@@ -1,0 +1,41 @@
+{
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "add",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "true",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 58,
+  "onClick": "{{ (TreeSelect.selectedOptionValue > 0) ? showModal(Insert_ModalHSPT.name) : showAlert(\"Yêu cầu chọn Đơn vị trước khi thêm Hồ sơ phòng thủ\", \"warning\");}}",
+  "parentColumnSpace": 12.0703125,
+  "parentId": "snjxwn8lbs",
+  "parentRowSpace": 10,
+  "rightColumn": 60,
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "lawap0c5sq",
+  "widgetName": "add_btn"
+}

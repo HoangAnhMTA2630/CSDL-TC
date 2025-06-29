@@ -1,0 +1,3 @@
+SELECT id, ten_don_vi
+FROM don_vi
+ORDER by id;

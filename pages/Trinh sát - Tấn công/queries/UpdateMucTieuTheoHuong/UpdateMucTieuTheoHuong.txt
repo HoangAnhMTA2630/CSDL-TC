@@ -1,0 +1,25 @@
+BEGIN;
+
+-- Cập nhật tên miền
+UPDATE public.muc_tieu mt
+SET 
+
+    "domain" = '{{(Table.updatedRow.domain)}}'
+FROM public.doi_tuong_tc dt, public.huong h
+WHERE 
+    mt.doi_tuong_tc_id = dt.id
+    AND dt.huong_id = h.id
+    AND h.id = {{Table.triggeredRow.id}}; 
+
+-- Cập nhật thông tin tổ chức
+UPDATE public.doi_tuong_tc dt
+SET 
+    ten_to_chuc = '{{Table.updatedRow.ten_to_chuc}}',
+    ban_nganh = '{{Table.updatedRow.ban_nganh}}'
+FROM public.huong h
+WHERE 
+    dt.huong_id = h.id
+    AND h.id = {{Table.triggeredRow.id}};
+
+COMMIT;
+

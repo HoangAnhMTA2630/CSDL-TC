@@ -1,0 +1,11 @@
+UPDATE public."ke_hoach" SET
+		"so_ke_hoach" = '{{update_form_KH.fieldState.so_ke_hoach.isVisible ? update_form_KH.formData.so_ke_hoach : update_form_KH.sourceData.so_ke_hoach}}',
+		"ten_ke_hoach" = '{{update_form_KH.fieldState.ten_ke_hoach.isVisible ? update_form_KH.formData.ten_ke_hoach : update_form_KH.sourceData.ten_ke_hoach}}',
+		"cap_ban_hanh_id" = '{{update_form_KH.fieldState.cap_ban_hanh_id.isVisible ? update_form_KH.formData.cap_ban_hanh_id : update_form_KH.sourceData.cap_ban_hanh_id}}',
+    "loai_ke_hoach_id" = '{{update_form_KH.fieldState.loai_ke_hoach_id.isVisible ? update_form_KH.formData.loai_ke_hoach_id : update_form_KH.sourceData.loai_ke_hoach_id}}',
+		"kh_cha_id" = '{{update_form_KH.fieldState.kh_cha_id.isVisible ? update_form_KH.formData.kh_cha_id : update_form_KH.sourceData.kh_cha_id}}',
+		"ngay_ban_hanh" = '{{update_form_KH.fieldState.ngay_ban_hanh.isVisible ? update_form_KH.formData.ngay_ban_hanh : update_form_KH.sourceData.ngay_ban_hanh}}',
+		"duong_dan_file" = '{{update_form_KH.fieldState.duong_dan_file.isVisible ? update_form_KH.formData.duong_dan_file : update_form_KH.sourceData.duong_dan_file}}',
+		"mo_ta" = '{{update_form_KH.fieldState.mo_ta.isVisible ? update_form_KH.formData.mo_ta : update_form_KH.sourceData.mo_ta}}',
+		"bo_ke_hoach_id" = '{{update_form_KH.fieldState.bo_ke_hoach_id.isVisible ? update_form_KH.formData.bo_ke_hoach_id : update_form_KH.sourceData.bo_ke_hoach_id}}'
+WHERE "id" = {{data_table_KH.triggeredRow.id}};

@@ -1,0 +1,12 @@
+SELECT 
+  so_bao_cao AS label,
+  id AS value
+FROM 
+  bao_cao
+WHERE 
+  id NOT IN (
+    SELECT bao_cao_id
+    FROM bao_cao_don_vi_phong_thu
+    WHERE don_vi_id = {{ TreeSelect.selectedOptionValue }}
+  )
+ORDER BY id ASC;

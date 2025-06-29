@@ -1,0 +1,18 @@
+SELECT 
+  CONCAT_WS(
+    ' - ',
+    ltg.ten_loai_thoi_gian,
+    CONCAT('Năm: ', tg.nam),
+    CASE WHEN tg.quy IS NOT NULL THEN CONCAT('Quý: ', tg.quy) END,
+    CASE WHEN tg.thang IS NOT NULL THEN CONCAT('Tháng: ', tg.thang) END,
+    CASE WHEN tg.tuan IS NOT NULL THEN CONCAT('Tuần: ', tg.tuan) END
+  ) AS label,
+	 tg.id as value
+FROM thoi_gian tg
+JOIN loai_thoi_gian ltg ON tg.loai_thoi_gian_id = ltg.id
+ORDER BY 
+  ltg.ten_loai_thoi_gian,  -- sắp theo loại thời gian (Năm, Quý, Tháng, Tuần)
+  tg.nam DESC,
+  tg.quy NULLS LAST,
+  tg.thang NULLS LAST,
+  tg.tuan NULLS LAST;

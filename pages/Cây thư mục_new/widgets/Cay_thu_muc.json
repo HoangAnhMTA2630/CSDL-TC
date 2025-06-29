@@ -1,0 +1,69 @@
+{
+  "backgroundColor": "#FFFFFF",
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 78,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "defaultModel": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "theme"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onResetClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onResetClick"
+    }
+  ],
+  "events": [
+    "onResetClick"
+  ],
+  "isCanvas": false,
+  "isLoading": false,
+  "isSearchWildcard": true,
+  "isVisible": true,
+  "key": "4moasvcn0k",
+  "leftColumn": 2,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 33,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 3,
+  "needsErrorInfo": false,
+  "onResetClick": "",
+  "parentColumnSpace": 20.25,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 15,
+  "srcDoc": {
+    "css": "body {\n  font-family: Arial, sans-serif;\n  margin: 2em;\n  background: #f9f9f9;\n}\n\n#tree {\n  background: #fff;\n  border: 1px solid #ddd;\n  padding: 1em;\n  border-radius: 5px;\n  max-width: 400px;\n}\n\nul {\n  list-style-type: none;\n  padding-left: 1em;\n}\n\nli::before {\n  color: #f4b400;\n}\n\nli.file::before {\n  color: #4285f4;\n}",
+    "html": "<!DOCTYPE html>\n<html lang=\"vi\">\n\n\t<head>\n\t\t<meta charset=\"UTF-8\">\n\t\t<title>Cây Thư Mục Đẹp</title>\n\t\t<style>\n\t\t\tbody {\n\t\t\t\tfont-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif;\n\t\t\t\tbackground: #fff;\n\t\t\t}\n\n\t\t\t.tree-container.left-align {\n\t\t\t\tmargin: -20;\n\t\t\t\tpadding-left: 0;\n\t\t\t}\n\n\t\t\th2 {\n\t\t\t\tcolor: #333;\n\t\t\t}\n\n\t\t\tul,\n\t\t\t#folderTree {\n\t\t\t\tlist-style-type: none;\n\t\t\t\tpadding-left: 0px;\n\t\t\t}\n\n\t\t\t.caret {\n\t\t\t\tcursor: pointer;\n\t\t\t\tuser-select: none;\n\t\t\t\tdisplay: flex;\n\t\t\t\talign-items: center;\n\t\t\t\tpadding: 6px 0 6px 0;\n\t\t\t\tfont-weight: 500;\n\t\t\t\tcolor: #2a2a2a;\n\t\t\t\ttransition: color 0.3s;\n\t\t\t\tborder-radius: 6px;\n\t\t\t}\n\n\t\t\t.caret:hover {\n\t\t\t\tcolor: #1976d2;\n\t\t\t\tbackground: #e3f0fc;\n\t\t\t}\n\n\t\t\t.caret::before {\n\t\t\t\tcontent: \"\\1F4C1\";\n\t\t\t\t/* 📁 */\n\t\t\t\tfont-size: 18px;\n\t\t\t\tmargin-right: 8px;\n\t\t\t\ttransition: transform 0.2s ease;\n\t\t\t}\n\n\t\t\t.caret-down::before {\n\t\t\t\ttransform: rotate(90deg) scale(1.1);\n\t\t\t}\n\n\t\t\t.nested {\n\t\t\t\tdisplay: none;\n\t\t\t\tmargin-left: 0px;\n\t\t\t\tborder-left: 1.5px dashed #c5d0e6;\n\t\t\t\tpadding-left: 18px;\n\t\t\t\ttransition: all 0.3s;\n\t\t\t}\n\n\t\t\t.active {\n\t\t\t\tdisplay: block;\n\t\t\t\tanimation: fadeIn 0.3s;\n\t\t\t}\n\n\t\t\t@keyframes fadeIn {\n\t\t\t\tfrom {\n\t\t\t\t\topacity: 0;\n\t\t\t\t\ttransform: translateY(-8px);\n\t\t\t\t}\n\n\t\t\t\tto {\n\t\t\t\t\topacity: 1;\n\t\t\t\t\ttransform: translateY(0);\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tli {\n\t\t\t\tmargin: 8px 0;\n\t\t\t}\n\n\t\t\t.file {\n\t\t\t\tcursor: default;\n\t\t\t\tpadding: 5px 0 5px 0;\n\t\t\t\tcolor: #444;\n\t\t\t\tborder-radius: 6px;\n\t\t\t\tdisplay: flex;\n\t\t\t\talign-items: center;\n\t\t\t\tfont-weight: 400;\n\t\t\t\ttransition: background-color 0.2s, color 0.2s;\n\t\t\t}\n\n\t\t\t.file::before {\n\t\t\t\tcontent: \"\\1F4C4\";\n\t\t\t\t/* 📄 */\n\t\t\t\tfont-size: 16px;\n\t\t\t\tmargin-right: 8px;\n\t\t\t\tcolor: #1976d2;\n\t\t\t}\n\n\t\t\t.file:hover {\n\t\t\t\tbackground-color: #f0f4fa;\n\t\t\t\tcolor: #1976d2;\n\t\t\t}\n\t\t</style>\n\t</head>\n\n\t<body>\n\t\t<div class=\"tree-container left-align\">\n\t\t\t<ul id=\"folderTree\">\n\t\t\t\t<li><span class=\"caret folder\">Chỉ huy trung tâm</span></li>\n\t\t\t\t<li><span class=\"caret folder\">Phòng tham mưu</span></li>\n\t\t\t\t<li><span class=\"caret folder\">Phòng chính trị</span></li>\n\t\t\t\t<li><span class=\"caret folder\">Phòng hậu cần</span></li>\n\t\t\t\t<li><span class=\"caret folder\">Ban tài chính</span></li>\n\t\t\t\t<li><span class=\"caret folder\">Cụm 31</span>\n\t\t\t\t\t<ul class=\"nested\">\n\t\t\t\t\t\t<li class=\"file\">Đội 1</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 2</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 3</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 4</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</li>\n\t\t\t\t<li><span class=\"caret folder\">Cụm 32</span>\n\t\t\t\t\t<ul class=\"nested\">\n\t\t\t\t\t\t<li class=\"file\">Đội 5</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 6</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 7</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 8</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</li>\n\t\t\t\t<li><span class=\"caret folder\">Cụm 33</span>\n\t\t\t\t\t<ul class=\"nested\">\n\t\t\t\t\t\t<li class=\"file\">Đội 9</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 10</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 11</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 12</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n\t\t<script>\n\t\t\tconst toggler = document.getElementsByClassName(\"caret\");\n\t\t\tfor (let i = 0; i < toggler.length; i++) {\n\t\t\t\ttoggler[i].addEventListener(\"click\", function () {\n\t\t\t\t\tconst nested = this.parentElement.querySelector(\".nested\");\n\t\t\t\t\tif (nested) {\n\t\t\t\t\t\tnested.classList.toggle(\"active\");\n\t\t\t\t\t\tthis.classList.toggle(\"caret-down\");\n\t\t\t\t\t}\n\t\t\t\t});\n\t\t\t}\n\t\t</script>\n\t</body>\n\n</html>",
+    "js": "const treeData = {\n  name: \"5.Javascript\",\n  children: [{\n    name: \"index.html\",\n    type: \"file\"\n  }, {\n    name: \"style.css\",\n    type: \"file\"\n  }\n  // Add more files/folders here if needed\n  ]\n};\nfunction createTree(node) {\n  const ul = document.createElement('ul');\n  if (node.children) {\n    node.children.forEach(child => {\n      const li = document.createElement('li');\n      li.textContent = child.name;\n      if (child.type === \"file\") li.classList.add('file');\n      ul.appendChild(li);\n    });\n  }\n  return ul;\n}\ndocument.getElementById('tree').appendChild(createTree(treeData));"
+  },
+  "theme": "{{appsmith.theme}}",
+  "topRow": 1,
+  "type": "CUSTOM_WIDGET",
+  "uncompiledSrcDoc": {
+    "css": "body {\n    font-family: Arial, sans-serif;\n    margin: 2em;\n    background: #f9f9f9;\n}\n\n#tree {\n    background: #fff;\n    border: 1px solid #ddd;\n    padding: 1em;\n    border-radius: 5px;\n    max-width: 400px;\n}\n\nul {\n    list-style-type: none;\n    padding-left: 1em;\n}\n\nli::before {\n    color: #f4b400;\n}\n\nli.file::before {\n    color: #4285f4;\n}",
+    "html": "<!DOCTYPE html>\n<html lang=\"vi\">\n\n\t<head>\n\t\t<meta charset=\"UTF-8\">\n\t\t<title>Cây Thư Mục Đẹp</title>\n\t\t<style>\n\t\t\tbody {\n\t\t\t\tfont-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif;\n\t\t\t\tbackground: #fff;\n\t\t\t}\n\n\t\t\t.tree-container.left-align {\n\t\t\t\tmargin: -20;\n\t\t\t\tpadding-left: 0;\n\t\t\t}\n\n\t\t\th2 {\n\t\t\t\tcolor: #333;\n\t\t\t}\n\n\t\t\tul,\n\t\t\t#folderTree {\n\t\t\t\tlist-style-type: none;\n\t\t\t\tpadding-left: 0px;\n\t\t\t}\n\n\t\t\t.caret {\n\t\t\t\tcursor: pointer;\n\t\t\t\tuser-select: none;\n\t\t\t\tdisplay: flex;\n\t\t\t\talign-items: center;\n\t\t\t\tpadding: 6px 0 6px 0;\n\t\t\t\tfont-weight: 500;\n\t\t\t\tcolor: #2a2a2a;\n\t\t\t\ttransition: color 0.3s;\n\t\t\t\tborder-radius: 6px;\n\t\t\t}\n\n\t\t\t.caret:hover {\n\t\t\t\tcolor: #1976d2;\n\t\t\t\tbackground: #e3f0fc;\n\t\t\t}\n\n\t\t\t.caret::before {\n\t\t\t\tcontent: \"\\1F4C1\";\n\t\t\t\t/* 📁 */\n\t\t\t\tfont-size: 18px;\n\t\t\t\tmargin-right: 8px;\n\t\t\t\ttransition: transform 0.2s ease;\n\t\t\t}\n\n\t\t\t.caret-down::before {\n\t\t\t\ttransform: rotate(90deg) scale(1.1);\n\t\t\t}\n\n\t\t\t.nested {\n\t\t\t\tdisplay: none;\n\t\t\t\tmargin-left: 0px;\n\t\t\t\tborder-left: 1.5px dashed #c5d0e6;\n\t\t\t\tpadding-left: 18px;\n\t\t\t\ttransition: all 0.3s;\n\t\t\t}\n\n\t\t\t.active {\n\t\t\t\tdisplay: block;\n\t\t\t\tanimation: fadeIn 0.3s;\n\t\t\t}\n\n\t\t\t@keyframes fadeIn {\n\t\t\t\tfrom {\n\t\t\t\t\topacity: 0;\n\t\t\t\t\ttransform: translateY(-8px);\n\t\t\t\t}\n\n\t\t\t\tto {\n\t\t\t\t\topacity: 1;\n\t\t\t\t\ttransform: translateY(0);\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tli {\n\t\t\t\tmargin: 8px 0;\n\t\t\t}\n\n\t\t\t.file {\n\t\t\t\tcursor: default;\n\t\t\t\tpadding: 5px 0 5px 0;\n\t\t\t\tcolor: #444;\n\t\t\t\tborder-radius: 6px;\n\t\t\t\tdisplay: flex;\n\t\t\t\talign-items: center;\n\t\t\t\tfont-weight: 400;\n\t\t\t\ttransition: background-color 0.2s, color 0.2s;\n\t\t\t}\n\n\t\t\t.file::before {\n\t\t\t\tcontent: \"\\1F4C4\";\n\t\t\t\t/* 📄 */\n\t\t\t\tfont-size: 16px;\n\t\t\t\tmargin-right: 8px;\n\t\t\t\tcolor: #1976d2;\n\t\t\t}\n\n\t\t\t.file:hover {\n\t\t\t\tbackground-color: #f0f4fa;\n\t\t\t\tcolor: #1976d2;\n\t\t\t}\n\t\t</style>\n\t</head>\n\n\t<body>\n\t\t<div class=\"tree-container left-align\">\n\t\t\t<ul id=\"folderTree\">\n\t\t\t\t<li><span class=\"caret folder\">Chỉ huy trung tâm</span></li>\n\t\t\t\t<li><span class=\"caret folder\">Phòng tham mưu</span></li>\n\t\t\t\t<li><span class=\"caret folder\">Phòng chính trị</span></li>\n\t\t\t\t<li><span class=\"caret folder\">Phòng hậu cần</span></li>\n\t\t\t\t<li><span class=\"caret folder\">Ban tài chính</span></li>\n\t\t\t\t<li><span class=\"caret folder\">Cụm 31</span>\n\t\t\t\t\t<ul class=\"nested\">\n\t\t\t\t\t\t<li class=\"file\">Đội 1</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 2</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 3</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 4</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</li>\n\t\t\t\t<li><span class=\"caret folder\">Cụm 32</span>\n\t\t\t\t\t<ul class=\"nested\">\n\t\t\t\t\t\t<li class=\"file\">Đội 5</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 6</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 7</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 8</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</li>\n\t\t\t\t<li><span class=\"caret folder\">Cụm 33</span>\n\t\t\t\t\t<ul class=\"nested\">\n\t\t\t\t\t\t<li class=\"file\">Đội 9</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 10</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 11</li>\n\t\t\t\t\t\t<li class=\"file\">Đội 12</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n\t\t<script>\n\t\t\tconst toggler = document.getElementsByClassName(\"caret\");\n\t\t\tfor (let i = 0; i < toggler.length; i++) {\n\t\t\t\ttoggler[i].addEventListener(\"click\", function () {\n\t\t\t\t\tconst nested = this.parentElement.querySelector(\".nested\");\n\t\t\t\t\tif (nested) {\n\t\t\t\t\t\tnested.classList.toggle(\"active\");\n\t\t\t\t\t\tthis.classList.toggle(\"caret-down\");\n\t\t\t\t\t}\n\t\t\t\t});\n\t\t\t}\n\t\t</script>\n\t</body>\n\n</html>",
+    "js": "const treeData = {\n    name: \"5.Javascript\",\n    children: [\n        { name: \"index.html\", type: \"file\" },\n        { name: \"style.css\", type: \"file\" },\n        // Add more files/folders here if needed\n    ]\n};\n\nfunction createTree(node) {\n    const ul = document.createElement('ul');\n    if (node.children) {\n        node.children.forEach(child => {\n            const li = document.createElement('li');\n            li.textContent = child.name;\n            if (child.type === \"file\") li.classList.add('file');\n            ul.appendChild(li);\n        });\n    }\n    return ul;\n}\n\ndocument.getElementById('tree').appendChild(createTree(treeData));"
+  },
+  "version": 1,
+  "widgetId": "kivpr7x93f",
+  "widgetName": "Cay_thu_muc"
+}

@@ -1,0 +1,36 @@
+{
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "refresh",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "true",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 61,
+  "onClick": "{{SelectQueryHSPT.run()}}",
+  "parentColumnSpace": 12.0703125,
+  "parentId": "snjxwn8lbs",
+  "parentRowSpace": 10,
+  "rightColumn": 63,
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "d3xj0rubgf",
+  "widgetName": "refresh_btn"
+}

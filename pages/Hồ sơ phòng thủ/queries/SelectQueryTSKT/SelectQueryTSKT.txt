@@ -1,0 +1,14 @@
+SELECT 
+  v.id as id,
+  a.ten_thuoc_tinh AS thuoc_tinh,
+	v.gia_tri AS gia_tri,
+  a.loai_du_lieu AS loai_du_lieu,
+	a.id AS thuoc_tinh_id
+FROM 
+  v_thiet_bi_mang v
+JOIN 
+  a_thiet_bi_mang a ON v.a_thiet_bi_mang_id = a.id
+WHERE 
+  v.e_thiet_bi_mang_id = {{ data_tableTBM.selectedRow.id }}  -- hoặc ID bạn chọn
+ORDER BY 
+  a.ten_thuoc_tinh ASC;

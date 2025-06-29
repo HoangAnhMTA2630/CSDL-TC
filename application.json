@@ -1,0 +1,141 @@
+{
+  "appIsExample": false,
+  "appLayout": {
+    "type": "FLUID"
+  },
+  "applicationDetail": {
+    "navigationSetting": {
+      "colorStyle": "light",
+      "itemStyle": "text",
+      "logoAssetId": "",
+      "logoConfiguration": "logoOnly",
+      "navStyle": "stacked",
+      "orientation": "top",
+      "position": "static",
+      "showNavbar": true,
+      "showSignIn": false
+    },
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
+  },
+  "applicationVersion": 2,
+  "collapseInvisibleWidgets": true,
+  "color": "#E3DEFF",
+  "embedSetting": {
+    "height": "720px",
+    "showNavigationBar": true,
+    "width": "1024px"
+  },
+  "evaluationVersion": 2,
+  "icon": "bag",
+  "pages": [
+    {
+      "id": "Đăng nhập",
+      "isDefault": true
+    },
+    {
+      "id": "Trang Chủ",
+      "isDefault": false
+    },
+    {
+      "id": "Kế hoạch - Báo cáo",
+      "isDefault": false
+    },
+    {
+      "id": "Hồ sơ phòng thủ",
+      "isDefault": false
+    },
+    {
+      "id": "Public.tai_khoan_lo_lot",
+      "isDefault": false
+    },
+    {
+      "id": "Trinh sát - Tấn công",
+      "isDefault": false
+    },
+    {
+      "id": "Courses",
+      "isDefault": false
+    },
+    {
+      "id": "Quản lý săn tim mối nguy cơ",
+      "isDefault": false
+    },
+    {
+      "id": "Quán lý vũ khí trang bị Cụm",
+      "isDefault": false
+    },
+    {
+      "id": "Quản lý tài liệu lột lọt",
+      "isDefault": false
+    },
+    {
+      "id": "Quán lý vũ khí trang bị",
+      "isDefault": false
+    },
+    {
+      "id": "Quản lý chung",
+      "isDefault": false
+    },
+    {
+      "id": "Cây thư mục",
+      "isDefault": false
+    },
+    {
+      "id": "Public.bao_cao",
+      "isDefault": false
+    },
+    {
+      "id": "Public.doi_tuong_tc",
+      "isDefault": false
+    },
+    {
+      "id": "Public.quan_nhan",
+      "isDefault": false
+    },
+    {
+      "id": "Cây thư mục_new",
+      "isDefault": false
+    },
+    {
+      "id": "Public.web",
+      "isDefault": false
+    },
+    {
+      "id": "Public.bao_cao_cve",
+      "isDefault": false
+    },
+    {
+      "id": "Public.tai_khoan_quan_tri",
+      "isDefault": false
+    },
+    {
+      "id": "Public.bo_ke_hoach",
+      "isDefault": false
+    }
+  ],
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
+  "unpublishedApplicationDetail": {
+    "navigationSetting": {
+      "colorStyle": "light",
+      "itemStyle": "text",
+      "logoAssetId": "",
+      "logoConfiguration": "logoOnly",
+      "navStyle": "stacked",
+      "orientation": "top",
+      "position": "static",
+      "showNavbar": true,
+      "showSignIn": false
+    },
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
+  }
+}

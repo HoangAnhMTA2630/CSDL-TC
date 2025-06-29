@@ -1,0 +1,27 @@
+SELECT 
+  bkh.id,
+  bkh.ten_bo_ke_hoach,
+  lkh.ten_loai_ke_hoach,
+  CONCAT_WS(
+    ' - ',
+    ltg.ten_loai_thoi_gian,
+    CONCAT('Năm: ', tg.nam),
+    CASE WHEN tg.quy IS NOT NULL THEN CONCAT('Quý: ', tg.quy) END,
+    CASE WHEN tg.thang IS NOT NULL THEN CONCAT('Tháng: ', tg.thang) END,
+    CASE WHEN tg.tuan IS NOT NULL THEN CONCAT('Tuần: ', tg.tuan) END
+  ) AS thoi_gian,
+  bkh.mo_ta
+FROM bo_ke_hoach bkh
+LEFT JOIN loai_ke_hoach lkh ON bkh.loai_ke_hoach_id = lkh.id
+LEFT JOIN thoi_gian tg ON bkh.thoi_gian_id = tg.id
+LEFT JOIN loai_thoi_gian ltg ON tg.loai_thoi_gian_id = ltg.id
+WHERE bkh.ten_bo_ke_hoach ILIKE '%{{data_tableBKH.searchText || ""}}%'
+ORDER BY 
+  {{
+    (() => {
+      const col = data_tableBKH.sortOrder.column || 'bkh.id';
+      const allowedCols = ['bkh.id', 'bkh.ten_bo_ke_hoach', 'lkh.ten_loai_ke_hoach', 'tg.nam'];
+      return allowedCols.includes(col) ? col : 'bkh.id';
+    })()
+  }}
+  {{data_tableBKH.sortOrder.order || 'ASC'}}

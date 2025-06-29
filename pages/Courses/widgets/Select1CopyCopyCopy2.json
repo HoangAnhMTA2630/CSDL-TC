@@ -1,0 +1,67 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 152,
+  "boxShadow": "none",
+  "defaultOptionValue": "GREEN",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": "{{!(SelectLoaiThoiGian.selectedOptionValue === \"Quý\" || SelectLoaiThoiGian.selectedOptionValue === \"Tháng\")\n}}",
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "dao62wbh8y",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Quý",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 31,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 8,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 7,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "optionLabel": "name",
+  "optionValue": "code",
+  "originalBottomRow": 152,
+  "originalTopRow": 145,
+  "parentColumnSpace": 19.5,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 38,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"name\": \"1\",\n    \"code\": \"1\"\n  },\n  {\n    \"name\": \"2\",\n    \"code\": \"2\"\n  },\n\t{\n    \"name\": \"3\",\n    \"code\": \"3\"\n  },\n\t{\n    \"name\": \"4\",\n    \"code\": \"4\"\n  }\n]",
+  "topRow": 145,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "2ijektt6i7",
+  "widgetName": "Select1CopyCopyCopy2"
+}

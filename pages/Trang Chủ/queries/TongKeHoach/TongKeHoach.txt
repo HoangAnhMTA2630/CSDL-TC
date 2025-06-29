@@ -1,0 +1,2 @@
+SELECT COUNT(*) AS TongKeHoach
+FROM Ke_hoach;

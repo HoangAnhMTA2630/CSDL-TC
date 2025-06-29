@@ -1,0 +1,9 @@
+UPDATE public."web" SET
+		"ten" = '{{update_formWeb.fieldState.ten.isVisible ? update_formWeb.formData.ten : update_formWeb.sourceData.ten}}',
+		"url" = '{{update_formWeb.fieldState.url.isVisible ? update_formWeb.formData.url : update_formWeb.sourceData.url}}',
+		"ip_public" = '{{update_formWeb.fieldState.ip_public.isVisible ? update_formWeb.formData.ip_public : update_formWeb.sourceData.ip_public}}',
+    "ip_private" = '{{update_formWeb.fieldState.ip_private.isVisible ? update_formWeb.formData.ip_private : update_formWeb.sourceData.ip_private}}',
+		"port" = '{{update_formWeb.fieldState.port.isVisible ? update_formWeb.formData.port : update_formWeb.sourceData.port}}',
+		"don_vi_phong_thu_id" = '{{update_formWeb.fieldState.don_vi_phong_thu_id.isVisible ? update_formWeb.formData.don_vi_phong_thu_id : update_formWeb.sourceData.don_vi_phong_thu_id}}',
+		"thiet_bi_mang_id" = '{{update_formWeb.fieldState.thiet_bi_mang_id.isVisible ? update_formWeb.formData.thiet_bi_mang_id : update_formWeb.sourceData.thiet_bi_mang_id}}'
+WHERE "id" = {{data_tableWeb.triggeredRow.id}};

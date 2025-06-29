@@ -1,0 +1,4 @@
+SELECT DISTINCT nam AS name, nam AS code
+FROM thoi_gian
+WHERE nam IS NOT NULL
+ORDER BY nam DESC;

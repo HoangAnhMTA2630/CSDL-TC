@@ -1,0 +1,2 @@
+DELETE FROM public."quan_nhan"
+  WHERE "id" = {{data_tableQN.triggeredRow.id}};

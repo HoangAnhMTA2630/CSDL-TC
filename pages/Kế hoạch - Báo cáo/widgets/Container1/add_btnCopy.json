@@ -1,0 +1,30 @@
+{
+  "borderRadius": "0.375rem",
+  "bottomRow": 7,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#1d4ed8",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "properties",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "true",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 60,
+  "onClick": "{{SelectQueryBKH.run();\nshowModal(ModalBKH.name)}}",
+  "parentColumnSpace": 12.0703125,
+  "parentId": "qy1mgie0pe",
+  "parentRowSpace": 10,
+  "rightColumn": 64,
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "po6rufhham",
+  "widgetName": "add_btnCopy"
+}

@@ -1,0 +1,38 @@
+{
+  "borderRadius": "0px",
+  "bottomRow": 5,
+  "boxShadow": "none",
+  "dynamicBindingPathList": [
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1.25rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": "true",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "overflow": "NONE",
+  "parentColumnSpace": 11.78515625,
+  "parentId": "zp5pjn85my",
+  "parentRowSpace": 10,
+  "rightColumn": 17,
+  "text": "Danh sách Bộ Kế hoạch",
+  "textAlign": "LEFT",
+  "textColor": "{{appsmith.theme.colors.primaryColor}}",
+  "topRow": 1,
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "rzajo6zqkr",
+  "widgetName": "Text16Copy1"
+}

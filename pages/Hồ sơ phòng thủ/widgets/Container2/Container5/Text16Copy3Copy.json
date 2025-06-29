@@ -1,0 +1,38 @@
+{
+  "borderRadius": "0px",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "dynamicBindingPathList": [
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": "true",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "overflow": "NONE",
+  "parentColumnSpace": 11.78515625,
+  "parentId": "3087glls78",
+  "parentRowSpace": 10,
+  "rightColumn": 22,
+  "text": "Thông tin chi tiết Dịch vụ: {{data_tableWeb.triggeredRow.ten}}/",
+  "textAlign": "LEFT",
+  "textColor": "#1d4ed8",
+  "topRow": 0,
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "549lf04m2g",
+  "widgetName": "Text16Copy3Copy"
+}

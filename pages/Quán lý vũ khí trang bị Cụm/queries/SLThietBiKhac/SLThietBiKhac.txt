@@ -1,0 +1,17 @@
+SELECT 
+    COUNT(etbm.id) AS tong_thiet_bi_khac
+FROM 
+    public.e_thiet_bi_mang etbm
+JOIN 
+    public.loai_thiet_bi ltb ON etbm.loai_thiet_bi_id = ltb.id
+WHERE 
+    ltb.ten_loai_thiet_bi NOT ILIKE ANY (
+        ARRAY[
+            'Switch', 
+            'Router', 
+            'Firewall', 
+            'Máy chủ ảo', 
+            'Máy chủ vật lý', 
+            'Máy tính'
+        ]
+    );

@@ -1,0 +1,38 @@
+WITH thiet_bi_moi AS (
+    INSERT INTO public.e_thiet_bi_mang (
+        ten_thiet_bi,
+        loai_thiet_bi_id,
+        don_vi_id,
+        quanh_nhan_id
+    )
+    VALUES (
+        {{ "'" + (Table4.newRow.ten_thiet_bi || '') + "'" }},
+        (SELECT id FROM loai_thiet_bi WHERE ten_loai_thiet_bi = {{ "'" + (Table4.newRow.ten_loai_thiet_bi || '') + "'" }}),
+        (SELECT id FROM don_vi WHERE ten_don_vi = {{ "'" + (Table4.newRow.ten_don_vi || '') + "'" }}),
+        {{ TableQNTB.triggeredRow.id }}
+    )
+    RETURNING id
+)
+INSERT INTO public.v_thiet_bi_mang (e_thiet_bi_mang_id, a_thiet_bi_mang_id, gia_tri)
+SELECT
+    tb.id,
+    a.id,
+    CASE a.ten_thuoc_tinh
+        WHEN 'CPU' THEN {{ "'" + (Table4.newRow.CPU || '') + "'" }}
+        WHEN 'Ram' THEN {{ "'" + (Table4.newRow.Ram || '') + "'" }}
+        WHEN 'Rom' THEN {{ "'" + (Table4.newRow.Rom || '') + "'" }}
+        WHEN 'Ports' THEN {{ "'" + (Table4.newRow.Ports || '') + "'" }}
+        WHEN 'IP Public' THEN {{ "'" + (Table4.newRow["IP Public"] || '') + "'" }}
+        WHEN 'IP Private' THEN {{ "'" + (Table4.newRow["IP Private"] || '') + "'" }}
+        WHEN 'Protocol' THEN {{ "'" + (Table4.newRow.Protocol || '') + "'" }}
+        WHEN 'SSID' THEN {{ "'" + (Table4.newRow.SSID || '') + "'" }}
+        WHEN 'HDH' THEN {{ "'" + (Table4.newRow.HDH || '') + "'" }}
+        ELSE ''
+    END AS gia_tri
+FROM thiet_bi_moi tb
+JOIN public.a_thiet_bi_mang a
+    ON a.ten_thuoc_tinh IN (
+        'CPU', 'Ram', 'Rom', 'Ports',
+        'IP Public', 'IP Private',
+        'Protocol', 'SSID', 'HDH'
+    );

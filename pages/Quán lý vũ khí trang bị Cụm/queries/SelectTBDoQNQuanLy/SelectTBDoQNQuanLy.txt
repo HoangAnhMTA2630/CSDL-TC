@@ -1,0 +1,52 @@
+SELECT 
+    split_part(ten_gop, '###', 1)::int AS id_thiet_bi,
+    split_part(ten_gop, '###', 2) AS ten_thiet_bi,
+    split_part(ten_gop, '###', 3) AS ten_loai_thiet_bi,
+    split_part(ten_gop, '###', 4) AS ten_don_vi,
+    "CPU",
+    "HDH",
+    "Ram",
+    "Rom",
+    "Ports",
+    "IP Public",
+    "IP Private",
+    "Protocol",
+    "SSID"
+FROM crosstab(
+    $$
+    SELECT 
+        e.id || '###' || e.ten_thiet_bi || '###' || 
+        COALESCE(l.ten_loai_thiet_bi, '') || '###' || 
+        COALESCE(d.ten_don_vi, '') AS ten_gop,
+        a.ten_thuoc_tinh,
+        v.gia_tri
+    FROM 
+        e_thiet_bi_mang e
+    LEFT JOIN v_thiet_bi_mang v ON e.id = v.e_thiet_bi_mang_id
+    LEFT JOIN a_thiet_bi_mang a ON v.a_thiet_bi_mang_id = a.id
+    LEFT JOIN loai_thiet_bi l ON e.loai_thiet_bi_id = l.id
+    LEFT JOIN don_vi d ON e.don_vi_id = d.id
+    WHERE 
+        e.id = {{ TableQNTB.triggeredRow.id_thiet_bi }}
+    ORDER BY 
+        ten_gop, a.ten_thuoc_tinh
+    $$,
+    $$ 
+    SELECT unnest(ARRAY[
+        'CPU', 'HDH', 'Ram', 'Rom', 
+        'Ports', 'IP Public', 'IP Private', 
+        'Protocol', 'SSID'
+    ])
+    $$
+) AS ct (
+    ten_gop text,
+    "CPU" text,
+    "HDH" text,
+    "Ram" text,
+    "Rom" text,
+    "Ports" text,
+    "IP Public" text,
+    "IP Private" text,
+    "Protocol" text,
+    "SSID" text
+);

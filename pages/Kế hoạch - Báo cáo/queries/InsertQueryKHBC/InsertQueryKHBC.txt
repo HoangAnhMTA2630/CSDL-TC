@@ -1,0 +1,2 @@
+INSERT INTO public."ke_hoach_bao_cao" ("ke_hoach_id", "bao_cao_id")
+VALUES ({{this.params.ke_hoach_id}}, {{this.params.bao_cao_id}});

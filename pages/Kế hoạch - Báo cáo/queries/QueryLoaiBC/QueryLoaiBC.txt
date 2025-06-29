@@ -1,0 +1,1 @@
+SELECT ten_loai_bao_cao as label, id as value FROM public."loai_bao_cao" ;

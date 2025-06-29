@@ -1,0 +1,2 @@
+DELETE FROM public."tai_khoan_lo_lot"
+  WHERE "id" = {{data_tableTKLL.triggeredRow.id}};

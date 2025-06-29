@@ -1,0 +1,44 @@
+{
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "add",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "{{ appsmith.store.showTabBC }}",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 55,
+  "onClick": "{{showModal(Insert_ModalBC_DVPT.name);\nQueryBCNotInDVPT.run()}}",
+  "parentColumnSpace": 12.0703125,
+  "parentId": "7d5iqkjx5z",
+  "parentRowSpace": 10,
+  "rightColumn": 57,
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "jhmgv0um9t",
+  "widgetName": "add_btnCopy6"
+}

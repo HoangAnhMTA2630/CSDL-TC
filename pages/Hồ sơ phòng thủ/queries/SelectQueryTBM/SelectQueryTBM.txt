@@ -1,0 +1,9 @@
+SELECT 
+  tbm.*, 
+  ltb.ten_loai_thiet_bi
+FROM public."e_thiet_bi_mang" AS tbm
+LEFT JOIN public."loai_thiet_bi" AS ltb ON tbm.loai_thiet_bi_id = ltb.id
+WHERE 
+  tbm."ten_thiet_bi" ILIKE '%{{data_tableTBM.searchText || ""}}%' AND
+  tbm."ho_so_phong_thu_id" = {{data_tableHSPT.triggeredRow.id}}
+ORDER BY {{data_tableTBM.sortOrder.column || 'tbm.id'}} {{data_tableTBM.sortOrder.order || 'ASC'}};

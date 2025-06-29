@@ -1,0 +1,2 @@
+SELECT COUNT(*) AS HSPhongThu
+FROM ho_so_phong_thu;

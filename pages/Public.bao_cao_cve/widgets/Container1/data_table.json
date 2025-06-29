@@ -1,0 +1,359 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 85,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "childStylesheet": {
+    "button": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "iconButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "menuButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "columnOrder": [
+    "id",
+    "webid",
+    "thiet_bi_id",
+    "bao_cao_don_vi_phong_thu_id",
+    "lo_hong_bao_mat_web_id",
+    "customColumn1"
+  ],
+  "columnSizeMap": {
+    "status": 75,
+    "step": 62,
+    "task": 245
+  },
+  "columnUpdatedAt": 1750174968318,
+  "defaultPageSize": 0,
+  "defaultSelectedRowIndex": "0",
+  "delimiter": ",",
+  "derivedColumns": {
+    "customColumn1": {
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "buttonColor": "#DD4B34",
+      "buttonLabel": "{{data_table.processedTableData.map((currentRow, currentIndex) => ( 'Delete'))}}",
+      "buttonLabelColor": "#FFFFFF",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "button",
+      "computedValue": "",
+      "enableFilter": true,
+      "enableSort": true,
+      "id": "customColumn1",
+      "index": 5,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Delete",
+      "labelColor": "#FFFFFF",
+      "menuColor": "#03B365",
+      "onClick": "{{showModal('Delete_Modal')}}",
+      "width": 150
+    }
+  },
+  "displayName": "Table",
+  "dynamicBindingPathList": [
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "derivedColumns.customColumn1.buttonLabel"
+    },
+    {
+      "key": "primaryColumns.customColumn1.buttonLabel"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn1.borderRadius"
+    },
+    {
+      "key": "primaryColumns.id.computedValue"
+    },
+    {
+      "key": "primaryColumns.webid.computedValue"
+    },
+    {
+      "key": "primaryColumns.thiet_bi_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.bao_cao_don_vi_phong_thu_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.lo_hong_bao_mat_web_id.computedValue"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "primaryColumns.customColumn1.borderRadius"
+    },
+    {
+      "key": "tableData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "onPageChange"
+    },
+    {
+      "key": "onSearchTextChanged"
+    },
+    {
+      "key": "onSort"
+    }
+  ],
+  "enableClientSideSearch": true,
+  "enableServerSideFiltering": false,
+  "hideCard": false,
+  "horizontalAlignment": "LEFT",
+  "iconSVG": "/static/media/icon.db8a9cbd.svg",
+  "isLoading": false,
+  "isSortable": true,
+  "isVisible": "true",
+  "isVisibleDownload": true,
+  "isVisibleFilters": true,
+  "isVisiblePagination": true,
+  "isVisibleSearch": true,
+  "key": "zba5qel0au",
+  "label": "Data",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 0,
+  "onPageChange": "{{SelectQueryTBM_CVE.run()}}",
+  "onSearchTextChanged": "{{SelectQueryTBM_CVE.run()}}",
+  "onSort": "{{SelectQueryTBM_CVE.run()}}",
+  "parentColumnSpace": 16.3125,
+  "parentId": "59rw5mx0bq",
+  "parentRowSpace": 10,
+  "primaryColumnId": "id",
+  "primaryColumns": {
+    "bao_cao_don_vi_phong_thu_id": {
+      "alias": "bao_cao_don_vi_phong_thu_id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{data_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"bao_cao_don_vi_phong_thu_id\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "bao_cao_don_vi_phong_thu_id",
+      "index": 3,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "bao_cao_don_vi_phong_thu_id",
+      "notation": "standard",
+      "originalId": "bao_cao_don_vi_phong_thu_id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn1": {
+      "borderRadius": "{{data_table.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+      "boxShadow": "none",
+      "buttonColor": "#DD4B34",
+      "buttonLabel": "{{data_table.processedTableData.map((currentRow, currentIndex) => ( 'Delete'))}}",
+      "buttonLabelColor": "#FFFFFF",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "button",
+      "computedValue": "",
+      "enableFilter": true,
+      "enableSort": true,
+      "id": "customColumn1",
+      "index": 5,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Delete",
+      "labelColor": "#FFFFFF",
+      "menuColor": "#03B365",
+      "onClick": "{{showModal('Delete_Modal')}}",
+      "sticky": "right",
+      "width": 150
+    },
+    "id": {
+      "alias": "id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{data_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "id",
+      "index": 0,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "id",
+      "notation": "standard",
+      "originalId": "id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "lo_hong_bao_mat_web_id": {
+      "alias": "lo_hong_bao_mat_web_id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{data_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"lo_hong_bao_mat_web_id\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "lo_hong_bao_mat_web_id",
+      "index": 4,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "lo_hong_bao_mat_web_id",
+      "notation": "standard",
+      "originalId": "lo_hong_bao_mat_web_id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "thiet_bi_id": {
+      "alias": "thiet_bi_id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{data_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"thiet_bi_id\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "thiet_bi_id",
+      "index": 2,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "thiet_bi_id",
+      "notation": "standard",
+      "originalId": "thiet_bi_id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "webid": {
+      "alias": "webid",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{data_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"webid\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "webid",
+      "index": 1,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "webid",
+      "notation": "standard",
+      "originalId": "webid",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    }
+  },
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "searchKey": "",
+  "serverSidePaginationEnabled": true,
+  "tableData": "{{SelectQueryTBM_CVE.data}}",
+  "textSize": "0.875rem",
+  "topRow": 6,
+  "totalRecordsCount": 0,
+  "type": "TABLE_WIDGET_V2",
+  "version": 3,
+  "verticalAlignment": "CENTER",
+  "widgetId": "hpy3pb4xft",
+  "widgetName": "data_table"
+}

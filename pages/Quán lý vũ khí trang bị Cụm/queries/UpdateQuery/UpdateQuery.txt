@@ -1,0 +1,9 @@
+UPDATE public."quan_nhan" SET
+		"ten_quan_nhan" = '{{update_form.fieldState.ten_quan_nhan.isVisible ? update_form.formData.ten_quan_nhan : update_form.sourceData.ten_quan_nhan}}',
+		"quan_ham" = '{{update_form.fieldState.quan_ham.isVisible ? update_form.formData.quan_ham : update_form.sourceData.quan_ham}}',
+    "chuc_vu" = '{{update_form.fieldState.chuc_vu.isVisible ? update_form.formData.chuc_vu : update_form.sourceData.chuc_vu}}',
+		"so_dien_thoai" = '{{update_form.fieldState.so_dien_thoai.isVisible ? update_form.formData.so_dien_thoai : update_form.sourceData.so_dien_thoai}}',
+		"nhiem_vu" = '{{update_form.fieldState.nhiem_vu.isVisible ? update_form.formData.nhiem_vu : update_form.sourceData.nhiem_vu}}',
+		"ho_so_phong_thu_id" = '{{update_form.fieldState.ho_so_phong_thu_id.isVisible ? update_form.formData.ho_so_phong_thu_id : update_form.sourceData.ho_so_phong_thu_id}}',
+		"don_vi_id" = '{{update_form.fieldState.don_vi_id.isVisible ? update_form.formData.don_vi_id : update_form.sourceData.don_vi_id}}'
+WHERE "id" = {{data_table.selectedRow.id}};

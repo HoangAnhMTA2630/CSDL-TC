@@ -1,0 +1,10 @@
+INSERT INTO public."tai_khoan_lo_lot" (
+	"username",
+	"pass",
+	"web_id",
+	"bao_cao_don_vi_phong_thu_id")
+VALUES (
+	'{{insert_formTKLL.formData.username}}',
+	'{{insert_formTKLL.formData.pass}}',
+	'{{insert_formTKLL.formData.web_id}}',
+	'{{insert_formTKLL.formData.bao_cao_don_vi_phong_thu_id}}');

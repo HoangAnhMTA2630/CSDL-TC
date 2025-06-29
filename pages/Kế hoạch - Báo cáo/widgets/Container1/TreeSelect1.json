@@ -1,0 +1,75 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowClear": true,
+  "animateLoading": true,
+  "borderRadius": "0px",
+  "bottomRow": 7,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "options"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onOptionChange"
+    },
+    {
+      "key": "onDropdownOpen"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    },
+    {
+      "key": "onDropdownOpen"
+    }
+  ],
+  "expandAll": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "ew5lgh603i",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "Thư mục Bộ kế hoạch",
+  "labelTextColor": "#1d4ed8",
+  "labelTextSize": "1rem",
+  "labelTooltip": "Thư mục theo dạng: Loại Bộ Kế hoạch(tương ứng với loại kế hoạch) -> Thời gian -> Các Bộ kế hoạch",
+  "labelWidth": "6",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 7,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 12,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onDropdownOpen": "{{\n(() => {\n  if (!chooseBKH.validateSelection()) {\n    resetWidget(\"TreeSelect1\", true);\n  }\n\tSelectQuery_KH.run();\n\tSelectQueryBC_v1.run();\n})()\n}}",
+  "onOptionChange": "{{\n(() => {\n  if (!chooseBKH.validateSelection()) {\n    resetWidget(\"TreeSelect1\", true);\n  }\n\tSelectQuery_KH.run();\n\tSelectQueryBC_v1.run();\n})()\n}}",
+  "options": "{{ JSObject1.transformToTree() }}\n\n",
+  "originalBottomRow": 7,
+  "originalTopRow": 0,
+  "parentColumnSpace": 19.9375,
+  "parentId": "qy1mgie0pe",
+  "parentRowSpace": 10,
+  "placeholderText": "Chọn bộ kế hoạch ",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 60,
+  "shouldScrollContents": true,
+  "topRow": 0,
+  "type": "SINGLE_SELECT_TREE_WIDGET",
+  "version": 1,
+  "widgetId": "aef2nmmevp",
+  "widgetName": "TreeSelect1"
+}

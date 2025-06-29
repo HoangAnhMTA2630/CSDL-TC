@@ -1,0 +1,2 @@
+SELECT * FROM public."tai_khoan_quan_tri"
+WHERE thiet_bi_mang_id = {{data_tableTBM.selectedRow.id}}

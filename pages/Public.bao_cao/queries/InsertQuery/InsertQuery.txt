@@ -1,0 +1,20 @@
+INSERT INTO public."bao_cao" (
+	"so_bao_cao",
+	"ten_bao_cao",
+	"loai_bao_cao_id",
+	"cap_bao_cao_id",
+	"ngay_ban_hanh",
+	"ngay_sua_doi",
+	"trang_thai",
+	"duong_dan_file",
+	"mo_ta")
+VALUES (
+	'{{insert_form.formData.so_bao_cao}}',
+	'{{insert_form.formData.ten_bao_cao}}',
+	'{{insert_form.formData.loai_bao_cao_id}}',
+	'{{insert_form.formData.cap_bao_cao_id}}',
+	'{{insert_form.formData.ngay_ban_hanh}}',
+	'{{insert_form.formData.ngay_sua_doi}}',
+	'{{insert_form.formData.trang_thai}}',
+	'{{insert_form.formData.duong_dan_file}}',
+	'{{insert_form.formData.mo_ta}}');

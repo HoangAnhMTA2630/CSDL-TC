@@ -1,0 +1,11 @@
+UPDATE public."bao_cao" SET
+		"so_bao_cao" = '{{update_form.fieldState.so_bao_cao.isVisible ? update_form.formData.so_bao_cao : update_form.sourceData.so_bao_cao}}',
+		"ten_bao_cao" = '{{update_form.fieldState.ten_bao_cao.isVisible ? update_form.formData.ten_bao_cao : update_form.sourceData.ten_bao_cao}}',
+    "loai_bao_cao_id" = '{{update_form.fieldState.loai_bao_cao_id.isVisible ? update_form.formData.loai_bao_cao_id : update_form.sourceData.loai_bao_cao_id}}',
+		"cap_bao_cao_id" = '{{update_form.fieldState.cap_bao_cao_id.isVisible ? update_form.formData.cap_bao_cao_id : update_form.sourceData.cap_bao_cao_id}}',
+		"ngay_ban_hanh" = '{{update_form.fieldState.ngay_ban_hanh.isVisible ? update_form.formData.ngay_ban_hanh : update_form.sourceData.ngay_ban_hanh}}',
+		"ngay_sua_doi" = '{{update_form.fieldState.ngay_sua_doi.isVisible ? update_form.formData.ngay_sua_doi : update_form.sourceData.ngay_sua_doi}}',
+		"trang_thai" = '{{update_form.fieldState.trang_thai.isVisible ? update_form.formData.trang_thai : update_form.sourceData.trang_thai}}',
+		"duong_dan_file" = '{{update_form.fieldState.duong_dan_file.isVisible ? update_form.formData.duong_dan_file : update_form.sourceData.duong_dan_file}}',
+		"mo_ta" = '{{update_form.fieldState.mo_ta.isVisible ? update_form.formData.mo_ta : update_form.sourceData.mo_ta}}'
+WHERE "id" = {{data_table.selectedRow.id}};

@@ -1,0 +1,3 @@
+SELECT * 
+FROM loai_bao_cao 
+ORDER BY id

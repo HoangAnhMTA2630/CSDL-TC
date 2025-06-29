@@ -1,0 +1,72 @@
+{
+  "backgroundColor": "#FFFFFF",
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 78,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "defaultModel": "{{{navItems: [{\n\t\ttitle: \"Management\",\n\t\ticon: \"💼\"\n\t}, {\n\t\ttitle: \"Analytics\",\n\t\ticon: \"📊\"\n\t}]}}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "theme"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "defaultModel"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onResetClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onResetClick"
+    }
+  ],
+  "events": [
+    "onResetClick"
+  ],
+  "isCanvas": false,
+  "isLoading": false,
+  "isSearchWildcard": true,
+  "isVisible": true,
+  "key": "4moasvcn0k",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 33,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 3,
+  "needsErrorInfo": false,
+  "onResetClick": "",
+  "parentColumnSpace": 20.25,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 19,
+  "srcDoc": {
+    "css": ".tree {\n  font-family: system-ui;\n  line-height: 1.5em;\n  margin: 0;\n  padding: 0;\n}\n\n.tree ul {\n  list-style-type: none;\n  padding-left: 20px;\n  position: relative;\n}\n\n.tree li {\n  margin: 0;\n  padding: 10px 5px 0 5px;\n  position: relative;\n}\n\n.tree li::before,\n.tree li::after {\n  content: \"\";\n  left: -20px;\n  position: absolute;\n  right: auto;\n}\n\n.tree li::before {\n  border-left: 1px solid #ccc;\n  bottom: 50px;\n  height: 100%;\n  top: 0;\n  width: 1px;\n}\n\n.tree li::after {\n  border-top: 1px solid #ccc;\n  height: 20px;\n  top: 15px;\n  width: 25px;\n}\n\n.tree li:last-child::before {\n  height: 30px;\n}\n\n.tree-icon {\n  margin-right: 5px;\n  cursor: pointer;\n}\n\n.tree-node {\n  display: inline-block;\n}\n\n.tree-node:hover {\n  background: #f3f3f3;\n  border-radius: var(--appsmith-theme-borderRadius);\n  transition: all 0.3s ease;\n}",
+    "html": "<link\n  rel=\"stylesheet\"\n  href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css\"\n/>\n<div id=\"root\"></div>",
+    "js": "import React from 'https://cdn.jsdelivr.net/npm/react@18.2.0/+esm';\nimport ReactDOM from 'https://cdn.jsdelivr.net/npm/react-dom@18.2.0/+esm';\nfunction TreeNode({\n  node\n}) {\n  const [expanded, setExpanded] = React.useState(false);\n  const toggleExpand = () => {\n    setExpanded(!expanded);\n  };\n  return /*#__PURE__*/React.createElement(\"li\", null, /*#__PURE__*/React.createElement(\"div\", {\n    className: \"tree-node\"\n  }, node.children && /*#__PURE__*/React.createElement(\"i\", {\n    className: `tree-icon ${expanded ? 'fas fa-minus-square' : 'fas fa-plus-square'}`,\n    onClick: toggleExpand\n  }), node.name), expanded && node.children && /*#__PURE__*/React.createElement(\"ul\", {\n    className: \"tree\"\n  }, node.children.map((childNode, index) => /*#__PURE__*/React.createElement(TreeNode, {\n    key: index,\n    node: childNode\n  }))));\n}\nfunction DirectoryTree({\n  data\n}) {\n  return /*#__PURE__*/React.createElement(\"ul\", {\n    className: \"tree\"\n  }, data.map((rootNode, index) => /*#__PURE__*/React.createElement(TreeNode, {\n    key: index,\n    node: rootNode\n  })));\n}\nfunction App() {\n  // Expanded mock data for the directory tree\n  const mockData = [{\n    name: \"2023\",\n    children: [{\n      name: \"Kế hoạch sẵn sàng chiến đấu - BTL86\"\n    }, {\n      name: \"Kế hoạch dò quét các mục tiêu hướng P\"\n    }, {\n      name: \"Kế hoạch phòng thủ miền trung tây nguyên - BTL86\",\n      children: [{\n        name: \"Kế hoạch phòng thủ miền trung tây nguyên - TT386\"\n      }, {\n        name: \"Kế hoạch STMNC hướng Mal - BTL86\"\n      }]\n    }, {\n      name: \"Kế hoạch STMNC hướng Mal - BTL86\",\n      children: [{\n        name: \"Kế hoạch STMNC hướng Mal - TT386\"\n      }, {\n        name: \"Kế hoạch STMNC hướng Mal (Bổ sung) - TT386\",\n        children: [{\n          name: \"Kế hoạch STMNC hướng Mal (Bổ sung) - Cm31\"\n        }, {\n          name: \"Kế hoạch STMNC hướng Mal (Triển khai) - Cm31\"\n        }]\n      }]\n    }]\n  }, {\n    name: \"2024\",\n    children: [{\n      name: \"File 8\"\n    }, {\n      name: \"Sub Folder 3\",\n      children: [{\n        name: \"File 9\"\n      }, {\n        name: \"Sub Sub Folder 2\",\n        children: [{\n          name: \"File 10\"\n        }]\n      }]\n    }]\n  }, {\n    name: \"2025\",\n    children: [{\n      name: \"File 8\"\n    }, {\n      name: \"Sub Folder 3\",\n      children: [{\n        name: \"File 9\"\n      }, {\n        name: \"Sub Sub Folder 2\",\n        children: [{\n          name: \"File 10\"\n        }]\n      }]\n    }]\n  }];\n  const [data, setData] = React.useState(appsmith.model.data || mockData);\n  React.useEffect(() => {\n    appsmith.onModelChange((model, prevModel) => {\n      if (JSON.stringify(model.data) !== JSON.stringify(prevModel?.data)) {\n        setData(model.data);\n      }\n    });\n  }, []);\n  return /*#__PURE__*/React.createElement(DirectoryTree, {\n    data: data\n  });\n}\nappsmith.onReady(() => {\n  ReactDOM.render(/*#__PURE__*/React.createElement(App, null), document.getElementById('root'));\n});"
+  },
+  "theme": "{{appsmith.theme}}",
+  "topRow": 0,
+  "type": "CUSTOM_WIDGET",
+  "uncompiledSrcDoc": {
+    "css": ".tree {\n  font-family: system-ui;\n  line-height: 1.5em;\n  margin: 0;\n  padding: 0;\n}\n\n.tree ul {\n  list-style-type: none;\n  padding-left: 20px;\n  position: relative;\n}\n\n.tree li {\n  margin: 0;\n  padding: 10px 5px 0 5px;\n  position: relative;\n}\n\n.tree li::before,\n.tree li::after {\n  content: '';\n  left: -20px;\n  position: absolute;\n  right: auto;\n}\n\n.tree li::before {\n  border-left: 1px solid #ccc;\n  bottom: 50px;\n  height: 100%;\n  top: 0;\n  width: 1px;\n}\n\n.tree li::after {\n  border-top: 1px solid #ccc;\n  height: 20px;\n  top: 15px;\n  width: 25px;\n}\n\n.tree li:last-child::before {\n  height: 30px;\n}\n\n.tree-icon {\n  margin-right: 5px;\n  cursor: pointer;\n}\n\n.tree-node {\n  display: inline-block;\n}\n\n.tree-node:hover {\n  background: #f3f3f3;\n  border-radius: var(--appsmith-theme-borderRadius);\n  transition: all 0.3s ease;\n}",
+    "html": "<link\n  rel=\"stylesheet\"\n  href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css\"\n/>\n<div id=\"root\"></div>",
+    "js": "import React from 'https://cdn.jsdelivr.net/npm/react@18.2.0/+esm';\nimport ReactDOM from 'https://cdn.jsdelivr.net/npm/react-dom@18.2.0/+esm';\n\nfunction TreeNode({ node }) {\n  const [expanded, setExpanded] = React.useState(false);\n\n  const toggleExpand = () => {\n    setExpanded(!expanded);\n  };\n\n  return (\n    <li>\n      <div className=\"tree-node\">\n        {node.children && (\n          <i\n            className={`tree-icon ${expanded ? 'fas fa-minus-square' : 'fas fa-plus-square'}`}\n            onClick={toggleExpand}\n          />\n        )}\n        {node.name}\n      </div>\n      {expanded && node.children && (\n        <ul className=\"tree\">\n          {node.children.map((childNode, index) => (\n            <TreeNode key={index} node={childNode} />\n          ))}\n        </ul>\n      )}\n    </li>\n  );\n}\n\nfunction DirectoryTree({ data }) {\n  return (\n    <ul className=\"tree\">\n      {data.map((rootNode, index) => (\n        <TreeNode key={index} node={rootNode} />\n      ))}\n    </ul>\n  );\n}\n\nfunction App() {\n  // Expanded mock data for the directory tree\n  const mockData = [\n    {\n      name: \"2023\",\n      children: [\n        { name: \"Kế hoạch sẵn sàng chiến đấu - BTL86\" },\n        { name: \"Kế hoạch dò quét các mục tiêu hướng P\" },\n        { \n          name: \"Kế hoạch phòng thủ miền trung tây nguyên - BTL86\", \n          children: [\n            { name: \"Kế hoạch phòng thủ miền trung tây nguyên - TT386\" },\n            { name: \"Kế hoạch STMNC hướng Mal - BTL86\" }\n          ]\n        },\n        {\n          name: \"Kế hoạch STMNC hướng Mal - BTL86\",\n          children: [\n            { name: \"Kế hoạch STMNC hướng Mal - TT386\" },\n            {\n              name: \"Kế hoạch STMNC hướng Mal (Bổ sung) - TT386\",\n              children: [\n                { name: \"Kế hoạch STMNC hướng Mal (Bổ sung) - Cm31\" },\n                { name: \"Kế hoạch STMNC hướng Mal (Triển khai) - Cm31\" }\n              ]\n            }\n          ]\n        }\n      ]\n    },\n    {\n      name: \"2024\",\n      children: [\n        { name: \"File 8\" },\n        {\n          name: \"Sub Folder 3\",\n          children: [\n            { name: \"File 9\" },\n            {\n              name: \"Sub Sub Folder 2\",\n              children: [\n                { name: \"File 10\" }\n              ]\n            }\n          ]\n        }\n      ]\n    },\n    {\n      name: \"2025\",\n      children: [\n        { name: \"File 8\" },\n        {\n          name: \"Sub Folder 3\",\n          children: [\n            { name: \"File 9\" },\n            {\n              name: \"Sub Sub Folder 2\",\n              children: [\n                { name: \"File 10\" }\n              ]\n            }\n          ]\n        }\n      ]\n    }\n  ];\n\n  const [data, setData] = React.useState(appsmith.model.data || mockData);\n\n  React.useEffect(() => {\n    appsmith.onModelChange((model, prevModel) => {\n      if (JSON.stringify(model.data) !== JSON.stringify(prevModel?.data)) {\n        setData(model.data);\n      }\n    });\n  }, []);\n\n  return (\n    <DirectoryTree data={data} />\n  );\n}\n\nappsmith.onReady(() => {\n  ReactDOM.render(<App />, document.getElementById('root'));\n});"
+  },
+  "version": 1,
+  "widgetId": "kivpr7x93f",
+  "widgetName": "Cay_thu_muc"
+}

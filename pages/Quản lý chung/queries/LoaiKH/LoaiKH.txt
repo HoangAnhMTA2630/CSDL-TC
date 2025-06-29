@@ -1,0 +1,3 @@
+SELECT * 
+FROM loai_ke_hoach 
+ORDER BY id

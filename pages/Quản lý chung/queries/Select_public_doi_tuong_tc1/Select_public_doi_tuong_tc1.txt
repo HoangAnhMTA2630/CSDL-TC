@@ -1,0 +1,12 @@
+SELECT
+  *
+FROM
+  public.doi_tuong_tc
+WHERE
+  "ten_to_chuc" ilike '%{{Table_DV.searchText}}%'
+ORDER BY
+  "{{Table_DV.sortOrder.column || 'id'}}" {{Table_DV.sortOrder.order !== "desc" ? "" : "DESC"}}
+LIMIT
+  {{Table_DV.pageSize}}
+OFFSET
+  {{Table_DV.pageOffset}}

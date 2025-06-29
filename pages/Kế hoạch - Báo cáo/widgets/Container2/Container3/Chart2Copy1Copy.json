@@ -1,0 +1,110 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "0px",
+  "bottomRow": 32,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "99hlnx0j9q": {
+      "data": "{{CountKHByCapKH.data}}",
+      "seriesName": ""
+    }
+  },
+  "chartName": "Số lượng - Cấp Kế hoạch",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( \n{\n  title: {\n    text: \"Báo cáo theo/không theo Kế hoạch\",\n    left: \"center\",\n    top: 20,\n    textStyle: {\n      fontSize: 20,\n      fontWeight: \"bold\",\n      fontFamily: \"Arial, sans-serif\"\n    }\n  },\n  tooltip: {\n    trigger: \"item\",\n    formatter: \"{b}: {c} ({d}%)\"\n  },\n  legend: {\n    orient: \"horizontal\",\n    bottom: 10,\n    left: \"center\",\n    itemWidth: 14,\n    itemHeight: 10,\n    textStyle: {\n      fontSize: 12\n    }\n  },\n  series: [\n    {\n      name: \"Báo cáo\",\n      type: \"pie\",\n      radius: \"60%\",\n      center: [\"50%\", \"50%\"],\n      data: PieChartCountBC_KH.data.map(item => ({\n        name: `${item.ten} (${item.so_luong})`,\n        value: item.so_luong\n      })),\n      label: {\n        formatter: \"{b}: {d}%\",\n        fontSize: 12,\n        overflow: \"truncate\"\n      },\n      labelLine: {\n        length: 10,\n        length2: 10\n      },\n      emphasis: {\n        itemStyle: {\n          shadowBlur: 8,\n          shadowOffsetX: 0,\n          shadowColor: \"rgba(0, 0, 0, 0.3)\"\n        }\n      },\n      itemStyle: {\n        borderRadius: 5,\n        borderColor: \"#fff\",\n        borderWidth: 1\n      }\n    }\n  ]\n}\n))(Chart2Copy1Copy.chartType) }}",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "chartData.99hlnx0j9q.data"
+    },
+    {
+      "key": "customEChartConfig"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "iyr52b8io3",
+  "labelOrientation": "auto",
+  "leftColumn": 49,
+  "minWidth": 450,
+  "mobileBottomRow": 32,
+  "mobileLeftColumn": 17,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 0,
+  "needsErrorInfo": true,
+  "parentColumnSpace": 22.765625,
+  "parentId": "k3phvwyv56",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "showDataPointLabel": false,
+  "topRow": 0,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "5rgird140v",
+  "widgetName": "Chart2Copy1Copy",
+  "xAxisName": "Product Line",
+  "yAxisName": "Revenue($)"
+}

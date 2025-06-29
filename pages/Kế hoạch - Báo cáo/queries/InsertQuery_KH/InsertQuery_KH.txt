@@ -1,0 +1,20 @@
+INSERT INTO public."ke_hoach" (
+	"so_ke_hoach",
+	"ten_ke_hoach",
+	"cap_ban_hanh_id",
+	"loai_ke_hoach_id",
+	"kh_cha_id",
+	"ngay_ban_hanh",
+	"duong_dan_file",
+	"mo_ta",
+	"bo_ke_hoach_id")
+VALUES (
+	'{{insert_form.formData.so_ke_hoach}}',
+	'{{insert_form.formData.ten_ke_hoach}}',
+	'{{insert_form.formData.cap_ban_hanh_id}}',
+	'{{insert_form.formData.loai_ke_hoach_id}}',
+	'{{insert_form.formData.kh_cha_id}}',
+	'{{insert_form.formData.ngay_ban_hanh}}',
+	'{{insert_form.formData.duong_dan_file}}',
+	'{{insert_form.formData.mo_ta}}',
+	'{{insert_form.formData.bo_ke_hoach_id}}');

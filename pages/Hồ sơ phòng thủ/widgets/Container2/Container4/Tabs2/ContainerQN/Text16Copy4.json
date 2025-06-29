@@ -1,0 +1,35 @@
+{
+  "borderRadius": "0px",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "dynamicBindingPathList": [
+    {
+      "key": "fontFamily"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": "true",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "overflow": "NONE",
+  "parentColumnSpace": 11.78515625,
+  "parentId": "lq3hx5q2qt",
+  "parentRowSpace": 10,
+  "rightColumn": 43,
+  "text": "Thông tin quân nhân ",
+  "textAlign": "LEFT",
+  "textColor": "#1d4ed8",
+  "topRow": 0,
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "7a4d94r15d",
+  "widgetName": "Text16Copy4"
+}

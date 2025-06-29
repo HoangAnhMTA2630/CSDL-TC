@@ -1,0 +1,11 @@
+INSERT INTO public."e_thiet_bi_mang" (
+  "ten_thiet_bi",
+  "loai_thiet_bi_id",
+  "ho_so_phong_thu_id",
+  "don_vi_id"
+) VALUES (
+  '{{insert_formTBM.formData.ten_thiet_bi}}',
+  '{{insert_formTBM.formData.loai_thiet_bi_id}}',
+  '{{insert_formTBM.formData.ho_so_phong_thu_id}}',
+  '{{insert_formTBM.formData.don_vi_id}}'
+);

@@ -1,0 +1,12 @@
+INSERT INTO public."bao_cao_cve" (
+
+	"webid",
+	"thiet_bi_id",
+	"bao_cao_don_vi_phong_thu_id",
+	"lo_hong_bao_mat_web_id")
+VALUES (
+
+	'{{insert_formTBM_CVE.formData.webid}}',
+	'{{insert_formTBM_CVE.formData.thiet_bi_id}}',
+	'{{insert_formTBM_CVE.formData.bao_cao_don_vi_phong_thu_id}}',
+	'{{insert_formTBM_CVE.formData.lo_hong_bao_mat_web_id}}');

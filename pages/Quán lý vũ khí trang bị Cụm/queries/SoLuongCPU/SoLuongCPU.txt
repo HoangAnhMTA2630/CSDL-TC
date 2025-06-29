@@ -1,0 +1,9 @@
+SELECT 
+  vtbm.gia_tri AS loai_cpu,
+  COUNT(DISTINCT tbm.id) AS so_luong_may_tinh
+FROM e_thiet_bi_mang tbm
+JOIN v_thiet_bi_mang vtbm ON tbm.id = vtbm.e_thiet_bi_mang_id
+WHERE tbm.loai_thiet_bi_id = 5        -- chỉ máy tính
+  AND vtbm.a_thiet_bi_mang_id = 4     -- chỉ thuộc tính CPU
+GROUP BY vtbm.gia_tri
+ORDER BY so_luong_may_tinh DESC;

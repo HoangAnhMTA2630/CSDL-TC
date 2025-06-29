@@ -1,0 +1,44 @@
+WITH RECURSIVE DonViDuocChon AS (
+  SELECT id, ten_don_vi
+  FROM don_vi_phong_thu
+  WHERE {{ TreeSelect.selectedOptionValue ? ("id = " + TreeSelect.selectedOptionValue) : "don_vi_cha_id IS NULL" }}
+),
+DonViConTrucTiep AS (
+  SELECT id, ten_don_vi
+  FROM don_vi_phong_thu
+  WHERE don_vi_cha_id = {{ TreeSelect.selectedOptionValue || 'NULL' }}
+),
+DonViConDeQuy AS (
+  SELECT id, ten_don_vi, id AS goc_id
+  FROM DonViConTrucTiep
+  UNION ALL
+  SELECT dv.id, dv.ten_don_vi, dvc.goc_id
+  FROM don_vi_phong_thu dv
+  JOIN DonViConDeQuy dvc ON dv.don_vi_cha_id = dvc.id
+)
+
+-- Đơn vị được chọn: priority = 0
+SELECT 
+  dvc.ten_don_vi AS x,
+  COUNT(etb.id) AS y,
+  0 AS priority
+FROM DonViDuocChon dvc
+LEFT JOIN ho_so_phong_thu hspt ON hspt.don_vi_id = dvc.id
+LEFT JOIN e_thiet_bi_mang etb ON etb.ho_so_phong_thu_id = hspt.id
+GROUP BY dvc.ten_don_vi
+
+UNION ALL
+
+-- Các đơn vị con: priority = 1
+SELECT 
+  dv_goc.ten_don_vi AS x,
+  COUNT(etb.id) AS y,
+  1 AS priority
+FROM DonViConDeQuy dvc
+JOIN don_vi_phong_thu dv_goc ON dv_goc.id = dvc.goc_id
+LEFT JOIN ho_so_phong_thu hspt ON hspt.don_vi_id = dvc.id
+LEFT JOIN e_thiet_bi_mang etb ON etb.ho_so_phong_thu_id = hspt.id
+GROUP BY dv_goc.ten_don_vi
+
+-- Sắp xếp A trước, rồi đến B, C...
+ORDER BY priority, x;

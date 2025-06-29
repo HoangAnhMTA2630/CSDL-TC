@@ -1,0 +1,18 @@
+INSERT INTO public."ho_so_phong_thu" (
+	"ten_ho_so",
+	"ngay_ban_hanh",
+	"ngay_sua_doi",
+	"so_do_tuyen_cap",
+	"so_do_logic",
+	"so_do_rack",
+	"duong_dan_file",
+	"don_vi_id")
+VALUES (
+	'{{insert_formHSPT.formData.ten_ho_so}}',
+	'{{insert_formHSPT.formData.ngay_ban_hanh}}',
+	'{{insert_formHSPT.formData.ngay_sua_doi}}',
+	'{{insert_formHSPT.formData.so_do_tuyen_cap}}',
+	'{{insert_formHSPT.formData.so_do_logic}}',
+	'{{insert_formHSPT.formData.so_do_rack}}',
+	'{{insert_formHSPT.formData.duong_dan_file}}',
+	'{{insert_formHSPT.formData.don_vi_id}}');

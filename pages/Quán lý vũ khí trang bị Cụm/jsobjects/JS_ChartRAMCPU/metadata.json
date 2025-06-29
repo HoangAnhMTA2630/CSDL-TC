@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "682d4d2a92cca105dbc17693_f85685e1-4117-411a-a0b1-5a3bb2f9f882",
+  "id": "Quán lý vũ khí trang bị Cụm_JS_ChartRAMCPU",
+  "unpublishedCollection": {
+    "name": "JS_ChartRAMCPU",
+    "pageId": "Quán lý vũ khí trang bị Cụm",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

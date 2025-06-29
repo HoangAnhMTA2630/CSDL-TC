@@ -1,0 +1,9 @@
+SELECT 
+    tinh_trang,
+    COUNT(*) AS so_luong_thiet_bi
+FROM 
+    public.e_thiet_bi_mang
+GROUP BY 
+    tinh_trang
+ORDER BY 
+    tinh_trang DESC;

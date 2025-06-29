@@ -1,0 +1,463 @@
+{
+  "animateLoading": true,
+  "autoGenerateForm": true,
+  "backgroundColor": "#FFFFFF",
+  "borderColor": "#fff",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "0",
+  "bottomRow": 72,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "childStylesheet": {
+    "ARRAY": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "cellBoxShadow": "none"
+    },
+    "CHECKBOX": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+    },
+    "CURRENCY_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "DATEPICKER": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "EMAIL_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "MULTILINE_TEXT_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "MULTISELECT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "NUMBER_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "OBJECT": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "cellBoxShadow": "none"
+    },
+    "PASSWORD_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "PHONE_NUMBER_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "RADIO_GROUP": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "boxShadow": "none"
+    },
+    "SELECT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "SWITCH": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "boxShadow": "none"
+    },
+    "TEXT_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    }
+  },
+  "disabledWhenInvalid": true,
+  "displayName": "JSON Form",
+  "dynamicBindingPathList": [
+    {
+      "key": "schema.__root_schema__.defaultValue"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "schema.__root_schema__.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.cellBorderRadius"
+    },
+    {
+      "key": "resetButtonStyles.buttonColor"
+    },
+    {
+      "key": "resetButtonStyles.borderRadius"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "submitButtonStyles.borderRadius"
+    },
+    {
+      "key": "submitButtonStyles.buttonColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_ho_so.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_ho_so.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_ho_so.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.ngay_ban_hanh.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.ngay_ban_hanh.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.ngay_ban_hanh.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.ngay_sua_doi.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.ngay_sua_doi.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.ngay_sua_doi.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.so_do_tuyen_cap.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.so_do_tuyen_cap.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.so_do_tuyen_cap.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.so_do_logic.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.so_do_logic.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.so_do_logic.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.so_do_rack.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.so_do_rack.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.duong_dan_file.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.duong_dan_file.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.duong_dan_file.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.don_vi_id.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.don_vi_id.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.don_vi_id.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.so_do_rack.defaultValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onSubmit"
+    }
+  ],
+  "fieldLimitExceeded": false,
+  "fixedFooter": true,
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.6bacf7df.svg",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "h9l9ozr8op",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "onSubmit": "{{UpdateQueryHSPT.run(() => {\n  SelectQueryHSPT.run();\n  closeModal(ModalView.name);\n}, error => {\n  showAlert(`Error while updating resource!\\n ${error}`, 'error');\n});\nresetWidget(\"Container3Copy1\", true);\nremoveValue('uploadedFilePathUpload');\nremoveValue('uploadedSDTCUpload');\nremoveValue('uploadedSDLGUpload');\nremoveValue('uploadedSDTRUpload');}}",
+  "originalBottomRow": 72,
+  "originalTopRow": 10,
+  "parentColumnSpace": 16.3125,
+  "parentId": "fl24y4s150",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetButtonLabel": "Reset",
+  "resetButtonStyles": {
+    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "boxShadow": "none",
+    "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+    "buttonVariant": "SECONDARY"
+  },
+  "rightColumn": 64,
+  "schema": {
+    "__root_schema__": {
+      "accessor": "__root_schema__",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "cellBoxShadow": "none",
+      "children": {
+        "don_vi_id": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "accessor": "don_vi_id",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "number",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.don_vi_id))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "fieldType": "Number Input",
+          "iconAlign": "left",
+          "identifier": "don_vi_id",
+          "isCustomField": false,
+          "isDisabled": true,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Don Vi Id",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "don_vi_id",
+          "position": 7,
+          "sourceData": 10
+        },
+        "duong_dan_file": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "accessor": "duong_dan_file",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (appsmith.store.uploadedFilePathUpload ? appsmith.store.uploadedFilePathUpload : sourceData.duong_dan_file))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "duong_dan_file",
+          "isCustomField": false,
+          "isDisabled": true,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Duong Dan File",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "duong_dan_file",
+          "position": 3,
+          "sourceData": "/files/hoso1.pdf"
+        },
+        "ngay_ban_hanh": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "accessor": "ngay_ban_hanh",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "closeOnSelection": false,
+          "convertToISO": false,
+          "dataType": "string",
+          "dateFormat": "YYYY-MM-DD",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (moment(sourceData.ngay_ban_hanh, \"YYYY-MM-DD\").format(\"YYYY-MM-DDTHH:mm:ss.sssZ\")))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "fieldType": "Datepicker",
+          "identifier": "ngay_ban_hanh",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isVisible": true,
+          "label": "Ngay Ban Hanh",
+          "labelTextSize": "0.875rem",
+          "maxDate": "2121-12-31T18:29:00.000Z",
+          "minDate": "1920-12-31T18:30:00.000Z",
+          "originalIdentifier": "ngay_ban_hanh",
+          "position": 1,
+          "shortcuts": false,
+          "sourceData": "2025-01-10",
+          "timePrecision": "minute"
+        },
+        "ngay_sua_doi": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "accessor": "ngay_sua_doi",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "closeOnSelection": false,
+          "convertToISO": false,
+          "dataType": "null",
+          "dateFormat": "YYYY-MM-DD",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.ngay_sua_doi))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "fieldType": "Datepicker",
+          "identifier": "ngay_sua_doi",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isVisible": true,
+          "label": "Ngay Sua Doi",
+          "labelTextSize": "0.875rem",
+          "maxDate": "2121-12-31T18:29:00.000Z",
+          "minDate": "1920-12-31T18:30:00.000Z",
+          "originalIdentifier": "ngay_sua_doi",
+          "position": 2,
+          "shortcuts": false,
+          "timePrecision": "minute"
+        },
+        "so_do_logic": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "accessor": "so_do_logic",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (appsmith.store.uploadedSDLGUpload ? appsmith.store.uploadedSDLGUpload : sourceData.so_do_logic))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "so_do_logic",
+          "isCustomField": false,
+          "isDisabled": true,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "So Do Logic",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "so_do_logic",
+          "position": 5,
+          "sourceData": "/files/logic1.pdf"
+        },
+        "so_do_rack": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "accessor": "so_do_rack",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (appsmith.store.uploadedSDTRUpload ? appsmith.store.uploadedSDTRUpload : sourceData.so_do_rack))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "so_do_rack",
+          "isCustomField": false,
+          "isDisabled": true,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "So Do Tu Rack",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "so_do_rack",
+          "position": 6,
+          "sourceData": "/files/rack1.pdf"
+        },
+        "so_do_tuyen_cap": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "accessor": "so_do_tuyen_cap",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (appsmith.store.uploadedSDTCUpload ? appsmith.store.uploadedSDTCUpload : sourceData.so_do_tuyen_cap))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "so_do_tuyen_cap",
+          "isCustomField": false,
+          "isDisabled": true,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "So Do Tuyen Cap",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "so_do_tuyen_cap",
+          "position": 4,
+          "sourceData": "/files/tuyencap1.pdf"
+        },
+        "ten_ho_so": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "accessor": "ten_ho_so",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.ten_ho_so))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "ten_ho_so",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": true,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Ten Ho So",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "ten_ho_so",
+          "position": 0,
+          "sourceData": "Hồ sơ phòng thủ QK5"
+        }
+      },
+      "dataType": "object",
+      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData))(update_formHSPT.sourceData, update_formHSPT.formData, update_formHSPT.fieldState)}}",
+      "fieldType": "Object",
+      "identifier": "__root_schema__",
+      "isCustomField": false,
+      "isDisabled": false,
+      "isRequired": false,
+      "isVisible": true,
+      "label": "",
+      "labelTextSize": "0.875rem",
+      "originalIdentifier": "__root_schema__",
+      "position": -1,
+      "sourceData": {
+        "col1": 5,
+        "col2": "skill B",
+        "col3": 9,
+        "col4": true
+      }
+    }
+  },
+  "scrollContents": true,
+  "showReset": false,
+  "sourceData": "{{_.omit(data_tableHSPT.triggeredRow, \"customColumn1\", \"__originalIndex__\", \"id\")}}",
+  "submitButtonLabel": "Cập nhật",
+  "submitButtonStyles": {
+    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "boxShadow": "none",
+    "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+    "buttonVariant": "PRIMARY"
+  },
+  "title": "",
+  "topRow": 10,
+  "type": "JSON_FORM_WIDGET",
+  "version": 1,
+  "widgetId": "4sssm4fjlk",
+  "widgetName": "update_formHSPT"
+}

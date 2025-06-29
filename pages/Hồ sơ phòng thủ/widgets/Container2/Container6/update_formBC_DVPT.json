@@ -1,0 +1,571 @@
+{
+  "animateLoading": true,
+  "autoGenerateForm": true,
+  "backgroundColor": "#FFFFFF",
+  "borderColor": "#fff",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "0",
+  "bottomRow": 37,
+  "bottomRowBeforeCollapse": 37,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "childStylesheet": {
+    "ARRAY": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "cellBoxShadow": "none"
+    },
+    "CHECKBOX": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+    },
+    "CURRENCY_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "DATEPICKER": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "EMAIL_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "MULTILINE_TEXT_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "MULTISELECT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "NUMBER_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "OBJECT": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "cellBoxShadow": "none"
+    },
+    "PASSWORD_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "PHONE_NUMBER_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "RADIO_GROUP": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "boxShadow": "none"
+    },
+    "SELECT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "SWITCH": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "boxShadow": "none"
+    },
+    "TEXT_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    }
+  },
+  "disabledWhenInvalid": true,
+  "displayName": "JSON Form",
+  "dynamicBindingPathList": [
+    {
+      "key": "schema.__root_schema__.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.cellBorderRadius"
+    },
+    {
+      "key": "resetButtonStyles.buttonColor"
+    },
+    {
+      "key": "resetButtonStyles.borderRadius"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "submitButtonStyles.borderRadius"
+    },
+    {
+      "key": "submitButtonStyles.buttonColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.don_vi_id.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.don_vi_id.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.don_vi_id.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.bao_cao_id.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.bao_cao_id.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.bao_cao_id.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.so_bao_cao.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.so_bao_cao.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.so_bao_cao.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_bao_cao.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_bao_cao.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_bao_cao.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.loai_bao_cao_id.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.loai_bao_cao_id.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.loai_bao_cao_id.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.cap_bao_cao_id.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.cap_bao_cao_id.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.cap_bao_cao_id.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.ngay_ban_hanh.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.ngay_ban_hanh.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.ngay_ban_hanh.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.ngay_sua_doi.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.ngay_sua_doi.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.ngay_sua_doi.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.trang_thai.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.trang_thai.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.trang_thai.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.duong_dan_file.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.duong_dan_file.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.duong_dan_file.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.mo_ta.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.mo_ta.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.mo_ta.accentColor"
+    },
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "schema.__root_schema__.children.bao_cao_id.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.bao_cao_id.placeholderText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "schema.__root_schema__.children.date_of_birth.defaultValue"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "onSubmit"
+    },
+    {
+      "key": "schema.__root_schema__.children.ngay_ban_hanh.defaultValue"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onSubmit"
+    }
+  ],
+  "fieldLimitExceeded": false,
+  "fixedFooter": true,
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.6bacf7df.svg",
+  "isLoading": false,
+  "isVisible": "{{ appsmith.store.showTabBC }}",
+  "key": "h9l9ozr8op",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 44,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "onSubmit": "{{UpdateQueryBC_DVPT.run(() => QueryAllBC.run(), (error) => showAlert(`Error while updating resource!\\n ${error}`,'error'))}}",
+  "originalBottomRow": 37,
+  "originalTopRow": 0,
+  "parentColumnSpace": 16.3125,
+  "parentId": "7d5iqkjx5z",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetButtonLabel": "Reset",
+  "resetButtonStyles": {
+    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "boxShadow": "none",
+    "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+    "buttonVariant": "SECONDARY"
+  },
+  "rightColumn": 64,
+  "schema": {
+    "__root_schema__": {
+      "accessor": "__root_schema__",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "cellBoxShadow": "none",
+      "children": {
+        "bao_cao_id": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "accessor": "bao_cao_id",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "number",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (data_tableBC_DVPT.selectedRow.bao_cao_id))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "fieldType": "Select",
+          "identifier": "bao_cao_id",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isFilterable": false,
+          "isRequired": false,
+          "isVisible": true,
+          "label": "So Bao cao",
+          "labelTextSize": "0.875rem",
+          "options": "{{ QueryBCNotInDVPT.data }}",
+          "originalIdentifier": "bao_cao_id",
+          "placeholderText": "{{((sourceData, formData, fieldState) => (data_tableBC_DVPT.selectedRow.so_bao_cao))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "position": 1,
+          "serverSideFiltering": false,
+          "sourceData": 63
+        },
+        "cap_bao_cao_id": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "accessor": "cap_bao_cao_id",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "number",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.cap_bao_cao_id))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "fieldType": "Number Input",
+          "iconAlign": "left",
+          "identifier": "cap_bao_cao_id",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Cap Bao Cao Id",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "cap_bao_cao_id",
+          "position": 5,
+          "sourceData": 1
+        },
+        "don_vi_id": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "accessor": "don_vi_id",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "number",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (data_tableBC_DVPT.selectedRow.don_vi_id))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "fieldType": "Number Input",
+          "iconAlign": "left",
+          "identifier": "don_vi_id",
+          "isCustomField": false,
+          "isDisabled": true,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Don Vi Id",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "don_vi_id",
+          "position": 0,
+          "sourceData": 4
+        },
+        "duong_dan_file": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "accessor": "duong_dan_file",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.duong_dan_file))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "duong_dan_file",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Duong Dan File",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "duong_dan_file",
+          "position": 9,
+          "sourceData": "/files/bao_cao_001.pdf"
+        },
+        "loai_bao_cao_id": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "accessor": "loai_bao_cao_id",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "number",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.loai_bao_cao_id))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "fieldType": "Number Input",
+          "iconAlign": "left",
+          "identifier": "loai_bao_cao_id",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Loai Bao Cao Id",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "loai_bao_cao_id",
+          "position": 4,
+          "sourceData": 2
+        },
+        "mo_ta": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "accessor": "mo_ta",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.mo_ta))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "mo_ta",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Mo Ta",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "mo_ta",
+          "position": 10,
+          "sourceData": "Mô tả  báo cáo3"
+        },
+        "ngay_ban_hanh": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "accessor": "ngay_ban_hanh",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "closeOnSelection": false,
+          "convertToISO": false,
+          "dataType": "string",
+          "dateFormat": "YYYY-MM-DD",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (moment(sourceData.ngay_ban_hanh, \"YYYY-MM-DD\").format(\"YYYY-MM-DDTHH:mm:ss.sssZ\")))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "fieldType": "Datepicker",
+          "identifier": "ngay_ban_hanh",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isVisible": false,
+          "label": "Ngay Ban Hanh",
+          "labelTextSize": "0.875rem",
+          "maxDate": "2121-12-31T18:29:00.000Z",
+          "minDate": "1920-12-31T18:30:00.000Z",
+          "originalIdentifier": "ngay_ban_hanh",
+          "position": 6,
+          "shortcuts": false,
+          "sourceData": "2024-01-03",
+          "timePrecision": "minute"
+        },
+        "ngay_sua_doi": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "accessor": "ngay_sua_doi",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "null",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.ngay_sua_doi))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "ngay_sua_doi",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Ngay Sua Doi",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "ngay_sua_doi",
+          "position": 7
+        },
+        "so_bao_cao": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "accessor": "so_bao_cao",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.so_bao_cao))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "so_bao_cao",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "So Bao Cao",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "so_bao_cao",
+          "position": 2,
+          "sourceData": "10"
+        },
+        "ten_bao_cao": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "accessor": "ten_bao_cao",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.ten_bao_cao))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "ten_bao_cao",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Ten Bao Cao",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "ten_bao_cao",
+          "position": 3,
+          "sourceData": "Báo cáophòng thủ năm 2024 - Trung Tâm"
+        },
+        "trang_thai": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "accessor": "trang_thai",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.trang_thai))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "trang_thai",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Trang Thai",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "trang_thai",
+          "position": 8,
+          "sourceData": "Hoàn thành"
+        }
+      },
+      "dataType": "object",
+      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData))(update_formBC_DVPT.sourceData, update_formBC_DVPT.formData, update_formBC_DVPT.fieldState)}}",
+      "fieldType": "Object",
+      "identifier": "__root_schema__",
+      "isCustomField": false,
+      "isDisabled": false,
+      "isRequired": false,
+      "isVisible": true,
+      "label": "",
+      "labelTextSize": "0.875rem",
+      "originalIdentifier": "__root_schema__",
+      "position": -1,
+      "sourceData": {
+        "col1": 5,
+        "col2": "skill B",
+        "col3": 9,
+        "col4": true
+      }
+    }
+  },
+  "scrollContents": true,
+  "showReset": false,
+  "sourceData": "",
+  "submitButtonLabel": "Cập nhật",
+  "submitButtonStyles": {
+    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "boxShadow": "none",
+    "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+    "buttonVariant": "PRIMARY"
+  },
+  "title": "Cập nhật:",
+  "topRow": 4,
+  "topRowBeforeCollapse": 0,
+  "type": "JSON_FORM_WIDGET",
+  "useSourceData": false,
+  "version": 1,
+  "widgetId": "edlu2rko26",
+  "widgetName": "update_formBC_DVPT"
+}

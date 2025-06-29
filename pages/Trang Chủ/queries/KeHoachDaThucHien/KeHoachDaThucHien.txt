@@ -1,0 +1,18 @@
+SELECT 
+    CASE 
+        WHEN EXISTS (
+            SELECT 1 FROM ke_hoach_bao_cao khbc 
+            WHERE khbc.ke_hoach_id = kh.id
+        ) THEN 'Đã hoàn thành'
+        ELSE 'Chưa hoàn thành'
+    END AS x,
+    COUNT(*) AS y
+FROM ke_hoach kh
+GROUP BY 
+    CASE 
+        WHEN EXISTS (
+            SELECT 1 FROM ke_hoach_bao_cao khbc 
+            WHERE khbc.ke_hoach_id = kh.id
+        ) THEN 'Đã hoàn thành'
+        ELSE 'Chưa hoàn thành'
+    END;

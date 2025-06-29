@@ -1,0 +1,2 @@
+DELETE FROM public."bao_cao"
+  WHERE "id" = {{data_tableBCNotInKH.triggeredRow.id}};

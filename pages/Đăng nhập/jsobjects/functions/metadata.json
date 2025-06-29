@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "682d4d2a92cca105dbc17693_00467afc-691e-454f-8ff9-8921639ef1a0",
+  "id": "Đăng nhập_functions",
+  "unpublishedCollection": {
+    "name": "functions",
+    "pageId": "Đăng nhập",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "defaultTab",
+        "value": "'Sign In'"
+      }
+    ]
+  }
+}

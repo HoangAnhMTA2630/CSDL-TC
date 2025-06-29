@@ -1,0 +1,9 @@
+SELECT 
+    dv.ten_don_vi,
+    COUNT(tb.id) AS so_luong_thiet_bi
+FROM 
+    e_thiet_bi_mang tb
+JOIN 
+    don_vi dv ON tb.don_vi_id = dv.id
+GROUP BY 
+    dv.ten_don_vi;

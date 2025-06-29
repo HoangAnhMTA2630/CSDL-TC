@@ -1,0 +1,51 @@
+-- Lấy tài liệu liên kết trực tiếp với mục tiêu
+SELECT 
+    tl.id AS tai_lieu_id,
+    tl.ten_file,
+    tl.kich_thuoc,
+    tl.doi_mat,
+    tl.ngay_ban_hanh,
+    tl.ngay_tai_len,
+    tl.cap_do,
+    tl.duong_dan_file,
+    tl.mo_ta,
+    mt.id AS muc_tieu_id,
+    mt.domain,
+    tk.username,
+    tk.pass,
+    'Trực tiếp' AS cach_lien_ket
+FROM 
+    public.tai_lieu tl
+JOIN 
+    public.muc_tieu mt ON tl.muc_tieu_id = mt.id
+LEFT JOIN 
+    public.tai_khoan tk ON tl.tai_khoan_id = tk.id
+WHERE
+	mt.id = {{Table.triggeredRow.id}}
+
+UNION
+
+-- Lấy tài liệu liên kết gián tiếp qua tài khoản
+SELECT 
+    tl.id AS tai_lieu_id,
+    tl.ten_file,
+    tl.kich_thuoc,
+    tl.doi_mat,
+    tl.ngay_ban_hanh,
+    tl.ngay_tai_len,
+    tl.cap_do,
+    tl.duong_dan_file,
+    tl.mo_ta,
+    mt.id AS muc_tieu_id,
+    mt.domain,
+    tk.username,
+    tk.pass,
+    'Qua tài khoản' AS cach_lien_ket
+FROM 
+    public.tai_lieu tl
+JOIN 
+    public.tai_khoan tk ON tl.tai_khoan_id = tk.id
+JOIN 
+    public.muc_tieu mt ON tk.muc_tieu_id = mt.id
+WHERE
+	mt.id = {{Table.triggeredRow.id}}

@@ -1,0 +1,18 @@
+SELECT DISTINCT 
+  bc.*, 
+  cbc.ten_cap AS cap_bao_cao,
+  lbc.ten_loai_bao_cao AS loai_bao_cao
+FROM public."bao_cao" bc
+JOIN public."ke_hoach_bao_cao" khbc ON bc."id" = khbc."bao_cao_id"
+JOIN public."ke_hoach" kh ON khbc."ke_hoach_id" = kh."id"
+LEFT JOIN public."cap" cbc ON bc."cap_bao_cao_id" = cbc."id"
+LEFT JOIN public."loai_bao_cao" lbc ON bc."loai_bao_cao_id" = lbc."id"
+WHERE bc."so_bao_cao" ILIKE '%{{data_tableBC.searchText || ""}}%'
+  AND (
+    ({{ data_table_KH.selectedRows.length > 0 }} AND kh."id" = ANY (
+      ARRAY[{{ data_table_KH.selectedRows.map(row => row.id).join(',') }}]::integer[]
+    ))
+    OR ({{ data_table_KH.selectedRows.length === 0 && !!appsmith.store.IDBoKH }} AND kh."bo_ke_hoach_id" = {{ appsmith.store.IDBoKH }})
+    OR ({{ data_table_KH.selectedRows.length === 0 && !appsmith.store.IDBoKH }})
+  )
+ORDER BY "{{data_tableBC.sortOrder.column || 'id'}}" {{data_tableBC.sortOrder.order || 'ASC'}}

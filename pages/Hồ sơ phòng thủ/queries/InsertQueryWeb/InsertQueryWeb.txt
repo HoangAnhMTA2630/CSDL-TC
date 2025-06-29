@@ -1,0 +1,16 @@
+INSERT INTO public."web" (
+	"ten",
+	"url",
+	"ip_public",
+	"ip_private",
+	"port",
+	"don_vi_phong_thu_id",
+	"thiet_bi_mang_id")
+VALUES (
+	'{{insert_formWeb.formData.ten}}',
+	'{{insert_formWeb.formData.url}}',
+	'{{insert_formWeb.formData.ip_public}}',
+	'{{insert_formWeb.formData.ip_private}}',
+	'{{insert_formWeb.formData.port}}',
+	'{{insert_formWeb.formData.don_vi_phong_thu_id}}',
+	'{{insert_formWeb.formData.thiet_bi_mang_id}}');

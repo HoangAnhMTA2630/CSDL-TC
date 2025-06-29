@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "682d4d2a92cca105dbc17693_4721f0b8-94c2-4a8b-9eab-9cd4a660b1f8",
+  "id": "Quán lý vũ khí trang bị Cụm_JS_LevelCPU",
+  "unpublishedCollection": {
+    "name": "JS_LevelCPU",
+    "pageId": "Quán lý vũ khí trang bị Cụm",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "cpuLevel",
+        "value": "({\n  \"i3\": 1,\n  \"i5\": 2,\n  \"i7\": 3,\n  \"i9\": 4\n})[Select_CPU.selectedOptionValue]"
+      }
+    ]
+  }
+}

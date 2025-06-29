@@ -1,0 +1,35 @@
+{
+  "borderRadius": "0px",
+  "bottomRow": 5,
+  "boxShadow": "none",
+  "dynamicBindingPathList": [
+    {
+      "key": "fontFamily"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": "true",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "overflow": "NONE",
+  "parentColumnSpace": 11.78515625,
+  "parentId": "t7vdzyki8y",
+  "parentRowSpace": 10,
+  "rightColumn": 18,
+  "text": "Danh sách Báo cáo không thuộc kế hoạch",
+  "textAlign": "LEFT",
+  "textColor": "#1d4ed8",
+  "topRow": 1,
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "x3liz1sqik",
+  "widgetName": "Text16CopyCopy"
+}

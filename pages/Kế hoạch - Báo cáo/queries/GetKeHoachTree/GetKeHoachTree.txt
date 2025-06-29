@@ -1,0 +1,32 @@
+-- Lấy thông tin chi tiết về các bộ kế hoạch, bao gồm loại kế hoạch và thời gian liên quan
+SELECT
+    bk.ID AS Bo_ke_hoach_ID,                     -- ID của Bộ kế hoạch
+    bk.Ten_bo_ke_hoach,                          -- Tên của Bộ kế hoạch
+    bk.Mo_ta AS Bo_ke_hoach_Mo_ta,               -- Mô tả của Bộ kế hoạch
+
+    lk.ID AS Loai_ke_hoach_ID,                   -- ID của Loại kế hoạch
+    lk.Ten_loai_ke_hoach,                        -- Tên của Loại kế hoạch (ví dụ: 'Kế hoạch kinh doanh', 'Kế hoạch sản xuất')
+
+    tg.ID AS Thoi_gian_ID,                       -- ID của Thời gian cụ thể
+    tg.Nam,                                      -- Năm của thời gian
+    tg.Quy,                                      -- Quý của thời gian (có thể NULL)
+    tg.Thang,                                    -- Tháng của thời gian (có thể NULL)
+    tg.Tuan,                                     -- Tuần của thời gian (có thể NULL)
+
+    ltg.ID AS Loai_thoi_gian_Type_ID,            -- ID của Loại thời gian (từ bảng Loai_thoi_gian)
+    ltg.Ten_loai_thoi_gian                       -- Tên loại thời gian (ví dụ: 'Năm', 'Quý', 'Tháng', 'Tuần')
+FROM
+    Bo_ke_hoach AS bk                            -- Bảng Bộ_ke_hoach
+JOIN
+    Loai_ke_hoach AS lk ON bk.Loai_ke_hoach_ID = lk.ID -- Nối với bảng Loại_ke_hoach
+JOIN
+    Thoi_gian AS tg ON bk.Thoi_gian_ID = tg.ID     -- Nối với bảng Thời_gian
+JOIN
+    Loai_thoi_gian AS ltg ON tg.Loai_thoi_gian_ID = ltg.ID -- Nối với bảng Loại_thoi_gian
+ORDER BY
+    lk.Ten_loai_ke_hoach,
+    tg.Nam DESC,
+    tg.Quy DESC,
+    tg.Thang DESC,
+    tg.Tuan DESC,
+    ltg.Ten_loai_thoi_gian;

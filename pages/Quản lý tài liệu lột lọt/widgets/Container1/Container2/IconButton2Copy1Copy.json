@@ -1,0 +1,44 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "#e15615",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "delete",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "og67mmur3n",
+  "leftColumn": 60,
+  "minWidth": 50,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 26,
+  "mobileRightColumn": 30,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "onClick": "{{showModal(Delete.name);}}",
+  "originalBottomRow": 64,
+  "originalTopRow": 60,
+  "parentColumnSpace": 19.9375,
+  "parentId": "wy3zd27u9t",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "kv87hl6zk7",
+  "widgetName": "IconButton2Copy1Copy"
+}

@@ -1,0 +1,11 @@
+UPDATE public."bao_cao" SET
+		"so_bao_cao" = '{{update_formBC.fieldState.so_bao_cao.isVisible ? update_formBC.formData.so_bao_cao : update_formBC.sourceData.so_bao_cao}}',
+		"ten_bao_cao" = '{{update_formBC.fieldState.ten_bao_cao.isVisible ? update_formBC.formData.ten_bao_cao : update_formBC.sourceData.ten_bao_cao}}',
+    "loai_bao_cao_id" = '{{update_formBC.fieldState.loai_bao_cao_id.isVisible ? update_formBC.formData.loai_bao_cao_id : update_formBC.sourceData.loai_bao_cao_id}}',
+		"cap_bao_cao_id" = '{{update_formBC.fieldState.cap_bao_cao_id.isVisible ? update_formBC.formData.cap_bao_cao_id : update_formBC.sourceData.cap_bao_cao_id}}',
+		"ngay_ban_hanh" = '{{update_formBC.fieldState.ngay_ban_hanh.isVisible ? update_formBC.formData.ngay_ban_hanh : update_formBC.sourceData.ngay_ban_hanh}}',
+		"ngay_sua_doi" = '{{update_formBC.fieldState.ngay_sua_doi.isVisible ? update_formBC.formData.ngay_sua_doi : update_formBC.sourceData.ngay_sua_doi}}',
+		"trang_thai" = '{{update_formBC.fieldState.trang_thai.isVisible ? update_formBC.formData.trang_thai : update_formBC.sourceData.trang_thai}}',
+		"duong_dan_file" = '{{update_formBC.fieldState.duong_dan_file.isVisible ? update_formBC.formData.duong_dan_file : update_formBC.sourceData.duong_dan_file}}',
+		"mo_ta" = '{{update_form_KH.fieldState.mo_ta.isVisible ? update_formBC.formData.mo_ta : update_formBC.sourceData.mo_ta}}'
+WHERE "id" = {{data_tableBC.triggeredRow.id}};

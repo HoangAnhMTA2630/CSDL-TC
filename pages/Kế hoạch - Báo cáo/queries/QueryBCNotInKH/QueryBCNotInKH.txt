@@ -1,0 +1,11 @@
+SELECT 
+  bc.*
+FROM bao_cao bc
+WHERE bc.id NOT IN (
+  SELECT DISTINCT bao_cao_id FROM ke_hoach_bao_cao
+)
+AND 1=1
+  {{ SelectNamBCNotInKH.selectedOptionValue ? `AND EXTRACT(YEAR FROM bc.ngay_ban_hanh) = ${SelectNamBCNotInKH.selectedOptionValue}` : "" }}
+  {{ SelectQuyBCNotInKH.selectedOptionValue ? `
+      AND CEIL(EXTRACT(MONTH FROM bc.ngay_ban_hanh)::numeric / 3) = ${SelectQuyBCNotInKH.selectedOptionValue}` : "" }}
+  {{ SelectThangBCNotInKH.selectedOptionValue ? `AND EXTRACT(MONTH FROM bc.ngay_ban_hanh) = ${SelectThangBCNotInKH.selectedOptionValue}` : "" }};

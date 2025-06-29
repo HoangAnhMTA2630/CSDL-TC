@@ -1,0 +1,10 @@
+SELECT 
+    cap_trang_bi,
+    COUNT(*) AS so_luong_thiet_bi
+FROM 
+    public.e_thiet_bi_mang
+GROUP BY 
+    cap_trang_bi
+ORDER BY 
+    cap_trang_bi ASC;
+		

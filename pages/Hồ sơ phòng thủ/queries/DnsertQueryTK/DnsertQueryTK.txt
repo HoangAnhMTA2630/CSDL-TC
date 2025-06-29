@@ -1,0 +1,2 @@
+DELETE FROM public."tai_khoan_quan_tri"
+  WHERE "id" = {{data_tableTK.triggeredRow.id}};

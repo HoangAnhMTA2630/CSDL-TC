@@ -1,0 +1,1 @@
+UPDATE public.doi_tuong_tc SET "ten_to_chuc"= '{{Table_DV.updatedRow.ten_to_chuc}}', "ban_nganh"= '{{Table_DV.updatedRow.ban_nganh}}' WHERE "id"= {{Table_DV.updatedRow.id}};

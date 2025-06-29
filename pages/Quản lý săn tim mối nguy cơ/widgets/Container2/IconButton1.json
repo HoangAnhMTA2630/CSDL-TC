@@ -1,0 +1,40 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "iconName": "reset",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "og67mmur3n",
+  "leftColumn": 49,
+  "minWidth": 50,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 49,
+  "mobileRightColumn": 53,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 19.62109375,
+  "parentId": "ycu59n7k2h",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 53,
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "lfl1iif9nd",
+  "widgetName": "IconButton1"
+}

@@ -1,0 +1,8 @@
+INSERT INTO public."v_thiet_bi_mang" (
+	"e_thiet_bi_mang_id",
+	"a_thiet_bi_mang_id",
+	"gia_tri")
+VALUES (
+	'{{data_tableTBM.selectedRow.id}}',
+	'{{insert_formTSKT.formData.thuoc_tinh}}',
+	'{{insert_formTSKT.formData.gia_tri}}');

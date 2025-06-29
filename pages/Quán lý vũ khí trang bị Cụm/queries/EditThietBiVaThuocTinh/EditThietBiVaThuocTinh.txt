@@ -1,0 +1,37 @@
+WITH thiet_bi_cte AS (
+    SELECT 
+        e.id AS e_id
+    FROM 
+        e_thiet_bi_mang e
+    JOIN loai_thiet_bi l ON e.loai_thiet_bi_id = l.id
+    JOIN don_vi d ON e.don_vi_id = d.id
+    WHERE 
+        e.id = {{Table4.updatedRow.id_thiet_bi}} AND
+        e.quanh_nhan_id = {{ TableQNTB.triggeredRow.id }}
+),
+thuoc_tinh_map AS (
+    SELECT * FROM a_thiet_bi_mang
+    WHERE ten_thuoc_tinh IN (
+        'CPU', 'HDH', 'Ram', 'Rom', 
+        'Ports', 'IP Public', 'IP Private', 
+        'Protocol', 'SSID'
+    )
+)
+UPDATE v_thiet_bi_mang v
+SET gia_tri = CASE a.ten_thuoc_tinh
+    WHEN 'CPU' THEN {{ "'" + (Table4.triggeredRow.CPU || '') + "'" }}
+    WHEN 'HDH' THEN {{ "'" + (Table4.triggeredRow.HDH || '') + "'" }}
+    WHEN 'Ram' THEN {{ "'" + (Table4.triggeredRow.Ram || '') + "'" }}
+    WHEN 'Rom' THEN {{ "'" + (Table4.triggeredRow.Rom || '') + "'" }}
+
+    WHEN 'Ports' THEN {{ "'" + (Table4.triggeredRow.Ports || '') + "'" }}
+    WHEN 'IP Public' THEN {{ "'" + (Table4.triggeredRow["IP Public"] || '') + "'" }}
+    WHEN 'IP Private' THEN {{ "'" + (Table4.triggeredRow["IP Private"] || '') + "'" }}
+    WHEN 'Protocol' THEN {{ "'" + (Table4.triggeredRow.Protocol || '') + "'" }}
+    WHEN 'SSID' THEN {{ "'" + (Table4.triggeredRow.SSID || '') + "'" }}
+    ELSE v.gia_tri
+END
+FROM thiet_bi_cte t, thuoc_tinh_map a
+WHERE 
+    v.e_thiet_bi_mang_id = t.e_id AND
+    v.a_thiet_bi_mang_id = a.id;

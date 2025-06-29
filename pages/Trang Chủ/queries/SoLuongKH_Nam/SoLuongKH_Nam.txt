@@ -1,0 +1,5 @@
+SELECT EXTRACT(YEAR FROM Ngay_ban_hanh) AS x, COUNT(*) AS y
+FROM Ke_hoach
+WHERE Ngay_ban_hanh IS NOT NULL
+GROUP BY EXTRACT(YEAR FROM Ngay_ban_hanh)
+ORDER BY x;

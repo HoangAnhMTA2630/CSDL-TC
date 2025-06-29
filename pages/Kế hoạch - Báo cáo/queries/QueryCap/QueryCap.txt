@@ -1,0 +1,1 @@
+SELECT ten_cap as label, id as value FROM public."cap" ;

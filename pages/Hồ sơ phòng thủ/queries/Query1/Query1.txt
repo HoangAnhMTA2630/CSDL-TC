@@ -1,0 +1,21 @@
+SELECT 
+  ltb.ten_loai_thiet_bi AS x,
+  COUNT(etbm.id) AS y
+FROM e_thiet_bi_mang etbm
+JOIN loai_thiet_bi ltb ON etbm.loai_thiet_bi_id = ltb.id
+JOIN ho_so_phong_thu hspt ON etbm.ho_so_phong_thu_id = hspt.id
+WHERE 1=1
+  {{ TreeSelect.selectedOptionValue ? 
+    `AND hspt.don_vi_id IN (
+      WITH RECURSIVE don_vi_con AS (
+        SELECT id FROM don_vi_phong_thu WHERE id = ${TreeSelect.selectedOptionValue}
+        UNION ALL
+        SELECT dv.id FROM don_vi_phong_thu dv
+        JOIN don_vi_con dvc ON dv.don_vi_cha_id = dvc.id
+      )
+      SELECT id FROM don_vi_con
+    )`
+  : "" }}
+GROUP BY ltb.ten_loai_thiet_bi
+ORDER BY y DESC;
+

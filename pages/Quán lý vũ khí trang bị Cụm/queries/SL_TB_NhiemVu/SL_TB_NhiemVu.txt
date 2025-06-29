@@ -1,0 +1,6 @@
+SELECT 
+  loai_vu_khi,
+  COUNT(*) AS so_luong_thiet_bi
+FROM vu_khi_mang
+GROUP BY loai_vu_khi
+ORDER BY so_luong_thiet_bi DESC;

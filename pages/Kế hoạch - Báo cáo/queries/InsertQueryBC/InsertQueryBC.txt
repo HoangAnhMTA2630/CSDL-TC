@@ -1,0 +1,21 @@
+INSERT INTO public."bao_cao" (
+	"so_bao_cao",
+	"ten_bao_cao",
+	"loai_bao_cao_id",
+	"cap_bao_cao_id",
+	"ngay_ban_hanh",
+	"ngay_sua_doi",
+	"trang_thai",
+	"duong_dan_file",
+	"mo_ta")
+VALUES (
+	'{{insert_formBC.formData.so_bao_cao}}',
+	'{{insert_formBC.formData.ten_bao_cao}}',
+	'{{insert_formBC.formData.loai_bao_cao_id}}',
+	'{{insert_formBC.formData.cap_bao_cao_id}}',
+	'{{insert_formBC.formData.ngay_ban_hanh}}',
+	'{{insert_formBC.formData.ngay_sua_doi}}',
+	'{{insert_formBC.formData.trang_thai}}',
+	'{{insert_formBC.formData.duong_dan_file}}',
+	'{{insert_formBC.formData.mo_ta}}')
+	RETURNING id;  	

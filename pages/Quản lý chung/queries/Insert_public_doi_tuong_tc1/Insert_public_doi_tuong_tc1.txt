@@ -1,0 +1,1 @@
+INSERT INTO public.doi_tuong_tc ("ten_to_chuc","ban_nganh") VALUES ('{{(Table_DV.newRow || {}).ten_to_chuc}}','{{(Table_DV.newRow || {}).ban_nganh}}')

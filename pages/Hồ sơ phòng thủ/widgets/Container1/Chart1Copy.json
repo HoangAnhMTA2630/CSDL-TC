@@ -1,0 +1,109 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 26,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "m511bv4lbi": {
+      "data": "[\n  {\n    \"x\": \"Quân khu 5\",\n    \"y\": 186\n  },\n  {\n    \"x\": \"Quân đoàn 34\",\n    \"y\": 150\n  },\n  {\n    \"x\": \"Trung tâm 3\",\n    \"y\": 89\n  }\n]",
+      "seriesName": ""
+    }
+  },
+  "chartName": "Số lượng thiết bị theo đơn vị",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( \n{\n  xAxis: {\n    type: \"category\",\n    data: CountTBMByDV.data.map(item => item.x),\n    axisLabel: {\n      interval: 0,\n      rotate: 30,\n      formatter: function(value) {\n        return value.length > 15 ? value.slice(0, 15)+\"...\" : value;\n      }\n    }\n  },\n  yAxis: {\n    type: \"value\"\n  },\n  tooltip: {\n    trigger: \"axis\"\n  },\n  title: {\n    text: \"Số lượng Thiết bị mạng theo Đơn vị\",\n    left: \"center\",\n    top: 20,\n    textStyle: {\n      fontSize: 20,\n      fontWeight: \"bold\",\n      fontFamily: \"Arial, sans-serif\"\n    }\n  },\n  series: [\n    {\n      type: \"bar\",\n      data: CountTBMByDV.data.map(item => item.y),\n      itemStyle: {\n        color: \"#5470C6\"\n      },\n\t\t\tlabel: {\n        show: true,\n        position: \"top\",\n        fontSize: 10,\n        fontWeight: \"bold\"\n      }\n    }\n  ],\n  grid: {\n    left: 20,\n    right: 20,\n    bottom: 10,\n    top: 80,\n    containLabel: true\n  }\n}\n))(Chart1Copy.chartType) }}",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "customEChartConfig"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "nttq302u96",
+  "labelOrientation": "auto",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 31,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 23,
+  "mobileTopRow": 0,
+  "needsErrorInfo": true,
+  "parentColumnSpace": 9.27490234375,
+  "parentId": "ywu03nppwq",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 32,
+  "showDataPointLabel": false,
+  "topRow": 0,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "i37o9uf1fj",
+  "widgetName": "Chart1Copy",
+  "xAxisName": "Đơn vị",
+  "yAxisName": "Sô lượng"
+}

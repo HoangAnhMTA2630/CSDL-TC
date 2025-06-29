@@ -1,0 +1,2 @@
+DELETE FROM public."ke_hoach"
+  WHERE "id" = {{data_table_KH.triggeredRow.id}};

@@ -1,0 +1,17 @@
+SELECT 
+  lbc.ten_loai_bao_cao AS loai,
+  ckh.ten_cap AS cap,
+  COUNT(bc.id) AS so_luong
+FROM bao_cao bc
+JOIN loai_bao_cao lbc ON bc.loai_bao_cao_id = lbc.id
+JOIN cap ckh ON bc.cap_bao_cao_id = ckh.id
+JOIN ke_hoach_bao_cao khbc ON bc.id = khbc.bao_cao_id
+JOIN ke_hoach kh ON khbc.ke_hoach_id = kh.id
+JOIN bo_ke_hoach bk ON kh.bo_ke_hoach_id = bk.id
+JOIN thoi_gian tg ON bk.thoi_gian_id = tg.id
+WHERE 1=1
+  {{ SelectNam.selectedOptionValue ? `AND tg.nam = ${SelectNam.selectedOptionValue}` : "" }}
+  {{ SelectQuy.selectedOptionValue ? `AND tg.quy = ${SelectQuy.selectedOptionValue}` : "" }}
+  {{ SelectThang.selectedOptionValue ? `AND tg.thang = ${SelectThang.selectedOptionValue}` : "" }}
+GROUP BY lbc.ten_loai_bao_cao, ckh.ten_cap
+ORDER BY lbc.ten_loai_bao_cao, ckh.ten_cap;

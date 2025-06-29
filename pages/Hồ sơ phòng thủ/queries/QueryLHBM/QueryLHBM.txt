@@ -1,0 +1,2 @@
+SELECT ten_lo_hong as label,id as value
+FROM public."lo_hong_bao_mat_web" 

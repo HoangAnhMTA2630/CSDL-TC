@@ -1,0 +1,119 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "0px",
+  "bottomRow": 32,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "99hlnx0j9q": {
+      "data": "{{CountKHByCapKH.data}}",
+      "seriesName": ""
+    }
+  },
+  "chartName": "Số lượng - Cấp Kế hoạch",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const data = CountBCByLoaiBC.data;\n\n  const loaiList = [...new Set(data.map(item => item.loai))];\n  const capList = [...new Set(data.map(item => item.cap))];\n\n  return {\n    xAxis: {\n      type: \"category\",\n      data: loaiList,\n      axisLabel: {\n        interval: 0,\n        rotate: 20,\n\t\t\t\tmargin: 8,\n        formatter: function(value) {\n          return value.length > 15 ? (value.slice(0, 15)+\"...\") : value;\n        }\n      }\n    },\n    yAxis: {\n      type: \"value\"\n    },\n    tooltip: {\n      trigger: \"axis\",\n      axisPointer: {\n        type: \"shadow\"\n      },\n      formatter: function(params) {\n        const total = params.reduce((sum, p) => (sum+p.value), 0);\n        const lines = params.map(p => `${p.seriesName}: ${p.value}`);\n        lines.push(`<strong>Tổng: ${total}</strong>`);\n        return lines.join(\"<br/>\");\n      }\n    },\n    legend: {\n      top: 45\n    },\n    title: {\n      text: \"Số lượng Báo cáo theo Loại\",\n      left: \"center\",\n      top: 15,\n      textStyle: {\n        fontSize: 20,\n        fontWeight: \"bold\",\n        fontFamily: \"Arial, sans-serif\"\n      }\n    },\n    series: capList.map(cap => ({\n      name: cap,\n      type: \"bar\",\n      stack: \"total\",\n      label: {\n        show: true,\n        position: \"inside\",\n        fontSize: 10\n      },\n      data: loaiList.map(loai => {\n        const match = data.find(d => d.loai === loai && d.cap === cap);\n        return match ? match.so_luong : 0;\n      })\n    })),\n    grid: {\n      left: 20,\n      right: 20,\n      bottom: 20,\n      top: 80,\n      containLabel: true\n    }\n  };\n})()\n))(ChartSL_LBC.chartType) }}",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "chartData.99hlnx0j9q.data"
+    },
+    {
+      "key": "customEChartConfig"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "chartType"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDataPointClick"
+    }
+  ],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "iyr52b8io3",
+  "labelOrientation": "auto",
+  "leftColumn": 24,
+  "minWidth": 450,
+  "mobileBottomRow": 32,
+  "mobileLeftColumn": 17,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 0,
+  "needsErrorInfo": true,
+  "onDataPointClick": "{{QueryBCByLoaiBCInChart.run();\nshowModal(ModalBC_LBC_Chart.name);}}",
+  "parentColumnSpace": 22.765625,
+  "parentId": "k3phvwyv56",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 36,
+  "showDataPointLabel": false,
+  "topRow": 0,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "5e02t368go",
+  "widgetName": "ChartSL_LBC",
+  "xAxisName": "Product Line",
+  "yAxisName": "Revenue($)"
+}

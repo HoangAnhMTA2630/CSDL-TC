@@ -1,0 +1,9 @@
+SELECT 
+  bcc.*, 
+  web.ten AS ten_web,
+  cve.ten_lo_hong, 
+  cve.mo_ta 
+FROM public."bao_cao_cve" AS bcc 
+LEFT JOIN public."web" AS web ON bcc.webid = web.id
+LEFT JOIN public."lo_hong_bao_mat_web" AS cve ON bcc.lo_hong_bao_mat_web_id = cve.id
+WHERE bcc.webid = {{data_tableWeb.triggeredRow.id}}

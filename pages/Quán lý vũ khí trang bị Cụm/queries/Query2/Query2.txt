@@ -1,0 +1,22 @@
+SELECT 
+    q.id,
+    q.ten_quan_nhan,
+    q.quan_ham,
+    q.chuc_vu,
+    q.so_dien_thoai,
+    d.ten_don_vi
+FROM 
+    e_thiet_bi_mang q
+LEFT JOIN 
+    don_vi d ON q.don_vi_id = d.id
+LEFT JOIN 
+    e_thiet_bi_mang tb ON q.id = tb.quanh_nhan_id
+WHERE 
+    {{ TreeSelect.selectedOptionValue 
+        ? `q.don_vi_id = '${TreeSelect.selectedOptionValue}'` 
+        : '1=1' 
+    }}
+GROUP BY 
+    q.id, q.ten_quan_nhan, q.quan_ham, q.chuc_vu, q.so_dien_thoai, d.ten_don_vi
+ORDER BY 
+    q.id DESC;

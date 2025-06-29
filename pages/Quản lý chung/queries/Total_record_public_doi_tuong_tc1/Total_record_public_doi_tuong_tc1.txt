@@ -1,0 +1,1 @@
+SELECT COUNT(*) from public.doi_tuong_tc where ten_to_chuc ilike '%{{Table_DV.searchText}}%';

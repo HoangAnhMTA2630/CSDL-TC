@@ -1,0 +1,9 @@
+SELECT 
+    ltb.ten_loai_thiet_bi,
+    COUNT(etbm.id) AS so_luong_thiet_bi
+FROM 
+    loai_thiet_bi ltb
+LEFT JOIN 
+    e_thiet_bi_mang etbm ON ltb.id = etbm.loai_thiet_bi_id
+GROUP BY 
+    ltb.ten_loai_thiet_bi;

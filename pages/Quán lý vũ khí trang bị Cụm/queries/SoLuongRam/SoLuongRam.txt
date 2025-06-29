@@ -1,0 +1,16 @@
+SELECT 
+  CASE 
+    WHEN CAST(vtbm.gia_tri AS FLOAT) >= 8 THEN 'RAM >= 8GB'
+    ELSE 'RAM < 8GB'
+  END AS x,
+  COUNT(DISTINCT tbm.id) AS y
+FROM e_thiet_bi_mang tbm
+JOIN v_thiet_bi_mang vtbm ON tbm.id = vtbm.e_thiet_bi_mang_id
+WHERE tbm.loai_thiet_bi_id = 5  -- máy tính
+  AND vtbm.a_thiet_bi_mang_id = 1  -- RAM
+GROUP BY
+  CASE 
+    WHEN CAST(vtbm.gia_tri AS FLOAT) >= 8 THEN 'RAM >= 8GB'
+    ELSE 'RAM < 8GB'
+  END;
+

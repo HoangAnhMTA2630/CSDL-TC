@@ -1,0 +1,1 @@
+INSERT INTO public.loai_ke_hoach ("ten_loai_ke_hoach") VALUES ('{{(insert_formCopy.formData || {}).ten_loai_ke_hoach}}')

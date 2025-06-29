@@ -1,0 +1,13 @@
+SELECT 
+  bcc.*, 
+  tbm.ten_thiet_bi,
+  cve.ten_lo_hong, 
+  cve.mo_ta 
+FROM public."bao_cao_cve" AS bcc
+LEFT JOIN public."e_thiet_bi_mang" AS tbm ON bcc.thiet_bi_id = tbm.id
+LEFT JOIN public."lo_hong_bao_mat_web" AS cve ON bcc.lo_hong_bao_mat_web_id = cve.id
+ORDER BY 
+  {{ data_tableTBM_CVE.sortOrder.column || 'bcc.id' }} 
+  {{ data_tableTBM_CVE.sortOrder.order || 'ASC' }}
+LIMIT {{ data_tableTBM_CVE.pageSize }}
+OFFSET {{ (data_tableTBM_CVE.pageNo - 1) * data_tableTBM_CVE.pageSize }};

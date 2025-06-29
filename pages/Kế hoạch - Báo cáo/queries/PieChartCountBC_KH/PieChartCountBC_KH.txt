@@ -1,0 +1,27 @@
+SELECT 
+  'Theo kế hoạch' AS ten, 
+  COUNT(DISTINCT bc.id) AS so_luong
+FROM bao_cao bc
+JOIN ke_hoach_bao_cao khbc ON bc.id = khbc.bao_cao_id
+JOIN ke_hoach kh ON kh.id = khbc.ke_hoach_id
+JOIN bo_ke_hoach bk ON kh.bo_ke_hoach_id = bk.id
+JOIN thoi_gian tg ON bk.thoi_gian_id = tg.id
+WHERE 1=1
+  {{ SelectNam.selectedOptionValue ? `AND tg.nam = ${SelectNam.selectedOptionValue}` : "" }}
+  {{ SelectQuy.selectedOptionValue ? `AND tg.quy = ${SelectQuy.selectedOptionValue}` : "" }}
+  {{ SelectThang.selectedOptionValue ? `AND tg.thang = ${SelectThang.selectedOptionValue}` : "" }}
+
+UNION ALL
+
+SELECT 
+  'Không theo kế hoạch' AS ten, 
+  COUNT(*) AS so_luong
+FROM bao_cao bc
+WHERE bc.id NOT IN (
+  SELECT DISTINCT bao_cao_id FROM ke_hoach_bao_cao
+)
+AND 1=1
+  {{ SelectNam.selectedOptionValue ? `AND EXTRACT(YEAR FROM bc.ngay_ban_hanh) = ${SelectNam.selectedOptionValue}` : "" }}
+  {{ SelectQuy.selectedOptionValue ? `
+      AND CEIL(EXTRACT(MONTH FROM bc.ngay_ban_hanh)::numeric / 3) = ${SelectQuy.selectedOptionValue}` : "" }}
+  {{ SelectThang.selectedOptionValue ? `AND EXTRACT(MONTH FROM bc.ngay_ban_hanh) = ${SelectThang.selectedOptionValue}` : "" }};

@@ -1,0 +1,41 @@
+{
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "add",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "true",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 57,
+  "onClick": "{{(data_table_KH.selectedRows.length == 1) ? showModal(Insert_ModalBC.name): showAlert('Yêu cầu chọn 1 và chỉ 1 Kế hoạch để thêm Báo cáo cho kế hoạch đó','warning')}}\n{{\n;}}",
+  "parentColumnSpace": 12.0703125,
+  "parentId": "7nf3mcyduu",
+  "parentRowSpace": 10,
+  "rightColumn": 59,
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "s2vtmy68h5",
+  "widgetName": "add_btnBC"
+}

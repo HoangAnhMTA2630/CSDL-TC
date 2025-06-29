@@ -1,0 +1,4 @@
+UPDATE public."v_thiet_bi_mang" SET
+		"a_thiet_bi_mang_id" = '{{update_formTSKT.fieldState.thuoc_tinh.isVisible ? update_formTSKT.formData.thuoc_tinh : update_formTSKT.sourceData.thuoc_tinh}}',
+		"gia_tri" = '{{update_formTSKT.fieldState.gia_tri.isVisible ? update_formTSKT.formData.gia_tri : update_formTSKT.sourceData.gia_tri}}'
+WHERE "id" = {{data_tableTSKT.triggeredRow.id}};

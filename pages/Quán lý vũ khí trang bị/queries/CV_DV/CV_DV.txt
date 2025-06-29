@@ -1,0 +1,4 @@
+SELECT dv.ten_don_vi, dv.id,
+FROM don_vi as dv
+WHERE id = 1 OR don_vi_cha_id = 1
+ORDER BY id;

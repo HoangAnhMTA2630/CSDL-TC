@@ -1,0 +1,14 @@
+SELECT 
+  cap.ten_cap AS x,
+  COUNT(kh.id) AS y
+FROM ke_hoach kh
+JOIN bo_ke_hoach bk ON kh.bo_ke_hoach_id = bk.id
+JOIN thoi_gian tg ON bk.thoi_gian_id = tg.id
+JOIN cap ON kh.cap_ban_hanh_id = cap.id
+WHERE 1=1
+  {{ SelectNam.selectedOptionValue ? `AND tg.nam = ${SelectNam.selectedOptionValue}` : "" }}
+  {{ SelectQuy.selectedOptionValue ? `AND tg.quy = ${SelectQuy.selectedOptionValue}` : "" }}
+  {{ SelectThang.selectedOptionValue ? `AND tg.thang = ${SelectThang.selectedOptionValue}` : "" }}
+GROUP BY cap.ten_cap
+ORDER BY y DESC;
+

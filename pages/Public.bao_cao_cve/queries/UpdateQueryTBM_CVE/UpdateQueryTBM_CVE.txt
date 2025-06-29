@@ -1,0 +1,6 @@
+UPDATE public."bao_cao_cve" SET
+		"webid" = '{{update_formTBM_CVE.fieldState.webid.isVisible ? update_formTBM_CVE.formData.webid : update_formTBM_CVE.sourceData.webid}}',
+    "thiet_bi_id" = '{{update_formTBM_CVE.fieldState.thiet_bi_id.isVisible ? update_formTBM_CVE.formData.thiet_bi_id : update_formTBM_CVE.sourceData.thiet_bi_id}}',
+		"bao_cao_don_vi_phong_thu_id" = '{{update_formTBM_CVE.fieldState.bao_cao_don_vi_phong_thu_id.isVisible ? update_formTBM_CVE.formData.bao_cao_don_vi_phong_thu_id : update_formTBM_CVE.sourceData.bao_cao_don_vi_phong_thu_id}}',
+		"lo_hong_bao_mat_web_id" = '{{update_formTBM_CVE.fieldState.lo_hong_bao_mat_web_id.isVisible ? update_formTBM_CVE.formData.lo_hong_bao_mat_web_id : update_formTBM_CVE.sourceData.lo_hong_bao_mat_web_id}}'
+WHERE "id" = {{data_tableTBM_CVE.selectedRow.id}};

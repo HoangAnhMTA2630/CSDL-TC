@@ -1,0 +1,4 @@
+INSERT INTO public."loai_ke_hoach" (
+	"ten_loai_ke_hoach")
+VALUES (
+	'{{insert_form.formData.ten_loai_ke_hoach}}');

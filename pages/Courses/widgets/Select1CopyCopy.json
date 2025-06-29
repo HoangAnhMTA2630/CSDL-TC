@@ -1,0 +1,67 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 152,
+  "boxShadow": "none",
+  "defaultOptionValue": "GREEN",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": "{{!SelectLoaiThoiGian.selectedOptionValue}}",
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "dao62wbh8y",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Năm",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 24,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 8,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 7,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "optionLabel": "name",
+  "optionValue": "code",
+  "originalBottomRow": 152,
+  "originalTopRow": 145,
+  "parentColumnSpace": 19.5,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 31,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"name\": \"2023\",\n    \"code\": \"2023\"\n  },\n  {\n    \"name\": \"2024\",\n    \"code\": \"2024\"\n  },\n\t{\n    \"name\": \"2025\",\n    \"code\": \"2025\"\n  }\n]",
+  "topRow": 145,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "x5xmbsa7jg",
+  "widgetName": "Select1CopyCopy"
+}

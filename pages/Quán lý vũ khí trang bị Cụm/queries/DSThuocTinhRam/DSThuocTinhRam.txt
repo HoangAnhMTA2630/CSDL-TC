@@ -1,0 +1,1 @@
+SELECT gia_tri from v_thiet_bi_mang WHERE a_thiet_bi_mang_id = 1 GROUP BY gia_tri ORDER by gia_tri

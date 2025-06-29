@@ -1,0 +1,10 @@
+UPDATE public."ho_so_phong_thu" SET
+		"ten_ho_so" = '{{update_formHSPT.fieldState.ten_ho_so.isVisible ? update_formHSPT.formData.ten_ho_so : update_formHSPT.sourceData.ten_ho_so}}',
+		"ngay_ban_hanh" = '{{update_formHSPT.fieldState.ngay_ban_hanh.isVisible ? update_formHSPT.formData.ngay_ban_hanh : update_formHSPT.sourceData.ngay_ban_hanh}}',
+    "ngay_sua_doi" = '{{update_formHSPT.fieldState.ngay_sua_doi.isVisible ? update_formHSPT.formData.ngay_sua_doi : update_formHSPT.sourceData.ngay_sua_doi}}',
+		"so_do_tuyen_cap" = '{{update_formHSPT.fieldState.so_do_tuyen_cap.isVisible ? update_formHSPT.formData.so_do_tuyen_cap : update_formHSPT.sourceData.so_do_tuyen_cap}}',
+		"so_do_logic" = '{{update_formHSPT.fieldState.so_do_logic.isVisible ? update_formHSPT.formData.so_do_logic : update_formHSPT.sourceData.so_do_logic}}',
+		"so_do_rack" = '{{update_formHSPT.fieldState.so_do_rack.isVisible ? update_formHSPT.formData.so_do_rack : update_formHSPT.sourceData.so_do_rack}}',
+		"duong_dan_file" = '{{update_formHSPT.fieldState.duong_dan_file.isVisible ? update_formHSPT.formData.duong_dan_file : update_formHSPT.sourceData.duong_dan_file}}',
+		"don_vi_id" = '{{update_formHSPT.fieldState.don_vi_id.isVisible ? update_formHSPT.formData.don_vi_id : update_formHSPT.sourceData.don_vi_id}}'
+WHERE "id" = {{data_tableHSPT.triggeredRow.id}};

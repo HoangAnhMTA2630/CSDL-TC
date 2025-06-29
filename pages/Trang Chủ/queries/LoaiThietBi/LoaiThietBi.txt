@@ -1,0 +1,5 @@
+SELECT ltb.Ten_loai_thiet_bi, COUNT(etb.ID) AS So_luong_thiet_bi
+FROM Loai_thiet_bi ltb
+LEFT JOIN E_thiet_bi_mang etb ON ltb.ID = etb.Loai_thiet_bi_ID
+GROUP BY ltb.Ten_loai_thiet_bi
+ORDER BY ltb.Ten_loai_thiet_bi;

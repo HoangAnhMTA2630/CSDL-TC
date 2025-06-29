@@ -1,0 +1,19 @@
+SELECT 
+    dv.ten_don_vi,
+    ltb.ten_loai_thiet_bi AS loai_trang_bi,
+    etbm.ten_thiet_bi AS ten_trang_bi,
+    qn.ten_quan_nhan,
+    qn.chuc_vu,
+    qn.so_dien_thoai
+FROM 
+    public.e_thiet_bi_mang etbm
+JOIN 
+    public.loai_thiet_bi ltb ON etbm.loai_thiet_bi_id = ltb.id
+LEFT JOIN 
+    public.quan_nhan qn ON etbm.quanh_nhan_id = qn.id
+LEFT JOIN 
+    public.don_vi dv ON etbm.don_vi_id = dv.id
+WHERE 
+    ltb.ten_loai_thiet_bi ILIKE 'Máy tính'
+ORDER BY 
+    dv.ten_don_vi, etbm.ten_thiet_bi;

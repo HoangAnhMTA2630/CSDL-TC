@@ -1,0 +1,2 @@
+DELETE FROM public."doi_tuong_tc"
+  WHERE "id" = {{data_table.triggeredRow.id}};

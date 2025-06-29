@@ -1,0 +1,16 @@
+SELECT 
+    mt.id,
+    h.ten_huong AS huong,
+    mt.domain,
+		dt.ten_to_chuc,
+		dt.ban_nganh
+FROM 
+    public.muc_tieu mt
+JOIN 
+    public.doi_tuong_tc dt ON mt.doi_tuong_tc_id = dt.id
+JOIN 
+    public.huong h ON dt.huong_id = h.id
+WHERE 
+    {{ Select.selectedOptionValue ? `h.id = ${Select.selectedOptionValue}` : '1=1' }}
+ORDER BY 
+    h.ten_huong, mt.id;

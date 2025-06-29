@@ -1,0 +1,1 @@
+SELECT ten_loai_thiet_bi as label, id as value FROM public."loai_thiet_bi" ORDER BY id ASC

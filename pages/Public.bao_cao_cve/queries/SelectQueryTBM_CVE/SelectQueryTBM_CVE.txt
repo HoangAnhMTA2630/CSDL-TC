@@ -1,0 +1,4 @@
+SELECT * FROM public."bao_cao_cve"
+ORDER BY "{{data_tableTBM_CVE.sortOrder.column || 'id'}}" {{data_tableTBM_CVE.sortOrder.order || 'ASC'}}
+LIMIT {{data_tableTBM_CVE.pageSize}}
+OFFSET {{(data_tableTBM_CVE.pageNo - 1) * data_tableTBM_CVE.pageSize}};

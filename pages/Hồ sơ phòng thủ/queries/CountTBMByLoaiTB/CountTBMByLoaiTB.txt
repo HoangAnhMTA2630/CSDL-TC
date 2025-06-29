@@ -1,0 +1,10 @@
+SELECT 
+  ltb.ten_loai_thiet_bi AS x,
+  COUNT(etb.id) AS y
+FROM e_thiet_bi_mang etb
+JOIN loai_thiet_bi ltb ON etb.loai_thiet_bi_id = ltb.id
+JOIN ho_so_phong_thu hspt ON etb.ho_so_phong_thu_id = hspt.id
+WHERE 
+  {{ TreeSelect.selectedOptionValue ? `hspt.don_vi_id = ${TreeSelect.selectedOptionValue}` : '1=1' }}
+GROUP BY ltb.ten_loai_thiet_bi
+ORDER BY y DESC;

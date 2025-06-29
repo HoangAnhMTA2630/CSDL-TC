@@ -1,0 +1,38 @@
+{
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 21,
+  "boxShadow": "none",
+  "buttonColor": "#DD4B34",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "true",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 46,
+  "onClick": "{{DeleteQueryTSKT.run(() => SelectQueryTSKT.run(() => closeModal('Delete_ModalTSKT')), () => {})}}",
+  "parentId": "2192cvc4oi",
+  "recaptchaType": "V3",
+  "rightColumn": 64,
+  "text": "Xoá",
+  "topRow": 17,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "s48iaxd4cp",
+  "widgetName": "Delete_ButtonCopy1"
+}

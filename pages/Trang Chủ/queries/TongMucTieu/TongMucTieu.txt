@@ -1,0 +1,2 @@
+SELECT COUNT(*) AS so_luong_muc_tieu
+FROM Muc_tieu;

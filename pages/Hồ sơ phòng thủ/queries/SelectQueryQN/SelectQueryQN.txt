@@ -1,0 +1,3 @@
+SELECT * FROM public."quan_nhan"
+WHERE ho_so_phong_thu_id = {{data_tableHSPT.triggeredRow.id}}
+ORDER BY "{{data_tableQN.sortOrder.column || 'id'}}" {{data_tableQN.sortOrder.order || 'ASC'}}

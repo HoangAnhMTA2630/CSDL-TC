@@ -1,0 +1,8 @@
+SELECT 
+    COUNT(etbm.id) AS so_luong_firewall
+FROM 
+    public.e_thiet_bi_mang etbm
+JOIN 
+    public.loai_thiet_bi ltb ON etbm.loai_thiet_bi_id = ltb.id
+WHERE 
+    ltb.ten_loai_thiet_bi ILIKE 'Firewall';

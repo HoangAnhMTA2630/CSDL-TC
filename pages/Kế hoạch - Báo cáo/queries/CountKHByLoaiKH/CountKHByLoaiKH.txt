@@ -1,0 +1,15 @@
+SELECT 
+  lkh.ten_loai_ke_hoach AS loai,
+  ckh.ten_cap AS cap,
+  COUNT(kh.id) AS so_luong
+FROM ke_hoach kh
+JOIN bo_ke_hoach bk ON kh.bo_ke_hoach_id = bk.id
+JOIN thoi_gian tg ON bk.thoi_gian_id = tg.id
+JOIN loai_ke_hoach lkh ON kh.loai_ke_hoach_id = lkh.id
+JOIN cap ckh ON kh.cap_ban_hanh_id = ckh.id
+WHERE 1=1
+  {{ SelectNam.selectedOptionValue ? `AND tg.nam = ${SelectNam.selectedOptionValue}` : "" }}
+  {{ SelectQuy.selectedOptionValue ? `AND tg.quy = ${SelectQuy.selectedOptionValue}` : "" }}
+  {{ SelectThang.selectedOptionValue ? `AND tg.thang = ${SelectThang.selectedOptionValue}` : "" }}
+GROUP BY lkh.ten_loai_ke_hoach, ckh.ten_cap
+ORDER BY lkh.ten_loai_ke_hoach, ckh.ten_cap;

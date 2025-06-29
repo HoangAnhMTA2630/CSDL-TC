@@ -1,0 +1,17 @@
+SELECT 
+    lk.ID AS loai_ke_hoach_id,
+    lk.Ten_loai_ke_hoach,
+    ltg.ID AS loai_thoi_gian_id,
+    ltg.Ten_loai_thoi_gian,
+    tg.ID AS thoigian_id,
+    tg.Nam,
+    tg.Quy,
+    tg.Thang,
+    tg.Tuan,
+    bkh.ID AS bo_ke_hoach_id,
+    bkh.Ten_bo_ke_hoach
+FROM Bo_ke_hoach bkh
+JOIN Loai_ke_hoach lk ON bkh.Loai_ke_hoach_ID = lk.ID
+JOIN Thoi_gian tg ON bkh.Thoi_gian_ID = tg.ID
+JOIN Loai_thoi_gian ltg ON tg.Loai_thoi_gian_ID = ltg.ID
+ORDER BY lk.ID, tg.Nam, tg.Quy NULLS FIRST, tg.Thang NULLS FIRST, tg.Tuan NULLS FIRST;

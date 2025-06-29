@@ -1,0 +1,10 @@
+UPDATE public.quan_nhan
+SET 
+    ten_quan_nhan = {{TableQNTB.updatedRow.ten_quan_nhan}},
+    quan_ham = {{TableQNTB.updatedRow.quan_ham}},
+    chuc_vu = {{TableQNTB.updatedRow.chuc_vu}},
+    so_dien_thoai = {{TableQNTB.updatedRow.so_dien_thoai}},
+    don_vi_id = (
+        SELECT id FROM public.don_vi WHERE ten_don_vi = {{TableQNTB.updatedRow.ten_don_vi}}
+    )
+WHERE id = {{TableQNTB.updatedRow.id}};

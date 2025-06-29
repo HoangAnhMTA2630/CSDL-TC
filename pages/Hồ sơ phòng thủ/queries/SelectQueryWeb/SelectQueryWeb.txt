@@ -1,0 +1,7 @@
+SELECT * FROM public."web"
+WHERE 
+  {{ TreeSelect.selectedOptionValue 
+      ? `don_vi_phong_thu_id = '${TreeSelect.selectedOptionValue}'` 
+      : '1=1' 
+  }}
+ORDER BY id ASC;

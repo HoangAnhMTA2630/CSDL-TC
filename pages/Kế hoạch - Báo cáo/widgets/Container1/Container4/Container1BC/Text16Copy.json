@@ -1,0 +1,35 @@
+{
+  "borderRadius": "0px",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "dynamicBindingPathList": [
+    {
+      "key": "fontFamily"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": "true",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "overflow": "NONE",
+  "parentColumnSpace": 11.78515625,
+  "parentId": "7nf3mcyduu",
+  "parentRowSpace": 10,
+  "rightColumn": 20,
+  "text": "Danh sách Báo cáo",
+  "textAlign": "LEFT",
+  "textColor": "#1d4ed8",
+  "topRow": 0,
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "db2af9t6bn",
+  "widgetName": "Text16Copy"
+}

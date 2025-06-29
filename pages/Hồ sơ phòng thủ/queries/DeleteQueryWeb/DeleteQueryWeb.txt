@@ -1,0 +1,2 @@
+DELETE FROM public."web"
+  WHERE "id" = {{data_tableWeb.triggeredRow.id}};
