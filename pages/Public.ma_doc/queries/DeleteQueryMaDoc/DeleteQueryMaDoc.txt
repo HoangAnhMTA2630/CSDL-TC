@@ -1,0 +1,2 @@
+DELETE FROM public."ma_doc"
+  WHERE "id" = {{data_tableMaDoc.triggeredRow.id}}; 

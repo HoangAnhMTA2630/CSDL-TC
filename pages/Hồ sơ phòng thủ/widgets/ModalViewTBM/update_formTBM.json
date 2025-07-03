@@ -179,6 +179,33 @@
     },
     {
       "key": "schema.__root_schema__.children.loai_thiet_bi_id.placeholderText"
+    },
+    {
+      "key": "schema.__root_schema__.children.nhom.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.nhom.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.nhom.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.cap_trang_bi.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.cap_trang_bi.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.cap_trang_bi.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.tinh_trang.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.tinh_trang.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.tinh_trang.accentColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -229,6 +256,28 @@
       "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
       "cellBoxShadow": "none",
       "children": {
+        "cap_trang_bi": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formTBM.sourceData, update_formTBM.formData, update_formTBM.fieldState)}}",
+          "accessor": "cap_trang_bi",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formTBM.sourceData, update_formTBM.formData, update_formTBM.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "number",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.cap_trang_bi))(update_formTBM.sourceData, update_formTBM.formData, update_formTBM.fieldState)}}",
+          "fieldType": "Number Input",
+          "iconAlign": "left",
+          "identifier": "cap_trang_bi",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Cap Trang Bi",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "cap_trang_bi",
+          "position": 7,
+          "sourceData": 4
+        },
         "don_vi_id": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formTBM.sourceData, update_formTBM.formData, update_formTBM.fieldState)}}",
           "accessor": "don_vi_id",
@@ -297,6 +346,28 @@
           "serverSideFiltering": false,
           "sourceData": 1
         },
+        "nhom": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formTBM.sourceData, update_formTBM.formData, update_formTBM.fieldState)}}",
+          "accessor": "nhom",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formTBM.sourceData, update_formTBM.formData, update_formTBM.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.nhom))(update_formTBM.sourceData, update_formTBM.formData, update_formTBM.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "nhom",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Nhom",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "nhom",
+          "position": 6,
+          "sourceData": "II"
+        },
         "quanh_nhan_id": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formTBM.sourceData, update_formTBM.formData, update_formTBM.fieldState)}}",
           "accessor": "quanh_nhan_id",
@@ -362,6 +433,28 @@
           "originalIdentifier": "ten_thiet_bi",
           "position": 0,
           "sourceData": "Router Asus"
+        },
+        "tinh_trang": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formTBM.sourceData, update_formTBM.formData, update_formTBM.fieldState)}}",
+          "accessor": "tinh_trang",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formTBM.sourceData, update_formTBM.formData, update_formTBM.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.tinh_trang))(update_formTBM.sourceData, update_formTBM.formData, update_formTBM.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "tinh_trang",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Tinh Trang",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "tinh_trang",
+          "position": 8,
+          "sourceData": "Hoạt động"
         }
       },
       "dataType": "object",

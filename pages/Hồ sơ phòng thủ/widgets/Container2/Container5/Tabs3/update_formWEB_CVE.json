@@ -3,9 +3,9 @@
   "autoGenerateForm": true,
   "backgroundColor": "#FFFFFF",
   "borderColor": "#fff",
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderRadius": "0px",
   "borderWidth": "0",
-  "bottomRow": 47,
+  "bottomRow": 51,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
     "ARRAY": {
@@ -104,9 +104,6 @@
     },
     {
       "key": "resetButtonStyles.borderRadius"
-    },
-    {
-      "key": "borderRadius"
     },
     {
       "key": "boxShadow"

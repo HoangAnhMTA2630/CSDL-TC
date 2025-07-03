@@ -119,6 +119,10 @@
     {
       "id": "Public.e_thiet_bi_mang",
       "isDefault": false
+    },
+    {
+      "id": "Public.ma_doc",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

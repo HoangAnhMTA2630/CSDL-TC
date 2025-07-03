@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "682d4d2a92cca105dbc17693_22a93e08-2301-4b16-b613-753748e5c9a9",
+  "gitSyncId": "682d4d2a92cca105dbc17693_fd9442cb-ea7c-4e64-afcc-0d71d1e09617",
   "id": "Hồ sơ phòng thủ_Query3",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"a_thiet_bi_mang\" LIMIT 10;",
+      "body": "SELECT \n  bc.id AS bao_cao_id,\n  bc.*,\n  bcdvpt.*,\n  cbc.ten_cap,\n  lbc.ten_loai_bao_cao\nFROM bao_cao AS bc\nJOIN bao_cao_don_vi_phong_thu AS bcdvpt ON bc.id = bcdvpt.bao_cao_id\nLEFT JOIN cap AS cbc ON bc.cap_bao_cao_id = cbc.id\nLEFT JOIN loai_bao_cao AS lbc ON bc.loai_bao_cao_id = lbc.id\nWHERE bcdvpt.don_vi_id = {{ TreeSelect.selectedOptionValue }};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
@@ -22,6 +22,11 @@
       "name": "csdltc",
       "pluginId": "postgres-plugin"
     },
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": false,
     "name": "Query3",
     "pageId": "Hồ sơ phòng thủ",

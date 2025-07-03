@@ -1,0 +1,41 @@
+{
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "add",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "true",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 50,
+  "onClick": "{{(data_tableTBM.selectedRow.id > 0) ? showModal('Insert_ModalTSKT') : showAlert('Vui lòng chọn Thiết bị được thêm thông số kỹ thuật','warning')}}",
+  "parentColumnSpace": 12.0703125,
+  "parentId": "ulv767isad",
+  "parentRowSpace": 10,
+  "rightColumn": 54,
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "26c5t5xr9j",
+  "widgetName": "add_btnCopy7Copy"
+}

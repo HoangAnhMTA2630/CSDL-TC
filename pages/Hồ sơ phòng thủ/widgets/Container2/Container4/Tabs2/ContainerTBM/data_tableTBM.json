@@ -1,8 +1,8 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 46,
+  "borderRadius": "0px",
+  "bottomRow": 47,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
     "button": {
@@ -40,12 +40,13 @@
     "step": 62,
     "task": 245
   },
-  "columnUpdatedAt": 1751504689094,
+  "columnUpdatedAt": 1751505614254,
   "columnWidthMap": {
     "customColumn1": 60,
     "customColumn2": 60,
     "id": 60,
     "loai_thiet_bi_id": 178,
+    "ten_loai_thiet_bi": 263,
     "ten_thiet_bi": 198
   },
   "defaultPageSize": 0,
@@ -86,9 +87,6 @@
     },
     {
       "key": "accentColor"
-    },
-    {
-      "key": "borderRadius"
     },
     {
       "key": "boxShadow"
@@ -217,7 +215,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "cap_trang_bi",
       "notation": "standard",
       "originalId": "cap_trang_bi",
@@ -466,7 +464,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "nhom",
       "notation": "standard",
       "originalId": "nhom",
@@ -602,7 +600,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "tinh_trang",
       "notation": "standard",
       "originalId": "tinh_trang",
@@ -616,10 +614,10 @@
     }
   },
   "renderMode": "CANVAS",
-  "rightColumn": 62,
+  "rightColumn": 64,
   "searchKey": "",
   "serverSidePaginationEnabled": false,
-  "tableData": "{{SelectQueryTBM.data}}",
+  "tableData": "{{QueryTBMInHSM_Filter.data}}",
   "textSize": "0.875rem",
   "topRow": 4,
   "totalRecordsCount": 0,

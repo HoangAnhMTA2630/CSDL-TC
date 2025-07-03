@@ -11,6 +11,6 @@ JOIN
 JOIN 
     public.huong h ON dt.huong_id = h.id
 WHERE 
-    {{ Select.selectedOptionValue ? `h.id = ${Select.selectedOptionValue}` : '1=1' }}
+    {{ SelectHuong.selectedOptionValue ? `h.id = ${SelectHuong.selectedOptionValue}` : '1=1' }}
 ORDER BY 
     h.ten_huong, mt.id;

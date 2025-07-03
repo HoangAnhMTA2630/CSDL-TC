@@ -1,0 +1,7 @@
+SELECT DISTINCT v.gia_tri AS label, v.gia_tri AS value
+FROM v_thiet_bi_mang v
+JOIN a_thiet_bi_mang a ON v.a_thiet_bi_mang_id = a.id
+JOIN e_thiet_bi_mang e ON v.e_thiet_bi_mang_id = e.id
+WHERE a.ten_thuoc_tinh = 'IP Public'
+  AND e.ho_so_phong_thu_id = {{ data_tableHSPT.triggeredRow.id }}
+ORDER BY v.gia_tri;

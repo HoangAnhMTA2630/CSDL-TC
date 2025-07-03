@@ -25,7 +25,7 @@
   "isVisible": "true",
   "labelTextSize": "0.875rem",
   "leftColumn": 46,
-  "onClick": "{{DnsertQueryTK.run(() => SelectQueryTK.run(() => closeModal('Delete_ModalTK')), () => {})}}",
+  "onClick": "{{DeleteQueryTK.run(() => SelectQueryTK.run(() => closeModal('Delete_ModalTK')), () => {})}}",
   "parentId": "3co8blun4d",
   "recaptchaType": "V3",
   "rightColumn": 64,

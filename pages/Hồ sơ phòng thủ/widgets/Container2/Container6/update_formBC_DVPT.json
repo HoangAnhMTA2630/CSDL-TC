@@ -3,7 +3,7 @@
   "autoGenerateForm": true,
   "backgroundColor": "#FFFFFF",
   "borderColor": "#fff",
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderRadius": "0px",
   "borderWidth": "0",
   "bottomRow": 37,
   "bottomRowBeforeCollapse": 37,
@@ -102,9 +102,6 @@
     },
     {
       "key": "resetButtonStyles.borderRadius"
-    },
-    {
-      "key": "borderRadius"
     },
     {
       "key": "boxShadow"
@@ -230,9 +227,6 @@
       "key": "schema.__root_schema__.children.date_of_birth.defaultValue"
     },
     {
-      "key": "borderRadius"
-    },
-    {
       "key": "onSubmit"
     },
     {
@@ -260,7 +254,7 @@
   "minDynamicHeight": 4,
   "onSubmit": "{{UpdateQueryBC_DVPT.run(() => QueryAllBC.run(), (error) => showAlert(`Error while updating resource!\\n ${error}`,'error'))}}",
   "originalBottomRow": 37,
-  "originalTopRow": 0,
+  "originalTopRow": 4,
   "parentColumnSpace": 16.3125,
   "parentId": "7d5iqkjx5z",
   "parentRowSpace": 10,
@@ -562,7 +556,7 @@
   },
   "title": "Cập nhật:",
   "topRow": 4,
-  "topRowBeforeCollapse": 0,
+  "topRowBeforeCollapse": 4,
   "type": "JSON_FORM_WIDGET",
   "useSourceData": false,
   "version": 1,

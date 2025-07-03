@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 33,
+  "bottomRow": 42,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "m511bv4lbi": {
@@ -110,6 +110,8 @@
   "mobileTopRow": 2,
   "needsErrorInfo": true,
   "onDataPointClick": "{{showModal(Modal_MucTieuTheoHuong.name);}}",
+  "originalBottomRow": 55,
+  "originalTopRow": 19,
   "parentColumnSpace": 9.27490234375,
   "parentId": "0bya9ngege",
   "parentRowSpace": 10,
@@ -117,7 +119,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 20,
   "showDataPointLabel": false,
-  "topRow": 0,
+  "topRow": 6,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "nk6yhi0gak",

@@ -1,0 +1,37 @@
+SELECT tbm.*, ltb.ten_loai_thiet_bi
+FROM e_thiet_bi_mang tbm
+LEFT JOIN loai_thiet_bi ltb ON tbm.loai_thiet_bi_id = ltb.id
+WHERE 
+  tbm.ho_so_phong_thu_id = {{ data_tableHSPT.triggeredRow.id }} AND
+  (
+    {{ MultiSelectLTB.selectedOptionValues.length === 0 
+      ? 'TRUE' 
+      : 'tbm.loai_thiet_bi_id IN (' + MultiSelectLTB.selectedOptionValues.join(',') + ')' 
+    }}
+  ) AND
+  (
+    {{ 
+      MultiSelectHDH.selectedOptionValues.length === 0 &&
+      MultiSelectIP_Private.selectedOptionValues.length === 0 &&
+      MultiSelectIP_Public.selectedOptionValues.length === 0 &&
+      MultiSelectCPU.selectedOptionValues.length === 0 &&
+      MultiSelectRAM.selectedOptionValues.length === 0 &&
+      MultiSelectROM.selectedOptionValues.length === 0
+      ? 'TRUE' 
+      : 'tbm.id IN (' +
+        (
+          "SELECT v.e_thiet_bi_mang_id FROM v_thiet_bi_mang v " +
+          "JOIN a_thiet_bi_mang a ON v.a_thiet_bi_mang_id = a.id WHERE " +
+          "(" +
+            (MultiSelectHDH.selectedOptionValues.length === 0 ? "FALSE" : "(a.ten_thuoc_tinh = 'HDH' AND v.gia_tri IN (" + MultiSelectHDH.selectedOptionValues.map(val => `'${val}'`).join(',') + "))") + " OR " +
+            (MultiSelectIP_Private.selectedOptionValues.length === 0 ? "FALSE" : "(a.ten_thuoc_tinh = 'IP Private' AND v.gia_tri IN (" + MultiSelectIP_Private.selectedOptionValues.map(val => `'${val}'`).join(',') + "))") + " OR " +
+            (MultiSelectIP_Public.selectedOptionValues.length === 0 ? "FALSE" : "(a.ten_thuoc_tinh = 'IP Public' AND v.gia_tri IN (" + MultiSelectIP_Public.selectedOptionValues.map(val => `'${val}'`).join(',') + "))") + " OR " +
+            (MultiSelectCPU.selectedOptionValues.length === 0 ? "FALSE" : "(a.ten_thuoc_tinh = 'CPU' AND v.gia_tri IN (" + MultiSelectCPU.selectedOptionValues.map(val => `'${val}'`).join(',') + "))") + " OR " +
+            (MultiSelectRAM.selectedOptionValues.length === 0 ? "FALSE" : "(a.ten_thuoc_tinh = 'Ram' AND v.gia_tri IN (" + MultiSelectRAM.selectedOptionValues.map(val => `'${val}'`).join(',') + "))") + " OR " +
+            (MultiSelectROM.selectedOptionValues.length === 0 ? "FALSE" : "(a.ten_thuoc_tinh = 'Rom' AND v.gia_tri IN (" + MultiSelectROM.selectedOptionValues.map(val => `'${val}'`).join(',') + "))") +
+          ")"
+        ) +
+      ')'
+    }}
+  )
+ORDER BY tbm.id ASC;

@@ -1,0 +1,5 @@
+SELECT DISTINCT ltb.ten_loai_thiet_bi AS label, ltb.id AS value
+FROM public.e_thiet_bi_mang tbm
+JOIN public.loai_thiet_bi ltb ON tbm.loai_thiet_bi_id = ltb.id
+WHERE tbm.ho_so_phong_thu_id = {{ data_tableHSPT.triggeredRow.id }}
+ORDER BY ltb.id ASC;

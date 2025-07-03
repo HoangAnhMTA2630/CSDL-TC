@@ -3,7 +3,7 @@
   "autoGenerateForm": true,
   "backgroundColor": "#FFFFFF",
   "borderColor": "#fff",
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderRadius": "0px",
   "borderWidth": "0",
   "bottomRow": 50,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
@@ -106,9 +106,6 @@
       "key": "resetButtonStyles.borderRadius"
     },
     {
-      "key": "borderRadius"
-    },
-    {
       "key": "boxShadow"
     },
     {
@@ -209,9 +206,6 @@
     },
     {
       "key": "isVisible"
-    },
-    {
-      "key": "borderRadius"
     },
     {
       "key": "onSubmit"

@@ -1,0 +1,13 @@
+SELECT 
+    SUM(
+        CASE 
+            WHEN kich_thuoc ILIKE '%MB' THEN CAST(SPLIT_PART(kich_thuoc, ' ', 1) AS FLOAT)
+            WHEN kich_thuoc ILIKE '%KB' THEN CAST(SPLIT_PART(kich_thuoc, ' ', 1) AS FLOAT) / 1024
+            WHEN kich_thuoc ILIKE '%GB' THEN CAST(SPLIT_PART(kich_thuoc, ' ', 1) AS FLOAT) * 1024
+            ELSE 0
+        END
+    ) AS tong_kich_thuoc_mb
+FROM 
+    public.tai_lieu
+WHERE 
+    kich_thuoc IS NOT NULL;

@@ -1,0 +1,5 @@
+SELECT * FROM public."ma_doc"
+WHERE "ten" ilike '%{{data_tableMaDoc.searchText || ""}}%'
+ORDER BY "{{data_tableMaDoc.sortOrder.column || 'id'}}" {{data_tableMaDoc.sortOrder.order || 'ASC'}}
+LIMIT {{data_tableMaDoc.pageSize}}
+OFFSET {{(data_tableMaDoc.pageNo - 1) * data_tableMaDoc.pageSize}};
