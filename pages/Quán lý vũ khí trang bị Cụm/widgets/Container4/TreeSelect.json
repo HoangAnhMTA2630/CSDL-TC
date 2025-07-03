@@ -3,7 +3,7 @@
   "allowClear": true,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 150,
+  "bottomRow": 7,
   "boxShadow": "none",
   "defaultOptionValue": "Trung tâm 386",
   "dynamicBindingPathList": [
@@ -51,15 +51,15 @@
   "originalBottomRow": 107,
   "originalTopRow": 102,
   "parentColumnSpace": 12.479248046875,
-  "parentId": "r05dfkqjoa",
+  "parentId": "v8efi64fy9",
   "parentRowSpace": 10,
   "placeholderText": "Chọn đơn vị",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 64,
-  "topRow": 146,
+  "topRow": 0,
   "type": "SINGLE_SELECT_TREE_WIDGET",
   "version": 1,
-  "widgetId": "csulfxwerz",
+  "widgetId": "b1c86ym6m0",
   "widgetName": "TreeSelect"
 }

@@ -27,7 +27,7 @@
   "parentId": "3087glls78",
   "parentRowSpace": 10,
   "rightColumn": 22,
-  "text": "Thông tin chi tiết Dịch vụ: {{data_tableWeb.triggeredRow.ten}}/",
+  "text": "Thông tin chi tiết Dịch vụ: {{data_tableWeb.triggeredRow.ten}}",
   "textAlign": "LEFT",
   "textColor": "#1d4ed8",
   "topRow": 0,

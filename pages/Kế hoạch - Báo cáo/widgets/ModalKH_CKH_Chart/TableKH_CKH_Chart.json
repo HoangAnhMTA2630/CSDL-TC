@@ -120,7 +120,11 @@
       "key": "tableData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.customColumn1.onClick"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -240,6 +244,7 @@
       "label": "V",
       "labelColor": "#FFFFFF",
       "notation": "standard",
+      "onClick": "{{showModal(ModalShowFileChart.name);}}",
       "originalId": "customColumn1",
       "sticky": "right",
       "textSize": "0.875rem",

@@ -1,11 +1,11 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "allowAddNewRow": true,
+  "allowAddNewRow": false,
   "animateLoading": true,
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 43,
+  "bottomRow": 51,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": false,
@@ -49,12 +49,18 @@
   ],
   "columnUpdatedAt": 1751163813839,
   "columnWidthMap": {
-    "EditActions1": 160,
+    "EditActions1": 154,
+    "cap_trang_bi": 136,
     "chuc_vu": 144,
     "id": 60,
+    "nhom": 102,
     "quan_ham": 147,
     "so_luong_thiet_bi": 958,
-    "ten_quan_nhan": 173
+    "ten_don_vi": 134,
+    "ten_loai_thiet_bi": 153,
+    "ten_quan_nhan": 173,
+    "ten_thiet_bi": 134,
+    "tinh_trang": 138
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -144,6 +150,9 @@
     },
     {
       "key": "tableData"
+    },
+    {
+      "key": "isSortable"
     }
   ],
   "dynamicTriggerPathList": [
@@ -155,20 +164,23 @@
     },
     {
       "key": "primaryColumns.EditActions1.onSave"
+    },
+    {
+      "key": "onSort"
     }
   ],
-  "enableClientSideSearch": true,
+  "enableClientSideSearch": false,
   "endOfData": false,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
   "inlineEditingSaveOption": "ROW_LEVEL",
   "isLoading": false,
-  "isSortable": true,
+  "isSortable": "false",
   "isVisible": true,
   "isVisibleDownload": false,
-  "isVisibleFilters": true,
+  "isVisibleFilters": false,
   "isVisiblePagination": true,
-  "isVisibleSearch": true,
+  "isVisibleSearch": false,
   "key": "9oz5vupis2",
   "label": "Data",
   "leftColumn": 0,
@@ -180,6 +192,8 @@
   "multiRowSelection": false,
   "needsErrorInfo": false,
   "onAddNewRowSave": "{{AddQuanNhan.run().then(() => {\n  Select_DV.run();\n});}}",
+  "onSearchTextChanged": "{{}}",
+  "onSort": "",
   "parentColumnSpace": 19.30859375,
   "parentId": "9my5qzzd58",
   "parentRowSpace": 10,
@@ -223,6 +237,7 @@
       "sticky": "right",
       "thousandSeparator": true,
       "validation": {},
+      "verticalAlignment": "BOTTOM",
       "width": 150
     },
     "cap_trang_bi": {
@@ -240,12 +255,12 @@
       "horizontalAlignment": "LEFT",
       "id": "cap_trang_bi",
       "index": 5,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "Cấp trang bị",
@@ -256,7 +271,7 @@
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
-      "verticalAlignment": "CENTER",
+      "verticalAlignment": "BOTTOM",
       "width": 150
     },
     "chuc_vu": {
@@ -287,7 +302,7 @@
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
-      "verticalAlignment": "CENTER",
+      "verticalAlignment": "BOTTOM",
       "width": 150
     },
     "customColumn1": {
@@ -326,7 +341,7 @@
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
-      "verticalAlignment": "CENTER",
+      "verticalAlignment": "BOTTOM",
       "width": 150
     },
     "id_thiet_bi": {
@@ -360,7 +375,7 @@
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
-      "verticalAlignment": "CENTER",
+      "verticalAlignment": "BOTTOM",
       "width": 150
     },
     "nhom": {
@@ -378,12 +393,12 @@
       "horizontalAlignment": "LEFT",
       "id": "nhom",
       "index": 4,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "Nhóm",
@@ -394,7 +409,7 @@
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
-      "verticalAlignment": "CENTER",
+      "verticalAlignment": "BOTTOM",
       "width": 150
     },
     "quan_ham": {
@@ -425,7 +440,7 @@
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
-      "verticalAlignment": "CENTER",
+      "verticalAlignment": "BOTTOM",
       "width": 150
     },
     "so_dien_thoai": {
@@ -456,7 +471,7 @@
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
-      "verticalAlignment": "CENTER",
+      "verticalAlignment": "BOTTOM",
       "width": 150
     },
     "ten_don_vi": {
@@ -487,7 +502,7 @@
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
-      "verticalAlignment": "CENTER",
+      "verticalAlignment": "BOTTOM",
       "width": 150
     },
     "ten_loai_thiet_bi": {
@@ -505,12 +520,12 @@
       "horizontalAlignment": "LEFT",
       "id": "ten_loai_thiet_bi",
       "index": 2,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "Loại thiết bị",
@@ -521,7 +536,7 @@
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
-      "verticalAlignment": "CENTER",
+      "verticalAlignment": "BOTTOM",
       "width": 150
     },
     "ten_quan_nhan": {
@@ -552,12 +567,12 @@
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
-      "verticalAlignment": "CENTER",
+      "verticalAlignment": "BOTTOM",
       "width": 150
     },
     "ten_thiet_bi": {
       "alias": "ten_thiet_bi",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
@@ -586,7 +601,7 @@
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
-      "verticalAlignment": "CENTER",
+      "verticalAlignment": "BOTTOM",
       "width": 150
     },
     "tinh_trang": {
@@ -604,12 +619,12 @@
       "horizontalAlignment": "LEFT",
       "id": "tinh_trang",
       "index": 6,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "Tình Trạng",
@@ -620,7 +635,7 @@
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
-      "verticalAlignment": "CENTER",
+      "verticalAlignment": "BOTTOM",
       "width": 150
     }
   },
@@ -628,14 +643,15 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
+  "serverSidePaginationEnabled": false,
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{Select_DV.data}}",
   "textSize": "0.875rem",
-  "topRow": 0,
+  "topRow": 5,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
-  "verticalAlignment": "CENTER",
+  "verticalAlignment": "BOTTOM",
   "widgetId": "9z1rcqywfc",
   "widgetName": "TableQNTB"
 }

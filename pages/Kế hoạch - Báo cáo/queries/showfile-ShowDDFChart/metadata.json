@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "fullyQualifiedName": "showfile.ShowDDFChart",
     "name": "ShowDDFChart",
     "pageId": "Kế hoạch - Báo cáo",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

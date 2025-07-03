@@ -20,7 +20,7 @@ LEFT JOIN
     public.quan_nhan qn ON tb.quanh_nhan_id = qn.id
 WHERE 
     {{ TreeSelect.selectedOptionValue 
-        ? `q.don_vi_id = '${TreeSelect.selectedOptionValue}'` 
+        ? `tb.don_vi_id = '${TreeSelect.selectedOptionValue}'` 
         : '1=1' 
     }}
 ORDER BY 

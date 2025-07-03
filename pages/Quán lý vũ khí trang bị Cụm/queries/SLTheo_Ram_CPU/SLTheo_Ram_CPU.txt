@@ -1,24 +1,32 @@
 SELECT 
   CASE 
     WHEN 
-      CAST(ram.gia_tri AS FLOAT) <= COALESCE({{Select_RAM.selectedOptionValue}}, 4) AND
-      CASE 
-        WHEN LOWER(TRIM(cpu.gia_tri)) = 'i3' THEN 1
-        WHEN LOWER(TRIM(cpu.gia_tri)) = 'i5' THEN 2
-        WHEN LOWER(TRIM(cpu.gia_tri)) = 'i7' THEN 3
-        WHEN LOWER(TRIM(cpu.gia_tri)) = 'i9' THEN 4
-        ELSE NULL
-      END <= COALESCE({{JS_LevelCPU.cpuLevel}}, 2)  -- i3 mặc định là 2
+      CAST(ram.gia_tri AS FLOAT) <= COALESCE({{Select_RAM.selectedOptionValue}}, 4)
+      AND
+      (
+        CASE 
+          WHEN LOWER(TRIM(cpu.gia_tri)) = 'i3' THEN 1
+          WHEN LOWER(TRIM(cpu.gia_tri)) = 'i5' THEN 2
+          WHEN LOWER(TRIM(cpu.gia_tri)) = 'i7' THEN 3
+          WHEN LOWER(TRIM(cpu.gia_tri)) = 'i9' THEN 4
+          ELSE 99  -- nếu CPU không xác định thì coi là quá yếu
+        END
+      ) <= COALESCE({{JS_LevelCPU.cpuLevel}}, 2)
     THEN 
-      '(RAM <= ' || COALESCE({{Select_RAM.selectedOptionValue}}, 4) || ' & CPU <= ' || COALESCE('{{Select_CPU.selectedOptionValue}}', 'i3') || ')'
+      '(RAM <= ' || COALESCE('{{Select_RAM.selectedOptionValue}}', 4) || ' & CPU <= ' || COALESCE('{{Select_CPU.selectedOptionValue}}', 'i3') || ')'
     ELSE 
       'Còn lại'
   END AS x,
   COUNT(DISTINCT tbm.id) AS y
-FROM e_thiet_bi_mang tbm
-JOIN v_thiet_bi_mang ram 
-  ON tbm.id = ram.e_thiet_bi_mang_id AND ram.a_thiet_bi_mang_id = 1  -- RAM
-JOIN v_thiet_bi_mang cpu 
-  ON tbm.id = cpu.e_thiet_bi_mang_id AND cpu.a_thiet_bi_mang_id = 4  -- CPU
-WHERE tbm.loai_thiet_bi_id = 5  -- Máy tính
-GROUP BY x;
+FROM 
+  e_thiet_bi_mang tbm
+JOIN 
+  v_thiet_bi_mang ram 
+    ON tbm.id = ram.e_thiet_bi_mang_id AND ram.a_thiet_bi_mang_id = 1  -- RAM
+JOIN 
+  v_thiet_bi_mang cpu 
+    ON tbm.id = cpu.e_thiet_bi_mang_id AND cpu.a_thiet_bi_mang_id = 4  -- CPU
+WHERE 
+  tbm.loai_thiet_bi_id = 5  -- Máy tính
+GROUP BY 
+  x;

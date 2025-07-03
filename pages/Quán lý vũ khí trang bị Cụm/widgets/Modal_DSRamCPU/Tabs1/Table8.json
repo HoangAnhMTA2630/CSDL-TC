@@ -37,7 +37,7 @@
     "ram_gb",
     "cpu_loai"
   ],
-  "columnUpdatedAt": 1750859719963,
+  "columnUpdatedAt": 1751337387839,
   "columnWidthMap": {
     "id": 60,
     "ram_gb": 163,
@@ -164,7 +164,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "id",
       "notation": "standard",
       "originalId": "id",
