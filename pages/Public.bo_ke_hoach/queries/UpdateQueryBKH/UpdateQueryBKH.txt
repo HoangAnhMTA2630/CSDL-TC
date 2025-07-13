@@ -1,6 +1,0 @@
-UPDATE public."bo_ke_hoach" SET
-		"ten_bo_ke_hoach" = '{{update_formBKH.fieldState.ten_bo_ke_hoach.isVisible ? update_formBKH.formData.ten_bo_ke_hoach : update_formBKH.sourceData.ten_bo_ke_hoach}}',
-		"loai_ke_hoach_id" = '{{update_formBKH.fieldState.loai_ke_hoach_id.isVisible ? update_formBKH.formData.loai_ke_hoach_id : update_formBKH.sourceData.loai_ke_hoach_id}}',
-    "thoi_gian_id" = '{{update_formBKH.fieldState.thoi_gian_id.isVisible ? update_formBKH.formData.thoi_gian_id : update_formBKH.sourceData.thoi_gian_id}}',
-		"mo_ta" = '{{update_formBKH.fieldState.mo_ta.isVisible ? update_formBKH.formData.mo_ta : update_formBKH.sourceData.mo_ta}}'
-WHERE "id" = {{data_tableBKH.selectedRow.id}};

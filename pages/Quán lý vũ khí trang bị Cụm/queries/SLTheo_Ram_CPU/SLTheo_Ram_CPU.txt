@@ -1,19 +1,27 @@
 SELECT 
   CASE 
     WHEN 
-      CAST(ram.gia_tri AS FLOAT) <= COALESCE({{Select_RAM.selectedOptionValue}}, 4)
+      -- So sánh RAM cấp độ
+      CASE 
+        WHEN CAST(REGEXP_REPLACE(LOWER(TRIM(ram.gia_tri)), '[^0-9.]', '', 'g') AS FLOAT) <= 4 THEN 1
+        WHEN CAST(REGEXP_REPLACE(LOWER(TRIM(ram.gia_tri)), '[^0-9.]', '', 'g') AS FLOAT) <= 8 THEN 2
+        WHEN CAST(REGEXP_REPLACE(LOWER(TRIM(ram.gia_tri)), '[^0-9.]', '', 'g') AS FLOAT) <= 16 THEN 3
+        ELSE 4
+      END <= COALESCE({{JS_RAMLevel.ramLevel}}, 1)  -- cấp độ RAM do người dùng chọn
+
       AND
-      (
-        CASE 
-          WHEN LOWER(TRIM(cpu.gia_tri)) = 'i3' THEN 1
-          WHEN LOWER(TRIM(cpu.gia_tri)) = 'i5' THEN 2
-          WHEN LOWER(TRIM(cpu.gia_tri)) = 'i7' THEN 3
-          WHEN LOWER(TRIM(cpu.gia_tri)) = 'i9' THEN 4
-          ELSE 99  -- nếu CPU không xác định thì coi là quá yếu
-        END
-      ) <= COALESCE({{JS_LevelCPU.cpuLevel}}, 2)
+
+      -- So sánh CPU cấp độ
+      CASE 
+        WHEN LOWER(TRIM(cpu.gia_tri)) = 'i3' THEN 1
+        WHEN LOWER(TRIM(cpu.gia_tri)) = 'i5' THEN 2
+        WHEN LOWER(TRIM(cpu.gia_tri)) = 'i7' THEN 3
+        WHEN LOWER(TRIM(cpu.gia_tri)) = 'i9' THEN 4
+        ELSE 99
+      END <= COALESCE({{JS_LevelCPU.cpuLevel}}, 1)
+
     THEN 
-      '(RAM <= ' || COALESCE('{{Select_RAM.selectedOptionValue}}', 4) || ' & CPU <= ' || COALESCE('{{Select_CPU.selectedOptionValue}}', 'i3') || ')'
+      '(RAM <= ' || COALESCE('{{Select_RAM.selectedOptionValue}}','4GB') || ' & CPU <= ' || COALESCE('{{Select_CPU.selectedOptionValue}}', 'i3') || ')'
     ELSE 
       'Còn lại'
   END AS x,
@@ -21,12 +29,10 @@ SELECT
 FROM 
   e_thiet_bi_mang tbm
 JOIN 
-  v_thiet_bi_mang ram 
-    ON tbm.id = ram.e_thiet_bi_mang_id AND ram.a_thiet_bi_mang_id = 1  -- RAM
+  v_thiet_bi_mang ram ON tbm.id = ram.e_thiet_bi_mang_id AND ram.a_thiet_bi_mang_id = 1
 JOIN 
-  v_thiet_bi_mang cpu 
-    ON tbm.id = cpu.e_thiet_bi_mang_id AND cpu.a_thiet_bi_mang_id = 4  -- CPU
+  v_thiet_bi_mang cpu ON tbm.id = cpu.e_thiet_bi_mang_id AND cpu.a_thiet_bi_mang_id = 4
 WHERE 
-  tbm.loai_thiet_bi_id = 5  -- Máy tính
+  tbm.loai_thiet_bi_id = 5
 GROUP BY 
   x;

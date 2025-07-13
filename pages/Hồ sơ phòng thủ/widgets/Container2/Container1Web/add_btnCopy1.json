@@ -12,6 +12,11 @@
       "key": "borderRadius"
     }
   ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -23,7 +28,7 @@
   "isVisible": "true",
   "labelTextSize": "0.875rem",
   "leftColumn": 57,
-  "onClick": "{{showModal(Insert_ModalWeb.name);}}",
+  "onClick": "{{showModal(Insert_ModalWeb.name);\nQueryTBMInHSM.run()}}",
   "parentColumnSpace": 12.0703125,
   "parentId": "ng6i479mbo",
   "parentRowSpace": 10,

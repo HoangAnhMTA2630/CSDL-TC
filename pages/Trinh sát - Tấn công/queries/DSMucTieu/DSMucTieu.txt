@@ -1,0 +1,19 @@
+SELECT 
+    mt.id,
+    h.ten_huong AS huong,
+    mt.domain,
+    dt.ten_to_chuc,
+    dt.ban_nganh
+FROM 
+    public.muc_tieu mt
+JOIN 
+    public.doi_tuong_tc dt ON mt.doi_tuong_tc_id = dt.id
+JOIN 
+    public.huong h ON dt.huong_id = h.id
+WHERE 
+		1=1
+    {{ SelectHuong.selectedOptionValue ? `AND h.id = ${SelectHuong.selectedOptionValue}` : '' }}
+    {{ SelectBanNganh.selectedOptionValue ? ` AND dt.ban_nganh = '${SelectBanNganh.selectedOptionValue}'` : '' }}
+    {{ SelectToChuc.selectedOptionValue ? ` AND dt.ten_to_chuc = '${SelectToChuc.selectedOptionValue}'` : '' }}
+ORDER BY 
+    h.ten_huong, mt.id;

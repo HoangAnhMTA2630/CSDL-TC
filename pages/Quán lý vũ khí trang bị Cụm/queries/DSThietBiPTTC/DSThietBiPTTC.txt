@@ -1,0 +1,13 @@
+SELECT 
+    vkm.id, 
+    vkm.ten, 
+    dv.ten_don_vi, 
+    vkm.mo_ta 
+FROM 
+    public.vu_khi_mang AS vkm
+JOIN 
+    public.don_vi AS dv ON vkm.don_vi_id = dv.id
+WHERE
+    1=1
+    {{ ChartPTTC.selectedDataPoint ? `AND vkm.loai_vu_khi = '${ChartPTTC.selectedDataPoint.rawEventData.name}'` : '' }}
+

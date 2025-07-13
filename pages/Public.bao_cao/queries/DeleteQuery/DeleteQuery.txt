@@ -1,2 +1,0 @@
-DELETE FROM public."bao_cao"
-  WHERE "id" = {{data_table.triggeredRow.id}};

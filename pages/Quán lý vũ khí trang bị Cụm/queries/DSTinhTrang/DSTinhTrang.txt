@@ -1,0 +1,1 @@
+SELECT tinh_trang FROM public."e_thiet_bi_mang" GROUP BY tinh_trang;

@@ -1,0 +1,12 @@
+SELECT 
+    dtc.ten_to_chuc
+FROM 
+    public.doi_tuong_tc dtc
+JOIN 
+    public.huong h ON dtc.huong_id = h.id
+WHERE 
+    h.id = {{SelectHuong_.selectedOptionValue}}
+GROUP BY 
+		dtc.ten_to_chuc
+ORDER BY 
+    dtc.ten_to_chuc;

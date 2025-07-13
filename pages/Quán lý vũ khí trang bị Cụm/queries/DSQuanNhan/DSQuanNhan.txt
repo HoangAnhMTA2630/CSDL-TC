@@ -1,0 +1,6 @@
+SELECT DISTINCT ON (ten_quan_nhan) *
+FROM public.quan_nhan
+WHERE don_vi_id IN (SELECT id FROM don_vi WHERE ten_don_vi = 
+  '{{ TableQNTB.updatedRow.ten_don_vi || TableQNTB.newRow.ten_don_vi }}'
+)
+ORDER BY ten_quan_nhan;

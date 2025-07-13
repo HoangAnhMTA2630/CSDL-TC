@@ -1,0 +1,1 @@
+SELECT id as x, ten_loai_thiet_bi as y FROM public."loai_thiet_bi"

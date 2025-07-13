@@ -25,7 +25,7 @@
   "isVisible": "true",
   "labelTextSize": "0.875rem",
   "leftColumn": 46,
-  "onClick": "{{Delete_LKH.run(() => LoaiKH.run(() => closeModal('Delete_Modal_KHCopy')), () => {})}}",
+  "onClick": "{{DeleteLoaiKH.run(() => LoaiKH.run(() => closeModal('Delete_Modal_KHCopy')), () => {})}}",
   "parentId": "ajp8gede1h",
   "recaptchaType": "V3",
   "rightColumn": 64,

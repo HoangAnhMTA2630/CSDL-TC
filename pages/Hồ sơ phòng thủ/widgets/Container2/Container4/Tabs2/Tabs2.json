@@ -164,7 +164,11 @@
       "key": "isVisible"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTabSelected"
+    }
+  ],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isLoading": false,
@@ -179,6 +183,7 @@
   "mobileRightColumn": 12,
   "mobileTopRow": 10,
   "needsErrorInfo": false,
+  "onTabSelected": "",
   "originalBottomRow": 50,
   "originalTopRow": 4,
   "parentColumnSpace": 19.8125,

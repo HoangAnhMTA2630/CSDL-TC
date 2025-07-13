@@ -11,6 +11,9 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -30,13 +33,15 @@
   "mobileRightColumn": 41,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
+  "originalBottomRow": 8,
+  "originalTopRow": 0,
   "overflow": "NONE",
   "parentId": "777i07m3pt",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 4,
+  "rightColumn": 9,
   "shouldTruncate": false,
-  "text": "CPU",
+  "text": "CPU {{ChartCPU.selectedDataPoint.rawEventData.name}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 0,

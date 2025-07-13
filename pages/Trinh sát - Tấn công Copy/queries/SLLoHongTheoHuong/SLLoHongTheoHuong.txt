@@ -1,0 +1,16 @@
+SELECT 
+    h.ten_huong AS huong,
+    COUNT(mtlh.id) AS so_luong_lo_hong
+FROM 
+    public.muc_tieu_lo_hong_bao_mat_web mtlh
+FULL JOIN 
+    public.muc_tieu mt ON mtlh.muc_tieu_id = mt.id
+FULL JOIN 
+    public.doi_tuong_tc dt ON mt.doi_tuong_tc_id = dt.id
+FULL JOIN 
+    public.huong h ON dt.huong_id = h.id
+GROUP BY 
+    h.ten_huong
+ORDER BY 
+    so_luong_lo_hong DESC;
+

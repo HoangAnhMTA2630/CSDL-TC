@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 9,
+  "bottomRow": 8,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -33,15 +33,17 @@
   "isLoading": false,
   "isVisible": true,
   "key": "s8ew0jemrb",
-  "leftColumn": 14,
+  "leftColumn": 12,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
+  "originalBottomRow": 8,
+  "originalTopRow": 4,
   "overflow": "NONE",
   "parentColumnSpace": 4.234375,
   "parentId": "vx2od12slj",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 52,
+  "rightColumn": 50,
   "searchTags": [
     "typography",
     "paragraph",
@@ -52,10 +54,10 @@
   "text": "{{SlTaiKhoan.data[0].tong_so_tai_khoan}}",
   "textAlign": "LEFT",
   "textColor": "{{appsmith.theme.colors.primaryColor}}",
-  "topRow": 5,
+  "topRow": 4,
   "truncateButtonColor": "#FFC13D",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "yxnrq5o9wr",
+  "widgetId": "qn2kgxu6m4",
   "widgetName": "txt_totalProductCountCopyCopy"
 }

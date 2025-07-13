@@ -1,0 +1,50 @@
+-- Cập nhật CPU
+UPDATE public.v_thiet_bi_mang
+SET gia_tri = '{{update_form_KH.formData.cpu}}'
+WHERE e_thiet_bi_mang_id = {{TableQNTB.triggeredRow.id_thiet_bi}} 
+  AND a_thiet_bi_mang_id = (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'CPU');
+
+-- Cập nhật RAM
+UPDATE public.v_thiet_bi_mang
+SET gia_tri = '{{update_form_KH.formData.ram}}'
+WHERE e_thiet_bi_mang_id = {{TableQNTB.triggeredRow.id_thiet_bi}} 
+  AND a_thiet_bi_mang_id = (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'RAM');
+
+-- Cập nhật ROM
+UPDATE public.v_thiet_bi_mang
+SET gia_tri = '{{update_form_KH.formData.rom}}'
+WHERE e_thiet_bi_mang_id = {{TableQNTB.triggeredRow.id_thiet_bi}} 
+  AND a_thiet_bi_mang_id = (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'ROM');
+
+-- Cập nhật HDH
+UPDATE public.v_thiet_bi_mang
+SET gia_tri = '{{update_form_KH.formData.hdh}}'
+WHERE e_thiet_bi_mang_id = {{TableQNTB.triggeredRow.id_thiet_bi}} 
+  AND a_thiet_bi_mang_id = (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'HDH');
+	
+	
+	
+	-- Cập nhật Ports
+UPDATE public.v_thiet_bi_mang
+SET gia_tri = '{{update_form_KH.formData.ports}}'
+WHERE e_thiet_bi_mang_id = {{TableQNTB.triggeredRow.id_thiet_bi}} 
+  AND a_thiet_bi_mang_id = (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'Ports');
+
+-- Cập nhật ip public
+UPDATE public.v_thiet_bi_mang
+SET gia_tri = '{{update_form_KH.formData.ip_public}}'
+WHERE e_thiet_bi_mang_id = {{TableQNTB.triggeredRow.id_thiet_bi}} 
+  AND a_thiet_bi_mang_id = (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'Ip Public');
+
+-- Cập nhật ip
+UPDATE public.v_thiet_bi_mang
+SET gia_tri = '{{update_form_KH.formData.ip_private}}'
+WHERE e_thiet_bi_mang_id = {{TableQNTB.triggeredRow.id_thiet_bi}} 
+  AND a_thiet_bi_mang_id = (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'Ip Private');
+
+-- Cập nhật HDH
+UPDATE public.v_thiet_bi_mang
+SET gia_tri = '{{update_form_KH.formData.ssid}}'
+WHERE e_thiet_bi_mang_id = {{TableQNTB.triggeredRow.id_thiet_bi}} 
+  AND a_thiet_bi_mang_id = (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'SSID');
+

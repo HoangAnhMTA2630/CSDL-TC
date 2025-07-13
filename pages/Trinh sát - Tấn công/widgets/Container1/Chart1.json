@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 42,
+  "bottomRow": 37,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "m511bv4lbi": {
@@ -26,7 +26,7 @@
   },
   "chartName": "Số lượng đơn vị theo hướng",
   "chartType": "CUSTOM_ECHART",
-  "customEChartConfig": "{{ ((chartType) => ( JS_SLThietBiTheoHuong.fetchData.data))(Chart1.chartType) }}",
+  "customEChartConfig": "{{ ((chartType) => ( Exit_JS_SLThietBiTheoHuong.fetchData.data))(Chart1.chartType) }}",
   "customFusionChartConfig": {
     "dataSource": {
       "chart": {
@@ -117,9 +117,9 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 20,
+  "rightColumn": 21,
   "showDataPointLabel": false,
-  "topRow": 6,
+  "topRow": 0,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "nk6yhi0gak",

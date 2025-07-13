@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "682d4d2a92cca105dbc17693_32ecb5c7-f73b-4e3b-8e19-dbeb3d49a8c2",
+  "id": "Quán lý vũ khí trang bị Cụm_JS_RAMLevel",
+  "unpublishedCollection": {
+    "name": "JS_RAMLevel",
+    "pageId": "Quán lý vũ khí trang bị Cụm",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "ramLevel",
+        "value": "({\n  \"4\": 1,\n  \"8\": 2,\n  \"16\": 3\n})[Select_RAM.selectedOptionValue]"
+      }
+    ]
+  }
+}

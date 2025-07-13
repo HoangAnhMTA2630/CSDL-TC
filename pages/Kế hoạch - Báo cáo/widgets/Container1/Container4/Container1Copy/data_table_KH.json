@@ -23,10 +23,10 @@
   },
   "columnOrder": [
     "id",
-    "ten_cap",
-    "cap_ban_hanh_id",
     "so_ke_hoach",
     "ten_ke_hoach",
+    "ten_cap",
+    "cap_ban_hanh_id",
     "ten_loai_ke_hoach",
     "loai_ke_hoach_id",
     "ngay_ban_hanh",
@@ -42,7 +42,7 @@
     "step": 62,
     "task": 245
   },
-  "columnUpdatedAt": 1750348426276,
+  "columnUpdatedAt": 1752316100207,
   "columnWidthMap": {
     "bo_ke_hoach_id": 330,
     "cap_ban_hanh_id": 96,

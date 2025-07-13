@@ -1,0 +1,23 @@
+SELECT 
+	tg.*, 
+  ltg.ten_loai_thoi_gian
+FROM public."thoi_gian" AS tg
+LEFT JOIN public."loai_thoi_gian" AS ltg ON tg.loai_thoi_gian_id = ltg.id
+WHERE 1=1
+
+-- Lọc theo loại thời gian nếu có chọn
+{{ SelectLoaiTG.selectedOptionValue ? `AND loai_thoi_gian_id = ${SelectLoaiTG.selectedOptionValue}` : "" }}
+
+-- Lọc theo năm nếu có chọn
+{{ SelectNam.selectedOptionValue ? `AND nam = ${SelectNam.selectedOptionValue}` : "" }}
+
+-- Lọc theo quý nếu có chọn
+{{ SelectQuy.selectedOptionValue ? `AND quy = ${SelectQuy.selectedOptionValue}` : "" }}
+
+-- Lọc theo tháng nếu có chọn
+{{ SelectThang.selectedOptionValue ? `AND thang = ${SelectThang.selectedOptionValue}` : "" }}
+
+-- Lọc theo tuần nếu có chọn
+{{ SelectTuan.selectedOptionValue ? `AND tuan = ${SelectTuan.selectedOptionValue}` : "" }}
+
+ORDER BY id ASC;

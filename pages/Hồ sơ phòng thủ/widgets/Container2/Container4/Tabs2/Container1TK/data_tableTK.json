@@ -190,7 +190,7 @@
       "labelColor": "#FFFFFF",
       "menuColor": "{{data_tableTK.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
       "notation": "standard",
-      "onClick": "{{showModal(Modal1.name);}}",
+      "onClick": "{{showModal(ModalTK_TBM.name);}}",
       "originalId": "customColumn1",
       "sticky": "right",
       "textSize": "0.875rem",

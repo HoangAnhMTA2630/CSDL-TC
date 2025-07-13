@@ -30,7 +30,11 @@
       "key": "customEChartConfig"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onDataPointClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onDataPointClick"

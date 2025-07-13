@@ -46,7 +46,7 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 64,
-  "text": "Danh sách đơn vị",
+  "text": "Danh sách đơn vị phòng thủ",
   "topRow": 26,
   "type": "BUTTON_WIDGET",
   "version": 1,

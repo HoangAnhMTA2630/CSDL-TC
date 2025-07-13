@@ -1,2 +1,0 @@
-DELETE FROM public."bao_cao_cve"
-  WHERE "id" = {{data_tableTBM_CVE.triggeredRow.id}};

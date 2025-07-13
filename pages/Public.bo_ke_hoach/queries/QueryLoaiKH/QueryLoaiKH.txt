@@ -1,1 +1,0 @@
-SELECT ten_loai_ke_hoach as label, id as value FROM public."loai_ke_hoach" ;

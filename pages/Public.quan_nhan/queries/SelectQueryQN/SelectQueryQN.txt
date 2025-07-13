@@ -1,5 +1,0 @@
-SELECT * FROM public."quan_nhan"
-WHERE "ten_quan_nhan" ilike '%{{data_tableQN.searchText || ""}}%'
-ORDER BY "{{data_tableQN.sortOrder.column || 'id'}}" {{data_tableQN.sortOrder.order || 'ASC'}}
-LIMIT {{data_tableQN.pageSize}}
-OFFSET {{(data_tableQN.pageNo - 1) * data_tableQN.pageSize}};

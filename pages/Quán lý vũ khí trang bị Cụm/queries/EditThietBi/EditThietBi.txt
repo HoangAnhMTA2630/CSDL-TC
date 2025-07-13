@@ -1,0 +1,27 @@
+UPDATE public.e_thiet_bi_mang
+SET
+  ten_thiet_bi = '{{TableQNTB.updatedRow.ten_thiet_bi}}',
+
+  loai_thiet_bi_id = (
+      SELECT id FROM loai_thiet_bi 
+      WHERE ten_loai_thiet_bi = '{{TableQNTB.updatedRow.ten_loai_thiet_bi}}'
+      LIMIT 1
+    ),
+
+  nhom = '{{TableQNTB.updatedRow.nhom}}',
+  cap_trang_bi = '{{TableQNTB.updatedRow.cap_trang_bi}}',
+  tinh_trang = '{{TableQNTB.updatedRow.tinh_trang}}',
+
+  don_vi_id = (
+      SELECT id FROM don_vi 
+      WHERE ten_don_vi = '{{TableQNTB.updatedRow.ten_don_vi}}'
+      LIMIT 1
+    ),
+
+  quanh_nhan_id =(
+      SELECT id FROM quan_nhan 
+      WHERE ten_quan_nhan = '{{TableQNTB.updatedRow.ten_quan_nhan}}'
+      LIMIT 1
+    )
+
+WHERE id = {{TableQNTB.updatedRow.id_thiet_bi}};

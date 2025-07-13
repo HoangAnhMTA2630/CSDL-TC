@@ -86,40 +86,16 @@
   "displayName": "JSON Form",
   "dynamicBindingPathList": [
     {
-      "key": "schema.__root_schema__.defaultValue"
-    },
-    {
-      "key": "sourceData"
-    },
-    {
-      "key": "schema.__root_schema__.borderRadius"
-    },
-    {
-      "key": "schema.__root_schema__.cellBorderRadius"
-    },
-    {
-      "key": "borderRadius"
-    },
-    {
-      "key": "submitButtonStyles.buttonColor"
-    },
-    {
-      "key": "submitButtonStyles.borderRadius"
-    },
-    {
-      "key": "resetButtonStyles.borderRadius"
-    },
-    {
-      "key": "resetButtonStyles.buttonColor"
-    },
-    {
       "key": "schema.__root_schema__.children.ten_loai_ke_hoach.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_loai_ke_hoach.accentColor"
     },
     {
       "key": "schema.__root_schema__.children.ten_loai_ke_hoach.borderRadius"
     },
     {
-      "key": "schema.__root_schema__.children.ten_loai_ke_hoach.accentColor"
+      "key": "borderRadius"
     }
   ],
   "dynamicHeight": "FIXED",

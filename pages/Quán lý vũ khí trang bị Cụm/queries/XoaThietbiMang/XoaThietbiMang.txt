@@ -1,0 +1,19 @@
+-- 1. Xóa các bản ghi phụ thuộc trong v_thiet_bi_mang
+DELETE FROM public.v_thiet_bi_mang
+WHERE e_thiet_bi_mang_id = {{ TableQNTB.triggeredRow.id_thiet_bi }};
+
+-- 2. Xóa các bản ghi phụ thuộc trong tai_khoan_quan_tri
+DELETE FROM public.tai_khoan_quan_tri
+WHERE thiet_bi_mang_id = {{ TableQNTB.triggeredRow.id_thiet_bi }};
+
+-- 3. Xóa các bản ghi phụ thuộc trong bao_cao_cve
+DELETE FROM public.bao_cao_cve
+WHERE thiet_bi_id = {{ TableQNTB.triggeredRow.id_thiet_bi }};
+
+-- 4. Xóa các bản ghi phụ thuộc trong web
+DELETE FROM public.web
+WHERE thiet_bi_mang_id = {{ TableQNTB.triggeredRow.id_thiet_bi }};
+
+-- 5. Cuối cùng, xóa thiết bị mạng trong e_thiet_bi_mang
+DELETE FROM public.e_thiet_bi_mang
+WHERE id = {{ TableQNTB.triggeredRow.id_thiet_bi }};

@@ -1,0 +1,4 @@
+INSERT INTO public."loai_thiet_bi" (
+	"ten_loai_thiet_bi")
+VALUES (
+	'{{Table_LoaiTB.newRow.ten_loai_thiet_bi}}');

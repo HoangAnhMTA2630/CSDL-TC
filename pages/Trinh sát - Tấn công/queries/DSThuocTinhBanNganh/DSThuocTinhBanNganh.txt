@@ -1,0 +1,5 @@
+SELECT DISTINCT ban_nganh
+FROM public.doi_tuong_tc
+WHERE ban_nganh IS NOT NULL
+GROUP BY ban_nganh
+ORDER BY ban_nganh;

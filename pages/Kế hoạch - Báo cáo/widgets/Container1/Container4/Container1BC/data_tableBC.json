@@ -156,6 +156,9 @@
     },
     {
       "key": "primaryColumns.customColumn2.onClick"
+    },
+    {
+      "key": "onSearchTextChanged"
     }
   ],
   "dynamicTriggerPathList": [
@@ -196,7 +199,7 @@
   "leftColumn": 0,
   "onPageChange": "{{SelectQueryBC.run()}}",
   "onRowSelected": "",
-  "onSearchTextChanged": "{{SelectQueryBC.run()}}",
+  "onSearchTextChanged": "{{SelectQueryBC_v1.run()}}",
   "onSort": "{{SelectQueryBC.run()}}",
   "parentColumnSpace": 16.3125,
   "parentId": "7nf3mcyduu",

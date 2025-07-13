@@ -1,6 +1,0 @@
-INSERT INTO public."doi_tuong_tc" (
-	"ten_to_chuc",
-	"ban_nganh")
-VALUES (
-	'{{insert_form.formData.ten_to_chuc}}',
-	'{{insert_form.formData.ban_nganh}}');

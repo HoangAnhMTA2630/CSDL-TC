@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  kh.*, \n  cap.ten_cap, \n  lkh.ten_loai_ke_hoach\nFROM public.\"ke_hoach\" AS kh\nLEFT JOIN public.\"cap\" AS cap ON kh.cap_ban_hanh_id = cap.id\nLEFT JOIN public.\"loai_ke_hoach\" AS lkh ON kh.loai_ke_hoach_id = lkh.id\nWHERE {{ appsmith.store.IDBoKH ? `kh.bo_ke_hoach_id = '${appsmith.store.IDBoKH}'` : '1=1' }}\nORDER BY kh.id ASC;",
+      "body": "SELECT \n  kh.*, \n  cap.ten_cap, \n  lkh.ten_loai_ke_hoach\nFROM public.\"ke_hoach\" AS kh\nLEFT JOIN public.\"cap\" AS cap ON kh.cap_ban_hanh_id = cap.id\nLEFT JOIN public.\"loai_ke_hoach\" AS lkh ON kh.loai_ke_hoach_id = lkh.id\nWHERE \n  (\n    {{ data_table_KH.searchText ? `kh.so_ke_hoach ILIKE '%${data_table_KH.searchText}%'` : 'TRUE' }}\n  )\n  AND \n  (\n    {{ appsmith.store.IDBoKH ? `kh.bo_ke_hoach_id = '${appsmith.store.IDBoKH}'` : 'TRUE' }}\n  )\nORDER BY kh.id ASC;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

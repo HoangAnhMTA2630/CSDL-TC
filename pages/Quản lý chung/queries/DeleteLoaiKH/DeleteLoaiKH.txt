@@ -1,0 +1,2 @@
+DELETE FROM public."loai_ke_hoach"
+  WHERE "id" = {{Table_LoaiKH.triggeredRow.id}};

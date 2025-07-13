@@ -1,0 +1,7 @@
+UPDATE public."thoi_gian" SET
+		"loai_thoi_gian_id" = '{{update_form.fieldState.loai_thoi_gian_id.isVisible ? update_form.formData.loai_thoi_gian_id : update_form.sourceData.loai_thoi_gian_id}}',
+    "nam" = '{{update_form.fieldState.nam.isVisible ? update_form.formData.nam : update_form.sourceData.nam}}',
+		"quy" = '{{update_form.fieldState.quy.isVisible ? update_form.formData.quy : update_form.sourceData.quy}}',
+		"thang" = '{{update_form.fieldState.thang.isVisible ? update_form.formData.thang : update_form.sourceData.thang}}',
+		"tuan" = '{{update_form.fieldState.tuan.isVisible ? update_form.formData.tuan : update_form.sourceData.tuan}}'
+WHERE "id" = {{data_table.selectedRow.id}};

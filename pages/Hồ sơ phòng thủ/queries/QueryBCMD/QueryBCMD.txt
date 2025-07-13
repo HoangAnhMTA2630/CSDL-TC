@@ -1,0 +1,20 @@
+SELECT 
+  bc.id,
+  bc.so_bao_cao,
+  bc.ten_bao_cao,
+  bc.ngay_ban_hanh,
+	bc.ngay_sua_doi,
+  bc.trang_thai,
+	bc.duong_dan_file,
+	bc.mo_ta,
+  cbc.ten_cap AS ten_cap_bao_cao,
+  lbc.ten_loai_bao_cao,
+  COUNT(md.id) AS so_luong_ma_doc
+FROM bao_cao bc
+JOIN ma_doc md ON md.bao_cao_id = bc.id
+LEFT JOIN cap cbc ON bc.cap_bao_cao_id = cbc.id
+LEFT JOIN loai_bao_cao lbc ON bc.loai_bao_cao_id = lbc.id
+GROUP BY 
+  bc.id, bc.so_bao_cao, bc.ten_bao_cao, bc.ngay_ban_hanh, bc.trang_thai,
+  cbc.ten_cap, lbc.ten_loai_bao_cao
+ORDER BY bc.ngay_ban_hanh DESC;

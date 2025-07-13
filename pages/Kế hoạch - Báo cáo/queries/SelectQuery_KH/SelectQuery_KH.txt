@@ -5,5 +5,12 @@ SELECT
 FROM public."ke_hoach" AS kh
 LEFT JOIN public."cap" AS cap ON kh.cap_ban_hanh_id = cap.id
 LEFT JOIN public."loai_ke_hoach" AS lkh ON kh.loai_ke_hoach_id = lkh.id
-WHERE {{ appsmith.store.IDBoKH ? `kh.bo_ke_hoach_id = '${appsmith.store.IDBoKH}'` : '1=1' }}
+WHERE 
+  (
+    {{ data_table_KH.searchText ? `kh.so_ke_hoach ILIKE '%${data_table_KH.searchText}%'` : 'TRUE' }}
+  )
+  AND 
+  (
+    {{ appsmith.store.IDBoKH ? `kh.bo_ke_hoach_id = '${appsmith.store.IDBoKH}'` : 'TRUE' }}
+  )
 ORDER BY kh.id ASC;

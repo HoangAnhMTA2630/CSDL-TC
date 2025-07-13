@@ -1,0 +1,9 @@
+SELECT 
+    sb.id,
+    sb.subdomain
+FROM 
+    public.subdomain sb
+WHERE 
+    sb.muc_tieu_id = {{ SelectMucTieu.selectedOptionValue }}
+ORDER BY 
+    sb.subdomain;

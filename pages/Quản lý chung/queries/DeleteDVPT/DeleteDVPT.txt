@@ -1,0 +1,2 @@
+DELETE FROM public."don_vi_phong_thu"
+  WHERE "id" = {{Table_DVPT.triggeredRow.id}};

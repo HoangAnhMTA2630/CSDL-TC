@@ -1,3 +1,0 @@
-SELECT id,ten_thiet_bi
-FROM e_thiet_bi_mang
-ORDER by id

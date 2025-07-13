@@ -1,8 +1,0 @@
-INSERT INTO public."tai_khoan_quan_tri" (
-	"mat_khau",
-	"tai_khoan_quan_tri",
-	"thiet_bi_mang_id")
-VALUES (
-	'{{insert_formTK.formData.mat_khau}}',
-	'{{insert_formTK.formData.tai_khoan_quan_tri}}',
-	'{{insert_formTK.formData.thiet_bi_mang_id}}');

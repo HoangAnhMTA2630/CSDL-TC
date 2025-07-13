@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  ten_thiet_bi AS label,\n  id AS value\nFROM \n  e_thiet_bi_mang\nWHERE \n  \"ho_so_phong_thu_id\" = {{data_tableHSPT.triggeredRow.id}}\nORDER BY id ASC;",
+      "body": "SELECT \n  tbm.ten_thiet_bi AS label,\n  tbm.id AS value\nFROM e_thiet_bi_mang tbm\nJOIN ho_so_phong_thu hspt ON tbm.ho_so_phong_thu_id = hspt.id\nWHERE hspt.don_vi_id = {{ TreeSelect.selectedOptionValue }}\nORDER BY tbm.id ASC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

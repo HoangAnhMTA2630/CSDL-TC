@@ -1,0 +1,1 @@
+SELECT nhom FROM e_thiet_bi_mang GROUP BY nhom;

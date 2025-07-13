@@ -1,0 +1,14 @@
+SELECT 
+    tk.id,
+    tk.username,
+		tk.pass,
+    tk.trang_thai,
+    tk.cap_do,
+    tk.ngay_phat_hien,
+    tk.mo_ta
+FROM 
+    public.tai_khoan tk
+WHERE 
+    tk.muc_tieu_id = {{Table.triggeredRow.id }}
+ORDER BY 
+    tk.id;

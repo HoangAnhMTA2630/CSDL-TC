@@ -1,0 +1,2 @@
+SELECT ten_loai_thoi_gian as label, id as value
+FROM public."loai_thoi_gian" ;

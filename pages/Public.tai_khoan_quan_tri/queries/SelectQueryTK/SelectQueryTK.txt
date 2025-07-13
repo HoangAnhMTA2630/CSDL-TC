@@ -1,5 +1,0 @@
-SELECT * FROM public."tai_khoan_quan_tri"
-WHERE "mat_khau" ilike '%{{data_tableTK.searchText || ""}}%'
-ORDER BY "{{data_tableTK.sortOrder.column || 'id'}}" {{data_table.sortOrder.order || 'ASC'}}
-LIMIT {{data_tableTK.pageSize}}
-OFFSET {{(data_tableTK.pageNo - 1) * data_table.pageSize}};

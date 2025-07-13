@@ -1,0 +1,4 @@
+SELECT DISTINCT nguon_thu_thap AS name, nguon_thu_thap AS code
+FROM public.ma_doc
+WHERE nguon_thu_thap IS NOT NULL
+ORDER BY nguon_thu_thap; 

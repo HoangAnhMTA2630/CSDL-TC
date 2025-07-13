@@ -1,0 +1,7 @@
+SELECT 
+    ten_huong
+FROM 
+    public.huong
+GROUP BY ten_huong
+ORDER BY 
+    ten_huong;

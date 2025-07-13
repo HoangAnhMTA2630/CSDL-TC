@@ -1,2 +1,0 @@
-DELETE FROM public."bo_ke_hoach"
-  WHERE "id" = {{data_tableBKH.triggeredRow.id}};

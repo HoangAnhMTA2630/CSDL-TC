@@ -11,16 +11,20 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
   "key": "p7i0dkqnf3",
-  "leftColumn": 1,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -35,9 +39,9 @@
   "parentId": "dnihi47k0r",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 41,
+  "rightColumn": 12,
   "shouldTruncate": false,
-  "text": "Modal Title",
+  "text": "Thiết bị {{ChartPTTC.selectedDataPoint.rawEventData.name}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 1,

@@ -1,0 +1,36 @@
+SELECT * 
+FROM public."ma_doc"
+WHERE 
+  (
+    {{ MSNguonThuThap.selectedOptionValues.length > 0 }} 
+    AND nguon_thu_thap = ANY (
+      ARRAY[{{ MSNguonThuThap.selectedOptionValues.map(x => `'${x}'`).join(',') }}]::text[]
+    )
+    OR {{ MSNguonThuThap.selectedOptionValues.length == 0 }}
+  )
+
+  AND (
+    {{ MSLayQua.selectedOptionValues.length > 0 }}
+    AND (
+      ({{ MSLayQua.selectedOptionValues.includes('USB') ? 'TRUE' : 'FALSE' }} AND lay_qua_usb = true)
+      OR ({{ MSLayQua.selectedOptionValues.includes('USBAT') ? 'TRUE' : 'FALSE' }} AND lay_qua_usbat = true)
+    )
+    OR {{ MSLayQua.selectedOptionValues.length == 0 }}
+  )
+
+  {{ JSFilterNgayMaDoc.hasDate() ? `
+    AND ngay_tiep_nhan BETWEEN 
+      '${JSFilterNgayMaDoc.fromDate()}' AND '${JSFilterNgayMaDoc.toDate()}'
+  ` : '' }}
+
+  AND (
+    {{ MSBaoCao.selectedOptionValues.length === 0 }}
+    OR (
+      {{ MSBaoCao.selectedOptionValues.includes('Có') ? 'TRUE' : 'FALSE' }} AND bao_cao_id IS NOT NULL
+    )
+    OR (
+      {{ MSBaoCao.selectedOptionValues.includes('Không') ? 'TRUE' : 'FALSE' }} AND bao_cao_id IS NULL
+    )
+  )
+
+ORDER BY id DESC;

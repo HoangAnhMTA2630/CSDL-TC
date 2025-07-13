@@ -266,7 +266,7 @@
           "isFilterable": false,
           "isRequired": true,
           "isVisible": true,
-          "label": "Lo Hong Bao Mat Web Id",
+          "label": "Lo Hong Bao Mat Web",
           "labelTextSize": "0.875rem",
           "options": "{{ QueryLHBM.data }}",
           "originalIdentifier": "lo_hong_bao_mat_web_id",

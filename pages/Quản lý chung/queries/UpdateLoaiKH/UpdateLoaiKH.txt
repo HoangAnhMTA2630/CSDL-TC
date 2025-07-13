@@ -1,0 +1,3 @@
+UPDATE public."loai_ke_hoach" SET
+		"ten_loai_ke_hoach" = '{{Table_LoaiKH.updatedRow.ten_loai_ke_hoach.isVisible ? Table_LoaiKH.updatedRow.ten_loai_ke_hoach : Table_LoaiKH.updatedRow.ten_loai_ke_hoach}}'
+WHERE "id" = {{Table_LoaiKH.updatedRow.id}};

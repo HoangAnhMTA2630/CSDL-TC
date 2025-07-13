@@ -1,0 +1,12 @@
+INSERT INTO public."don_vi_phong_thu" (
+	"ten_don_vi",
+	"kinh_do",
+	"vi_do",
+	"mo_ta",
+	"don_vi_cha_id")
+VALUES (
+	'{{insert_formDVPT.formData.ten_don_vi}}',
+	'{{insert_formDVPT.formData.kinh_do}}',
+	'{{insert_formDVPT.formData.vi_do}}',
+	'{{insert_formDVPT.formData.mo_ta}}',
+	'{{insert_formDVPT.formData.don_vi_cha_id}}');

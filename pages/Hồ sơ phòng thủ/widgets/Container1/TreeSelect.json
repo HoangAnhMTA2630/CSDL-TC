@@ -1,0 +1,63 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowClear": true,
+  "animateLoading": true,
+  "borderRadius": "0px",
+  "bottomRow": 40,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "options"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "expandAll": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "mzqnk1wau6",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "Đơn vị",
+  "labelTextColor": "#1d4ed8",
+  "labelTextSize": "1rem",
+  "labelTooltip": "Chọn đơn vị để xem các báo cáo liên quan",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 48,
+  "mobileLeftColumn": 19,
+  "mobileRightColumn": 39,
+  "mobileTopRow": 41,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{SelectQueryHSPT.run().then(() => {\n  SelectQueryTBM.run();\n});\nSelectQueryWeb.run();\nstoreValue('showContainerTBM', false);\nstoreValue('showContainerWeb', false);\nJSObject1.bcUI();\nQueryAllBC.run();\nCountTBMByLoaiTB.run();\nCountTBMByDV.run()}}",
+  "options": "{{utils.getUnitTreeData()}}",
+  "originalBottomRow": 41,
+  "originalTopRow": 34,
+  "parentColumnSpace": 12.479248046875,
+  "parentId": "ywu03nppwq",
+  "parentRowSpace": 10,
+  "placeholderText": "Chọn đơn vị",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 37,
+  "topRow": 33,
+  "type": "SINGLE_SELECT_TREE_WIDGET",
+  "version": 1,
+  "widgetId": "0guzj3t5ty",
+  "widgetName": "TreeSelect"
+}

@@ -1,8 +1,7 @@
 SELECT 
-  ten_thiet_bi AS label,
-  id AS value
-FROM 
-  e_thiet_bi_mang
-WHERE 
-  "ho_so_phong_thu_id" = {{data_tableHSPT.triggeredRow.id}}
-ORDER BY id ASC;
+  tbm.ten_thiet_bi AS label,
+  tbm.id AS value
+FROM e_thiet_bi_mang tbm
+JOIN ho_so_phong_thu hspt ON tbm.ho_so_phong_thu_id = hspt.id
+WHERE hspt.don_vi_id = {{ TreeSelect.selectedOptionValue }}
+ORDER BY tbm.id ASC;

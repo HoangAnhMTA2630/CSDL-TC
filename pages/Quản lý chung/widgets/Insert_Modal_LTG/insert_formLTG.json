@@ -1,0 +1,374 @@
+{
+  "animateLoading": true,
+  "autoGenerateForm": true,
+  "backgroundColor": "#fff",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 62,
+  "boxShadow": "none",
+  "childStylesheet": {
+    "ARRAY": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "cellBoxShadow": "none"
+    },
+    "CHECKBOX": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+    },
+    "CURRENCY_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "DATEPICKER": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "EMAIL_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "MULTILINE_TEXT_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "MULTISELECT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "NUMBER_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "OBJECT": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "cellBoxShadow": "none"
+    },
+    "PASSWORD_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "PHONE_NUMBER_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "RADIO_GROUP": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "boxShadow": "none"
+    },
+    "SELECT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "SWITCH": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "boxShadow": "none"
+    },
+    "TEXT_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    }
+  },
+  "disabledWhenInvalid": true,
+  "displayName": "JSON Form",
+  "dynamicBindingPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "schema.__root_schema__.children.loai_thoi_gian_id.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.loai_thoi_gian_id.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.loai_thoi_gian_id.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.nam.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.nam.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.nam.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.quy.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.quy.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.quy.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.quy.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.thang.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.thang.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.thang.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.thang.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.tuan.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.tuan.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.tuan.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.tuan.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_loai_thoi_gian.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_loai_thoi_gian.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_loai_thoi_gian.borderRadius"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "schema.__root_schema__.children.date_of_birth.defaultValue"
+    },
+    {
+      "key": "onSubmit"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onSubmit"
+    }
+  ],
+  "fieldLimitExceeded": false,
+  "fixedFooter": true,
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.6bacf7df.svg",
+  "isLoading": false,
+  "isVisible": "true",
+  "key": "h9l9ozr8op",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "onSubmit": "{{AddLoaiTG.run(\n\t() => LoaiTG.run()\n\t\t\t\t\t.then(() => closeModal('Insert_Modal_LTG')), \n\t(error) => showAlert(`Error while inserting resource!\\n ${error}`,'error'))\n}}",
+  "parentColumnSpace": 8.125,
+  "parentId": "nfhakypr3r",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetButtonLabel": "Reset",
+  "resetButtonStyles": {
+    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "boxShadow": "none",
+    "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+    "buttonVariant": "SECONDARY"
+  },
+  "rightColumn": 64,
+  "schema": {
+    "__root_schema__": {
+      "accessor": "__root_schema__",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "cellBoxShadow": "none",
+      "children": {
+        "loai_thoi_gian_id": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+          "accessor": "loai_thoi_gian_id",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "number",
+          "defaultValue": "",
+          "fieldType": "Select",
+          "identifier": "loai_thoi_gian_id",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isFilterable": false,
+          "isRequired": true,
+          "isVisible": true,
+          "label": "Loại thời gian",
+          "labelTextSize": "0.875rem",
+          "options": "{{LTG.data}}",
+          "originalIdentifier": "loai_thoi_gian_id",
+          "position": 0,
+          "serverSideFiltering": false,
+          "sourceData": 1
+        },
+        "nam": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+          "accessor": "nam",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "number",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.nam))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+          "fieldType": "Number Input",
+          "iconAlign": "left",
+          "identifier": "nam",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Năm",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "nam",
+          "position": 1,
+          "sourceData": 2024
+        },
+        "quy": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+          "accessor": "quy",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "null",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.quy))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+          "fieldType": "Select",
+          "identifier": "quy",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isFilterable": false,
+          "isRequired": false,
+          "isVisible": true,
+          "label": "Quý",
+          "labelTextSize": "0.875rem",
+          "options": "{{_.range(1, 5).map(x => ({ label: x.toString(), value: x }))}}",
+          "originalIdentifier": "quy",
+          "position": 2,
+          "serverSideFiltering": false
+        },
+        "ten_loai_thoi_gian": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+          "accessor": "ten_loai_thoi_gian",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.ten_loai_thoi_gian))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "ten_loai_thoi_gian",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Ten Loai Thoi Gian",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "ten_loai_thoi_gian",
+          "position": 5,
+          "sourceData": "Năm"
+        },
+        "thang": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+          "accessor": "thang",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "null",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.thang))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+          "fieldType": "Select",
+          "identifier": "thang",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isFilterable": false,
+          "isRequired": false,
+          "isVisible": true,
+          "label": "Tháng",
+          "labelTextSize": "0.875rem",
+          "options": "{{_.range(1, 13).map(x => ({ label: x.toString(), value: x }))}}",
+          "originalIdentifier": "thang",
+          "position": 3,
+          "serverSideFiltering": false
+        },
+        "tuan": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+          "accessor": "tuan",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "null",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.tuan))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+          "fieldType": "Select",
+          "identifier": "tuan",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isFilterable": true,
+          "isRequired": false,
+          "isVisible": true,
+          "label": "Tuần",
+          "labelTextSize": "0.875rem",
+          "options": "{{_.range(1, 54).map(x => ({ label: x.toString(), value: x }))}}",
+          "originalIdentifier": "tuan",
+          "position": 4,
+          "serverSideFiltering": false
+        }
+      },
+      "dataType": "object",
+      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData))(insert_formLTG.sourceData, insert_formLTG.formData, insert_formLTG.fieldState)}}",
+      "fieldType": "Object",
+      "identifier": "__root_schema__",
+      "isCustomField": false,
+      "isDisabled": false,
+      "isRequired": false,
+      "isVisible": true,
+      "label": "",
+      "labelTextSize": "0.875rem",
+      "originalIdentifier": "__root_schema__",
+      "position": -1,
+      "sourceData": {
+        "col1": 5,
+        "col2": "skill B",
+        "col3": 9,
+        "col4": true
+      }
+    }
+  },
+  "scrollContents": true,
+  "showReset": false,
+  "sourceData": "{{_.omit(Table_LoaiTG.tableData[0], \"customColumn1\", \"id\")}}",
+  "submitButtonLabel": "Thêm",
+  "submitButtonStyles": {
+    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "boxShadow": "none",
+    "buttonColor": "#553de9",
+    "buttonVariant": "PRIMARY"
+  },
+  "title": "Thêm Thời gian",
+  "topRow": 0,
+  "type": "JSON_FORM_WIDGET",
+  "version": 1,
+  "widgetId": "98y6iy288f",
+  "widgetName": "insert_formLTG"
+}

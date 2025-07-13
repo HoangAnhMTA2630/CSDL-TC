@@ -1,0 +1,3 @@
+SELECT ltb.*
+FROM public."loai_thiet_bi" AS ltb
+ORDER BY ltb.id;

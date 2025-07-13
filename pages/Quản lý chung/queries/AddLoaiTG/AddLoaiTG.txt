@@ -1,0 +1,14 @@
+INSERT INTO public."thoi_gian" (
+
+	"loai_thoi_gian_id",
+	"nam",
+	"quy",
+	"thang",
+	"tuan")
+VALUES (
+
+	'{{insert_form.formData.loai_thoi_gian_id}}',
+	'{{insert_form.formData.nam}}',
+	'{{insert_form.formData.quy}}',
+	'{{insert_form.formData.thang}}',
+	'{{insert_form.formData.tuan}}');

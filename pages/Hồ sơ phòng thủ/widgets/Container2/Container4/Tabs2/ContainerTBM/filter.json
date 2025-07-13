@@ -28,7 +28,7 @@
   "isVisible": "true",
   "labelTextSize": "0.875rem",
   "leftColumn": 53,
-  "onClick": "{{ storeValue('showContainerFilter', true) }}",
+  "onClick": "{{storeValue('showContainerFilter', true);\nLoaiTBInHSPT.run();\nHDHInHSPT.run();\nCPUInHSPT.run();\nRomInHSPT.run();\nRAMInHSPT.run();\nIP_PublicInHSPT.run();\nIP_PrivateInHSPT.run()}}",
   "parentColumnSpace": 12.0703125,
   "parentId": "c0ahceiz3z",
   "parentRowSpace": 10,

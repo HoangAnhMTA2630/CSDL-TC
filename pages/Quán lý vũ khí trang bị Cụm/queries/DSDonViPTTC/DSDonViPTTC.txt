@@ -1,0 +1,7 @@
+SELECT 
+    dv.ten_don_vi
+FROM 
+    public.vu_khi_mang AS vkm
+JOIN 
+    public.don_vi AS dv ON vkm.don_vi_id = dv.id
+GROUP BY dv.ten_don_vi

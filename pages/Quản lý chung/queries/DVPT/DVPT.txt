@@ -1,0 +1,8 @@
+SELECT 
+  dvpt.*, 
+  dvpt_cha.ten_don_vi AS ten_don_vi_cha
+FROM public."don_vi_phong_thu" dvpt
+LEFT JOIN public."don_vi_phong_thu" dvpt_cha ON dvpt.don_vi_cha_id = dvpt_cha.id
+WHERE dvpt."ten_don_vi" ILIKE '%{{Table_DVPT.searchText || ""}}%'
+ORDER BY "{{Table_DVPT.sortOrder.column || 'id'}}" {{Table_DVPT.sortOrder.order || 'ASC'}}
+

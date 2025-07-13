@@ -40,7 +40,7 @@
     "step": 62,
     "task": 245
   },
-  "columnUpdatedAt": 1749832670450,
+  "columnUpdatedAt": 1751945810388,
   "columnWidthMap": {
     "customColumn1": 60,
     "customColumn2": 60,
@@ -346,7 +346,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "don_vi_phong_thu_id",
       "notation": "standard",
       "originalId": "don_vi_phong_thu_id",
@@ -600,7 +600,7 @@
   "renderMode": "CANVAS",
   "rightColumn": 64,
   "searchKey": "",
-  "serverSidePaginationEnabled": true,
+  "serverSidePaginationEnabled": false,
   "tableData": "{{SelectQueryWeb.data}}",
   "textSize": "0.875rem",
   "topRow": 4,

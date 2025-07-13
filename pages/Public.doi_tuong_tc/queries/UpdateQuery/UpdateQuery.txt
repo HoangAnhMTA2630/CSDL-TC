@@ -1,4 +1,0 @@
-UPDATE public."doi_tuong_tc" SET
-		"ten_to_chuc" = '{{update_form.fieldState.ten_to_chuc.isVisible ? update_form.formData.ten_to_chuc : update_form.sourceData.ten_to_chuc}}',
-		"ban_nganh" = '{{update_form.fieldState.ban_nganh.isVisible ? update_form.formData.ban_nganh : update_form.sourceData.ban_nganh}}'
-WHERE "id" = {{data_table.selectedRow.id}};

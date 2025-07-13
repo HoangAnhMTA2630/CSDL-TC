@@ -1,0 +1,2 @@
+DELETE FROM public."loai_thiet_bi"
+  WHERE "id" = {{Table_LoaiTB.triggeredRow.id}};

@@ -13,7 +13,7 @@
       "orientation": "top",
       "position": "static",
       "showNavbar": true,
-      "showSignIn": false
+      "showSignIn": true
     },
     "themeSetting": {
       "appMaxWidth": "LARGE",
@@ -30,7 +30,7 @@
     "width": "1024px"
   },
   "evaluationVersion": 2,
-  "icon": "bag",
+  "icon": "product",
   "pages": [
     {
       "id": "Đăng nhập",
@@ -49,19 +49,7 @@
       "isDefault": false
     },
     {
-      "id": "Public.tai_khoan_lo_lot",
-      "isDefault": false
-    },
-    {
       "id": "Trinh sát - Tấn công",
-      "isDefault": false
-    },
-    {
-      "id": "Courses",
-      "isDefault": false
-    },
-    {
-      "id": "Quản lý săn tim mối nguy cơ",
       "isDefault": false
     },
     {
@@ -69,51 +57,7 @@
       "isDefault": false
     },
     {
-      "id": "Quản lý tài liệu lột lọt",
-      "isDefault": false
-    },
-    {
-      "id": "Quán lý vũ khí trang bị",
-      "isDefault": false
-    },
-    {
       "id": "Quản lý chung",
-      "isDefault": false
-    },
-    {
-      "id": "Cây thư mục",
-      "isDefault": false
-    },
-    {
-      "id": "Public.bao_cao",
-      "isDefault": false
-    },
-    {
-      "id": "Public.doi_tuong_tc",
-      "isDefault": false
-    },
-    {
-      "id": "Public.quan_nhan",
-      "isDefault": false
-    },
-    {
-      "id": "Cây thư mục_new",
-      "isDefault": false
-    },
-    {
-      "id": "Public.web",
-      "isDefault": false
-    },
-    {
-      "id": "Public.bao_cao_cve",
-      "isDefault": false
-    },
-    {
-      "id": "Public.tai_khoan_quan_tri",
-      "isDefault": false
-    },
-    {
-      "id": "Public.bo_ke_hoach",
       "isDefault": false
     },
     {
@@ -121,7 +65,7 @@
       "isDefault": false
     },
     {
-      "id": "Public.ma_doc",
+      "id": "Trinh sát - Tấn công Copy",
       "isDefault": false
     }
   ],
@@ -138,7 +82,7 @@
       "orientation": "top",
       "position": "static",
       "showNavbar": true,
-      "showSignIn": false
+      "showSignIn": true
     },
     "themeSetting": {
       "appMaxWidth": "LARGE",

@@ -5,12 +5,12 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": 1,
-  "bottomRow": 75,
+  "bottomRow": 65,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 660,
+      "bottomRow": 560,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -102,7 +102,7 @@
     },
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 660,
+      "bottomRow": 600,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": false,
       "containerStyle": "none",
@@ -144,6 +144,51 @@
       "version": 1,
       "widgetId": "o5j4yip1il",
       "widgetName": "Canvas20"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 650,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "e3vfnawv9m",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 900,
+      "minWidth": 450,
+      "mobileBottomRow": 901,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 1230.6,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "f4zc7xdrgq",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 1230.6,
+      "tabId": "tabrrtu7814ll",
+      "tabName": "Danh sách tài khoản",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "gff90t9g9w",
+      "widgetName": "Canvas113"
     }
   ],
   "defaultTab": "Chi tiết mục tiêu",
@@ -179,7 +224,7 @@
   "mobileTopRow": 42,
   "needsErrorInfo": false,
   "onTabSelected": "{{DSTaiLieuTheoMucTieu.run();\nSelectDSBaoCao.run()}}",
-  "originalBottomRow": 75,
+  "originalBottomRow": 65,
   "originalTopRow": 5,
   "parentColumnSpace": 19.228125,
   "parentId": "u5w32k34fq",
@@ -193,6 +238,7 @@
     "tab1": {
       "id": "tab1",
       "index": 0,
+      "isDuplicateLabel": false,
       "isVisible": true,
       "label": "Chi tiết mục tiêu",
       "positioning": "vertical",
@@ -200,7 +246,8 @@
     },
     "tab2": {
       "id": "tab2",
-      "index": 1,
+      "index": 2,
+      "isDuplicateLabel": false,
       "isVisible": true,
       "label": "Danh sách tài liệu",
       "positioning": "vertical",
@@ -208,10 +255,19 @@
     },
     "tabllyac4rw95": {
       "id": "tabllyac4rw95",
-      "index": 2,
+      "index": 3,
+      "isDuplicateLabel": false,
       "isVisible": true,
       "label": "Báo cáo có liên quan",
       "widgetId": "o5j4yip1il"
+    },
+    "tabrrtu7814ll": {
+      "id": "tabrrtu7814ll",
+      "index": 1,
+      "isDuplicateLabel": false,
+      "isVisible": true,
+      "label": "Danh sách tài khoản",
+      "widgetId": "gff90t9g9w"
     }
   },
   "topRow": 5,

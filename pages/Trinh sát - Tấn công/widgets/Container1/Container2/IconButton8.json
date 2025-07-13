@@ -1,0 +1,47 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "#e15615",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "delete",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ajfhr0tioo",
+  "leftColumn": 60,
+  "minWidth": 50,
+  "mobileBottomRow": 10,
+  "mobileLeftColumn": 60,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 6,
+  "needsErrorInfo": false,
+  "onClick": "{{resetWidget(\"SelectHuong\")\n    .then(() => resetWidget(\"SelectBanNganh\"))\n    .then(() => resetWidget(\"SelectToChuc\")).then(() =>DSMucTieu.run())\n}}\n",
+  "parentColumnSpace": 22.90625,
+  "parentId": "jhggisft0f",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "yhw8ziurxg",
+  "widgetName": "IconButton8"
+}

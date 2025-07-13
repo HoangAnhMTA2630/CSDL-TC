@@ -1,6 +1,0 @@
-UPDATE public."tai_khoan_lo_lot" SET
-		"username" = '{{update_formTKLL.fieldState.username.isVisible ? update_formTKLL.formData.username : update_formTKLL.sourceData.username}}',
-		"pass" = '{{update_formTKLL.fieldState.pass.isVisible ? update_formTKLL.formData.pass : update_formTKLL.sourceData.pass}}',
-    "web_id" = '{{update_formTKLL.fieldState.web_id.isVisible ? update_formTKLL.formData.web_id : update_formTKLL.sourceData.web_id}}',
-		"bao_cao_don_vi_phong_thu_id" = '{{update_formTKLL.fieldState.bao_cao_don_vi_phong_thu_id.isVisible ? update_formTKLL.formData.bao_cao_don_vi_phong_thu_id : update_formTKLL.sourceData.bao_cao_don_vi_phong_thu_id}}'
-WHERE "id" = {{data_tableTKLL.selectedRow.id}};

@@ -79,7 +79,11 @@
     }
   ],
   "dynamicPropertyPathList": [],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDataPointClick"
+    }
+  ],
   "flexVerticalAlignment": "start",
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "isLoading": false,
@@ -93,6 +97,7 @@
   "mobileRightColumn": 41,
   "mobileTopRow": 0,
   "needsErrorInfo": true,
+  "onDataPointClick": "",
   "parentColumnSpace": 22.765625,
   "parentId": "k3phvwyv56",
   "parentRowSpace": 10,

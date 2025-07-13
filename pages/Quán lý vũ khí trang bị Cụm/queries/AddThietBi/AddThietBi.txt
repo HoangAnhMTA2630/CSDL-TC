@@ -1,0 +1,18 @@
+INSERT INTO public.e_thiet_bi_mang (
+    ten_thiet_bi,
+    loai_thiet_bi_id,
+    nhom,
+    cap_trang_bi,
+    tinh_trang,
+    don_vi_id,
+    quanh_nhan_id
+)
+VALUES (
+    '{{TableQNTB.newRow.ten_thiet_bi}}',
+		(SELECT id FROM loai_thiet_bi WHERE ten_loai_thiet_bi = '{{TableQNTB.newRow.ten_loai_thiet_bi}}'),
+    '{{TableQNTB.newRow.nhom}}',
+    '{{TableQNTB.newRow.cap_trang_bi}}',
+    '{{TableQNTB.newRow.tinh_trang}}',
+		(SELECT id FROM don_vi WHERE ten_don_vi = '{{TableQNTB.newRow.ten_don_vi}}'),
+		(SELECT id FROM quan_nhan WHERE ten_quan_nhan = '{{TableQNTB.newRow.ten_quan_nhan}}')
+);

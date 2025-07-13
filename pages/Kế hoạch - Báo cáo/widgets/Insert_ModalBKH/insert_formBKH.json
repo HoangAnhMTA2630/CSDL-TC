@@ -277,7 +277,7 @@
           "position": 2,
           "serverSideFiltering": false,
           "sourceData": "Quý - Năm: 2025 - Quý: 4",
-          "tooltip": "<Loại thời gian> - <Thời gian>"
+          "tooltip": ""
         }
       },
       "dataType": "object",
