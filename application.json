@@ -12,7 +12,7 @@
       "navStyle": "stacked",
       "orientation": "top",
       "position": "static",
-      "showNavbar": true,
+      "showNavbar": false,
       "showSignIn": true
     },
     "themeSetting": {
@@ -61,10 +61,6 @@
       "isDefault": false
     },
     {
-      "id": "Public.e_thiet_bi_mang",
-      "isDefault": false
-    },
-    {
       "id": "Trinh sát - Tấn công Copy",
       "isDefault": false
     }
@@ -81,7 +77,7 @@
       "navStyle": "stacked",
       "orientation": "top",
       "position": "static",
-      "showNavbar": true,
+      "showNavbar": false,
       "showSignIn": true
     },
     "themeSetting": {

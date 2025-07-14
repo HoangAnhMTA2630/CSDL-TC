@@ -25,7 +25,7 @@
   "isVisible": true,
   "key": "6h7wgm6l90",
   "leftColumn": 55,
-  "onClick": "{{showModal(Modal_Router.name);}}",
+  "onClick": "{{showModal(Modal_SLBaoCao.name);}}",
   "parentColumnSpace": 4.2578125,
   "parentId": "08dhxq97pb",
   "parentRowSpace": 10,

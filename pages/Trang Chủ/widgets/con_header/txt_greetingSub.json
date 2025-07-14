@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 14,
+  "bottomRow": 4,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -12,9 +12,6 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "textColor"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -28,7 +25,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "a391ouhaqa",
-  "leftColumn": 1,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "originalBottomRow": 14,
@@ -38,7 +35,7 @@
   "parentId": "bgrrpvwf7z",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 17,
+  "rightColumn": 16,
   "searchTags": [
     "typography",
     "paragraph",
@@ -47,8 +44,8 @@
   "shouldTruncate": false,
   "text": "Thống kê tổng quan",
   "textAlign": "LEFT",
-  "textColor": "{{appsmith.theme.colors.backgroundColor}}",
-  "topRow": 10,
+  "textColor": "#553de9",
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

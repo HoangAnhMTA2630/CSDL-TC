@@ -1,0 +1,57 @@
+{
+  "animateLoading": true,
+  "borderRadius": "0px",
+  "bottomRow": 9,
+  "boxShadow": "none",
+  "buttonColor": "{{ appsmith.store.activeTab === 5 ? \"#ffffff\" : \"#553DE9\" }}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "0fwr5li2sp",
+  "leftColumn": 28,
+  "minWidth": 120,
+  "mobileBottomRow": 113,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 109,
+  "needsErrorInfo": false,
+  "onClick": "{{ storeValue(\"activeTab\", 5) }}",
+  "originalBottomRow": 9,
+  "originalTopRow": 5,
+  "parentColumnSpace": 20.125,
+  "parentId": "idbr9rtzxg",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 36,
+  "text": "Vũ khí trang bị Cụm",
+  "topRow": 5,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "spk37yzw48",
+  "widgetName": "Button3Copy11Copy2"
+}

@@ -1,0 +1,54 @@
+{
+  "animateLoading": false,
+  "borderRadius": "0px",
+  "bottomRow": 8,
+  "boxShadow": "none",
+  "buttonColor": "{{ appsmith.store.activeTab === 1 ? \"#ffffff\" : \"#553DE9\" }}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "0fwr5li2sp",
+  "leftColumn": 0,
+  "minWidth": 120,
+  "mobileBottomRow": 113,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 109,
+  "needsErrorInfo": false,
+  "onClick": "{{storeValue(\"activeTab\", 1);\nnavigateTo('Trang Chủ', {}, 'SAME_WINDOW');}}",
+  "originalBottomRow": 8,
+  "originalTopRow": 4,
+  "parentColumnSpace": 20.125,
+  "parentId": "dvqyw0rf59",
+  "parentRowSpace": 10,
+  "placement": "BETWEEN",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 5,
+  "text": "Trang chủ",
+  "topRow": 4,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "hdo23z2bcn",
+  "widgetName": "Button3"
+}

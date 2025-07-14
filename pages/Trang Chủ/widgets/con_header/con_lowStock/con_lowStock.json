@@ -4,7 +4,7 @@
   "borderColor": "transparent",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "0",
-  "bottomRow": 24,
+  "bottomRow": 17,
   "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
   "children": [
     {
@@ -74,7 +74,7 @@
     "parent",
     "group"
   ],
-  "topRow": 11,
+  "topRow": 4,
   "type": "CONTAINER_WIDGET",
   "version": 1,
   "widgetId": "760ivor8yy",

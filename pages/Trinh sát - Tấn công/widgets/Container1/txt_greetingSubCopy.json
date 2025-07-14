@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 41,
+  "bottomRow": 79,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -45,7 +45,7 @@
   "text": "Thông tin Mục tiêu",
   "textAlign": "LEFT",
   "textColor": "#231f20",
-  "topRow": 37,
+  "topRow": 75,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
