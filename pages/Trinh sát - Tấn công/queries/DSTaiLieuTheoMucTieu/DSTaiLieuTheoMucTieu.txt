@@ -3,7 +3,6 @@ SELECT
     tl.id AS tai_lieu_id,
     tl.ten_file,
     tl.kich_thuoc,
-    tl.doi_mat,
     tl.ngay_ban_hanh,
     tl.ngay_tai_len,
     tl.cap_do,
@@ -21,7 +20,7 @@ JOIN
 LEFT JOIN 
     public.tai_khoan tk ON tl.tai_khoan_id = tk.id
 WHERE
-	mt.id = {{Table.triggeredRow.id}}
+	mt.id = {{TableMucTieu.triggeredRow.id}}
 
 UNION
 
@@ -30,7 +29,6 @@ SELECT
     tl.id AS tai_lieu_id,
     tl.ten_file,
     tl.kich_thuoc,
-    tl.doi_mat,
     tl.ngay_ban_hanh,
     tl.ngay_tai_len,
     tl.cap_do,
@@ -48,4 +46,4 @@ JOIN
 JOIN 
     public.muc_tieu mt ON tk.muc_tieu_id = mt.id
 WHERE
-	mt.id = {{Table.triggeredRow.id}}
+	mt.id = {{TableMucTieu.triggeredRow.id}}

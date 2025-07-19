@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(*) AS so_luong_muc_tieu\nFROM Muc_tieu;",
+      "body": "SELECT COUNT(*) AS so_luong_muc_tieu\nFROM muc_tieu;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

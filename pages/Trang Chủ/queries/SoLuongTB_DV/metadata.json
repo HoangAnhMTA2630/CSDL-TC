@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "name": "SoLuongTB_DV",
     "pageId": "Trang Chủ",
     "userSetOnLoad": false

@@ -1,0 +1,25 @@
+WITH valid_input AS (
+  SELECT 
+    {{TableCongNghe.triggeredRow.id}}::int AS cong_nghe_id,
+    '{{TableCongNghe.updatedRow.ten_loai_cong_nghe}}' AS ten_loai_cong_nghe,
+    '{{TableCongNghe.updatedRow.gia_tri}}' AS gia_tri
+  WHERE 
+    '{{TableCongNghe.updatedRow.ten_loai_cong_nghe}}' IS NOT NULL AND '{{TableCongNghe.updatedRow.ten_loai_cong_nghe}}' <> ''
+),
+upsert_loai_cong_nghe AS (
+  INSERT INTO public.loai_cong_nghe (ten_loai_cong_nghe)
+  SELECT ten_loai_cong_nghe FROM valid_input
+  ON CONFLICT (ten_loai_cong_nghe) DO NOTHING
+  RETURNING id, ten_loai_cong_nghe
+),
+selected_loai_cong_nghe AS (
+  SELECT id FROM upsert_loai_cong_nghe
+  UNION
+  SELECT id FROM public.loai_cong_nghe 
+  WHERE ten_loai_cong_nghe = (SELECT ten_loai_cong_nghe FROM valid_input)
+)
+UPDATE public.cong_nghe
+SET 
+  loai_cong_nghe_id = (SELECT id FROM selected_loai_cong_nghe),
+  gia_tri = (SELECT gia_tri FROM valid_input)
+WHERE id = (SELECT cong_nghe_id FROM valid_input);

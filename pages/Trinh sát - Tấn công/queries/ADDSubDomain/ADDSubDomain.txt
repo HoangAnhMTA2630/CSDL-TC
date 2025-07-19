@@ -1,0 +1,2 @@
+INSERT INTO public.subdomain (subdomain, muc_tieu_id)
+VALUES ('{{TableSubDomain.newRow.subdomain}}', {{TableMucTieu.triggeredRow.id}});

@@ -1,5 +1,5 @@
-SELECT ltb.Ten_loai_thiet_bi, COUNT(etb.ID) AS So_luong_thiet_bi
-FROM Loai_thiet_bi ltb
-LEFT JOIN E_thiet_bi_mang etb ON ltb.ID = etb.Loai_thiet_bi_ID
-GROUP BY ltb.Ten_loai_thiet_bi
-ORDER BY ltb.Ten_loai_thiet_bi;
+SELECT ltb.ten_loai_thiet_bi, COUNT(etb.id) AS So_luong_thiet_bi
+FROM loai_thiet_bi ltb
+LEFT JOIN e_thiet_bi_mang etb ON ltb.id = etb.loai_thiet_bi_id
+GROUP BY ltb.ten_loai_thiet_bi
+ORDER BY ltb.ten_loai_thiet_bi;

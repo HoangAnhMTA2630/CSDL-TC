@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "682d4d2a92cca105dbc17693_14717600-d922-465f-bdc3-8f3c91bfb1d0",
+  "gitSyncId": "682d4d2a92cca105dbc17693_7ce0a67a-c282-4583-a63d-c2c097481428",
   "id": "Kế hoạch - Báo cáo_Query3",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "",
+      "body": "SELECT \n  bc.*,\n  cbc.ten_cap,\n  lbc.ten_loai_bao_cao\nFROM bao_cao bc\nLEFT JOIN cap cbc ON bc.cap_bao_cao_id = cbc.id\nLEFT JOIN loai_bao_cao lbc ON bc.loai_bao_cao_id = lbc.id\nWHERE (\n  {{ data_tableBCNotInKH.searchText ? \n      `bc.so_bao_cao ILIKE '%${data_tableBCNotInKH.searchText}%'` \n      : 'TRUE' }}\n)\nAND bc.id NOT IN (\n  SELECT DISTINCT bao_cao_id FROM ke_hoach_bao_cao\n)\n\n-- Lọc theo năm (MultiSelect)\nAND (\n  {{ MultiSelectNamBCNotInKH.selectedOptionValues.length > 0 ? \n      `EXTRACT(YEAR FROM bc.ngay_ban_hanh)::int = ANY (ARRAY[${MultiSelectNamBCNotInKH.selectedOptionValues.join(',')}]::int[])` \n      : 'TRUE' }}\n)\n\n-- Lọc theo quý (MultiSelect)\nAND (\n  {{ MultiSelectQuyBCNotInKH.selectedOptionValues.length > 0 ? \n      `CEIL(EXTRACT(MONTH FROM bc.ngay_ban_hanh)::numeric / 3)::int = ANY (ARRAY[${MultiSelectQuyBCNotInKH.selectedOptionValues.join(',')}]::int[])` \n      : 'TRUE' }}\n)\n\n-- Lọc theo tháng (MultiSelect)\nAND (\n  {{ MultiSelectThangBCNotInKH.selectedOptionValues.length > 0 ? \n      `EXTRACT(MONTH FROM bc.ngay_ban_hanh)::int = ANY (ARRAY[${MultiSelectThangBCNotInKH.selectedOptionValues.join(',')}]::int[])` \n      : 'TRUE' }}\n)\n\n-- Lọc theo loại báo cáo\nAND (\n  {{ MultiSelectLoaiBCNotInKH.selectedOptionValues.length > 0 ? \n      `bc.loai_bao_cao_id = ANY (ARRAY[${MultiSelectLoaiBCNotInKH.selectedOptionValues.join(',')}]::int[])` \n      : 'TRUE' }}\n)\n\n-- Lọc theo cấp báo cáo\nAND (\n  {{ MultiSelectCapBCNotInKH.selectedOptionValues.length > 0 ? \n      `bc.cap_bao_cao_id = ANY (ARRAY[${MultiSelectCapBCNotInKH.selectedOptionValues.join(',')}]::int[])` \n      : 'TRUE' }}\n)\n\n-- Lọc theo trạng thái\nAND (\n  {{ MultiSelectStatusBCNotInKH.selectedOptionValues.length > 0 ? \n      `bc.trang_thai = ANY (ARRAY[${MultiSelectStatusBCNotInKH.selectedOptionValues.map(x => `'${x}'`).join(',')}]::text[])` \n      : 'TRUE' }}\n)\n\nORDER BY bc.ngay_ban_hanh DESC;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,7 +22,11 @@
       "name": "csdltc",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": false,
     "name": "Query3",
     "pageId": "Kế hoạch - Báo cáo",

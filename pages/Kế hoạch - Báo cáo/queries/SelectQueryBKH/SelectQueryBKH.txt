@@ -1,6 +1,8 @@
 SELECT 
   bkh.id,
   bkh.ten_bo_ke_hoach,
+	bkh.thoi_gian_id,
+  bkh.loai_ke_hoach_id,
   lkh.ten_loai_ke_hoach,
   CONCAT_WS(
     ' - ',
@@ -16,9 +18,12 @@ LEFT JOIN loai_ke_hoach lkh ON bkh.loai_ke_hoach_id = lkh.id
 LEFT JOIN thoi_gian tg ON bkh.thoi_gian_id = tg.id
 LEFT JOIN loai_thoi_gian ltg ON tg.loai_thoi_gian_id = ltg.id
 WHERE bkh.ten_bo_ke_hoach ILIKE '%{{data_tableBKH.searchText || ""}}%'
-  {{ SelectNamBKH.selectedOptionValue ? `AND tg.nam = ${SelectNamBKH.selectedOptionValue}` : "" }}
-  {{ SelectQuyBKH.selectedOptionValue ? `AND tg.quy = ${SelectQuyBKH.selectedOptionValue}` : "" }}
-  {{ SelectThangBKH.selectedOptionValue ? `AND tg.thang = ${SelectThangBKH.selectedOptionValue}` : "" }}
+  {{ MultiSelectNamBKH.selectedOptionValues.length > 0 ? 
+    `AND tg.nam = ANY (ARRAY[${MultiSelectNamBKH.selectedOptionValues.join(',')}]::int[])` : '' }}
+  {{ MultiSelectQuyBKH.selectedOptionValues.length > 0 ? 
+    `AND tg.quy = ANY (ARRAY[${MultiSelectQuyBKH.selectedOptionValues.join(',')}]::int[])` : '' }}
+  {{ MultiSelectThangBKH.selectedOptionValues.length > 0 ? 
+    `AND tg.thang = ANY (ARRAY[${MultiSelectThangBKH.selectedOptionValues.join(',')}]::int[])` : '' }}
   {{ 
 		MultiSelectLKH.selectedOptionValues && MultiSelectLKH.selectedOptionValues.length > 0 
 			? `AND lkh.id = ANY (ARRAY[${MultiSelectLKH.selectedOptionValues.join(',')}]::integer[])` 

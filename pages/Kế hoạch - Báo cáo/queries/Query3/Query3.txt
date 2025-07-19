@@ -1,0 +1,59 @@
+SELECT 
+  bc.*,
+  cbc.ten_cap,
+  lbc.ten_loai_bao_cao
+FROM bao_cao bc
+LEFT JOIN cap cbc ON bc.cap_bao_cao_id = cbc.id
+LEFT JOIN loai_bao_cao lbc ON bc.loai_bao_cao_id = lbc.id
+WHERE (
+  {{ data_tableBCNotInKH.searchText ? 
+      `bc.so_bao_cao ILIKE '%${data_tableBCNotInKH.searchText}%'` 
+      : 'TRUE' }}
+)
+AND bc.id NOT IN (
+  SELECT DISTINCT bao_cao_id FROM ke_hoach_bao_cao
+)
+
+-- Lọc theo năm (MultiSelect)
+AND (
+  {{ MultiSelectNamBCNotInKH.selectedOptionValues.length > 0 ? 
+      `EXTRACT(YEAR FROM bc.ngay_ban_hanh)::int = ANY (ARRAY[${MultiSelectNamBCNotInKH.selectedOptionValues.join(',')}]::int[])` 
+      : 'TRUE' }}
+)
+
+-- Lọc theo quý (MultiSelect)
+AND (
+  {{ MultiSelectQuyBCNotInKH.selectedOptionValues.length > 0 ? 
+      `CEIL(EXTRACT(MONTH FROM bc.ngay_ban_hanh)::numeric / 3)::int = ANY (ARRAY[${MultiSelectQuyBCNotInKH.selectedOptionValues.join(',')}]::int[])` 
+      : 'TRUE' }}
+)
+
+-- Lọc theo tháng (MultiSelect)
+AND (
+  {{ MultiSelectThangBCNotInKH.selectedOptionValues.length > 0 ? 
+      `EXTRACT(MONTH FROM bc.ngay_ban_hanh)::int = ANY (ARRAY[${MultiSelectThangBCNotInKH.selectedOptionValues.join(',')}]::int[])` 
+      : 'TRUE' }}
+)
+
+-- Lọc theo loại báo cáo
+AND (
+  {{ MultiSelectLoaiBCNotInKH.selectedOptionValues.length > 0 ? 
+      `bc.loai_bao_cao_id = ANY (ARRAY[${MultiSelectLoaiBCNotInKH.selectedOptionValues.join(',')}]::int[])` 
+      : 'TRUE' }}
+)
+
+-- Lọc theo cấp báo cáo
+AND (
+  {{ MultiSelectCapBCNotInKH.selectedOptionValues.length > 0 ? 
+      `bc.cap_bao_cao_id = ANY (ARRAY[${MultiSelectCapBCNotInKH.selectedOptionValues.join(',')}]::int[])` 
+      : 'TRUE' }}
+)
+
+-- Lọc theo trạng thái
+AND (
+  {{ MultiSelectStatusBCNotInKH.selectedOptionValues.length > 0 ? 
+      `bc.trang_thai = ANY (ARRAY[${MultiSelectStatusBCNotInKH.selectedOptionValues.map(x => `'${x}'`).join(',')}]::text[])` 
+      : 'TRUE' }}
+)
+
+ORDER BY bc.ngay_ban_hanh DESC;

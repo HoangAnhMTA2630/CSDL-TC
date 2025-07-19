@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT DISTINCT ON (ten_quan_nhan) *\nFROM public.quan_nhan\nWHERE don_vi_id IN (SELECT id FROM don_vi WHERE ten_don_vi = \n  '{{ TableQNTB.updatedRow.ten_don_vi || TableQNTB.newRow.ten_don_vi }}'\n)\nORDER BY ten_quan_nhan;\n",
+      "body": "SELECT DISTINCT ON (ten_quan_nhan) *\nFROM public.quan_nhan\nWHERE don_vi_id IN (\n  SELECT id \n  FROM don_vi \n  WHERE ten_don_vi = '{{ TableQNTB.selectedRow?.ten_don_vi || TableQNTB.updatedRow?.ten_don_vi || TableQNTB.newRow?.ten_don_vi || \"\" }}'\n)\nORDER BY ten_quan_nhan;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -30,6 +30,6 @@
     "executeOnLoad": true,
     "name": "DSQuanNhan",
     "pageId": "Quán lý vũ khí trang bị Cụm",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

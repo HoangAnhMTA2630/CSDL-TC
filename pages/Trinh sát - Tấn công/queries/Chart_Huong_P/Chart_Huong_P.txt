@@ -1,0 +1,18 @@
+SELECT 
+    TO_CHAR(tl.ngay_tai_len, 'YYYY/MM') AS thang,
+    COUNT(tl.id) AS so_luong_tai_lieu
+FROM 
+    public.tai_lieu tl
+JOIN 
+    public.muc_tieu mt ON tl.muc_tieu_id = mt.id
+JOIN 
+    public.doi_tuong_tc dtc ON mt.doi_tuong_tc_id = dtc.id
+JOIN 
+    public.huong h ON dtc.huong_id = h.id
+WHERE 
+    tl.ngay_tai_len IS NOT NULL 
+    AND h.ten_huong = 'P'
+GROUP BY 
+    TO_CHAR(tl.ngay_tai_len, 'YYYY/MM')
+ORDER BY 
+    TO_CHAR(tl.ngay_tai_len, 'YYYY/MM');

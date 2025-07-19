@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.\"e_thiet_bi_mang\" (\n  \"ten_thiet_bi\",\n  \"loai_thiet_bi_id\",\n  \"ho_so_phong_thu_id\",\n  \"don_vi_id\"\n) VALUES (\n  '{{insert_formTBM.formData.ten_thiet_bi}}',\n  '{{insert_formTBM.formData.loai_thiet_bi_id}}',\n  '{{insert_formTBM.formData.ho_so_phong_thu_id}}',\n  '{{insert_formTBM.formData.don_vi_id}}'\n);\n",
+      "body": "INSERT INTO public.\"e_thiet_bi_mang\" (\n\t\"ten_thiet_bi\",\n\t\"loai_thiet_bi_id\",\n\t\"ho_so_phong_thu_id\"\n) VALUES (\n\t'{{insert_formTBM.formData.ten_thiet_bi}}',\n\t'{{insert_formTBM.formData.loai_thiet_bi_id}}',\n\t'{{insert_formTBM.formData.ho_so_phong_thu_id}}'\n);\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

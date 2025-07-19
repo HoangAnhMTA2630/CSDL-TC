@@ -5,4 +5,6 @@ FROM
 JOIN 
     public.loai_thiet_bi ltb ON etbm.loai_thiet_bi_id = ltb.id
 WHERE 
-    ltb.ten_loai_thiet_bi ILIKE 'Router';
+    ltb.ten_loai_thiet_bi ILIKE 'Router'
+    {{ TreeSelectDonVi_.selectedOptionValue ? `AND etbm.don_vi_id = ${TreeSelectDonVi_.selectedOptionValue}` : '' }}
+;

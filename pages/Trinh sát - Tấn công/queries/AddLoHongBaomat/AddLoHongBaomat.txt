@@ -1,0 +1,13 @@
+WITH inserted_lo_hong AS (
+  INSERT INTO public.lo_hong_bao_mat_web (ten_lo_hong, mo_ta)
+  VALUES ('{{TableLoHongBaoMat.newRow.ten_lo_hong}}', '{{TableLoHongBaoMat.newRow.mo_ta}}')
+  ON CONFLICT (ten_lo_hong) DO NOTHING
+  RETURNING id
+),
+selected_lo_hong AS (
+  SELECT id FROM inserted_lo_hong
+  UNION
+  SELECT id FROM public.lo_hong_bao_mat_web WHERE ten_lo_hong = '{{TableLoHongBaoMat.newRow.ten_lo_hong}}'
+)
+INSERT INTO public.muc_tieu_lo_hong_bao_mat_web (muc_tieu_id, lo_hong_bao_mat_web_id)
+SELECT {{TableMucTieu.triggeredRow.id}}, id FROM selected_lo_hong;

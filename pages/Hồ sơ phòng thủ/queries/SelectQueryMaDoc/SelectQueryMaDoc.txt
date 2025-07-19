@@ -23,13 +23,11 @@ WHERE
       '${JSFilterNgayMaDoc.fromDate()}' AND '${JSFilterNgayMaDoc.toDate()}'
   ` : '' }}
 
+  -- ✅ Lọc theo trạng thái (kiểu text)
   AND (
-    {{ MSBaoCao.selectedOptionValues.length === 0 }}
-    OR (
-      {{ MSBaoCao.selectedOptionValues.includes('Có') ? 'TRUE' : 'FALSE' }} AND bao_cao_id IS NOT NULL
-    )
-    OR (
-      {{ MSBaoCao.selectedOptionValues.includes('Không') ? 'TRUE' : 'FALSE' }} AND bao_cao_id IS NULL
+    {{ MSStatus.selectedOptionValues.length === 0 }} 
+    OR trang_thai = ANY (
+      ARRAY[{{ MSStatus.selectedOptionValues.map(x => `'${x}'`).join(',') }}]::text[]
     )
   )
 

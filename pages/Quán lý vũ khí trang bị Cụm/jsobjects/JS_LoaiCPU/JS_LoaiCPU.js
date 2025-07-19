@@ -40,7 +40,7 @@ export default {
         formatter: "{b}: {c} máy tính"
       },
       title: {
-        text: "Thống kê số lượng máy tính theo loại CPU",
+        text: "Số lượng máy tính theo loại CPU",
         left: "center",
         textStyle: {
           width: 300,
@@ -64,8 +64,9 @@ export default {
       yAxis: [
         {
           type: "value",
-          name: "Số lượng máy tính",
-          minInterval: 1
+          name: "SL máy tính",
+          minInterval: 1,
+					
         }
       ],
       series: [
@@ -73,6 +74,11 @@ export default {
           name: "Máy tính",
           type: "bar",
           data: values,
+					label: {
+      			show: true,           // 👈 Hiển thị nhãn
+      			position: "top",      // 👈 Vị trí trên đầu cột
+      			formatter: "{c}"      // 👈 Hiển thị giá trị y (số lượng)
+   		 			},
           itemStyle: {
             color: "#5470C6"
           }

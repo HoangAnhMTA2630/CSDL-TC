@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT EXTRACT(YEAR FROM Ngay_ban_hanh) AS x, COUNT(*) AS y\nFROM bao_cao\nWHERE Ngay_ban_hanh IS NOT NULL\nGROUP BY EXTRACT(YEAR FROM Ngay_ban_hanh)\nORDER BY x;",
+      "body": "SELECT EXTRACT(YEAR FROM ngay_ban_hanh) AS x, COUNT(*) AS y\nFROM bao_cao\nWHERE ngay_ban_hanh IS NOT NULL\nGROUP BY EXTRACT(YEAR FROM ngay_ban_hanh)\nORDER BY x;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "name": "SoLuongBC_Nam",
     "pageId": "Trang Chủ",
     "userSetOnLoad": false

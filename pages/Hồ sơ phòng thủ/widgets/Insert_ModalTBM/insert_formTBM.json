@@ -3,7 +3,7 @@
   "autoGenerateForm": true,
   "backgroundColor": "#fff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 60,
+  "bottomRow": 45,
   "boxShadow": "none",
   "childStylesheet": {
     "ARRAY": {
@@ -265,7 +265,7 @@
           "isDisabled": true,
           "isRequired": false,
           "isSpellCheck": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Don Vi Id",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "don_vi_id",

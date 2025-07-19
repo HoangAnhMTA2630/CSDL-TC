@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(*) AS TongBaoCao\nFROM Bao_cao;",
+      "body": "SELECT COUNT(*) AS TongBaoCao\nFROM bao_cao;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

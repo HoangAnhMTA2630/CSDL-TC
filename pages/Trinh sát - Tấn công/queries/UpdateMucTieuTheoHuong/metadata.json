@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "BEGIN;\n\n-- Cập nhật tên miền\nUPDATE public.muc_tieu mt\nSET \n\n    \"domain\" = '{{(Table.updatedRow.domain)}}'\nFROM public.doi_tuong_tc dt, public.huong h\nWHERE \n    mt.doi_tuong_tc_id = dt.id\n    AND dt.huong_id = h.id\n    AND h.id = {{Table.triggeredRow.id}}; \n\n-- Cập nhật thông tin tổ chức\nUPDATE public.doi_tuong_tc dt\nSET \n    ten_to_chuc = '{{Table.updatedRow.ten_to_chuc}}',\n    ban_nganh = '{{Table.updatedRow.ban_nganh}}'\nFROM public.huong h\nWHERE \n    dt.huong_id = h.id\n    AND h.id = {{Table.triggeredRow.id}};\n\nCOMMIT;\n\n",
+      "body": "BEGIN;\n\n-- Cập nhật tên miền\nUPDATE public.muc_tieu mt\nSET \n\n    \"domain\" = '{{(TableMucTieu.updatedRow.domain)}}'\nFROM public.doi_tuong_tc dt, public.huong h\nWHERE \n    mt.doi_tuong_tc_id = dt.id\n    AND dt.huong_id = h.id\n    AND h.id = {{TableMucTieu.triggeredRow.id}}; \n\n-- Cập nhật thông tin tổ chức\nUPDATE public.doi_tuong_tc dt\nSET \n    ten_to_chuc = '{{TableMucTieu.updatedRow.ten_to_chuc}}',\n    ban_nganh = '{{TableMucTieu.updatedRow.ban_nganh}}'\nFROM public.huong h\nWHERE \n    dt.huong_id = h.id\n    AND h.id = {{TableMucTieu.triggeredRow.id}};\n\nCOMMIT;\n\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

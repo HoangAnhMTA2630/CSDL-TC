@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    q.id,\n    q.ten_quan_nhan,\n    q.quan_ham,\n    q.chuc_vu,\n    q.so_dien_thoai,\n    d.ten_don_vi\nFROM \n    e_thiet_bi_mang q\nLEFT JOIN \n    don_vi d ON q.don_vi_id = d.id\nLEFT JOIN \n    e_thiet_bi_mang tb ON q.id = tb.quanh_nhan_id\nWHERE \n    {{ TreeSelect.selectedOptionValue \n        ? `q.don_vi_id = '${TreeSelect.selectedOptionValue}'` \n        : '1=1' \n    }}\nGROUP BY \n    q.id, q.ten_quan_nhan, q.quan_ham, q.chuc_vu, q.so_dien_thoai, d.ten_don_vi\nORDER BY \n    q.id DESC;",
+      "body": "SELECT \n    q.id,\n    q.ten_quan_nhan,\n    q.quan_ham,\n    q.chuc_vu,\n    q.so_dien_thoai,\n    d.ten_don_vi\nFROM \n    e_thiet_bi_mang q\nLEFT JOIN \n    don_vi d ON q.don_vi_id = d.id\nLEFT JOIN \n    e_thiet_bi_mang tb ON q.id = tb.quanh_nhan_id\nWHERE \n    {{ TreeSelectDonVi_.selectedOptionValue \n        ? `q.don_vi_id = '${TreeSelectDonVi_.selectedOptionValue}'` \n        : '1=1' \n    }}\nGROUP BY \n    q.id, q.ten_quan_nhan, q.quan_ham, q.chuc_vu, q.so_dien_thoai, d.ten_don_vi\nORDER BY \n    q.id DESC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

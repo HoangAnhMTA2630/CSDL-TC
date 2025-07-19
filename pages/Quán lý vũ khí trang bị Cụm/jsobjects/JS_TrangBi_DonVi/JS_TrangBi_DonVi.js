@@ -40,7 +40,7 @@ export default {
         formatter: "{b}: {c} thiết bị"
       },
       title: {
-        text: "Số lượng thiết bị theo nhóm đơn vị",
+        text: "Đơn vị",
         left: "center",
         textStyle: {
           width: 300,
@@ -73,6 +73,11 @@ export default {
           name: "Thiết bị",
           type: "bar",
           data: values,
+					label: {
+      			show: true,           // 👈 Hiển thị nhãn
+      			position: "top",      // 👈 Vị trí trên đầu cột
+      			formatter: "{c}"      // 👈 Hiển thị giá trị y (số lượng)
+   		 			},
           itemStyle: {
             color: "#91cc75"
           }

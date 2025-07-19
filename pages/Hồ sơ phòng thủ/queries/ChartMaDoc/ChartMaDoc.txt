@@ -1,25 +1,13 @@
-WITH ma_doc_with_nam AS (
+WITH ma_doc_nam_nguon AS (
   SELECT 
-    *,
-    CASE 
-      WHEN ngay_tiep_nhan IS NOT NULL THEN EXTRACT(YEAR FROM ngay_tiep_nhan)::text
-      ELSE 'Không rõ'
-    END AS nam
-  FROM public.ma_doc
+    COALESCE(EXTRACT(YEAR FROM ngay_tiep_nhan)::text, 'Không rõ') AS nam,
+    COALESCE(nguon_thu_thap, 'Không rõ') AS nguon_thu_thap,
+    COUNT(*) AS so_luong
+  FROM ma_doc
+  GROUP BY nam, nguon_thu_thap
 )
-SELECT 
-  nam,
-  CASE 
-    WHEN bao_cao_id IS NULL THEN 'Không có báo cáo'
-    ELSE 'Có báo cáo'
-  END AS co_bao_cao,
-  COUNT(*) AS so_luong
-FROM ma_doc_with_nam
-GROUP BY nam, 
-         CASE 
-           WHEN bao_cao_id IS NULL THEN 'Không có báo cáo'
-           ELSE 'Có báo cáo'
-         END
+SELECT *
+FROM ma_doc_nam_nguon
 ORDER BY 
   CASE 
     WHEN nam ~ '^\d+$' THEN CAST(nam AS INT)

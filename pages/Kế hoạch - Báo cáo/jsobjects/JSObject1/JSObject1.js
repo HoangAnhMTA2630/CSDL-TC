@@ -1,6 +1,6 @@
 export default {
   transformToTree: () => {
-    const rawData = Query1.data;
+    const rawData = QueryFolderBKH.data;
     const tree = [];
 
     rawData.forEach(item => {
@@ -270,7 +270,7 @@ export default {
     return tree;
   }
 };
-// export default {
+// var ____INTERNAL_JS_OBJECT_NAME_USED_FOR_PARSING_____ = {
   // transformToTree: () => {
     // const rawData = Query1.data;
     // const tree = [];

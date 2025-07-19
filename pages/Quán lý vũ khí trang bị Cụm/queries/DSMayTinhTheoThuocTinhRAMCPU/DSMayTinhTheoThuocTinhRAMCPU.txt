@@ -1,0 +1,42 @@
+SELECT 
+  tbm.id,
+  tbm.ten_thiet_bi,
+  ram.gia_tri AS ram_gb,
+  cpu.gia_tri AS cpu_loai
+FROM 
+  e_thiet_bi_mang tbm
+JOIN 
+  v_thiet_bi_mang ram ON tbm.id = ram.e_thiet_bi_mang_id AND ram.a_thiet_bi_mang_id = 1
+JOIN 
+  v_thiet_bi_mang cpu ON tbm.id = cpu.e_thiet_bi_mang_id AND cpu.a_thiet_bi_mang_id = 4
+WHERE 
+  tbm.loai_thiet_bi_id = 5
+  AND (
+    -- Nhóm 1: phù hợp điều kiện
+    (
+      '{{ChartCauHinhMayTinh.selectedDataPoint.x}}' = '{{SLTheo_Ram_CPU.data[0].x}}'
+      AND CAST(ram.gia_tri AS FLOAT) <= {{Select_RAM.selectedOptionValue}}
+      AND CASE 
+            WHEN LOWER(TRIM(cpu.gia_tri)) = 'i3' THEN 1
+            WHEN LOWER(TRIM(cpu.gia_tri)) = 'i5' THEN 2
+            WHEN LOWER(TRIM(cpu.gia_tri)) = 'i7' THEN 3
+            WHEN LOWER(TRIM(cpu.gia_tri)) = 'i9' THEN 4
+            ELSE 99
+          END <= {{JS_LevelCPU.cpuLevel}}
+    )
+    OR
+    -- Nhóm 2: còn lại
+    (
+      '{{ChartCauHinhMayTinh.selectedDataPoint.x}}' = '{{SLTheo_Ram_CPU.data[1].x}}'
+      AND (
+        CAST(ram.gia_tri AS FLOAT) > {{Select_RAM.selectedOptionValue}}
+        OR CASE 
+              WHEN LOWER(TRIM(cpu.gia_tri)) = 'i3' THEN 1
+              WHEN LOWER(TRIM(cpu.gia_tri)) = 'i5' THEN 2
+              WHEN LOWER(TRIM(cpu.gia_tri)) = 'i7' THEN 3
+              WHEN LOWER(TRIM(cpu.gia_tri)) = 'i9' THEN 4
+              ELSE 99
+            END > {{JS_LevelCPU.cpuLevel}}
+      )
+    )
+  );

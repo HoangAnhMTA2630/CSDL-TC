@@ -1,0 +1,17 @@
+SELECT 
+    COUNT(DISTINCT tk.id) AS tong_so_tai_khoan
+FROM 
+    public.tai_khoan tk
+JOIN 
+    public.muc_tieu mt ON tk.muc_tieu_id = mt.id
+JOIN 
+    public.doi_tuong_tc dt ON mt.doi_tuong_tc_id = dt.id
+JOIN 
+    public.huong h ON dt.huong_id = h.id
+WHERE 
+    1 = 1
+    {{ SelectHuong_.selectedOptionValue ? `AND h.id = ${SelectHuong_.selectedOptionValue}` : '' }}
+    {{ DatePickerBD.selectedDate && DatePickerKT.selectedDate 
+        ? `AND tk.ngay_phat_hien BETWEEN DATE '${DatePickerBD.selectedDate}' AND DATE '${DatePickerKT.selectedDate}'`
+        : '' 
+    }}

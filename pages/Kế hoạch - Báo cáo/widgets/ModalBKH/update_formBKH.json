@@ -5,7 +5,7 @@
   "borderColor": "#fff",
   "borderRadius": "0px",
   "borderWidth": "0",
-  "bottomRow": 51,
+  "bottomRow": 64,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
     "ARRAY": {
@@ -161,14 +161,40 @@
     },
     {
       "key": "schema.__root_schema__.children.thoi_gian.placeholderText"
+    },
+    {
+      "key": "schema.__root_schema__.children.thoi_gian_id.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.thoi_gian_id.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.thoi_gian_id.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.loai_ke_hoach_id.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.loai_ke_hoach_id.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.loai_ke_hoach_id.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.thoi_gian_id.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.thoi_gian_id.placeholderText"
+    },
+    {
+      "key": "schema.__root_schema__.children.loai_ke_hoach_id.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.loai_ke_hoach_id.placeholderText"
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicPropertyPathList": [
-    {
-      "key": "onSubmit"
-    }
-  ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onSubmit"
@@ -182,10 +208,10 @@
   "isVisible": true,
   "key": "h9l9ozr8op",
   "labelTextSize": "0.875rem",
-  "leftColumn": 50,
+  "leftColumn": 48,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
-  "onSubmit": "{{UpdateQueryBKH.run(() => SelectQueryBKH.run(), (error) => showAlert(`Error while updating resource!\\n ${error}`,'error'))}}",
+  "onSubmit": "{{UpdateQueryBKH.run(() => SelectQueryBKH.run(), error => showAlert(`Error while updating resource!\\n ${error}`, 'error'));\nQueryFolderBKH.run().then(() => {\n  JSObject1.transformToTree();\n});}}",
   "parentColumnSpace": 16.3125,
   "parentId": "ywfssrl33x",
   "parentRowSpace": 10,
@@ -206,6 +232,29 @@
       "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
       "cellBoxShadow": "none",
       "children": {
+        "loai_ke_hoach_id": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formBKH.sourceData, update_formBKH.formData, update_formBKH.fieldState)}}",
+          "accessor": "loai_ke_hoach_id",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formBKH.sourceData, update_formBKH.formData, update_formBKH.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "null",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.loai_ke_hoach_id))(update_formBKH.sourceData, update_formBKH.formData, update_formBKH.fieldState)}}",
+          "fieldType": "Select",
+          "identifier": "loai_ke_hoach_id",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isFilterable": false,
+          "isRequired": false,
+          "isVisible": true,
+          "label": "Loai Ke Hoach",
+          "labelTextSize": "0.875rem",
+          "options": "{{QueryLoaiKH.data}}",
+          "originalIdentifier": "loai_ke_hoach_id",
+          "placeholderText": "{{((sourceData, formData, fieldState) => (sourceData.ten_loai_ke_hoach))(update_formBKH.sourceData, update_formBKH.formData, update_formBKH.fieldState)}}",
+          "position": 3,
+          "serverSideFiltering": false
+        },
         "mo_ta": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formBKH.sourceData, update_formBKH.formData, update_formBKH.fieldState)}}",
           "accessor": "mo_ta",
@@ -225,7 +274,7 @@
           "label": "Mo Ta",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "mo_ta",
-          "position": 3,
+          "position": 5,
           "sourceData": "Mô tả kế hoạch 1"
         },
         "ten_bo_ke_hoach": {
@@ -263,8 +312,8 @@
           "isCustomField": false,
           "isDisabled": false,
           "isFilterable": false,
-          "isRequired": true,
-          "isVisible": true,
+          "isRequired": false,
+          "isVisible": false,
           "label": "Ten Loai Ke Hoach",
           "labelTextSize": "0.875rem",
           "options": "{{QueryLoaiKH.data}}",
@@ -287,8 +336,8 @@
           "isCustomField": false,
           "isDisabled": false,
           "isFilterable": true,
-          "isRequired": true,
-          "isVisible": true,
+          "isRequired": false,
+          "isVisible": false,
           "label": "Thoi Gian",
           "labelTextSize": "0.875rem",
           "options": "{{QueryLoaiTG.data}}",
@@ -297,6 +346,29 @@
           "position": 2,
           "serverSideFiltering": false,
           "sourceData": "Năm - Năm: 2024"
+        },
+        "thoi_gian_id": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formBKH.sourceData, update_formBKH.formData, update_formBKH.fieldState)}}",
+          "accessor": "thoi_gian_id",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formBKH.sourceData, update_formBKH.formData, update_formBKH.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "null",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.thoi_gian_id))(update_formBKH.sourceData, update_formBKH.formData, update_formBKH.fieldState)}}",
+          "fieldType": "Select",
+          "identifier": "thoi_gian_id",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isFilterable": true,
+          "isRequired": false,
+          "isVisible": true,
+          "label": "Thoi Gian",
+          "labelTextSize": "0.875rem",
+          "options": "{{QueryLoaiTG.data}}",
+          "originalIdentifier": "thoi_gian_id",
+          "placeholderText": "{{((sourceData, formData, fieldState) => (sourceData.thoi_gian))(update_formBKH.sourceData, update_formBKH.formData, update_formBKH.fieldState)}}",
+          "position": 4,
+          "serverSideFiltering": false
         }
       },
       "dataType": "object",

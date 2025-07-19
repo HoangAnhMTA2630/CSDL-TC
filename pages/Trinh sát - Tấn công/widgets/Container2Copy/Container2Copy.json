@@ -4,7 +4,7 @@
   "borderColor": "#553de9",
   "borderRadius": "0px",
   "borderWidth": "1",
-  "bottomRow": 10,
+  "bottomRow": 11,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
@@ -38,7 +38,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "48tivy6y72",
+      "parentId": "8e9jwc1kwv",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -46,7 +46,7 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "9md1406ln1",
+      "widgetId": "syftd3vgsy",
       "widgetName": "Canvas123Copy"
     }
   ],
@@ -72,8 +72,8 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 86,
   "needsErrorInfo": false,
-  "originalBottomRow": 10,
-  "originalTopRow": -1,
+  "originalBottomRow": 11,
+  "originalTopRow": 0,
   "parentColumnSpace": 20.125,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -81,9 +81,9 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "shouldScrollContents": true,
-  "topRow": -1,
+  "topRow": 0,
   "type": "CONTAINER_WIDGET",
   "version": 1,
-  "widgetId": "48tivy6y72",
+  "widgetId": "8e9jwc1kwv",
   "widgetName": "Container2Copy"
 }

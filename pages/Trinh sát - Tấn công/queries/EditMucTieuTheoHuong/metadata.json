@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "-- 1. Cập nhật domain theo hướng\nUPDATE public.muc_tieu\nSET domain = '{{ Table.updatedRow.domain }}'\nWHERE doi_tuong_tc_id IN (\n    SELECT id FROM public.doi_tuong_tc\n    WHERE huong_id = (\n        SELECT id FROM public.huong\n        WHERE ten_huong = '{{ Table.triggeredRow.huong }}'\n    )\n);\n\n-- 2. Cập nhật tổ chức theo hướng\nUPDATE public.doi_tuong_tc\nSET \n    huong_id = (\n        SELECT id FROM public.huong\n        WHERE ten_huong = '{{ Table.updatedRow.huong }}'\n    ),\n    ten_to_chuc = '{{ Table.updatedRow.ten_to_chuc }}',\n    ban_nganh = '{{ Table.updatedRow.ban_nganh }}'\nWHERE huong_id = (\n    SELECT id FROM public.huong\n    WHERE ten_huong = '{{ Table.triggeredRow.huong }}'\n);\n",
+      "body": "-- 1. Cập nhật domain theo hướng\nUPDATE public.muc_tieu\nSET domain = '{{ TableMucTieu.updatedRow.domain }}'\nWHERE doi_tuong_tc_id IN (\n    SELECT id FROM public.doi_tuong_tc\n    WHERE huong_id = (\n        SELECT id FROM public.huong\n        WHERE ten_huong = '{{ TableMucTieu.triggeredRow.huong }}'\n    )\n);\n\n-- 2. Cập nhật tổ chức theo hướng\nUPDATE public.doi_tuong_tc\nSET \n    huong_id = (\n        SELECT id FROM public.huong\n        WHERE ten_huong = '{{ TableMucTieu.updatedRow.huong }}'\n    ),\n    ten_to_chuc = '{{ TableMucTieu.updatedRow.ten_to_chuc }}',\n    ban_nganh = '{{ TableMucTieu.updatedRow.ban_nganh }}'\nWHERE huong_id = (\n    SELECT id FROM public.huong\n    WHERE ten_huong = '{{ TableMucTieu.triggeredRow.huong }}'\n);\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

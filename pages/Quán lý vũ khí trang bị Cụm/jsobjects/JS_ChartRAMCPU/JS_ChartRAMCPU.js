@@ -6,10 +6,10 @@ export default {
 	},
 	async myFun2(category) {
 		if (category === "Còn lại") {
-			await DSMayYeu.run();
+			await DSMayTinhTheoThuocTinhRAMCPU.run();
 			showModal(Modal_DSRamCPU.name)
 		} else {
-			await DSMayYeu.run();
+			await DSMayTinhTheoThuocTinhRAMCPU.run();
 			showModal("Modal_DSMayYeu");
 		}
 	}

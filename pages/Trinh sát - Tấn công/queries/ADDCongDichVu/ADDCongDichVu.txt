@@ -1,0 +1,20 @@
+DO $$
+BEGIN
+  IF '{{TableCongMoDichVu.newRow.cong}}' IS NOT NULL AND '{{TableCongMoDichVu.newRow.cong}}' <> '' THEN
+    WITH inserted_cmdv AS (
+      INSERT INTO public.cong_mo_dich_vu (cong, dich_vu)
+      VALUES ('{{TableCongMoDichVu.newRow.cong}}', '{{TableCongMoDichVu.newRow.dich_vu}}')
+      ON CONFLICT DO NOTHING
+      RETURNING id
+    ),
+    selected_cmdv AS (
+      SELECT id FROM inserted_cmdv
+      UNION
+      SELECT id FROM public.cong_mo_dich_vu 
+      WHERE cong = '{{TableCongMoDichVu.newRow.cong}}' AND dich_vu = '{{TableCongMoDichVu.newRow.dich_vu}}'
+    )
+    INSERT INTO public.muc_tieu_cong_mo_dich_vu (muc_tieu_id, cong_mo_dich_vu_id)
+    SELECT {{TableMucTieu.triggeredRow.id}}, id FROM selected_cmdv;
+  END IF;
+END
+$$;

@@ -1,0 +1,18 @@
+INSERT INTO public.tai_khoan (
+  username,
+  pass,
+  trang_thai,
+  cap_do,
+  ngay_phat_hien,
+  mo_ta,
+  muc_tieu_id
+)
+VALUES (
+  '{{TableTaiKhoan.newRow.username}}',
+  '{{TableTaiKhoan.newRow.pass}}',
+  '{{TableTaiKhoan.newRow.trang_thai}}',
+  '{{TableTaiKhoan.newRow.cap_do}}',
+  '{{TableTaiKhoan.newRow.ngay_phat_hien}}'::date,
+  '{{TableTaiKhoan.newRow.mo_ta}}',
+  {{TableMucTieu.triggeredRow.id}}
+);

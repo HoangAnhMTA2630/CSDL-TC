@@ -1,14 +1,14 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 451,
+  "bottomRow": 861,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 430,
+      "bottomRow": 840,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -57,13 +57,14 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "height": 430,
+  "height": 840,
   "isCanvas": true,
   "isLoading": false,
   "key": "hkc8jkd6sv",
   "leftColumn": 35,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 24,
+  "minHeight": 840,
   "mobileBottomRow": 45,
   "mobileLeftColumn": 35,
   "mobileRightColumn": 59,
@@ -80,5 +81,5 @@
   "version": 2,
   "widgetId": "o24lr8hx1o",
   "widgetName": "Modal_View_TBTheoDV",
-  "width": 876
+  "width": 1693.85
 }

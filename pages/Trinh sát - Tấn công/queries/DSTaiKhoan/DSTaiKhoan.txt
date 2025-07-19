@@ -9,6 +9,6 @@ SELECT
 FROM 
     public.tai_khoan tk
 WHERE 
-    tk.muc_tieu_id = {{Table.triggeredRow.id }}
+    tk.muc_tieu_id = {{TableMucTieu.triggeredRow.id }}
 ORDER BY 
     tk.id;

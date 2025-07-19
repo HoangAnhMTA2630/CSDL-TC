@@ -1,0 +1,23 @@
+SELECT 
+    tk.id,
+    tk.username,
+    tk.pass,               -- Thêm mật khẩu
+    tk.trang_thai,
+    tk.cap_do,
+    tk.ngay_phat_hien,
+    tk.mo_ta,
+    mt.domain,
+    h.ten_huong
+FROM 
+    public.tai_khoan tk
+JOIN 
+    public.muc_tieu mt ON tk.muc_tieu_id = mt.id
+JOIN 
+    public.doi_tuong_tc dt ON mt.doi_tuong_tc_id = dt.id
+JOIN 
+    public.huong h ON dt.huong_id = h.id
+WHERE 
+    1 = 1
+    {{ ChartTaiKhoanTheoHuong.selectedDataPoint? `AND h.ten_huong = '${ChartTaiKhoanTheoHuong.selectedDataPoint.rawEventData.name}` : '' }}'
+ORDER BY 
+    tk.id;

@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "name": "SLTheoCap",
     "pageId": "Quán lý vũ khí trang bị Cụm",
     "userSetOnLoad": false

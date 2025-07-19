@@ -1,6 +1,0 @@
-SELECT DISTINCT ten_to_chuc
-FROM public.doi_tuong_tc
-WHERE ten_to_chuc IS NOT NULL
-
-GROUP BY ten_to_chuc
-ORDER BY ten_to_chuc;

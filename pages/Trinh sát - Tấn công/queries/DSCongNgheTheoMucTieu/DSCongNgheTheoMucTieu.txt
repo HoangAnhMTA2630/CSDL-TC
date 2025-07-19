@@ -1,0 +1,12 @@
+SELECT 
+    cn.id,
+    lcn.ten_loai_cong_nghe,
+    cn.gia_tri
+FROM 
+    public.cong_nghe cn
+JOIN 
+    public.loai_cong_nghe lcn ON cn.loai_cong_nghe_id = lcn.id
+WHERE 
+    cn.muc_tieu_id = {{TableMucTieu.triggeredRow.id}}
+ORDER BY 
+    lcn.ten_loai_cong_nghe;

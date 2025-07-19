@@ -1,0 +1,38 @@
+SELECT 
+  kh.*,
+  bk.ten_bo_ke_hoach,
+  lkh.ten_loai_ke_hoach,
+  ckh.ten_cap
+FROM ke_hoach kh
+JOIN bo_ke_hoach bk ON kh.bo_ke_hoach_id = bk.id
+JOIN thoi_gian tg ON bk.thoi_gian_id = tg.id
+JOIN loai_ke_hoach lkh ON kh.loai_ke_hoach_id = lkh.id
+JOIN cap ckh ON kh.cap_ban_hanh_id = ckh.id
+WHERE 1=1
+
+-- Lọc theo năm (kiểu integer)
+{{ MultiSelectNamFilterKH.selectedOptionValues.length > 0 ? 
+  `AND tg.nam = ANY (ARRAY[${MultiSelectNamFilterKH.selectedOptionValues.join(',')}]::int[])` 
+  : '' }}
+
+-- Lọc theo quý (kiểu integer)
+{{ MultiSelectQuyFilterKH.selectedOptionValues.length > 0 ? 
+  `AND tg.quy = ANY (ARRAY[${MultiSelectQuyFilterKH.selectedOptionValues.join(',')}]::int[])` 
+  : '' }}
+
+-- Lọc theo tháng (kiểu integer)
+{{ MultiSelectThangFilterKH.selectedOptionValues.length > 0 ? 
+  `AND tg.thang = ANY (ARRAY[${MultiSelectThangFilterKH.selectedOptionValues.join(',')}]::int[])` 
+  : '' }}
+
+-- Lọc theo loại kế hoạch (kiểu integer)
+{{ MultiSelectLoaiKH.selectedOptionValues.length > 0 ? 
+  `AND kh.loai_ke_hoach_id = ANY (ARRAY[${MultiSelectLoaiKH.selectedOptionValues.join(',')}]::int[])` 
+  : '' }}
+
+-- Lọc theo cấp ban hành (kiểu integer)
+{{ MultiSelectCapKH.selectedOptionValues.length > 0 ? 
+  `AND kh.cap_ban_hanh_id = ANY (ARRAY[${MultiSelectCapKH.selectedOptionValues.join(',')}]::int[])` 
+  : '' }}
+
+ORDER BY kh.id;

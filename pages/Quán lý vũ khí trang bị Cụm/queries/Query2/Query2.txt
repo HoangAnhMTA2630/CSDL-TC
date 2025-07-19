@@ -12,8 +12,8 @@ LEFT JOIN
 LEFT JOIN 
     e_thiet_bi_mang tb ON q.id = tb.quanh_nhan_id
 WHERE 
-    {{ TreeSelect.selectedOptionValue 
-        ? `q.don_vi_id = '${TreeSelect.selectedOptionValue}'` 
+    {{ TreeSelectDonVi_.selectedOptionValue 
+        ? `q.don_vi_id = '${TreeSelectDonVi_.selectedOptionValue}'` 
         : '1=1' 
     }}
 GROUP BY 

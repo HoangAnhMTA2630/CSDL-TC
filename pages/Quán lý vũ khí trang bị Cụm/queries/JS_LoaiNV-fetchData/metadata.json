@@ -22,7 +22,7 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "fullyQualifiedName": "JS_LoaiNV.fetchData",
     "name": "fetchData",
     "pageId": "Quán lý vũ khí trang bị Cụm",

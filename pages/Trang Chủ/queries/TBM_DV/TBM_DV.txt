@@ -1,0 +1,20 @@
+WITH RECURSIVE DonViCon AS (
+  SELECT id, ten_don_vi, id AS goc_id, ten_don_vi AS ten_goc
+  FROM don_vi_phong_thu
+  WHERE don_vi_cha_id IS NULL
+
+  UNION ALL
+
+  SELECT dv.id, dv.ten_don_vi, dvc.goc_id, dvc.ten_goc
+  FROM don_vi_phong_thu dv
+  JOIN DonViCon dvc ON dv.don_vi_cha_id = dvc.id
+)
+
+SELECT 
+  ten_goc AS x,
+  COUNT(etb.id) AS y
+FROM DonViCon dvc
+LEFT JOIN ho_so_phong_thu hspt ON hspt.don_vi_id = dvc.id
+LEFT JOIN e_thiet_bi_mang etb ON etb.ho_so_phong_thu_id = hspt.id
+GROUP BY ten_goc
+ORDER BY y DESC;

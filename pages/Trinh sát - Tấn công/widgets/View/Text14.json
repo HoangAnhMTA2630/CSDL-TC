@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 24,
   "shouldTruncate": false,
-  "text": "Domain: {{Table.triggeredRow.domain}}",
+  "text": "Domain: {{TableMucTieu.triggeredRow.domain}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 1,

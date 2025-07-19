@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 48,
+  "bottomRow": 61,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
     "button": {
@@ -27,6 +27,8 @@
     "ten_loai_ke_hoach",
     "thoi_gian",
     "mo_ta",
+    "thoi_gian_id",
+    "loai_ke_hoach_id",
     "customColumn1"
   ],
   "columnSizeMap": {
@@ -34,7 +36,7 @@
     "step": 62,
     "task": 245
   },
-  "columnUpdatedAt": 1750690169095,
+  "columnUpdatedAt": 1752822053626,
   "columnWidthMap": {
     "customColumn1": 60,
     "id": 86,
@@ -108,6 +110,12 @@
     },
     {
       "key": "primaryColumns.customColumn1.menuColor"
+    },
+    {
+      "key": "primaryColumns.thoi_gian_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.loai_ke_hoach_id.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -210,6 +218,37 @@
       "originalId": "id",
       "sticky": "",
       "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "loai_ke_hoach_id": {
+      "alias": "loai_ke_hoach_id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "number",
+      "computedValue": "{{data_tableBKH.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"loai_ke_hoach_id\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "loai_ke_hoach_id",
+      "index": 3,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "loai_ke_hoach_id",
+      "notation": "standard",
+      "originalId": "loai_ke_hoach_id",
+      "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -339,6 +378,37 @@
       "label": "thoi_gian",
       "notation": "standard",
       "originalId": "thoi_gian",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "thoi_gian_id": {
+      "alias": "thoi_gian_id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "number",
+      "computedValue": "{{data_tableBKH.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"thoi_gian_id\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "thoi_gian_id",
+      "index": 2,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "thoi_gian_id",
+      "notation": "standard",
+      "originalId": "thoi_gian_id",
       "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,

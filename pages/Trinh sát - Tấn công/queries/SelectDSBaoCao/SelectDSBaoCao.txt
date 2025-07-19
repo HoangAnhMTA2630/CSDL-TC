@@ -19,4 +19,4 @@ LEFT JOIN
 LEFT JOIN 
     public.cap c ON bc.cap_bao_cao_id = c.id
 WHERE 
-    mt.id = {{Table.triggeredRow.id}};
+    mt.id = {{TableMucTieu.triggeredRow.id}};

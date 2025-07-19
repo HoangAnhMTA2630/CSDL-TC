@@ -7,8 +7,11 @@ JOIN thoi_gian tg ON bk.thoi_gian_id = tg.id
 JOIN loai_ke_hoach lkh ON kh.loai_ke_hoach_id = lkh.id
 JOIN cap ckh ON kh.cap_ban_hanh_id = ckh.id
 WHERE 1=1
-  {{ SelectNam.selectedOptionValue ? `AND tg.nam = ${SelectNam.selectedOptionValue}` : '' }}
-  {{ SelectQuy.selectedOptionValue ? `AND tg.quy = ${SelectQuy.selectedOptionValue}` : '' }}
-  {{ SelectThang.selectedOptionValue ? `AND tg.thang = ${SelectThang.selectedOptionValue}` : '' }}
-  {{ ChartSL_LKH.selectedDataPoint ? `AND ckh.ten_cap = '${ChartSL_CapKH.selectedDataPoint.rawEventData.name}'` : '' }}
+  {{ MultiSelectNam.selectedOptionValues.length > 0 ? 
+  `AND tg.nam = ANY (ARRAY[${MultiSelectNam.selectedOptionValues.join(',')}]::int[])` : '' }}
+{{ MultiSelectQuy.selectedOptionValues.length > 0 ? 
+  `AND tg.quy = ANY (ARRAY[${MultiSelectQuy.selectedOptionValues.join(',')}]::int[])` : '' }}
+{{ MultiSelectThang.selectedOptionValues.length > 0 ? 
+  `AND tg.thang = ANY (ARRAY[${MultiSelectThang.selectedOptionValues.join(',')}]::int[])` : '' }}
+  {{ ChartSL_CapKH.selectedDataPoint ? `AND ckh.ten_cap = '${ChartSL_CapKH.selectedDataPoint.rawEventData.name}'` : '' }}
 ORDER BY kh.id;

@@ -1,0 +1,9 @@
+SELECT 
+  EXTRACT(YEAR FROM bc.ngay_ban_hanh) AS x,
+  COUNT(DISTINCT md.bao_cao_id) AS y
+FROM public."ma_doc" md
+JOIN public."bao_cao" bc ON bc.id = md.bao_cao_id
+WHERE md.bao_cao_id IS NOT NULL
+  AND bc.ngay_ban_hanh IS NOT NULL
+GROUP BY EXTRACT(YEAR FROM bc.ngay_ban_hanh)
+ORDER BY x;

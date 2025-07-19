@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "682d4d2a92cca105dbc17693_0610778d-41ed-4d89-809e-0bdd1b4e1dbe",
+  "gitSyncId": "682d4d2a92cca105dbc17693_5b290605-582d-48b7-b070-7b65464ea87b",
   "id": "Kế hoạch - Báo cáo_QueryBCByLoaiBCInChart",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  bc.*\nFROM bao_cao bc\nJOIN loai_bao_cao lbc ON bc.loai_bao_cao_id = lbc.id\nJOIN cap ckh ON bc.cap_bao_cao_id = ckh.id\nJOIN ke_hoach_bao_cao khbc ON bc.id = khbc.bao_cao_id\nJOIN ke_hoach kh ON khbc.ke_hoach_id = kh.id\nJOIN bo_ke_hoach bk ON kh.bo_ke_hoach_id = bk.id\nJOIN thoi_gian tg ON bk.thoi_gian_id = tg.id\nWHERE 1=1\n  {{ SelectNam.selectedOptionValue ? `AND tg.nam = ${SelectNam.selectedOptionValue}` : '' }}\n  {{ SelectQuy.selectedOptionValue ? `AND tg.quy = ${SelectQuy.selectedOptionValue}` : '' }}\n  {{ SelectThang.selectedOptionValue ? `AND tg.thang = ${SelectThang.selectedOptionValue}` : '' }}\n  {{ ChartSL_LBC.selectedDataPoint ? `AND lbc.ten_loai_bao_cao = '${ChartSL_LBC.selectedDataPoint.rawEventData.name}'` : '' }}\n  {{ ChartSL_LBC.selectedDataPoint ? `AND ckh.ten_cap = '${ChartSL_LBC.selectedDataPoint.rawEventData.seriesName}'` : '' }}\nORDER BY bc.id;\n",
+      "body": "SELECT \n  bc.*\nFROM bao_cao bc\nJOIN loai_bao_cao lbc ON bc.loai_bao_cao_id = lbc.id\nJOIN cap ckh ON bc.cap_bao_cao_id = ckh.id\nJOIN ke_hoach_bao_cao khbc ON bc.id = khbc.bao_cao_id\nJOIN ke_hoach kh ON khbc.ke_hoach_id = kh.id\nJOIN bo_ke_hoach bk ON kh.bo_ke_hoach_id = bk.id\nJOIN thoi_gian tg ON bk.thoi_gian_id = tg.id\nWHERE 1=1\n {{ MultiSelectNam.selectedOptionValues.length > 0 ? \n    `AND tg.nam = ANY (ARRAY[${MultiSelectNam.selectedOptionValues.join(',')}]::int[])` : '' }}\n  {{ MultiSelectQuy.selectedOptionValues.length > 0 ? \n    `AND tg.quy = ANY (ARRAY[${MultiSelectQuy.selectedOptionValues.join(',')}]::int[])` : '' }}\n  {{ MultiSelectThang.selectedOptionValues.length > 0 ? \n    `AND tg.thang = ANY (ARRAY[${MultiSelectThang.selectedOptionValues.join(',')}]::int[])` : '' }}\n  {{ ChartSL_LBC.selectedDataPoint ? `AND lbc.ten_loai_bao_cao = '${ChartSL_LBC.selectedDataPoint.rawEventData.name}'` : '' }}\n  {{ ChartSL_LBC.selectedDataPoint ? `AND ckh.ten_cap = '${ChartSL_LBC.selectedDataPoint.rawEventData.seriesName}'` : '' }}\nORDER BY bc.id;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

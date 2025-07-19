@@ -1,0 +1,45 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "filter-list",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "b865p085df",
+  "leftColumn": 58,
+  "minWidth": 50,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 55,
+  "mobileRightColumn": 59,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "onClick": "{{TongSoLuongBaoCao.run();\nTongDungLuong.run();\nSLTaiKhoan.run();\nSLMucTieuTheoHuong.run().then(() => {\n  JS_SLThietBiTheoHuong.fetchData();\n});\nSLTaiKhoanTheoHuong.run().then(() => {\n  JS_SLTaiKhoanTheoHuong.fetchData();\n});\nChartsTopSLTaiLieuTheoTK.run();\nChartsTopSLTaiLieuTheoMucTieu.run();\nSLBaoCao.run().then(() => {\n  JS_SLBaoCao.fetchData();\n});\nSLTaiLieu.run().then(() => {\n  JS_SLTaiLieu.fetchData();\n});}}",
+  "parentColumnSpace": 29.828125,
+  "parentId": "nfrqoyzr8c",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 60,
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "623cwvwjvd",
+  "widgetName": "ButtonFilter"
+}

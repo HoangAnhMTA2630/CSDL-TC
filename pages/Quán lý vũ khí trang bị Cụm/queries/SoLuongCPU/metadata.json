@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  vtbm.gia_tri AS loai_cpu,\n  COUNT(DISTINCT tbm.id) AS so_luong_may_tinh\nFROM e_thiet_bi_mang tbm\nJOIN v_thiet_bi_mang vtbm ON tbm.id = vtbm.e_thiet_bi_mang_id\nWHERE tbm.loai_thiet_bi_id = 5        -- chỉ máy tính\n  AND vtbm.a_thiet_bi_mang_id = 4     -- chỉ thuộc tính CPU\nGROUP BY vtbm.gia_tri\nORDER BY so_luong_may_tinh DESC;\n",
+      "body": "SELECT \n  vtbm.gia_tri AS loai_cpu,\n  COUNT(DISTINCT tbm.id) AS so_luong_may_tinh\nFROM \n  e_thiet_bi_mang tbm\nJOIN \n  v_thiet_bi_mang vtbm ON tbm.id = vtbm.e_thiet_bi_mang_id\nWHERE \n  tbm.loai_thiet_bi_id = 5        -- chỉ máy tính\n  AND vtbm.a_thiet_bi_mang_id = 4 -- chỉ thuộc tính CPU\n  {{ TreeSelectDonVi_.selectedOptionValue ? `AND tbm.don_vi_id = ${TreeSelectDonVi_.selectedOptionValue}` : '' }}\nGROUP BY \n  vtbm.gia_tri\nORDER BY loai_cpu ;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
@@ -22,7 +22,11 @@
       "name": "csdltc",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": true,
     "name": "SoLuongCPU",
     "pageId": "Quán lý vũ khí trang bị Cụm",

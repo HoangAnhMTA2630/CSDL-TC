@@ -1,0 +1,26 @@
+SELECT 
+    mt.domain AS x,
+    COUNT(*) AS y
+FROM (
+    -- Tài liệu lấy trực tiếp từ mục tiêu
+    SELECT tl.id, tl.muc_tieu_id AS muc_tieu_id_thuoc
+    FROM public.tai_lieu tl
+    WHERE tl.muc_tieu_id IS NOT NULL
+
+    UNION ALL
+
+    -- Tài liệu gián tiếp qua tài khoản
+    SELECT tl.id, tk.muc_tieu_id AS muc_tieu_id_thuoc
+    FROM public.tai_lieu tl
+    JOIN public.tai_khoan tk ON tl.tai_khoan_id = tk.id
+    WHERE tk.muc_tieu_id IS NOT NULL
+) AS tai_lieu_hop_nhat
+JOIN public.muc_tieu mt ON tai_lieu_hop_nhat.muc_tieu_id_thuoc = mt.id
+JOIN public.doi_tuong_tc dt ON mt.doi_tuong_tc_id = dt.id
+JOIN public.huong h ON dt.huong_id = h.id
+WHERE
+    1 = 1
+    {{ SelectHuong_.selectedOptionValue ? `AND h.id = ${SelectHuong_.selectedOptionValue}` : '' }}
+GROUP BY mt.id, mt.domain
+ORDER BY y DESC
+LIMIT 10;

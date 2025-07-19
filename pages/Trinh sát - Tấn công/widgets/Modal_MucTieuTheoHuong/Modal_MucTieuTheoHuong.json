@@ -1,14 +1,14 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 672,
+  "bottomRow": 632,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 650,
+      "bottomRow": 610,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -29,7 +29,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 350,
+      "minHeight": 630,
       "minWidth": 450,
       "mobileBottomRow": 240,
       "mobileLeftColumn": 0,
@@ -57,14 +57,14 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "height": 650,
+  "height": 610,
   "isCanvas": true,
   "isLoading": false,
   "key": "2al8xy6kov",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 24,
-  "minHeight": 650,
+  "minHeight": 610,
   "mobileBottomRow": 46,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 21,
@@ -81,5 +81,5 @@
   "version": 2,
   "widgetId": "8mmt960vcy",
   "widgetName": "Modal_MucTieuTheoHuong",
-  "width": 1773.6499999999999
+  "width": 1693.85
 }

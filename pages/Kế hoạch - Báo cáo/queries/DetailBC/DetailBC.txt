@@ -1,0 +1,16 @@
+SELECT 
+  kh.so_ke_hoach,
+  kh.ten_ke_hoach,
+  bk.ten_bo_ke_hoach,
+  lbk.ten_loai_ke_hoach,
+  lttg.ten_loai_thoi_gian,
+  tg.nam,
+  tg.quy,
+  tg.thang
+FROM ke_hoach_bao_cao khbc
+JOIN ke_hoach kh ON khbc.ke_hoach_id = kh.id
+JOIN bo_ke_hoach bk ON kh.bo_ke_hoach_id = bk.id
+JOIN loai_ke_hoach lbk ON bk.loai_ke_hoach_id = lbk.id
+JOIN thoi_gian tg ON bk.thoi_gian_id = tg.id
+JOIN loai_thoi_gian lttg ON tg.loai_thoi_gian_id = lttg.id
+WHERE khbc.bao_cao_id = {{ TableFilterBC.triggeredRow.id }};

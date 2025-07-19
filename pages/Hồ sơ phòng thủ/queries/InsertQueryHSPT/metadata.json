@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.\"ho_so_phong_thu\" (\n\t\"ten_ho_so\",\n\t\"ngay_ban_hanh\",\n\t\"ngay_sua_doi\",\n\t\"so_do_tuyen_cap\",\n\t\"so_do_logic\",\n\t\"so_do_rack\",\n\t\"duong_dan_file\",\n\t\"don_vi_id\")\nVALUES (\n\t'{{insert_formHSPT.formData.ten_ho_so}}',\n\t'{{insert_formHSPT.formData.ngay_ban_hanh}}',\n\t'{{insert_formHSPT.formData.ngay_sua_doi}}',\n\t'{{insert_formHSPT.formData.so_do_tuyen_cap}}',\n\t'{{insert_formHSPT.formData.so_do_logic}}',\n\t'{{insert_formHSPT.formData.so_do_rack}}',\n\t'{{insert_formHSPT.formData.duong_dan_file}}',\n\t'{{insert_formHSPT.formData.don_vi_id}}');",
+      "body": "INSERT INTO public.\"ho_so_phong_thu\" (\n\t\"ten_ho_so\",\n\t\"ngay_ban_hanh\",\n\t\"ngay_sua_doi\",\n\t\"so_do_tuyen_cap\",\n\t\"so_do_logic\",\n\t\"so_do_rack\",\n\t\"duong_dan_file\",\n\t\"don_vi_id\")\nVALUES (\n\t'{{insert_formHSPT.formData.ten_ho_so}}',\n\t'{{insert_formHSPT.formData.ngay_ban_hanh}}',\n\t{{ insert_formHSPT.formData.ngay_sua_doi ? `'${insert_formHSPT.formData.ngay_sua_doi}'` : 'NULL' }},\n\t'{{insert_formHSPT.formData.so_do_tuyen_cap}}',\n\t'{{insert_formHSPT.formData.so_do_logic}}',\n\t'{{insert_formHSPT.formData.so_do_rack}}',\n\t'{{insert_formHSPT.formData.duong_dan_file}}',\n\t'{{insert_formHSPT.formData.don_vi_id}}');",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

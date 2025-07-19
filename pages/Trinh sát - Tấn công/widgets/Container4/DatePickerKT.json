@@ -39,7 +39,7 @@
   "labelPosition": "Left",
   "labelTextSize": "0.875rem",
   "labelWidth": "4",
-  "leftColumn": 45,
+  "leftColumn": 46,
   "maxDate": "",
   "maxDynamicHeight": 9000,
   "minDate": "{{DatePickerBD.selectedDate}}",

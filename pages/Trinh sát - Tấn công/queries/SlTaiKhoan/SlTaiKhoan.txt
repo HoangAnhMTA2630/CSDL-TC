@@ -1,4 +1,0 @@
-SELECT 
-    COUNT(*) AS tong_so_tai_khoan
-FROM 
-    public.tai_khoan;

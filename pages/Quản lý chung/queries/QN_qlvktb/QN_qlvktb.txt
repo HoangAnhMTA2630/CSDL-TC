@@ -1,0 +1,9 @@
+SELECT 
+  qn.*, 
+  dv.ten_don_vi
+FROM public."quan_nhan" qn
+JOIN public."don_vi" dv ON qn.don_vi_id = dv.id
+WHERE qn."don_vi_id" IS NOT NULL
+  AND qn."ten_quan_nhan" ILIKE '%{{ Table_QN_qlvktb.searchText || "" }}%'
+ORDER BY "{{ Table_QN_qlvktb.sortOrder.column || 'id' }}" {{ Table_QN_qlvktb.sortOrder.order || 'ASC' }};
+

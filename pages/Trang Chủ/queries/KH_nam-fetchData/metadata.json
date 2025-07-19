@@ -22,7 +22,7 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "fullyQualifiedName": "KH_nam.fetchData",
     "name": "fetchData",
     "pageId": "Trang Chủ",

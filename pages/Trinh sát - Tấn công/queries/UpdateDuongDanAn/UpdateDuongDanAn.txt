@@ -1,0 +1,8 @@
+UPDATE public.duong_dan_an dda
+SET ten_duong_dan_an = '{{TableDuongDanAn.updatedRow.ten_duong_dan_an}}'
+FROM public.muc_tieu_duong_dan_an mtda
+WHERE dda.id = mtda.duong_dan_an_id
+  AND mtda.muc_tieu_id = {{TableMucTieu.triggeredRow.id}}
+  AND dda.id = {{TableDuongDanAn.updatedRow.id}}
+  AND '{{TableDuongDanAn.updatedRow.ten_duong_dan_an}}' IS NOT NULL
+  AND '{{TableDuongDanAn.updatedRow.ten_duong_dan_an}}' <> '';

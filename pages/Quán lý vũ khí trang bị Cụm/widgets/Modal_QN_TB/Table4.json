@@ -176,7 +176,7 @@
   "mobileRightColumn": 38,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
-  "onAddNewRowSave": "{{AddThietBiVaThuocTinh.run().then(() => {\n  SelectTBDoQNQuanLy.run();\n}).catch(() => {\n  Select_DV.run();\n});}}",
+  "onAddNewRowSave": "{{AddThietBiVaThuocTinh.run().then(() => {\n  SelectTBDoQNQuanLy.run();\n}).catch(() => {\n  DSThietBi.run();\n});}}",
   "originalBottomRow": 36,
   "originalTopRow": 4,
   "parentColumnSpace": 15.25,

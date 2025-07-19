@@ -1,0 +1,19 @@
+SELECT 
+    ltb.ten_loai_thiet_bi,
+    dv.ten_don_vi,
+    COUNT(DISTINCT etbm.id) AS so_luong_thiet_bi
+FROM 
+    loai_thiet_bi ltb
+LEFT JOIN 
+    e_thiet_bi_mang etbm ON ltb.id = etbm.loai_thiet_bi_id
+LEFT JOIN 
+    don_vi dv ON etbm.don_vi_id = dv.id
+LEFT JOIN 
+    v_thiet_bi_mang cpu ON etbm.id = cpu.e_thiet_bi_mang_id 
+                        AND cpu.a_thiet_bi_mang_id = 4  -- CPU
+GROUP BY 
+    ltb.ten_loai_thiet_bi,
+    dv.ten_don_vi
+ORDER BY 
+    ltb.ten_loai_thiet_bi,
+    dv.ten_don_vi;

@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "allowScroll": false,
   "animateLoading": true,
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderRadius": "0.375rem",
   "bottomRow": 36,
   "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
   "chartData": {
@@ -13,7 +13,7 @@
   },
   "chartName": "Số lượng kế hoạch theo năm",
   "chartType": "CUSTOM_ECHART",
-  "customEChartConfig": "{{ ((chartType) => ( KH_nam.fetchData.data))(Chart1.chartType) }}",
+  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const data = CountKHBCTheoNam.data;\n\n  const namList = data.map(d => d.nam);\n\n  return {\n    xAxis: {\n      type: \"category\",\n      data: namList,\n      axisLabel: {\n        rotate: 0\n      }\n    },\n    yAxis: {\n      type: \"value\"\n    },\n    tooltip: {\n      trigger: \"axis\",\n      axisPointer: {\n        type: \"shadow\"\n      }\n    },\n    legend: {\n      top: 35\n    },\n    title: {\n      text: \"Kế hoạch và Báo cáo của Kế hoạch\",\n      left: \"center\",\n      top: 10,\n      textStyle: {\n        fontSize: 18,\n        fontWeight: \"bold\",\n\t\t\t\tfontFamily: \"Arial, sans-serif\"\n      }\n    },\n    series: [\n      {\n        name: \"Kế hoạch\",\n        type: \"bar\",\n        label: {\n          show: true,\n          position: \"top\"\n        },\n        data: data.map(d => d.so_ke_hoach),\n        color: \"#553DE9\"\n      },\n      {\n        name: \"Báo cáo\",\n        type: \"bar\",\n        label: {\n          show: true,\n          position: \"top\"\n        },\n        data: data.map(d => d.so_bao_cao),\n        color: \"#2BB673\"\n      }\n    ],\n    grid: {\n      left: 20,\n      right: 20,\n      bottom: 20,\n      top: 70,\n      containLabel: true\n    }\n  };\n})()\n))(Chart1.chartType) }}",
   "customFusionChartConfig": {
     "dataSource": {
       "chart": {
@@ -63,9 +63,6 @@
   },
   "dynamicBindingPathList": [
     {
-      "key": "borderRadius"
-    },
-    {
       "key": "accentColor"
     },
     {
@@ -75,6 +72,7 @@
       "key": "customEChartConfig"
     }
   ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "start",
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
@@ -96,7 +94,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 23,
+  "rightColumn": 16,
   "showDataPointLabel": false,
   "topRow": 4,
   "type": "CHART_WIDGET",

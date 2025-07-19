@@ -5,11 +5,12 @@ INSERT INTO public."ma_doc" (
 	"nguon_thu_thap",
 	"ngay_tiep_nhan",
 	"c2serverip",
-	"hanh_vi",
+	"ghi_chu",
 	"lay_qua_usb",
 	"lay_qua_usbat",
 	"mo_so",
-	"bao_cao_id"
+	"bao_cao_id",
+	"trang_thai"
 )
 VALUES (
 	'{{insert_formMaDoc.formData.ten}}',
@@ -18,9 +19,10 @@ VALUES (
 	'{{insert_formMaDoc.formData.nguon_thu_thap}}',
 	{{ insert_formMaDoc.formData.ngay_tiep_nhan ? `'${insert_formMaDoc.formData.ngay_tiep_nhan}'` : 'NULL' }},
 	'{{insert_formMaDoc.formData.c2serverip}}',
-	'{{insert_formMaDoc.formData.hanh_vi}}',
+	'{{insert_formMaDoc.formData.ghi_chu}}',
 	{{ insert_formMaDoc.formData.lay_qua_usb }},
 	{{ insert_formMaDoc.formData.lay_qua_usbat }},
 	'{{insert_formMaDoc.formData.mo_so}}',
-	{{ insert_formMaDoc.formData.bao_cao_id || 'NULL' }}
+	{{ insert_formMaDoc.formData.bao_cao_id || 'NULL' }},
+	'{{insert_formMaDoc.formData.trang_thai}}'
 );

@@ -1,0 +1,9 @@
+SELECT DISTINCT
+    dtc.ten_to_chuc
+FROM 
+    public.doi_tuong_tc dtc
+WHERE 
+    dtc.ban_nganh = '{{TableMucTieu.newRow.ban_nganh||TableMucTieu.updatedRow.ban_nganh ||TableMucTieu.selectedRow.ban_nganh }}'
+    AND dtc.ten_to_chuc IS NOT NULL
+ORDER BY 
+    dtc.ten_to_chuc;

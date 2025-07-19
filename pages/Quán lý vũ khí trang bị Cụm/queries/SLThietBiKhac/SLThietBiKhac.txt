@@ -14,4 +14,5 @@ WHERE
             'Máy chủ vật lý', 
             'Máy tính'
         ]
-    );
+    )
+    {{ TreeSelectDonVi_.selectedOptionValue ? `AND etbm.don_vi_id = ${TreeSelectDonVi_.selectedOptionValue}` : '' }};

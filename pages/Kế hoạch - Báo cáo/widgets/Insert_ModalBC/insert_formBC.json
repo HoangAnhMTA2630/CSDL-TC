@@ -225,7 +225,7 @@
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
-  "onSubmit": "{{addBCInKH.insertBCAndLinkKH();\nremoveValue('uploadedFilePath');\ncloseModal(Insert_ModalBC.name).then(() => {\n  resetWidget(\"FilePicker3\", true);\n});\nSelectQueryBC_v1.run()}}",
+  "onSubmit": "{{addBCInKH.insertBCAndLinkKH();\nremoveValue('uploadedFilePath');\ncloseModal(Insert_ModalBC.name).then(() => {\n  resetWidget(\"FilePicker3\", true);\n  SelectQueryBC_v1.run();\n});}}",
   "originalBottomRow": 84,
   "originalTopRow": 13,
   "parentColumnSpace": 8.125,

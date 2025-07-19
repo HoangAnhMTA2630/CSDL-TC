@@ -1,0 +1,35 @@
+{
+  "animateLoading": true,
+  "bottomRow": 83,
+  "docUrl": "{{showfile.ShowDDFFilterKH.data}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "docUrl"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isCanvas": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "8qaij48yp5",
+  "leftColumn": 0,
+  "mobileBottomRow": 45,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 24,
+  "mobileTopRow": 5,
+  "needsErrorInfo": false,
+  "originalBottomRow": 85,
+  "originalTopRow": 17,
+  "parentColumnSpace": 17.0625,
+  "parentId": "vj8fyeyyn7",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "topRow": 14,
+  "type": "DOCUMENT_VIEWER_WIDGET",
+  "version": 1,
+  "widgetId": "74vc30bu8l",
+  "widgetName": "ShowFileFilterKH"
+}

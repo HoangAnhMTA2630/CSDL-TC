@@ -1,0 +1,19 @@
+SELECT 
+		h.id,
+    h.ten_huong,
+    mt.id AS muc_tieu_id,
+    mt.domain,
+    mt.email,
+    dt.ten_to_chuc,
+    dt.ban_nganh
+FROM 
+    public.muc_tieu mt
+JOIN 
+    public.doi_tuong_tc dt ON mt.doi_tuong_tc_id = dt.id
+JOIN 
+    public.huong h ON dt.huong_id = h.id
+WHERE
+		 1=1
+    {{ ChartSLMucTieuTheoHuong.selectedDataPoint ? `AND h.ten_huong = '${ChartSLMucTieuTheoHuong.selectedDataPoint.rawEventData.name}'` : '' }}
+ORDER BY 
+    h.ten_huong, mt.id;

@@ -1,0 +1,21 @@
+SELECT 
+    tk.username AS x,
+    COUNT(tl.id) AS y
+FROM 
+    public.tai_khoan tk
+JOIN 
+    public.tai_lieu tl ON tk.id = tl.tai_khoan_id
+JOIN 
+    public.muc_tieu mt ON tk.muc_tieu_id = mt.id
+JOIN 
+    public.doi_tuong_tc dt ON mt.doi_tuong_tc_id = dt.id
+JOIN 
+    public.huong h ON dt.huong_id = h.id
+WHERE
+    1 = 1
+    {{ SelectHuong_.selectedOptionValue ? `AND h.id = ${SelectHuong_.selectedOptionValue}` : '' }}
+GROUP BY 
+    tk.id, tk.username
+ORDER BY 
+    y DESC
+LIMIT 10;

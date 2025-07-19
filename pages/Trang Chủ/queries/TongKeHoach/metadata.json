@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(*) AS TongKeHoach\nFROM Ke_hoach;",
+      "body": "SELECT COUNT(*) AS TongKeHoach\nFROM ke_hoach;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

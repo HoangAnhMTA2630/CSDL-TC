@@ -3,7 +3,7 @@
   "allowAddNewRow": true,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 72,
+  "bottomRow": 76,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
     "button": {
@@ -317,7 +317,7 @@
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{LoaiKH.data}}",
   "textSize": "0.875rem",
-  "topRow": 1,
+  "topRow": 0,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 3,

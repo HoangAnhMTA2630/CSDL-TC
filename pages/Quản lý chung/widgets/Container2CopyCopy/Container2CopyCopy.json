@@ -4,8 +4,8 @@
   "borderColor": "#553de9",
   "borderRadius": "0px",
   "borderWidth": "1",
-  "bottomRow": 11,
-  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "bottomRow": 10,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -38,7 +38,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "g8i2a3f2on",
+      "parentId": "ho7cgvqzd5",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -46,16 +46,12 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "g4v0jgy7lu",
+      "widgetId": "a1ri276v75",
       "widgetName": "Canvas123CopyCopy"
     }
   ],
   "containerStyle": "card",
-  "dynamicBindingPathList": [
-    {
-      "key": "boxShadow"
-    }
-  ],
+  "dynamicBindingPathList": [],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
@@ -72,8 +68,8 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 86,
   "needsErrorInfo": false,
-  "originalBottomRow": 11,
-  "originalTopRow": 0,
+  "originalBottomRow": 10,
+  "originalTopRow": -1,
   "parentColumnSpace": 20.125,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -81,9 +77,9 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "shouldScrollContents": true,
-  "topRow": 0,
+  "topRow": -1,
   "type": "CONTAINER_WIDGET",
   "version": 1,
-  "widgetId": "g8i2a3f2on",
+  "widgetId": "ho7cgvqzd5",
   "widgetName": "Container2CopyCopy"
 }

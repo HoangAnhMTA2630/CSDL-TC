@@ -1,0 +1,3 @@
+UPDATE public.subdomain
+SET subdomain = '{{TableSubDomain.updatedRow.subdomain}}'
+WHERE id = {{TableSubDomain.updatedRow.id}};

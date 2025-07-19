@@ -1,0 +1,25 @@
+WITH inserted_huong AS (
+    INSERT INTO public.huong (ten_huong)
+    VALUES ('{{TableMucTieu.newRow.huong}}')
+    ON CONFLICT (ten_huong) DO NOTHING
+    RETURNING id
+),
+selected_huong AS (
+    SELECT id FROM inserted_huong
+    UNION
+    SELECT id FROM public.huong WHERE ten_huong = '{{TableMucTieu.newRow.huong}}'
+),
+inserted_doi_tuong AS (
+    INSERT INTO public.doi_tuong_tc (ten_to_chuc, ban_nganh, huong_id)
+    VALUES (
+        '{{TableMucTieu.newRow.ten_to_chuc}}',
+        '{{TableMucTieu.newRow.ban_nganh}}',
+        (SELECT id FROM selected_huong)
+    )
+    RETURNING id
+)
+INSERT INTO public.muc_tieu (domain, doi_tuong_tc_id)
+VALUES (
+    '{{TableMucTieu.newRow.domain}}',
+    (SELECT id FROM inserted_doi_tuong)
+);

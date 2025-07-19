@@ -1,0 +1,112 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 36,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "1mxxtw81l7": {
+      "data": "{{\n{\n  xAxis: {\n    type: \"category\",\n    data: SLBaoCao.data.map(item => item.ten_huong),\n    axisLabel: {\n      interval: 0,\n      rotate: 30,\n      formatter: function(value) {\n        return value.length > 15 ? value.slice(0, 15)+\"...\" : value;\n      }\n    }\n  },\n  yAxis: {\n    type: \"value\"\n  },\n  tooltip: {\n    trigger: \"axis\"\n  },\n  title: {\n    text: \"Báo cáo trính sát tấn công\",\n    left: \"center\",\n    top: 10,\n    textStyle: {\n      fontSize: 18,\n      fontWeight: \"bold\",\n      fontFamily: \"Arial, sans-serif\"\n    }\n  },\n  series: [\n    {\n      type: \"bar\",\n      data: SLBaoCao.data.map(item => item.so_luong_bao_cao),\n      itemStyle: {\n        color: \"#553DE9\"\n      },\n\t\t\tlabel: {\n        show: true,\n        position: \"top\",\n        fontSize: 10,\n        fontWeight: \"bold\"\n      }\n    }\n  ],\n  grid: {\n    left: 20,\n    right: 20,\n    bottom: 10,\n    top: 80,\n    containLabel: true\n  }\n}\n}}",
+      "seriesName": "2023"
+    }
+  },
+  "chartName": "Số lượng báo cáo theo năm, hướng",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( \n{\n  xAxis: {\n    type: \"category\",\n    data: SLBaoCao.data.map(item => item.ten_huong),\n    axisLabel: {\n      interval: 0,\n      rotate: 30,\n      formatter: function(value) {\n        return value.length > 15 ? value.slice(0, 15)+\"...\" : value;\n      }\n    }\n  },\n  yAxis: {\n    type: \"value\"\n  },\n  tooltip: {\n    trigger: \"axis\"\n  },\n  title: {\n    text: \"Báo cáo trinh sát tấn công\",\n    left: \"center\",\n    top: 10,\n    textStyle: {\n      fontSize: 18,\n      fontWeight: \"bold\",\n      fontFamily: \"Arial, sans-serif\"\n    }\n  },\n  series: [\n    {\n      type: \"bar\",\n      data: SLBaoCao.data.map(item => item.so_luong_bao_cao),\n      itemStyle: {\n        color: \"#553DE9\"\n      },\n\t\t\tlabel: {\n        show: true,\n        position: \"top\",\n        fontSize: 10,\n        fontWeight: \"bold\"\n      }\n    }\n  ],\n  grid: {\n    left: 20,\n    right: 20,\n    bottom: 10,\n    top: 80,\n    containLabel: true\n  }\n}\n))(Chart5Copy.chartType) }}",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "customEChartConfig"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "chartData.1mxxtw81l7.data"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "kwfufh4nvt",
+  "labelOrientation": "auto",
+  "leftColumn": 33,
+  "minWidth": 450,
+  "mobileBottomRow": 36,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 18,
+  "mobileTopRow": 4,
+  "needsErrorInfo": true,
+  "parentColumnSpace": 19.8125,
+  "parentId": "kdp90f5tu0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 49,
+  "showDataPointLabel": false,
+  "topRow": 4,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "ixkdcswg8g",
+  "widgetName": "Chart5Copy",
+  "xAxisName": "Product Line",
+  "yAxisName": "Revenue($)"
+}

@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "0px",
-  "bottomRow": 53,
+  "bottomRow": 52,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "a31hppwpw6": {
@@ -26,7 +26,7 @@
   },
   "chartName": "Mã Độc",
   "chartType": "CUSTOM_ECHART",
-  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const data = ChartMaDoc.data;\n\n  const years = [...new Set(data.map(item => item.nam))];\n  const categories = [\"Có báo cáo\", \"Không có báo cáo\"];\n\n  return {\n    xAxis: {\n      type: \"category\",\n      data: years,\n      axisLabel: {\n        interval: 0,\n        rotate: 30,\n        margin: 8\n      }\n    },\n    yAxis: {\n      type: \"value\"\n    },\n    tooltip: {\n      trigger: \"axis\",\n      axisPointer: {\n        type: \"shadow\"\n      },\n      formatter: function(params) {\n        const total = params.reduce((sum, p) => (sum + p.value), 0);\n        const lines = params.map(p => `${p.seriesName}: ${p.value}`);\n        lines.push(`<strong>Tổng: ${total}</strong>`);\n        return lines.join(\"<br/>\");\n      }\n    },\n    legend: {\n      top: 45\n    },\n    title: {\n      text: \"Số lượng mã độc có/không có báo cáo theo năm\",\n      left: \"center\",\n      top: 10,\n      textStyle: {\n        fontSize: 18,\n        fontWeight: \"bold\"\n      }\n    },\n    series: categories.map(cat => ({\n      name: cat,\n      type: \"bar\",\n      stack: \"total\",\n      label: {\n        show: true,\n        position: \"inside\",\n        fontSize: 10\n      },\n      data: years.map(year => {\n        const item = data.find(d => d.nam === year && d.co_bao_cao === cat);\n        return item ? item.so_luong : 0;\n      })\n    })),\n    grid: {\n      left: 20,\n      right: 20,\n      bottom: 30,\n      top: 80,\n      containLabel: true\n    }\n  };\n})()\n))(Chart2.chartType) }}",
+  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const data = ChartMaDoc.data;\n\n  const years = [...new Set(data.map(item => item.nam))];\n  const statusList = [...new Set(data.map(item => item.nguon_thu_thap))];\n\n  const statusColors = {\n    \"Internet\": \"#2BB673\",\n    \"TSLqs\": \"#553DE9\",\n    \"Không được công nhận\": \"#E74C3C\",\n    \"Không rõ\": \"#95A5A6\"\n    // Thêm các trạng thái khác tại đây nếu có\n  };\n\n  return {\n    xAxis: {\n      type: \"category\",\n      data: years,\n      axisLabel: {\n        interval: 0,\n        rotate: 30,\n        margin: 8\n      }\n    },\n    yAxis: {\n      type: \"value\"\n    },\n    tooltip: {\n      trigger: \"axis\",\n      axisPointer: {\n        type: \"shadow\"\n      },\n      formatter: function(params) {\n        const total = params.reduce((sum, p) => (sum+p.value), 0);\n        const lines = params.map(p => `${p.seriesName}: ${p.value}`);\n        lines.push(`<strong>Tổng: ${total}</strong>`);\n        return lines.join(\"<br/>\");\n      }\n    },\n    legend: {\n      top: 45\n    },\n    title: {\n      text: \"Số lượng mã độc theo Nguồn thu thập\",\n      left: \"center\",\n      top: 10,\n      textStyle: {\n        fontSize: 18,\n        fontWeight: \"bold\",\n        fontFamily: \"Arial, sans-serif\"\n      }\n    },\n    series: statusList.map(status => ({\n      name: status,\n      type: \"bar\",\n      label: {\n        show: true,\n        position: \"inside\",\n        fontSize: 10\n      },\n      itemStyle: {\n        color: statusColors[status] || \"#999999\" // mặc định nếu không có màu\n      },\n      data: years.map(year => {\n        const item = data.find(d => d.nam === year && d.nguon_thu_thap === status);\n        return item ? item.so_luong : 0;\n      })\n    })),\n    grid: {\n      left: 20,\n      right: 20,\n      bottom: 30,\n      top: 100,\n      containLabel: true\n    }\n  };\n})()\n))(Chart2.chartType) }}",
   "customFusionChartConfig": {
     "dataSource": {
       "chart": {
@@ -102,8 +102,8 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 6,
   "needsErrorInfo": true,
-  "originalBottomRow": 53,
-  "originalTopRow": 11,
+  "originalBottomRow": 52,
+  "originalTopRow": 10,
   "parentColumnSpace": 23.390625,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -111,7 +111,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "showDataPointLabel": false,
-  "topRow": 11,
+  "topRow": 10,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "5vrunu23lw",

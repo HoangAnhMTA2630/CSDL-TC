@@ -1,0 +1,7 @@
+SELECT 
+  dv.*, 
+  dv_cha.ten_don_vi AS ten_don_vi_cha
+FROM public."don_vi" dv
+LEFT JOIN public."don_vi" dv_cha ON dv.don_vi_cha_id = dv_cha.id
+WHERE dv."ten_don_vi" ILIKE '%{{Table_DV_qlvktb.searchText || ""}}%'
+ORDER BY "{{Table_DV_qlvktb.sortOrder.column || 'id'}}" {{Table_DV_qlvktb.sortOrder.order || 'ASC'}};

@@ -32,7 +32,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{XoaThietbiMang.run().then(() => {\n  Select_DV.run().then(() => {\n    showAlert('Xoá thành công');\n  }).catch(() => {\n    showAlert('Xoá thất bại');\n  });\n});}}",
+  "onClick": "{{XoaThietbiMang.run().then(() => {\n  DSThietBi.run().then(() => {\n    showAlert('Xoá thành công');\n  }).catch(() => {\n    showAlert('Xoá thất bại');\n  });\n});}}",
   "originalBottomRow": 20,
   "originalTopRow": 16,
   "parentId": "pg2upi1ijs",

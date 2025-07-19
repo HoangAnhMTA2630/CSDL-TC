@@ -1,16 +1,16 @@
 {
   "gitSyncId": "682d4d2a92cca105dbc17693_fa797a60-76af-439f-a65a-3820a1823fdc",
-  "id": "Trinh sát - Tấn công_SlTaiKhoan",
+  "id": "Trinh sát - Tấn công_SLTaiKhoan",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    COUNT(*) AS tong_so_tai_khoan\nFROM \n    public.tai_khoan;",
+      "body": "SELECT \n    COUNT(DISTINCT tk.id) AS tong_so_tai_khoan\nFROM \n    public.tai_khoan tk\nJOIN \n    public.muc_tieu mt ON tk.muc_tieu_id = mt.id\nJOIN \n    public.doi_tuong_tc dt ON mt.doi_tuong_tc_id = dt.id\nJOIN \n    public.huong h ON dt.huong_id = h.id\nWHERE \n    1 = 1\n    {{ SelectHuong_.selectedOptionValue ? `AND h.id = ${SelectHuong_.selectedOptionValue}` : '' }}\n    {{ DatePickerBD.selectedDate && DatePickerKT.selectedDate \n        ? `AND tk.ngay_phat_hien BETWEEN DATE '${DatePickerBD.selectedDate}' AND DATE '${DatePickerKT.selectedDate}'`\n        : '' \n    }}\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
@@ -22,10 +22,14 @@
       "name": "csdltc",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": true,
-    "name": "SlTaiKhoan",
+    "name": "SLTaiKhoan",
     "pageId": "Trinh sát - Tấn công",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

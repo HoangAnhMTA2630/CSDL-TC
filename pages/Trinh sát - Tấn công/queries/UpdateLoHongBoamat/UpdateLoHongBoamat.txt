@@ -1,0 +1,11 @@
+UPDATE public.lo_hong_bao_mat_web lhb
+SET
+    ten_lo_hong = '{{TableLoHongBaoMat.updatedRow.ten_lo_hong}}',
+    mo_ta = '{{TableLoHongBaoMat.updatedRow.mo_ta}}'
+FROM public.muc_tieu_lo_hong_bao_mat_web mtlhb
+WHERE
+    lhb.id = mtlhb.lo_hong_bao_mat_web_id
+    AND mtlhb.muc_tieu_id = {{TableMucTieu.triggeredRow.id}}
+    AND lhb.id = {{TableLoHongBaoMat.triggeredRow.id}}
+    AND '{{TableLoHongBaoMat.updatedRow.ten_lo_hong}}' IS NOT NULL
+    AND '{{TableLoHongBaoMat.updatedRow.ten_lo_hong}}' <> '';

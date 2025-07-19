@@ -1,0 +1,12 @@
+SELECT 
+		cm.id,
+    cm.cong,
+    cm.dich_vu
+FROM 
+    public.muc_tieu_cong_mo_dich_vu mtcmdv
+JOIN 
+    public.cong_mo_dich_vu cm ON mtcmdv.cong_mo_dich_vu_id = cm.id
+WHERE 
+    mtcmdv.muc_tieu_id = {{TableMucTieu.triggeredRow.id}}
+ORDER BY 
+    cm.cong, cm.dich_vu;

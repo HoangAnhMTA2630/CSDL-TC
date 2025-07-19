@@ -39,7 +39,7 @@
   "parentId": "xqswthk9g0",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 31,
+  "rightColumn": 20,
   "shouldTruncate": false,
   "text": "Danh sách Kế hoạch cấp {{ChartSL_CapKH.selectedDataPoint.rawEventData.name}} ",
   "textAlign": "LEFT",

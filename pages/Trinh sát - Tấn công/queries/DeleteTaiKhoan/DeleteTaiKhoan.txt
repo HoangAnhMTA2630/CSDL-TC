@@ -1,0 +1,8 @@
+-- 1. Xóa liên kết trong tài liệu
+UPDATE public.tai_lieu
+SET tai_khoan_id = NULL
+WHERE tai_khoan_id = {{TableTaiKhoan.triggeredRow.id}};
+
+-- 2. Xóa tài khoản
+DELETE FROM public.tai_khoan
+WHERE id = {{TableTaiKhoan.triggeredRow.id}};

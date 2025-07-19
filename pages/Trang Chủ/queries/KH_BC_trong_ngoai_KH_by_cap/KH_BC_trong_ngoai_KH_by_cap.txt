@@ -1,0 +1,23 @@
+SELECT 
+  c.ten_cap AS cap,
+
+  COUNT(DISTINCT kh.id) AS so_ke_hoach,
+
+  COUNT(DISTINCT CASE WHEN khbc.bao_cao_id IS NOT NULL THEN bc.id END) AS so_bao_cao_trong_kh,
+
+  COUNT(DISTINCT CASE WHEN khbc.bao_cao_id IS NULL AND bc.id IS NOT NULL THEN bc.id END) AS so_bao_cao_khong_kh
+
+FROM public.cap c
+LEFT JOIN public.ke_hoach kh ON kh.cap_ban_hanh_id = c.id
+LEFT JOIN public.bao_cao bc ON bc.cap_bao_cao_id = c.id
+LEFT JOIN public.ke_hoach_bao_cao khbc ON bc.id = khbc.bao_cao_id
+
+GROUP BY c.ten_cap
+ORDER BY CASE 
+    WHEN c.ten_cap = 'Bộ Tư Lệnh' THEN 1
+    WHEN c.ten_cap = 'Trung Tâm' THEN 2
+    WHEN c.ten_cap = 'Cụm' THEN 3
+    WHEN c.ten_cap = 'Đội' THEN 4
+    ELSE 5
+END;
+

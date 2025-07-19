@@ -1,0 +1,2 @@
+DELETE FROM public.subdomain
+WHERE muc_tieu_id = {{TableMucTieu.triggeredRow.id}} AND subdomain = '{{TableSubDomain.triggeredRow.subdomain}}';

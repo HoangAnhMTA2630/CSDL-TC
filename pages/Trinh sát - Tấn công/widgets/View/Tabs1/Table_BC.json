@@ -47,7 +47,7 @@
   ],
   "columnUpdatedAt": 1750354081719,
   "columnWidthMap": {
-    "EditActions1": 137,
+    "EditActions1": 148,
     "so_bao_cao": 102
   },
   "customIsLoading": false,
@@ -132,6 +132,9 @@
     },
     {
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -234,7 +237,7 @@
       "label": "Show file",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{navigateTo(JS_showfile.ShowDDF.data, {}, 'NEW_WINDOW');}}",
+      "onClick": "{{ \n  JS_showfileBC.ShowDDF()\n    .then((result) => navigateTo(result, {}, 'NEW_WINDOW'))\n}}\n",
       "originalId": "customColumn1",
       "sticky": "right",
       "textSize": "0.875rem",

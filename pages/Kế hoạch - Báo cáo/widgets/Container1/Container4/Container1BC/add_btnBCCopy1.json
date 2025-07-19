@@ -1,0 +1,37 @@
+{
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "filter",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "true",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 52,
+  "onClick": "{{QueryCap.run();\nQueryLoaiBC.run();\nStatusBC.run();\nFilterBC.run();\nshowModal(ModalFilterBC.name);}}",
+  "parentColumnSpace": 12.0703125,
+  "parentId": "7nf3mcyduu",
+  "parentRowSpace": 10,
+  "rightColumn": 56,
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "q9x71l4jz4",
+  "widgetName": "add_btnBCCopy1"
+}

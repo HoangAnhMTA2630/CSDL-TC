@@ -1,25 +1,28 @@
 INSERT INTO public.v_thiet_bi_mang (e_thiet_bi_mang_id, a_thiet_bi_mang_id, gia_tri)
 VALUES 
--- CPU
-({{TableQNTB.triggeredRow.id_thiet_bi}}, (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'CPU'), '{{update_form_KH.formData.cpu}}'),
+  -- CPU
+  ({{TableQNTB.triggeredRow.id_thiet_bi}}, (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'CPU'), '{{update_form_KH.formData.cpu}}'),
 
--- RAM
-({{TableQNTB.triggeredRow.id_thiet_bi}}, (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'RAM'), '{{update_form_KH.formData.ram}}'),
+  -- RAM
+  ({{TableQNTB.triggeredRow.id_thiet_bi}}, (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'Ram'), '{{update_form_KH.formData.ram}}'),
 
--- ROM
-({{TableQNTB.triggeredRow.id_thiet_bi}}, (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'ROM'), '{{update_form_KH.formData.rom}}'),
+  -- ROM
+  ({{TableQNTB.triggeredRow.id_thiet_bi}}, (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'Rom'), '{{update_form_KH.formData.rom}}'),
 
--- HDH
-({{TableQNTB.triggeredRow.id_thiet_bi}}, (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'HDH'), '{{update_form_KH.formData.hdh}}'),
+  -- HDH
+  ({{TableQNTB.triggeredRow.id_thiet_bi}}, (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'HDH'), '{{update_form_KH.formData.hdh}}'),
 
--- Ports
-({{TableQNTB.triggeredRow.id_thiet_bi}}, (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'Ports'), '{{update_form_KH.formData.ports}}'),
+  -- Ports
+  ({{TableQNTB.triggeredRow.id_thiet_bi}}, (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'Ports'), '{{update_form_KH.formData.ports}}'),
 
--- Ip Public
-({{TableQNTB.triggeredRow.id_thiet_bi}}, (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'IP Public'), '{{update_form_KH.formData.ip_public}}'),
+  -- IP Public
+  ({{TableQNTB.triggeredRow.id_thiet_bi}}, (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'IP Public'), '{{update_form_KH.formData.ip_public}}'),
 
--- IP Private
-({{TableQNTB.triggeredRow.id_thiet_bi}}, (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'IP Private'), '{{update_form_KH.formData.ip_private}}'),
+  -- IP Private
+  ({{TableQNTB.triggeredRow.id_thiet_bi}}, (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'IP Private'), '{{update_form_KH.formData.ip_private}}'),
 
--- SSID
-({{TableQNTB.triggeredRow.id_thiet_bi}}, (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'SSID'), '{{update_form_KH.formData.ssid}}');
+  -- SSID
+  ({{TableQNTB.triggeredRow.id_thiet_bi}}, (SELECT id FROM a_thiet_bi_mang WHERE ten_thuoc_tinh = 'SSID'), '{{update_form_KH.formData.ssid}}')
+
+ON CONFLICT (e_thiet_bi_mang_id, a_thiet_bi_mang_id)
+DO UPDATE SET gia_tri = EXCLUDED.gia_tri;

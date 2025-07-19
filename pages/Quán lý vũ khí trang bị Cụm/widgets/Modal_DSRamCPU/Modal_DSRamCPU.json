@@ -1,14 +1,14 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 94,
+  "bottomRow": 669,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 940,
+      "bottomRow": 650,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -29,7 +29,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 940,
+      "minHeight": 900,
       "minWidth": 450,
       "mobileBottomRow": 240,
       "mobileLeftColumn": 0,
@@ -57,14 +57,14 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "height": 940,
+  "height": 650,
   "isCanvas": true,
   "isLoading": false,
   "key": "b32lsko1vr",
   "leftColumn": 21,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 24,
-  "minHeight": 940,
+  "minHeight": 900,
   "mobileBottomRow": 43,
   "mobileLeftColumn": 21,
   "mobileRightColumn": 45,
@@ -81,5 +81,5 @@
   "version": 2,
   "widgetId": "wysny4sbxi",
   "widgetName": "Modal_DSRamCPU",
-  "width": 1843.9499999999998
+  "width": 1242.6
 }

@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "682d4d2a92cca105dbc17693_90e4a0fb-78bf-451b-bc9d-41d7f93ba0df",
+  "gitSyncId": "682d4d2a92cca105dbc17693_8c4a37ca-dd5c-4c65-9dd0-74b78938645a",
   "id": "Kế hoạch - Báo cáo_CountKHByLoaiKH",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  lkh.ten_loai_ke_hoach AS loai,\n  ckh.ten_cap AS cap,\n  COUNT(kh.id) AS so_luong\nFROM ke_hoach kh\nJOIN bo_ke_hoach bk ON kh.bo_ke_hoach_id = bk.id\nJOIN thoi_gian tg ON bk.thoi_gian_id = tg.id\nJOIN loai_ke_hoach lkh ON kh.loai_ke_hoach_id = lkh.id\nJOIN cap ckh ON kh.cap_ban_hanh_id = ckh.id\nWHERE 1=1\n  {{ SelectNam.selectedOptionValue ? `AND tg.nam = ${SelectNam.selectedOptionValue}` : \"\" }}\n  {{ SelectQuy.selectedOptionValue ? `AND tg.quy = ${SelectQuy.selectedOptionValue}` : \"\" }}\n  {{ SelectThang.selectedOptionValue ? `AND tg.thang = ${SelectThang.selectedOptionValue}` : \"\" }}\nGROUP BY lkh.ten_loai_ke_hoach, ckh.ten_cap\nORDER BY lkh.ten_loai_ke_hoach, ckh.ten_cap;\n",
+      "body": "SELECT \n  lkh.ten_loai_ke_hoach AS loai,\n  ckh.ten_cap AS cap,\n  COUNT(kh.id) AS so_luong\nFROM ke_hoach kh\nJOIN bo_ke_hoach bk ON kh.bo_ke_hoach_id = bk.id\nJOIN thoi_gian tg ON bk.thoi_gian_id = tg.id\nJOIN loai_ke_hoach lkh ON kh.loai_ke_hoach_id = lkh.id\nJOIN cap ckh ON kh.cap_ban_hanh_id = ckh.id\nWHERE 1=1\n  {{ MultiSelectNam.selectedOptionValues.length > 0 ? \n  `AND tg.nam = ANY (ARRAY[${MultiSelectNam.selectedOptionValues.join(',')}]::int[])` : '' }}\n{{ MultiSelectQuy.selectedOptionValues.length > 0 ? \n  `AND tg.quy = ANY (ARRAY[${MultiSelectQuy.selectedOptionValues.join(',')}]::int[])` : '' }}\n{{ MultiSelectThang.selectedOptionValues.length > 0 ? \n  `AND tg.thang = ANY (ARRAY[${MultiSelectThang.selectedOptionValues.join(',')}]::int[])` : '' }}\nGROUP BY lkh.ten_loai_ke_hoach, ckh.ten_cap\nORDER BY lkh.ten_loai_ke_hoach, ckh.ten_cap;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

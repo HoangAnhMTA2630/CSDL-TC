@@ -1,0 +1,438 @@
+{
+  "animateLoading": true,
+  "autoGenerateForm": true,
+  "backgroundColor": "#fff",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 63,
+  "boxShadow": "none",
+  "childStylesheet": {
+    "ARRAY": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "cellBoxShadow": "none"
+    },
+    "CHECKBOX": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+    },
+    "CURRENCY_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "DATEPICKER": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "EMAIL_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "MULTILINE_TEXT_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "MULTISELECT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "NUMBER_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "OBJECT": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "cellBoxShadow": "none"
+    },
+    "PASSWORD_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "PHONE_NUMBER_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "RADIO_GROUP": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "boxShadow": "none"
+    },
+    "SELECT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "SWITCH": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "boxShadow": "none"
+    },
+    "TEXT_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    }
+  },
+  "disabledWhenInvalid": true,
+  "displayName": "JSON Form",
+  "dynamicBindingPathList": [
+    {
+      "key": "schema.__root_schema__.defaultValue"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "schema.__root_schema__.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.cellBorderRadius"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "submitButtonStyles.buttonColor"
+    },
+    {
+      "key": "submitButtonStyles.borderRadius"
+    },
+    {
+      "key": "resetButtonStyles.borderRadius"
+    },
+    {
+      "key": "resetButtonStyles.buttonColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_quan_nhan.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_quan_nhan.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.quan_ham.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.quan_ham.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.chuc_vu.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.chuc_vu.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.so_dien_thoai.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.so_dien_thoai.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.nhiem_vu.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.nhiem_vu.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.nhiem_vu.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.ho_so_phong_thu_id.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.ho_so_phong_thu_id.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.ho_so_phong_thu_id.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.don_vi_id.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.don_vi_id.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_don_vi.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_don_vi.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_don_vi.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.don_vi_id.options"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "schema.__root_schema__.children.date_of_birth.defaultValue"
+    },
+    {
+      "key": "onSubmit"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onSubmit"
+    }
+  ],
+  "fieldLimitExceeded": false,
+  "fixedFooter": true,
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.6bacf7df.svg",
+  "isLoading": false,
+  "isVisible": "true",
+  "key": "h9l9ozr8op",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "onSubmit": "{{AddQN_qlvktb.run(\n\t() => QN_qlvktb.run()\n\t\t\t\t\t.then(() => closeModal('Insert_ModalQN_qlvktb')), \n\t(error) => showAlert(`Error while inserting resource!\\n ${error}`,'error'))\n}}",
+  "originalBottomRow": 66,
+  "originalTopRow": 0,
+  "parentColumnSpace": 8.125,
+  "parentId": "qigh830qck",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetButtonLabel": "Reset",
+  "resetButtonStyles": {
+    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "boxShadow": "none",
+    "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+    "buttonVariant": "SECONDARY"
+  },
+  "rightColumn": 64,
+  "schema": {
+    "__root_schema__": {
+      "accessor": "__root_schema__",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "cellBoxShadow": "none",
+      "children": {
+        "chuc_vu": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "accessor": "chuc_vu",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "chuc_vu",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Chuc Vu",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "chuc_vu",
+          "position": 2,
+          "sourceData": "Chỉ huy mạng"
+        },
+        "don_vi_id": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "accessor": "don_vi_id",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "null",
+          "defaultValue": "",
+          "fieldType": "Select",
+          "identifier": "don_vi_id",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isFilterable": true,
+          "isRequired": true,
+          "isVisible": true,
+          "label": "Don Vi",
+          "labelTextSize": "0.875rem",
+          "options": "{{DV_qlvktb.data.map(x=> ({\n\tlabel : x.ten_don_vi,\n\tvalue : x.id\n}))}}",
+          "originalIdentifier": "don_vi_id",
+          "position": 3,
+          "serverSideFiltering": false
+        },
+        "ho_so_phong_thu_id": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "accessor": "ho_so_phong_thu_id",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "number",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.ho_so_phong_thu_id))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "fieldType": "Number Input",
+          "iconAlign": "left",
+          "identifier": "ho_so_phong_thu_id",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Ho So Phong Thu Id",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "ho_so_phong_thu_id",
+          "position": 7,
+          "sourceData": 1
+        },
+        "nhiem_vu": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "accessor": "nhiem_vu",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.nhiem_vu))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "nhiem_vu",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Nhiem Vu",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "nhiem_vu",
+          "position": 6,
+          "sourceData": "Quản lý an ninh mạng"
+        },
+        "quan_ham": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "accessor": "quan_ham",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "quan_ham",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Quan Ham",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "quan_ham",
+          "position": 1,
+          "sourceData": "Thiếu tá"
+        },
+        "so_dien_thoai": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "accessor": "so_dien_thoai",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "so_dien_thoai",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "So Dien Thoai",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "so_dien_thoai",
+          "position": 5,
+          "sourceData": "0987654322"
+        },
+        "ten_don_vi": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "accessor": "ten_don_vi",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.ten_don_vi))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "ten_don_vi",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Ten Don Vi",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "ten_don_vi",
+          "position": 4,
+          "sourceData": "Trung tâm 386"
+        },
+        "ten_quan_nhan": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "accessor": "ten_quan_nhan",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "ten_quan_nhan",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Ten Quan Nhan",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "ten_quan_nhan",
+          "position": 0,
+          "sourceData": "Nguyễn Văn An"
+        }
+      },
+      "dataType": "object",
+      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData))(insert_formQN_qlvktb.sourceData, insert_formQN_qlvktb.formData, insert_formQN_qlvktb.fieldState)}}",
+      "fieldType": "Object",
+      "identifier": "__root_schema__",
+      "isCustomField": false,
+      "isDisabled": false,
+      "isRequired": false,
+      "isVisible": true,
+      "label": "",
+      "labelTextSize": "0.875rem",
+      "originalIdentifier": "__root_schema__",
+      "position": -1,
+      "sourceData": {
+        "col1": 5,
+        "col2": "skill B",
+        "col3": 9,
+        "col4": true
+      }
+    }
+  },
+  "scrollContents": true,
+  "shouldScrollContents": true,
+  "showReset": false,
+  "sourceData": "{{_.omit(Table_QN_qlvktb.tableData[0], \"customColumn1\", \"id\")}}",
+  "submitButtonLabel": "Thêm",
+  "submitButtonStyles": {
+    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "boxShadow": "none",
+    "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+    "buttonVariant": "PRIMARY"
+  },
+  "title": "Thêm Quân nhân",
+  "topRow": 0,
+  "type": "JSON_FORM_WIDGET",
+  "version": 1,
+  "widgetId": "2b2g672yag",
+  "widgetName": "insert_formQN_qlvktb"
+}

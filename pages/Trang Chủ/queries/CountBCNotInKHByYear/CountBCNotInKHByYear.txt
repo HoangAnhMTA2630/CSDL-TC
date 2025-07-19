@@ -1,0 +1,9 @@
+SELECT
+  EXTRACT(YEAR FROM bc.ngay_ban_hanh) AS x,
+  COUNT(*) AS y
+FROM bao_cao bc
+WHERE bc.id NOT IN (
+  SELECT DISTINCT bao_cao_id FROM ke_hoach_bao_cao
+)
+GROUP BY x
+ORDER BY x;

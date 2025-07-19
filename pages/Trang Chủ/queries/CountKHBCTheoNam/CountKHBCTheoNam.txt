@@ -1,0 +1,11 @@
+SELECT
+  tg.nam,
+  COUNT(DISTINCT kh.id) AS so_ke_hoach,
+  COUNT(bc.id) AS so_bao_cao
+FROM ke_hoach kh
+JOIN bo_ke_hoach bkh ON kh.bo_ke_hoach_id = bkh.id
+JOIN thoi_gian tg ON bkh.thoi_gian_id = tg.id
+LEFT JOIN ke_hoach_bao_cao khbc ON kh.id = khbc.ke_hoach_id
+LEFT JOIN bao_cao bc ON bc.id = khbc.bao_cao_id
+GROUP BY tg.nam
+ORDER BY tg.nam;

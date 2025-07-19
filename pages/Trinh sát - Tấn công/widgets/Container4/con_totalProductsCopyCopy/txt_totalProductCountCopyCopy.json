@@ -51,7 +51,7 @@
   ],
   "shouldScrollContents": true,
   "shouldTruncate": false,
-  "text": "{{SlTaiKhoan.data[0].tong_so_tai_khoan}}",
+  "text": "{{SLTaiKhoan.data[0].tong_so_tai_khoan}}",
   "textAlign": "LEFT",
   "textColor": "{{appsmith.theme.colors.primaryColor}}",
   "topRow": 4,

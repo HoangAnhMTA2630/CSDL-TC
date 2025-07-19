@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT ltb.Ten_loai_thiet_bi, COUNT(etb.ID) AS So_luong_thiet_bi\nFROM Loai_thiet_bi ltb\nLEFT JOIN E_thiet_bi_mang etb ON ltb.ID = etb.Loai_thiet_bi_ID\nGROUP BY ltb.Ten_loai_thiet_bi\nORDER BY ltb.Ten_loai_thiet_bi;",
+      "body": "SELECT ltb.ten_loai_thiet_bi, COUNT(etb.id) AS So_luong_thiet_bi\nFROM loai_thiet_bi ltb\nLEFT JOIN e_thiet_bi_mang etb ON ltb.id = etb.loai_thiet_bi_id\nGROUP BY ltb.ten_loai_thiet_bi\nORDER BY ltb.ten_loai_thiet_bi;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "name": "LoaiThietBi",
     "pageId": "Trang Chủ",
     "userSetOnLoad": false

@@ -1,6 +1,5 @@
 UPDATE public."e_thiet_bi_mang" SET
 		"ten_thiet_bi" = '{{update_formTBM.fieldState.ten_thiet_bi.isVisible ? update_formTBM.formData.ten_thiet_bi : update_formTBM.sourceData.ten_thiet_bi}}',
 		"loai_thiet_bi_id" = '{{update_formTBM.fieldState.loai_thiet_bi_id.isVisible ? update_formTBM.formData.loai_thiet_bi_id : update_formTBM.sourceData.loai_thiet_bi_id}}',
-    "ho_so_phong_thu_id" = '{{update_formTBM.fieldState.ho_so_phong_thu_id.isVisible ? update_formTBM.formData.ho_so_phong_thu_id : update_formTBM.sourceData.ho_so_phong_thu_id}}',
-		"don_vi_id" = '{{update_formTBM.fieldState.don_vi_id.isVisible ? update_formTBM.formData.don_vi_id : update_formTBM.sourceData.don_vi_id}}'
+    "ho_so_phong_thu_id" = '{{update_formTBM.fieldState.ho_so_phong_thu_id.isVisible ? update_formTBM.formData.ho_so_phong_thu_id : update_formTBM.sourceData.ho_so_phong_thu_id}}'
 WHERE "id" = {{data_tableTBM.triggeredRow.id}};

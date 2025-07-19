@@ -1,0 +1,11 @@
+SELECT DISTINCT 
+    dtc.ban_nganh
+FROM 
+    public.doi_tuong_tc dtc
+JOIN 
+    public.huong h ON dtc.huong_id = h.id
+WHERE 
+    h.ten_huong = '{{ TableMucTieu.selectedRow.huong || TableMucTieu.newRow.huong || TableMucTieu.updatedRow.huong }}'
+    AND dtc.ban_nganh IS NOT NULL
+ORDER BY 
+    dtc.ban_nganh;

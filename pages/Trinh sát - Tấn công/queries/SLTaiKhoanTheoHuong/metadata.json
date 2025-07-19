@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    h.ten_huong AS huong,\n    COUNT(tk.id) AS so_luong_tai_khoan\nFROM \n    public.tai_khoan tk\n FULL JOIN \n    public.muc_tieu mt ON tk.muc_tieu_id = mt.id\nFULL JOIN \n    public.doi_tuong_tc dt ON mt.doi_tuong_tc_id = dt.id\nFULL JOIN \n    public.huong h ON dt.huong_id = h.id\nGROUP BY \n    h.ten_huong\nORDER BY \n    so_luong_tai_khoan DESC;\n",
+      "body": "SELECT \n    h.ten_huong AS huong,\n    COUNT(tk.id) AS so_luong_tai_khoan\nFROM \n    public.tai_khoan tk\n FULL JOIN \n    public.muc_tieu mt ON tk.muc_tieu_id = mt.id\nFULL JOIN \n    public.doi_tuong_tc dt ON mt.doi_tuong_tc_id = dt.id\nFULL JOIN \n    public.huong h ON dt.huong_id = h.id\nWHERE\n\t    1 = 1\n    {{ SelectHuong_.selectedOptionValue ? `AND h.id = ${SelectHuong_.selectedOptionValue}` : '' }}\nGROUP BY \n    h.ten_huong\nORDER BY \n    so_luong_tai_khoan DESC;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
@@ -22,7 +22,11 @@
       "name": "csdltc",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": true,
     "name": "SLTaiKhoanTheoHuong",
     "pageId": "Trinh sát - Tấn công",

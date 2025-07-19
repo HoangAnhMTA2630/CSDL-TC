@@ -39,7 +39,7 @@ LEFT JOIN public.muc_tieu_lo_hong_bao_mat_web mtlh ON mtlh.muc_tieu_id = mt.id
 LEFT JOIN public.lo_hong_bao_mat_web lhb ON lhb.id = mtlh.lo_hong_bao_mat_web_id
 
 WHERE 
-    mt.id = {{Table.triggeredRow.id}}
+    mt.id = {{TableMucTieu.triggeredRow.id}}
 
 GROUP BY 
     mt.id, mt.domain, mt.email;

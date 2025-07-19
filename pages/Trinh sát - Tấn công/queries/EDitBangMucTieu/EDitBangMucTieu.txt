@@ -1,0 +1,34 @@
+WITH target_muc_tieu AS (
+    SELECT 
+        mt.id AS muc_tieu_id,
+        mt.doi_tuong_tc_id,
+        dtc.huong_id
+    FROM public.muc_tieu mt
+    JOIN public.doi_tuong_tc dtc ON mt.doi_tuong_tc_id = dtc.id
+    WHERE mt.id = {{TableMucTieu.updatedRow.id}}
+),
+update_huong AS (
+    UPDATE public.huong h
+    SET ten_huong = '{{TableMucTieu.updatedRow.huong}}'
+    FROM target_muc_tieu t
+    WHERE h.id = t.huong_id
+    RETURNING h.id
+),
+update_doi_tuong AS (
+    UPDATE public.doi_tuong_tc dtc
+    SET ten_to_chuc = '{{TableMucTieu.updatedRow.ten_to_chuc}}',
+        ban_nganh = '{{TableMucTieu.updatedRow.ban_nganh}}'
+    FROM target_muc_tieu t
+    WHERE dtc.id = t.doi_tuong_tc_id
+    RETURNING dtc.id
+),
+update_muc_tieu AS (
+    UPDATE public.muc_tieu mt
+    SET domain = '{{TableMucTieu.updatedRow.domain}}'
+    WHERE mt.id = {{TableMucTieu.updatedRow.id}}
+    RETURNING mt.id
+)
+SELECT 
+    (SELECT id FROM update_huong) AS huong_updated,
+    (SELECT id FROM update_doi_tuong) AS doi_tuong_updated,
+    (SELECT id FROM update_muc_tieu) AS muc_tieu_updated;

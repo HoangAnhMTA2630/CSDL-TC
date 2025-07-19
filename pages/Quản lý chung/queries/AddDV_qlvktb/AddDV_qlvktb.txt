@@ -1,0 +1,6 @@
+INSERT INTO public."don_vi" (
+	"ten_don_vi",
+	"don_vi_cha_id")
+VALUES (
+	'{{insert_formDV_qlvktb.formData.ten_don_vi}}',
+	'{{insert_formDV_qlvktb.formData.don_vi_cha_id}}');

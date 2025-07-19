@@ -49,7 +49,7 @@
   "leftColumn": 21,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
-  "onClose": "{{showModal()}}",
+  "onClose": "{{showModal(ModalBKH.name);}}",
   "parentColumnSpace": 18.8828125,
   "parentId": "0",
   "parentRowSpace": 10,

@@ -1,0 +1,6 @@
+DELETE FROM public.muc_tieu_duong_dan_an mtda
+USING public.duong_dan_an dda
+WHERE
+  dda.id = mtda.duong_dan_an_id
+  AND mtda.muc_tieu_id = {{TableMucTieu.triggeredRow.id}}
+  AND dda.ten_duong_dan_an = '{{TableDuongDanAn.triggeredRow.ten_duong_dan_an}}';

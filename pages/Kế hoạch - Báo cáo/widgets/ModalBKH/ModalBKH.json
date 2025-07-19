@@ -1,14 +1,14 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 57,
+  "bottomRow": 70,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 570,
+      "bottomRow": 700,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -29,7 +29,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 570,
+      "minHeight": 660,
       "minWidth": 450,
       "mobileBottomRow": 240,
       "mobileLeftColumn": 0,
@@ -58,14 +58,14 @@
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
-  "height": 570,
+  "height": 700,
   "isCanvas": true,
   "isLoading": false,
   "key": "jdz4rb1aw4",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 10,
-  "minHeight": 570,
+  "minHeight": 700,
   "mobileBottomRow": 25,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 9,
@@ -84,5 +84,5 @@
   "version": 2,
   "widgetId": "spgpvljba9",
   "widgetName": "ModalBKH",
-  "width": 1433.55
+  "width": 1569.55
 }

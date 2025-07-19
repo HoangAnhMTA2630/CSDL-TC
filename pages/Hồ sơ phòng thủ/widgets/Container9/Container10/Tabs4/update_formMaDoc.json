@@ -173,15 +173,6 @@
       "key": "schema.__root_schema__.children.c2serverip.accentColor"
     },
     {
-      "key": "schema.__root_schema__.children.hanh_vi.defaultValue"
-    },
-    {
-      "key": "schema.__root_schema__.children.hanh_vi.borderRadius"
-    },
-    {
-      "key": "schema.__root_schema__.children.hanh_vi.accentColor"
-    },
-    {
       "key": "schema.__root_schema__.children.lay_qua_usb.defaultValue"
     },
     {
@@ -210,6 +201,30 @@
     },
     {
       "key": "schema.__root_schema__.children.bao_cao_id.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.nguon_thu_thap.placeholderText"
+    },
+    {
+      "key": "schema.__root_schema__.children.ghi_chu.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.ghi_chu.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.ghi_chu.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.trang_thai.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.trang_thai.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.trang_thai.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.trang_thai.placeholderText"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -304,27 +319,27 @@
           "position": 5,
           "sourceData": "198.51.100.10"
         },
-        "hanh_vi": {
+        "ghi_chu": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formMaDoc.sourceData, update_formMaDoc.formData, update_formMaDoc.fieldState)}}",
-          "accessor": "hanh_vi",
+          "accessor": "ghi_chu",
           "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formMaDoc.sourceData, update_formMaDoc.formData, update_formMaDoc.fieldState)}}",
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.hanh_vi))(update_formMaDoc.sourceData, update_formMaDoc.formData, update_formMaDoc.fieldState)}}",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.ghi_chu))(update_formMaDoc.sourceData, update_formMaDoc.formData, update_formMaDoc.fieldState)}}",
           "fieldType": "Text Input",
           "iconAlign": "left",
-          "identifier": "hanh_vi",
+          "identifier": "ghi_chu",
           "isCustomField": false,
           "isDisabled": false,
           "isRequired": false,
           "isSpellCheck": false,
           "isVisible": true,
-          "label": "Hanh Vi",
+          "label": "Ghi Chu",
           "labelTextSize": "0.875rem",
-          "originalIdentifier": "hanh_vi",
-          "position": 6,
-          "sourceData": "Thu thập dữ liệu"
+          "originalIdentifier": "ghi_chu",
+          "position": 10,
+          "sourceData": "Phát tán mạng"
         },
         "hash": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formMaDoc.sourceData, update_formMaDoc.formData, update_formMaDoc.fieldState)}}",
@@ -467,18 +482,20 @@
           "children": {},
           "dataType": "string",
           "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.nguon_thu_thap))(update_formMaDoc.sourceData, update_formMaDoc.formData, update_formMaDoc.fieldState)}}",
-          "fieldType": "Text Input",
-          "iconAlign": "left",
+          "fieldType": "Select",
           "identifier": "nguon_thu_thap",
           "isCustomField": false,
           "isDisabled": false,
+          "isFilterable": false,
           "isRequired": false,
-          "isSpellCheck": false,
           "isVisible": true,
           "label": "Nguon Thu Thap",
           "labelTextSize": "0.875rem",
+          "options": "[\n  {\n    \"label\": \"Internet\",\n    \"value\": \"Internet\"\n  },\n  {\n    \"label\": \"TSLqs\",\n    \"value\": \"TSLqs\"\n  },\n  {\n    \"label\": \"Khác\",\n    \"value\": \"Khác\"\n  }\n]",
           "originalIdentifier": "nguon_thu_thap",
+          "placeholderText": "{{((sourceData, formData, fieldState) => (sourceData.nguon_thu_thap))(update_formMaDoc.sourceData, update_formMaDoc.formData, update_formMaDoc.fieldState)}}",
           "position": 3,
+          "serverSideFiltering": false,
           "sourceData": "Dark Web"
         },
         "ten": {
@@ -502,6 +519,30 @@
           "originalIdentifier": "ten",
           "position": 0,
           "sourceData": "TrojanX"
+        },
+        "trang_thai": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formMaDoc.sourceData, update_formMaDoc.formData, update_formMaDoc.fieldState)}}",
+          "accessor": "trang_thai",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formMaDoc.sourceData, update_formMaDoc.formData, update_formMaDoc.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.trang_thai))(update_formMaDoc.sourceData, update_formMaDoc.formData, update_formMaDoc.fieldState)}}",
+          "fieldType": "Select",
+          "identifier": "trang_thai",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isFilterable": false,
+          "isRequired": false,
+          "isVisible": true,
+          "label": "Trang Thai",
+          "labelTextSize": "0.875rem",
+          "options": "[\n  {\n    \"label\": \"Chờ công nhận\",\n    \"value\": \"Chờ công nhận\"\n  },\n  {\n    \"label\": \"Đã được công nhận\",\n    \"value\": \"Đã được công nhận\"\n  },\n  {\n    \"label\": \"Không được công nhận\",\n    \"value\": \"Không được công nhận\"\n  }\n]",
+          "originalIdentifier": "trang_thai",
+          "placeholderText": "{{((sourceData, formData, fieldState) => (sourceData.trang_thai))(update_formMaDoc.sourceData, update_formMaDoc.formData, update_formMaDoc.fieldState)}}",
+          "position": 11,
+          "serverSideFiltering": false,
+          "sourceData": "Chờ công nhận"
         }
       },
       "dataType": "object",

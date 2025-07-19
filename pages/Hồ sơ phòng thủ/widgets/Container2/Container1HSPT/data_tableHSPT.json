@@ -300,7 +300,7 @@
       "labelColor": "#FFFFFF",
       "menuColor": "{{data_tableHSPT.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
       "notation": "standard",
-      "onClick": "{{storeValue(\"showContainerTBM\", true);\nSelectQueryTBM.run();\nSelectQueryQN.run();\nSelectQueryTBM_CVE.run()}}",
+      "onClick": "{{storeValue(\"showContainerTBM\", true);\nQueryTBMInHSM_Filter.run();\nSelectQueryQN.run();\nSelectQueryTBM_CVE.run()}}",
       "originalId": "customColumn3",
       "sticky": "right",
       "textSize": "0.875rem",

@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    tk.id,\n    tk.username,\n\t\ttk.pass,\n    tk.trang_thai,\n    tk.cap_do,\n    tk.ngay_phat_hien,\n    tk.mo_ta\nFROM \n    public.tai_khoan tk\nWHERE \n    tk.muc_tieu_id = {{Table.triggeredRow.id }}\nORDER BY \n    tk.id;\n",
+      "body": "SELECT \n    tk.id,\n    tk.username,\n\t\ttk.pass,\n    tk.trang_thai,\n    tk.cap_do,\n    tk.ngay_phat_hien,\n    tk.mo_ta\nFROM \n    public.tai_khoan tk\nWHERE \n    tk.muc_tieu_id = {{TableMucTieu.triggeredRow.id }}\nORDER BY \n    tk.id;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000

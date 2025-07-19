@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    SUM(\n        CASE \n            WHEN kich_thuoc ILIKE '%MB' THEN CAST(SPLIT_PART(kich_thuoc, ' ', 1) AS FLOAT)\n            WHEN kich_thuoc ILIKE '%KB' THEN CAST(SPLIT_PART(kich_thuoc, ' ', 1) AS FLOAT) / 1024\n            WHEN kich_thuoc ILIKE '%GB' THEN CAST(SPLIT_PART(kich_thuoc, ' ', 1) AS FLOAT) * 1024\n            ELSE 0\n        END\n    ) AS tong_kich_thuoc_mb\nFROM \n    public.tai_lieu\nWHERE \n    kich_thuoc IS NOT NULL;\n",
+      "body": "SELECT  \n    SUM(\n        CASE \n            WHEN kich_thuoc ILIKE '%MB' THEN CAST(SPLIT_PART(kich_thuoc, ' ', 1) AS FLOAT)\n            WHEN kich_thuoc ILIKE '%KB' THEN CAST(SPLIT_PART(kich_thuoc, ' ', 1) AS FLOAT) / 1024\n            WHEN kich_thuoc ILIKE '%GB' THEN CAST(SPLIT_PART(kich_thuoc, ' ', 1) AS FLOAT) * 1024\n            ELSE 0\n        END\n    ) AS tong_kich_thuoc_mb\nFROM \n    public.tai_lieu tl\nJOIN \n    public.muc_tieu mt ON tl.muc_tieu_id = mt.id\nJOIN \n    public.doi_tuong_tc dtc ON mt.doi_tuong_tc_id = dtc.id\nJOIN \n    public.huong h ON dtc.huong_id = h.id\nWHERE \n    kich_thuoc IS NOT NULL\n    {{ SelectHuong_.selectedOptionValue ? `AND h.id = ${SelectHuong_.selectedOptionValue}` : '' }}\n    {{ DatePickerBD.selectedDate && DatePickerKT.selectedDate \n        ? `AND tl.ngay_tai_len BETWEEN DATE '${DatePickerBD.selectedDate}' AND DATE '${DatePickerKT.selectedDate}'` \n        : '' \n    }}\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
@@ -22,7 +22,11 @@
       "name": "csdltc",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": true,
     "name": "TongDungLuong",
     "pageId": "Trinh sát - Tấn công",

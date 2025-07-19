@@ -1,19 +1,21 @@
-SELECT
-    CASE 
-        WHEN dv.id = 1 THEN 'Trung tâm 386'
-        WHEN dv.id = 9 THEN 'Cụm 31'
-        ELSE 'Các đơn vị khác'
-    END AS ten_don_vi,
-    COUNT(*) AS so_luong_thiet_bi
-FROM
-    e_thiet_bi_mang tbm
-JOIN
-    don_vi dv ON tbm.don_vi_id = dv.id
-GROUP BY
-    CASE 
-        WHEN dv.id = 1 THEN 'Trung tâm 386'
-        WHEN dv.id = 9 THEN 'Cụm 31'
-        ELSE 'Các đơn vị khác'
-    END;
 
+
+
+SELECT 
+    dv.ten_don_vi,
+    COUNT(tbm.id) AS so_luong_thiet_bi
+FROM 
+    e_thiet_bi_mang tbm
+JOIN 
+    don_vi dv ON tbm.don_vi_id = dv.id
+WHERE 
+    1=1
+    {{ TreeSelectDonVi_.selectedOptionValue 
+        ? `AND dv.id = ${TreeSelectDonVi_.selectedOptionValue}` 
+        : '' 
+    }}
+GROUP BY 
+    dv.ten_don_vi
+ORDER BY 
+    so_luong_thiet_bi DESC;
 

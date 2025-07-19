@@ -5,9 +5,10 @@ UPDATE public."ma_doc" SET
 		"nguon_thu_thap" = '{{update_formMaDoc.fieldState.nguon_thu_thap.isVisible ? update_formMaDoc.formData.nguon_thu_thap : update_formMaDoc.sourceData.nguon_thu_thap}}',
 		"ngay_tiep_nhan" = '{{update_formMaDoc.fieldState.ngay_tiep_nhan.isVisible ? update_formMaDoc.formData.ngay_tiep_nhan : update_formMaDoc.sourceData.ngay_tiep_nhan}}',
 		"c2serverip" = '{{update_formMaDoc.fieldState.c2serverip.isVisible ? update_formMaDoc.formData.c2serverip : update_formMaDoc.sourceData.c2serverip}}',
-		"hanh_vi" = '{{update_formMaDoc.fieldState.hanh_vi.isVisible ? update_formMaDoc.formData.hanh_vi : update_formMaDoc.sourceData.hanh_vi}}',
+		"ghi_chu" = '{{update_formMaDoc.fieldState.ghi_chu.isVisible ? update_formMaDoc.formData.ghi_chu : update_formMaDoc.sourceData.ghi_chu}}',
 		"lay_qua_usb" = '{{update_formMaDoc.fieldState.lay_qua_usb.isVisible ? update_formMaDoc.formData.lay_qua_usb : update_formMaDoc.sourceData.lay_qua_usb}}',
 		"lay_qua_usbat" = '{{update_formMaDoc.fieldState.lay_qua_usbat.isVisible ? update_formMaDoc.formData.lay_qua_usbat : update_formMaDoc.sourceData.lay_qua_usbat}}',
 		"mo_so" = '{{update_formMaDoc.fieldState.mo_so.isVisible ? update_formMaDoc.formData.mo_so : update_formMaDoc.sourceData.mo_so}}',
-		"bao_cao_id" = '{{update_formMaDoc.fieldState.bao_cao_id.isVisible ? update_formMaDoc.formData.bao_cao_id : update_formMaDoc.sourceData.bao_cao_id}}'
+		"bao_cao_id" = '{{update_formMaDoc.fieldState.bao_cao_id.isVisible ? update_formMaDoc.formData.bao_cao_id : update_formMaDoc.sourceData.bao_cao_id}}',
+		"trang_thai" = '{{update_formMaDoc.fieldState.trang_thai.isVisible ? update_formMaDoc.formData.trang_thai : update_formMaDoc.sourceData.trang_thai}}'
 	WHERE "id" = {{data_tableMaDoc.selectedRow.id}};

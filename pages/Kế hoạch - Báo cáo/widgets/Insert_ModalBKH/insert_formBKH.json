@@ -141,14 +141,28 @@
     },
     {
       "key": "schema.__root_schema__.children.thoi_gian.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.thoi_gian_id.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.thoi_gian_id.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.loai_ke_hoach_id.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.loai_ke_hoach_id.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.loai_ke_hoach_id.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.thoi_gian_id.options"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicPropertyPathList": [
-    {
-      "key": "onSubmit"
-    }
-  ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onSubmit"
@@ -165,7 +179,7 @@
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
-  "onSubmit": "{{InsertQueryBKH.run(\n\t() => SelectQueryBKH.run()\n\t\t\t\t\t.then(() => closeModal('Insert_ModalBKH')), \n\t(error) => showAlert(`Error while inserting resource!\\n ${error}`,'error'))\n}}",
+  "onSubmit": "{{InsertQueryBKH.run(() => SelectQueryBKH.run().then(() => closeModal('Insert_ModalBKH')), error => showAlert(`Error while inserting resource!\\n ${error}`, 'error'));\nQueryFolderBKH.run().then(() => {\n  JSObject1.transformToTree();\n});}}",
   "originalBottomRow": 48,
   "originalTopRow": 0,
   "parentColumnSpace": 8.125,
@@ -188,6 +202,29 @@
       "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
       "cellBoxShadow": "none",
       "children": {
+        "loai_ke_hoach_id": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_formBKH.sourceData, insert_formBKH.formData, insert_formBKH.fieldState)}}",
+          "accessor": "loai_ke_hoach_id",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_formBKH.sourceData, insert_formBKH.formData, insert_formBKH.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "number",
+          "defaultValue": "",
+          "fieldType": "Select",
+          "identifier": "loai_ke_hoach_id",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isFilterable": false,
+          "isRequired": false,
+          "isVisible": true,
+          "label": "Loai Bo Ke Hoach",
+          "labelTextSize": "0.875rem",
+          "options": "{{QueryLoaiKH.data}}",
+          "originalIdentifier": "loai_ke_hoach_id",
+          "position": 3,
+          "serverSideFiltering": false,
+          "sourceData": 1
+        },
         "mo_ta": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_formBKH.sourceData, insert_formBKH.formData, insert_formBKH.fieldState)}}",
           "accessor": "mo_ta",
@@ -207,7 +244,7 @@
           "label": "Mo Ta",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "mo_ta",
-          "position": 3,
+          "position": 5,
           "sourceData": "Mô tả kế hoạch 1"
         },
         "ten_bo_ke_hoach": {
@@ -245,8 +282,8 @@
           "isCustomField": false,
           "isDisabled": false,
           "isFilterable": false,
-          "isRequired": true,
-          "isVisible": true,
+          "isRequired": false,
+          "isVisible": false,
           "label": "Ten Loai Ke Hoach",
           "labelTextSize": "0.875rem",
           "options": "{{QueryLoaiKH.data}}",
@@ -268,8 +305,8 @@
           "isCustomField": false,
           "isDisabled": false,
           "isFilterable": true,
-          "isRequired": true,
-          "isVisible": true,
+          "isRequired": false,
+          "isVisible": false,
           "label": "Thoi Gian",
           "labelTextSize": "0.875rem",
           "options": "{{QueryLoaiTG.data}}",
@@ -278,6 +315,29 @@
           "serverSideFiltering": false,
           "sourceData": "Quý - Năm: 2025 - Quý: 4",
           "tooltip": ""
+        },
+        "thoi_gian_id": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_formBKH.sourceData, insert_formBKH.formData, insert_formBKH.fieldState)}}",
+          "accessor": "thoi_gian_id",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_formBKH.sourceData, insert_formBKH.formData, insert_formBKH.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "number",
+          "defaultValue": "",
+          "fieldType": "Select",
+          "identifier": "thoi_gian_id",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isFilterable": true,
+          "isRequired": false,
+          "isVisible": true,
+          "label": "Thoi Gian",
+          "labelTextSize": "0.875rem",
+          "options": "{{QueryLoaiTG.data}}",
+          "originalIdentifier": "thoi_gian_id",
+          "position": 4,
+          "serverSideFiltering": false,
+          "sourceData": 2
         }
       },
       "dataType": "object",

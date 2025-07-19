@@ -1,0 +1,16 @@
+SELECT 
+  tg.nam,
+  COUNT(CASE WHEN kh.id IN (
+    SELECT DISTINCT ke_hoach_id FROM public.ke_hoach_bao_cao
+  ) THEN 1 END) AS da_co_bao_cao,
+  
+  COUNT(CASE WHEN kh.id NOT IN (
+    SELECT DISTINCT ke_hoach_id FROM public.ke_hoach_bao_cao
+  ) THEN 1 END) AS chua_co_bao_cao
+
+FROM public.ke_hoach kh
+JOIN public.bo_ke_hoach bokh ON kh.bo_ke_hoach_id = bokh.id
+JOIN public.thoi_gian tg ON bokh.thoi_gian_id = tg.id
+
+GROUP BY tg.nam
+ORDER BY tg.nam;

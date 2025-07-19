@@ -1,0 +1,42 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "#e15615",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "delete",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "apdv0f62o8",
+  "leftColumn": 60,
+  "minWidth": 50,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 51,
+  "mobileRightColumn": 55,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onClick": "{{resetWidget(\"TreeSelectDonVi\", true);\nresetWidget(\"SelectTB\", true);\nresetWidget(\"SelectNhom\", true);\nresetWidget(\"SelectTinhTrang\", true);\nresetWidget(\"SelectCap\", true);}}",
+  "parentColumnSpace": 22.890625,
+  "parentId": "9my5qzzd58",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "331bywxlwn",
+  "widgetName": "ButtonClear"
+}

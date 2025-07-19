@@ -1,0 +1,63 @@
+--CPU
+INSERT INTO public.v_thiet_bi_mang (e_thiet_bi_mang_id, a_thiet_bi_mang_id, gia_tri)  
+VALUES (1, 2, 'Giá trị mới')  
+ON CONFLICT (e_thiet_bi_mang_id) -- Thay thế bằng cột duy nhất để xác định xung đột  
+DO UPDATE SET  
+    a_thiet_bi_mang_id = EXCLUDED.a_thiet_bi_mang_id,  
+    gia_tri = EXCLUDED.gia_tri; 
+--RAM
+		
+INSERT INTO public.v_thiet_bi_mang (e_thiet_bi_mang_id, a_thiet_bi_mang_id, gia_tri)  
+VALUES (1, 2, 'Giá trị mới')  
+ON CONFLICT (e_thiet_bi_mang_id) -- Thay thế bằng cột duy nhất để xác định xung đột  
+DO UPDATE SET  
+    a_thiet_bi_mang_id = EXCLUDED.a_thiet_bi_mang_id,  
+    gia_tri = EXCLUDED.gia_tri; 
+--ROM		
+		
+INSERT INTO public.v_thiet_bi_mang (e_thiet_bi_mang_id, a_thiet_bi_mang_id, gia_tri)  
+VALUES (1, 2, 'Giá trị mới')  
+ON CONFLICT (e_thiet_bi_mang_id) -- Thay thế bằng cột duy nhất để xác định xung đột  
+DO UPDATE SET  
+    a_thiet_bi_mang_id = EXCLUDED.a_thiet_bi_mang_id,  
+    gia_tri = EXCLUDED.gia_tri; 
+ 
+		--HDH		
+INSERT INTO public.v_thiet_bi_mang (e_thiet_bi_mang_id, a_thiet_bi_mang_id, gia_tri)  
+VALUES (1, 2, 'Giá trị mới')  
+ON CONFLICT (e_thiet_bi_mang_id) -- Thay thế bằng cột duy nhất để xác định xung đột  
+DO UPDATE SET  
+    a_thiet_bi_mang_id = EXCLUDED.a_thiet_bi_mang_id,  
+    gia_tri = EXCLUDED.gia_tri; 
+		
+--PORTS		
+INSERT INTO public.v_thiet_bi_mang (e_thiet_bi_mang_id, a_thiet_bi_mang_id, gia_tri)  
+VALUES (1, 2, 'Giá trị mới')  
+ON CONFLICT (e_thiet_bi_mang_id) -- Thay thế bằng cột duy nhất để xác định xung đột  
+DO UPDATE SET  
+    a_thiet_bi_mang_id = EXCLUDED.a_thiet_bi_mang_id,  
+    gia_tri = EXCLUDED.gia_tri;
+		
+--IP PUBLIC		
+INSERT INTO public.v_thiet_bi_mang (e_thiet_bi_mang_id, a_thiet_bi_mang_id, gia_tri)  
+VALUES (1, 2, 'Giá trị mới')  
+ON CONFLICT (e_thiet_bi_mang_id) -- Thay thế bằng cột duy nhất để xác định xung đột  
+DO UPDATE SET  
+    a_thiet_bi_mang_id = EXCLUDED.a_thiet_bi_mang_id,  
+    gia_tri = EXCLUDED.gia_tri;
+		
+--IP PRIVATE		
+INSERT INTO public.v_thiet_bi_mang (e_thiet_bi_mang_id, a_thiet_bi_mang_id, gia_tri)  
+VALUES (1, 2, 'Giá trị mới')  
+ON CONFLICT (e_thiet_bi_mang_id) -- Thay thế bằng cột duy nhất để xác định xung đột  
+DO UPDATE SET  
+    a_thiet_bi_mang_id = EXCLUDED.a_thiet_bi_mang_id,  
+    gia_tri = EXCLUDED.gia_tri;
+		
+--SSID		
+INSERT INTO public.v_thiet_bi_mang (e_thiet_bi_mang_id, a_thiet_bi_mang_id, gia_tri)  
+VALUES (1, 2, 'Giá trị mới')  
+ON CONFLICT (e_thiet_bi_mang_id) -- Thay thế bằng cột duy nhất để xác định xung đột  
+DO UPDATE SET  
+    a_thiet_bi_mang_id = EXCLUDED.a_thiet_bi_mang_id,  
+    gia_tri = EXCLUDED.gia_tri;

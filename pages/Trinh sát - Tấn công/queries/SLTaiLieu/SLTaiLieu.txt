@@ -1,0 +1,22 @@
+SELECT  
+    h.ten_huong,
+    COUNT(tl.id) AS so_luong_tai_lieu
+FROM 
+    public.tai_lieu tl
+JOIN 
+    public.muc_tieu mt ON tl.muc_tieu_id = mt.id
+JOIN 
+    public.doi_tuong_tc dtc ON mt.doi_tuong_tc_id = dtc.id
+JOIN 
+    public.huong h ON dtc.huong_id = h.id
+WHERE 
+    1=1
+    {{ SelectHuong_.selectedOptionValue ? `AND h.id = ${SelectHuong_.selectedOptionValue}` : '' }}
+    {{ DatePickerBD.selectedDate && DatePickerKT.selectedDate 
+        ? `AND tl.ngay_tai_len BETWEEN DATE '${DatePickerBD.selectedDate}' AND DATE '${DatePickerKT.selectedDate}'` 
+        : '' 
+    }}
+GROUP BY 
+    h.ten_huong
+ORDER BY 
+    so_luong_tai_lieu DESC;

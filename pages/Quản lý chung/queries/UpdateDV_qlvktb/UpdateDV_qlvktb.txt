@@ -1,0 +1,4 @@
+UPDATE public."don_vi" SET
+		"ten_don_vi" = '{{update_formDV_qlvktb.fieldState.ten_don_vi.isVisible ? update_formDV_qlvktb.formData.ten_don_vi : update_formDV_qlvktb.sourceData.ten_don_vi}}',
+		"don_vi_cha_id" = '{{update_formDV_qlvktb.fieldState.don_vi_cha_id.isVisible ? update_formDV_qlvktb.formData.don_vi_cha_id : update_formDV_qlvktb.sourceData.don_vi_cha_id}}'
+WHERE "id" = {{Table_DV_qlvktb.selectedRow.id}};

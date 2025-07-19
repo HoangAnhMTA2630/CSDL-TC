@@ -1,4 +1,4 @@
-SELECT 
+SELECT  
     SUM(
         CASE 
             WHEN kich_thuoc ILIKE '%MB' THEN CAST(SPLIT_PART(kich_thuoc, ' ', 1) AS FLOAT)
@@ -8,6 +8,17 @@ SELECT
         END
     ) AS tong_kich_thuoc_mb
 FROM 
-    public.tai_lieu
+    public.tai_lieu tl
+JOIN 
+    public.muc_tieu mt ON tl.muc_tieu_id = mt.id
+JOIN 
+    public.doi_tuong_tc dtc ON mt.doi_tuong_tc_id = dtc.id
+JOIN 
+    public.huong h ON dtc.huong_id = h.id
 WHERE 
-    kich_thuoc IS NOT NULL;
+    kich_thuoc IS NOT NULL
+    {{ SelectHuong_.selectedOptionValue ? `AND h.id = ${SelectHuong_.selectedOptionValue}` : '' }}
+    {{ DatePickerBD.selectedDate && DatePickerKT.selectedDate 
+        ? `AND tl.ngay_tai_len BETWEEN DATE '${DatePickerBD.selectedDate}' AND DATE '${DatePickerKT.selectedDate}'` 
+        : '' 
+    }}

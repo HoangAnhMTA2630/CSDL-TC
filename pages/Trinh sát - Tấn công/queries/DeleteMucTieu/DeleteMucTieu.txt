@@ -1,0 +1,28 @@
+WITH target_muc_tieu AS (
+    SELECT 
+        mt.id AS muc_tieu_id,
+        mt.doi_tuong_tc_id,
+        dtc.huong_id
+    FROM public.muc_tieu mt
+    JOIN public.doi_tuong_tc dtc ON mt.doi_tuong_tc_id = dtc.id
+    WHERE mt.id = {{TableMucTieu.triggeredRow.id}}
+),
+deleted_muc_tieu AS (
+    DELETE FROM public.muc_tieu
+    WHERE id = (SELECT muc_tieu_id FROM target_muc_tieu)
+    RETURNING id
+),
+deleted_doi_tuong AS (
+    DELETE FROM public.doi_tuong_tc
+    WHERE id = (SELECT doi_tuong_tc_id FROM target_muc_tieu)
+    RETURNING id
+),
+deleted_huong AS (
+    DELETE FROM public.huong
+    WHERE id = (SELECT huong_id FROM target_muc_tieu)
+    RETURNING id
+)
+SELECT
+    (SELECT id FROM deleted_muc_tieu) AS muc_tieu_deleted,
+    (SELECT id FROM deleted_doi_tuong) AS doi_tuong_deleted,
+    (SELECT id FROM deleted_huong) AS huong_deleted;

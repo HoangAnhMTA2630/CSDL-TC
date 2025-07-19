@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "682d4d2a92cca105dbc17693_fc13f6d9-033a-449f-9c45-837aaf26ea2e",
+  "gitSyncId": "682d4d2a92cca105dbc17693_c1af52c7-b687-4693-841e-accc9f811640",
   "id": "Kế hoạch - Báo cáo_InsertQueryBKH",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
@@ -10,7 +10,7 @@
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000

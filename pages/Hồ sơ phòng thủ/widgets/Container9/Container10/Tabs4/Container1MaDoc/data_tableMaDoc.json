@@ -29,11 +29,12 @@
     "nguon_thu_thap",
     "ngay_tiep_nhan",
     "c2serverip",
-    "hanh_vi",
     "lay_qua_usb",
     "lay_qua_usbat",
     "mo_so",
     "bao_cao_id",
+    "ghi_chu",
+    "trang_thai",
     "customColumn1"
   ],
   "columnSizeMap": {
@@ -41,7 +42,7 @@
     "step": 62,
     "task": 245
   },
-  "columnUpdatedAt": 1752028116303,
+  "columnUpdatedAt": 1752811287379,
   "columnWidthMap": {
     "customColumn1": 60,
     "id": 67
@@ -113,9 +114,6 @@
       "key": "primaryColumns.c2serverip.computedValue"
     },
     {
-      "key": "primaryColumns.hanh_vi.computedValue"
-    },
-    {
       "key": "primaryColumns.lay_qua_usb.computedValue"
     },
     {
@@ -129,6 +127,12 @@
     },
     {
       "key": "primaryColumns.customColumn1.menuColor"
+    },
+    {
+      "key": "primaryColumns.ghi_chu.computedValue"
+    },
+    {
+      "key": "primaryColumns.trang_thai.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -268,20 +272,20 @@
       "sticky": "right",
       "width": 150
     },
-    "hanh_vi": {
-      "alias": "hanh_vi",
+    "ghi_chu": {
+      "alias": "ghi_chu",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{data_tableMaDoc.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"hanh_vi\"]))}}",
+      "computedValue": "{{data_tableMaDoc.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"ghi_chu\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "hanh_vi",
+      "id": "ghi_chu",
       "index": 7,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -291,9 +295,9 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "hanh_vi",
+      "label": "ghi_chu",
       "notation": "standard",
-      "originalId": "hanh_vi",
+      "originalId": "ghi_chu",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -495,7 +499,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "mo_so",
+      "label": "ma_so",
       "notation": "standard",
       "originalId": "mo_so",
       "sticky": "",
@@ -602,6 +606,40 @@
       "label": "ten",
       "notation": "standard",
       "originalId": "ten",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "trang_thai": {
+      "alias": "trang_thai",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{data_tableMaDoc.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"trang_thai\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "trang_thai",
+      "index": 12,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "trang_thai",
+      "notation": "standard",
+      "originalId": "trang_thai",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

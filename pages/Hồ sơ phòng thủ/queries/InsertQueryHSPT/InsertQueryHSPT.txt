@@ -10,7 +10,7 @@ INSERT INTO public."ho_so_phong_thu" (
 VALUES (
 	'{{insert_formHSPT.formData.ten_ho_so}}',
 	'{{insert_formHSPT.formData.ngay_ban_hanh}}',
-	'{{insert_formHSPT.formData.ngay_sua_doi}}',
+	{{ insert_formHSPT.formData.ngay_sua_doi ? `'${insert_formHSPT.formData.ngay_sua_doi}'` : 'NULL' }},
 	'{{insert_formHSPT.formData.so_do_tuyen_cap}}',
 	'{{insert_formHSPT.formData.so_do_logic}}',
 	'{{insert_formHSPT.formData.so_do_rack}}',

@@ -8,6 +8,9 @@ FULL JOIN
     public.doi_tuong_tc dt ON mt.doi_tuong_tc_id = dt.id
 FULL JOIN 
     public.huong h ON dt.huong_id = h.id
+WHERE
+	    1 = 1
+    {{ SelectHuong_.selectedOptionValue ? `AND h.id = ${SelectHuong_.selectedOptionValue}` : '' }}
 GROUP BY 
     h.ten_huong, h.quoc_gia
 ORDER BY 

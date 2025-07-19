@@ -1,0 +1,2 @@
+DELETE FROM public."don_vi"
+  WHERE "id" = {{Table_DV_qlvktb.triggeredRow.id}};

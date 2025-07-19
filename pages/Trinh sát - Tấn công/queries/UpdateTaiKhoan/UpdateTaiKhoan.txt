@@ -1,0 +1,11 @@
+UPDATE public.tai_khoan
+SET
+  username = '{{TableTaiKhoan.updatedRow.username}}',
+  pass = '{{TableTaiKhoan.updatedRow.pass}}',
+  trang_thai = '{{TableTaiKhoan.updatedRow.trang_thai}}',
+  cap_do = '{{TableTaiKhoan.updatedRow.cap_do}}',
+  ngay_phat_hien = '{{TableTaiKhoan.updatedRow.ngay_phat_hien}}'::date,
+  mo_ta = '{{TableTaiKhoan.updatedRow.mo_ta}}'
+WHERE
+  id = {{TableTaiKhoan.updatedRow.id}}
+  AND muc_tieu_id = {{TableMucTieu.triggeredRow.id}};

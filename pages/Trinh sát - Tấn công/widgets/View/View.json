@@ -8,7 +8,7 @@
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 990,
+      "bottomRow": 900,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -29,7 +29,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 996,
+      "minHeight": 894,
       "minWidth": 450,
       "mobileBottomRow": 240,
       "mobileLeftColumn": 0,
@@ -58,7 +58,7 @@
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
-  "height": 996,
+  "height": 894,
   "isCanvas": true,
   "isLoading": false,
   "key": "ax35nmevch",
@@ -82,5 +82,5 @@
   "version": 2,
   "widgetId": "mt8t4makrq",
   "widgetName": "View",
-  "width": 1441.1499999999999
+  "width": 1843.9499999999998
 }

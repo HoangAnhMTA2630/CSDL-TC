@@ -1,0 +1,17 @@
+SELECT 
+    h.ten_huong,
+    COUNT(DISTINCT bc.id) AS so_luong_bao_cao
+FROM 
+    public.bao_cao_doi_tuong_tc bcdttc
+LEFT JOIN 
+    public.bao_cao bc ON bcdttc.bao_cao_id = bc.id
+LEFT JOIN 
+    public.muc_tieu mt ON bcdttc.muc_tieu_id = mt.id
+LEFT JOIN 
+    public.doi_tuong_tc dtc ON mt.doi_tuong_tc_id = dtc.id
+LEFT JOIN 
+    public.huong h ON dtc.huong_id = h.id
+GROUP BY 
+    h.ten_huong
+ORDER BY 
+    so_luong_bao_cao DESC;

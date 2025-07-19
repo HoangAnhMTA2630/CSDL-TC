@@ -11,6 +11,9 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -36,7 +39,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 12,
   "shouldTruncate": false,
-  "text": "Router tại đơn vị",
+  "text": "Router tại  {{TreeSelectDonVi_.selectedOptionLabel}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 1,

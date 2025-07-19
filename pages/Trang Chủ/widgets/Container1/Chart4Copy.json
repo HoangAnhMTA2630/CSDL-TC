@@ -1,0 +1,110 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 36,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "chartData": {
+    "0g45c33ngb": {
+      "data": "{{KeHoachDaThucHien.data}}",
+      "seriesName": ""
+    }
+  },
+  "chartName": "KH hoàn thành",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const data = KH_BC_trong_ngoai_KH_by_cap.data;\n\n  const capList = data.map(d => d.cap);\n\n  return {\n    xAxis: {\n      type: \"category\",\n      data: capList,\n      axisLabel: {\n        rotate: 0\n      }\n    },\n    yAxis: {\n      type: \"value\"\n    },\n    tooltip: {\n      trigger: \"axis\",\n      axisPointer: {\n        type: \"shadow\"\n      }\n    },\n    legend: {\n      top: 35\n    },\n    title: {\n      text: \"Kế hoạch & Báo cáo (trong / ngoài KH) theo Cấp\",\n      left: \"center\",\n      top: 10,\n      textStyle: {\n        fontSize: 18,\n        fontWeight: \"bold\",\n\t\t\t\tfontFamily: \"Arial, sans-serif\"\n      }\n    },\n    series: [\n      {\n        name: \"Kế hoạch\",\n        type: \"bar\",\n        label: {\n          show: true,\n          position: \"top\"\n        },\n        data: data.map(d => d.so_ke_hoach),\n        color: \"#553DE9\"\n      },\n      {\n        name: \"Báo cáo trong KH\",\n        type: \"bar\",\n        label: {\n          show: true,\n          position: \"top\"\n        },\n        data: data.map(d => d.so_bao_cao_trong_kh),\n        color: \"#2BB673\"\n      },\n\t\t\t{\n        name: \"Báo cáo không thuộc KH\",\n        type: \"bar\",\n        label: { show: true, position: \"top\" },\n        data: data.map(d => d.so_bao_cao_khong_kh),\n        color: \"#FF9F40\"\n      }\n    ],\n    grid: {\n      left: 20,\n      right: 20,\n      bottom: 20,\n      top: 70,\n      containLabel: true\n    }\n  };\n})()\n))(Chart4Copy.chartType) }}",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "customEChartConfig"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "chartData.0g45c33ngb.data"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "3cu6gegk5t",
+  "labelOrientation": "auto",
+  "leftColumn": 32,
+  "minWidth": 450,
+  "mobileBottomRow": 70,
+  "mobileLeftColumn": 22,
+  "mobileRightColumn": 46,
+  "mobileTopRow": 38,
+  "needsErrorInfo": true,
+  "parentColumnSpace": 19.9375,
+  "parentId": "ai3oiaeksr",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 51,
+  "setAdaptiveYMin": true,
+  "showDataPointLabel": true,
+  "topRow": 4,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "tohvndyitt",
+  "widgetName": "Chart4Copy",
+  "xAxisName": "Product Line",
+  "yAxisName": "Revenue($)"
+}

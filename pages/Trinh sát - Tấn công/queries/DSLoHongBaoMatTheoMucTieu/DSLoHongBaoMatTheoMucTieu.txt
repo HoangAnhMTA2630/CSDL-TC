@@ -1,0 +1,12 @@
+SELECT 
+    lhb.id,
+    lhb.ten_lo_hong,
+    lhb.mo_ta
+FROM 
+    public.muc_tieu_lo_hong_bao_mat_web mtlh
+JOIN 
+    public.lo_hong_bao_mat_web lhb ON mtlh.lo_hong_bao_mat_web_id = lhb.id
+WHERE 
+    mtlh.muc_tieu_id = {{TableMucTieu.triggeredRow.id}}
+ORDER BY 
+    lhb.ten_lo_hong;

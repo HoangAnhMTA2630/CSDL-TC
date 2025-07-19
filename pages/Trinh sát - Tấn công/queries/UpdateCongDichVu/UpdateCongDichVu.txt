@@ -1,0 +1,11 @@
+UPDATE public.cong_mo_dich_vu cmdv
+SET
+  cong = '{{TableCongMoDichVu.updatedRow.cong}}',
+  dich_vu = '{{TableCongMoDichVu.updatedRow.dich_vu}}'
+FROM public.muc_tieu_cong_mo_dich_vu mt_cmdv
+WHERE
+  cmdv.id = mt_cmdv.cong_mo_dich_vu_id
+  AND mt_cmdv.muc_tieu_id = {{TableMucTieu.triggeredRow.id}}
+  AND cmdv.id = {{TableCongMoDichVu.updatedRow.id}}
+  AND '{{TableCongMoDichVu.updatedRow.cong}}' IS NOT NULL
+  AND '{{TableCongMoDichVu.updatedRow.cong}}' <> '';

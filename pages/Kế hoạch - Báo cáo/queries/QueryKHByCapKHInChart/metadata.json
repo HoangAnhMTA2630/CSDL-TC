@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "682d4d2a92cca105dbc17693_7ed6ada0-26e7-4d04-903f-ad75fda473dc",
+  "gitSyncId": "682d4d2a92cca105dbc17693_d3871dea-1146-42b9-b29f-dcd12a38e4a3",
   "id": "Kế hoạch - Báo cáo_QueryKHByCapKHInChart",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  kh.*,\n\tbk.ten_bo_ke_hoach\nFROM ke_hoach kh\nJOIN bo_ke_hoach bk ON kh.bo_ke_hoach_id = bk.id\nJOIN thoi_gian tg ON bk.thoi_gian_id = tg.id\nJOIN loai_ke_hoach lkh ON kh.loai_ke_hoach_id = lkh.id\nJOIN cap ckh ON kh.cap_ban_hanh_id = ckh.id\nWHERE 1=1\n  {{ SelectNam.selectedOptionValue ? `AND tg.nam = ${SelectNam.selectedOptionValue}` : '' }}\n  {{ SelectQuy.selectedOptionValue ? `AND tg.quy = ${SelectQuy.selectedOptionValue}` : '' }}\n  {{ SelectThang.selectedOptionValue ? `AND tg.thang = ${SelectThang.selectedOptionValue}` : '' }}\n  {{ ChartSL_LKH.selectedDataPoint ? `AND ckh.ten_cap = '${ChartSL_CapKH.selectedDataPoint.rawEventData.name}'` : '' }}\nORDER BY kh.id;",
+      "body": "SELECT \n  kh.*,\n\tbk.ten_bo_ke_hoach\nFROM ke_hoach kh\nJOIN bo_ke_hoach bk ON kh.bo_ke_hoach_id = bk.id\nJOIN thoi_gian tg ON bk.thoi_gian_id = tg.id\nJOIN loai_ke_hoach lkh ON kh.loai_ke_hoach_id = lkh.id\nJOIN cap ckh ON kh.cap_ban_hanh_id = ckh.id\nWHERE 1=1\n  {{ MultiSelectNam.selectedOptionValues.length > 0 ? \n  `AND tg.nam = ANY (ARRAY[${MultiSelectNam.selectedOptionValues.join(',')}]::int[])` : '' }}\n{{ MultiSelectQuy.selectedOptionValues.length > 0 ? \n  `AND tg.quy = ANY (ARRAY[${MultiSelectQuy.selectedOptionValues.join(',')}]::int[])` : '' }}\n{{ MultiSelectThang.selectedOptionValues.length > 0 ? \n  `AND tg.thang = ANY (ARRAY[${MultiSelectThang.selectedOptionValues.join(',')}]::int[])` : '' }}\n  {{ ChartSL_CapKH.selectedDataPoint ? `AND ckh.ten_cap = '${ChartSL_CapKH.selectedDataPoint.rawEventData.name}'` : '' }}\nORDER BY kh.id;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

@@ -49,7 +49,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 51,
-  "shortcuts": false,
+  "shortcuts": true,
   "shouldScrollContents": true,
   "timePrecision": "None",
   "topRow": 0,

@@ -218,6 +218,24 @@
     },
     {
       "key": "schema.__root_schema__.children.don_vi_id.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_cap.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_cap.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_cap.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_loai_bao_cao.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_loai_bao_cao.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.ten_loai_bao_cao.accentColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -488,6 +506,50 @@
           "originalIdentifier": "ten_bao_cao",
           "position": 1,
           "sourceData": "Báo cáo săn tìm mối nguy cơ tháng 1"
+        },
+        "ten_cap": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formBC.sourceData, update_formBC.formData, update_formBC.fieldState)}}",
+          "accessor": "ten_cap",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formBC.sourceData, update_formBC.formData, update_formBC.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.ten_cap))(update_formBC.sourceData, update_formBC.formData, update_formBC.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "ten_cap",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Ten Cap",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "ten_cap",
+          "position": 11,
+          "sourceData": "Trung Tâm"
+        },
+        "ten_loai_bao_cao": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formBC.sourceData, update_formBC.formData, update_formBC.fieldState)}}",
+          "accessor": "ten_loai_bao_cao",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_formBC.sourceData, update_formBC.formData, update_formBC.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.ten_loai_bao_cao))(update_formBC.sourceData, update_formBC.formData, update_formBC.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "ten_loai_bao_cao",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Ten Loai Bao Cao",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "ten_loai_bao_cao",
+          "position": 12,
+          "sourceData": "Báo cáo Trinh sát chuyên sâu"
         },
         "trang_thai": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_formBC.sourceData, update_formBC.formData, update_formBC.fieldState)}}",

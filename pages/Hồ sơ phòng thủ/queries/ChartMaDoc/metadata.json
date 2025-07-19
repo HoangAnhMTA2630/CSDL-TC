@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "WITH ma_doc_with_nam AS (\n  SELECT \n    *,\n    CASE \n      WHEN ngay_tiep_nhan IS NOT NULL THEN EXTRACT(YEAR FROM ngay_tiep_nhan)::text\n      ELSE 'Không rõ'\n    END AS nam\n  FROM public.ma_doc\n)\nSELECT \n  nam,\n  CASE \n    WHEN bao_cao_id IS NULL THEN 'Không có báo cáo'\n    ELSE 'Có báo cáo'\n  END AS co_bao_cao,\n  COUNT(*) AS so_luong\nFROM ma_doc_with_nam\nGROUP BY nam, \n         CASE \n           WHEN bao_cao_id IS NULL THEN 'Không có báo cáo'\n           ELSE 'Có báo cáo'\n         END\nORDER BY \n  CASE \n    WHEN nam ~ '^\\d+$' THEN CAST(nam AS INT)\n    ELSE 9999\n  END;\n",
+      "body": "WITH ma_doc_nam_nguon AS (\n  SELECT \n    COALESCE(EXTRACT(YEAR FROM ngay_tiep_nhan)::text, 'Không rõ') AS nam,\n    COALESCE(nguon_thu_thap, 'Không rõ') AS nguon_thu_thap,\n    COUNT(*) AS so_luong\n  FROM ma_doc\n  GROUP BY nam, nguon_thu_thap\n)\nSELECT *\nFROM ma_doc_nam_nguon\nORDER BY \n  CASE \n    WHEN nam ~ '^\\d+$' THEN CAST(nam AS INT)\n    ELSE 9999\n  END;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

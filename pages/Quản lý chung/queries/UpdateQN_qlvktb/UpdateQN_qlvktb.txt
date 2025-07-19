@@ -1,0 +1,8 @@
+UPDATE public."quan_nhan" SET
+		"ten_quan_nhan" = '{{update_formQN_qlvktb.fieldState.ten_quan_nhan.isVisible ? update_formQN_qlvktb.formData.ten_quan_nhan : update_formQN_qlvktb.sourceData.ten_quan_nhan}}',
+		"quan_ham" = '{{update_formQN_qlvktb.fieldState.quan_ham.isVisible ? update_formQN_qlvktb.formData.quan_ham : update_formQN_qlvktb.sourceData.quan_ham}}',
+    "chuc_vu" = '{{update_formQN_qlvktb.fieldState.chuc_vu.isVisible ? update_formQN_qlvktb.formData.chuc_vu : update_formQN_qlvktb.sourceData.chuc_vu}}',
+		"so_dien_thoai" = '{{update_formQN_qlvktb.fieldState.so_dien_thoai.isVisible ? update_formQN_qlvktb.formData.so_dien_thoai : update_formQN_qlvktb.sourceData.so_dien_thoai}}',
+		"nhiem_vu" = '{{update_formQN_qlvktb.fieldState.nhiem_vu.isVisible ? update_formQN_qlvktb.formData.nhiem_vu : update_formQN_qlvktb.sourceData.nhiem_vu}}',
+		"don_vi_id" = '{{update_formQN_qlvktb.fieldState.don_vi_id.isVisible ? update_formQN_qlvktb.formData.don_vi_id : update_formQN_qlvktb.sourceData.don_vi_id}}'
+WHERE "id" = {{Table_QN_qlvktb.selectedRow.id}};

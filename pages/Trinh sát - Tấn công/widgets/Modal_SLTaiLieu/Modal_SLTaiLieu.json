@@ -2,14 +2,14 @@
   "animateLoading": true,
   "backgroundColor": "#dbeafe",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 720,
+  "bottomRow": 600,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 710,
+      "bottomRow": 590,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -59,13 +59,14 @@
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
-  "height": 710,
+  "height": 590,
   "isCanvas": true,
   "isLoading": false,
   "key": "7yge841idn",
   "leftColumn": 9,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 24,
+  "minHeight": 590,
   "mobileBottomRow": 34,
   "mobileLeftColumn": 9,
   "mobileRightColumn": 33,
@@ -82,5 +83,5 @@
   "version": 2,
   "widgetId": "29sr3pz7ml",
   "widgetName": "Modal_SLTaiLieu",
-  "width": 1235
+  "width": 1843.9499999999998
 }

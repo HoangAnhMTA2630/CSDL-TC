@@ -13,7 +13,7 @@
   },
   "chartName": "Số lượng - Cấp Kế hoạch",
   "chartType": "CUSTOM_ECHART",
-  "customEChartConfig": "{{ ((chartType) => ( \n{\n  xAxis: {\n    type: \"category\",\n    data: CountBCByCapBC.data.map(item => item.x),\n    axisLabel: {\n      interval: 0,\n      rotate: 30,\n      formatter: function(value) {\n        return value.length > 15 ? value.slice(0, 15)+\"...\" : value;\n      }\n    }\n  },\n  yAxis: {\n    type: \"value\"\n  },\n  tooltip: {\n    trigger: \"axis\"\n  },\n  title: {\n    text: \"Số lượng Báo cáo theo Cấp\",\n    left: \"center\",\n    top: 20,\n    textStyle: {\n      fontSize: 20,\n      fontWeight: \"bold\",\n      fontFamily: \"Arial, sans-serif\"\n    }\n  },\n  series: [\n    {\n      type: \"bar\",\n      data: CountBCByCapBC.data.map(item => item.y),\n      itemStyle: {\n        color: \"#5470C6\"\n      },\n\t\t\tlabel: {\n        show: true,\n        position: \"top\",\n        fontSize: 10,\n        fontWeight: \"bold\"\n      }\n    }\n  ],\n  grid: {\n    left: 20,\n    right: 20,\n    bottom: 20,\n    top: 80,\n    containLabel: true\n  }\n}\n))(ChartSL_CapBC.chartType) }}",
+  "customEChartConfig": "{{ ((chartType) => ( \n{\n  xAxis: {\n    type: \"category\",\n    data: CountBCByCapBC.data.map(item => item.x),\n    axisLabel: {\n      interval: 0,\n      rotate: 30,\n      formatter: function(value) {\n        return value.length > 15 ? value.slice(0, 15)+\"...\" : value;\n      }\n    }\n  },\n  yAxis: {\n    type: \"value\"\n  },\n  tooltip: {\n    trigger: \"axis\"\n  },\n  title: {\n    text: \"Số lượng Báo cáo theo Cấp\",\n    left: \"center\",\n    top: 15,\n    textStyle: {\n      fontSize: 18,\n      fontWeight: \"bold\",\n      fontFamily: \"Arial, sans-serif\"\n    }\n  },\n  series: [\n    {\n      type: \"bar\",\n      data: CountBCByCapBC.data.map(item => item.y),\n      itemStyle: {\n        color: \"#553DE9\"\n      },\n\t\t\tlabel: {\n        show: true,\n        position: \"top\",\n        fontSize: 10,\n        fontWeight: \"bold\"\n      }\n    }\n  ],\n  grid: {\n    left: 20,\n    right: 20,\n    bottom: 20,\n    top: 80,\n    containLabel: true\n  }\n}\n))(ChartSL_CapBC.chartType) }}",
   "customFusionChartConfig": {
     "dataSource": {
       "chart": {
@@ -81,6 +81,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "chartType"
+    },
+    {
+      "key": "onDataPointClick"
     }
   ],
   "dynamicTriggerPathList": [

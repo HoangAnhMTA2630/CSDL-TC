@@ -1,0 +1,21 @@
+WITH input_check AS (
+  SELECT * FROM (
+    VALUES ('{{TableCongNghe.newRow.ten_loai_cong_nghe}}', '{{TableCongNghe.newRow.gia_tri}}', {{TableMucTieu.triggeredRow.id}})
+  ) AS t(ten_loai_cong_nghe, gia_tri, muc_tieu_id)
+  WHERE 
+    ten_loai_cong_nghe IS NOT NULL AND ten_loai_cong_nghe <> ''
+),
+inserted_loai_cong_nghe AS (
+  INSERT INTO public.loai_cong_nghe (ten_loai_cong_nghe)
+  SELECT ten_loai_cong_nghe FROM input_check
+  ON CONFLICT (ten_loai_cong_nghe) DO NOTHING
+  RETURNING id
+),
+selected_loai_cong_nghe AS (
+  SELECT id FROM inserted_loai_cong_nghe
+  UNION
+  SELECT id FROM public.loai_cong_nghe 
+  WHERE ten_loai_cong_nghe = '{{TableCongNghe.newRow.ten_loai_cong_nghe}}'
+)
+INSERT INTO public.cong_nghe (loai_cong_nghe_id, gia_tri, muc_tieu_id)
+SELECT id, gia_tri, muc_tieu_id FROM selected_loai_cong_nghe, input_check;

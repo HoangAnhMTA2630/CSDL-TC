@@ -1,0 +1,4 @@
+SELECT DISTINCT trang_thai as label, trang_thai as value
+FROM bao_cao
+WHERE trang_thai IS NOT NULL
+ORDER BY trang_thai;

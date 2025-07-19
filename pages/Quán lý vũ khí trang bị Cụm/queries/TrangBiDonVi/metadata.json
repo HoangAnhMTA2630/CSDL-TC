@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    CASE \n        WHEN dv.id = 1 THEN 'Trung tâm 386'\n        WHEN dv.id = 9 THEN 'Cụm 31'\n        ELSE 'Các đơn vị khác'\n    END AS ten_don_vi,\n    COUNT(*) AS so_luong_thiet_bi\nFROM\n    e_thiet_bi_mang tbm\nJOIN\n    don_vi dv ON tbm.don_vi_id = dv.id\nGROUP BY\n    CASE \n        WHEN dv.id = 1 THEN 'Trung tâm 386'\n        WHEN dv.id = 9 THEN 'Cụm 31'\n        ELSE 'Các đơn vị khác'\n    END;\n\n\n",
+      "body": "\n\n\nSELECT \n    dv.ten_don_vi,\n    COUNT(tbm.id) AS so_luong_thiet_bi\nFROM \n    e_thiet_bi_mang tbm\nJOIN \n    don_vi dv ON tbm.don_vi_id = dv.id\nWHERE \n    1=1\n    {{ TreeSelectDonVi_.selectedOptionValue \n        ? `AND dv.id = ${TreeSelectDonVi_.selectedOptionValue}` \n        : '' \n    }}\nGROUP BY \n    dv.ten_don_vi\nORDER BY \n    so_luong_thiet_bi DESC;\n\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
@@ -22,7 +22,11 @@
       "name": "csdltc",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": true,
     "name": "TrangBiDonVi",
     "pageId": "Quán lý vũ khí trang bị Cụm",

@@ -1,0 +1,124 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 41,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "jqyi5pbyvh": {
+      "data": [
+        {
+          "x": "Product1",
+          "y": 20000
+        },
+        {
+          "x": "Product2",
+          "y": 22000
+        },
+        {
+          "x": "Product3",
+          "y": 32000
+        }
+      ],
+      "seriesName": ""
+    }
+  },
+  "chartName": "Số lượng thiết bị theo loại",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( \n{\n  xAxis: {\n    type: \"category\",\n    data: LoaiThietBi_.data.map(item => item.ten_loai_thiet_bi),\n    axisLabel: {\n      interval: 0,\n      rotate: 30,\n      formatter: function(value) {\n        return value.length > 15 ? value.slice(0, 15)+\"...\" : value;\n      }\n    }\n  },\n  yAxis: {\n    type: \"value\"\n  },\n  tooltip: {\n    trigger: \"axis\"\n  },\n  title: {\n    text: \"Số lượng Thiết bị mạng theo Loại\",\n    left: \"center\",\n    top: 10,\n    textStyle: {\n      fontSize: 18,\n      fontWeight: \"bold\",\n      fontFamily: \"Arial, sans-serif\"\n    }\n  },\n  series: [\n    {\n      type: \"bar\",\n      data: LoaiThietBi_.data.map(item => item.so_luong_thiet_bi),\n      itemStyle: {\n        color: \"#553DE9\"\n      },\n\t\t\tlabel: {\n        show: true,\n        position: \"top\",\n        fontSize: 10,\n        fontWeight: \"bold\"\n      }\n    }\n  ],\n  grid: {\n    left: 20,\n    right: 20,\n    bottom: 10,\n    top: 80,\n    containLabel: true\n  }\n}\n))(Chart1Copy.chartType) }}",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "customEChartConfig"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "p9e7g0zayp",
+  "labelOrientation": "auto",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 34,
+  "mobileLeftColumn": 11,
+  "mobileRightColumn": 35,
+  "mobileTopRow": 2,
+  "needsErrorInfo": true,
+  "originalBottomRow": 36,
+  "originalTopRow": 4,
+  "parentColumnSpace": 5.5693359375,
+  "parentId": "q63n39yjv6",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "showDataPointLabel": false,
+  "topRow": 4,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "vred54587g",
+  "widgetName": "Chart1Copy",
+  "xAxisName": "Product Line",
+  "yAxisName": "Revenue($)"
+}

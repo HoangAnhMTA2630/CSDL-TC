@@ -12,8 +12,8 @@
     }
   },
   "chartName": "KH hoàn thành",
-  "chartType": "PIE_CHART",
-  "customEChartConfig": "{{\n{\n  \"dataset\": {\n    \"source\": [\n      [\n        \"Day\",\n        \"Baidu\",\n        \"Google\",\n        \"Bing\"\n      ],\n      [\n        \"Mon\",\n        620,\n        120,\n        60\n      ],\n      [\n        \"Tue\",\n        732,\n        132,\n        72\n      ],\n      [\n        \"Wed\",\n        701,\n        101,\n        71\n      ],\n      [\n        \"Thu\",\n        734,\n        134,\n        74\n      ],\n      [\n        \"Fri\",\n        1090,\n        290,\n        190\n      ],\n      [\n        \"Sat\",\n        1130,\n        230,\n        130\n      ],\n      [\n        \"Sun\",\n        1120,\n        220,\n        110\n      ]\n    ]\n  },\n  \"tooltip\": {\n    \"trigger\": \"axis\",\n    \"axisPointer\": {\n      \"type\": \"shadow\"\n    }\n  },\n  \"title\": {\n    \"text\": \"Search Engine Usage\",\n    \"left\": \"center\",\n    \"textStyle\": {\n      \"width\": 200,\n      \"overflow\": \"truncate\"\n    }\n  },\n  \"legend\": {\n    \"top\": 40,\n    \"type\": \"scroll\"\n  },\n  \"grid\": {\n    \"left\": 15,\n    \"right\": 15,\n    \"bottom\": 30,\n    \"top\": 100,\n    \"containLabel\": true\n  },\n  \"xAxis\": [\n    {\n      \"type\": \"category\"\n    }\n  ],\n  \"yAxis\": [\n    {\n      \"type\": \"value\"\n    }\n  ],\n  \"series\": [\n    {\n      \"type\": \"bar\",\n      \"stack\": \"Search Engine\"\n    },\n    {\n      \"type\": \"bar\",\n      \"stack\": \"Search Engine\"\n    },\n    {\n      \"type\": \"bar\",\n      \"stack\": \"Search Engine\"\n    }\n  ]\n}\n}}",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n  const data = CountKHCo_ChuaCoBC.data;\n\n  const namList = data.map(d => d.nam);\n\n  return {\n    xAxis: {\n      type: \"category\",\n      data: namList,\n      axisLabel: {\n        rotate: 0\n      }\n    },\n    yAxis: {\n      type: \"value\"\n    },\n    tooltip: {\n      trigger: \"axis\",\n      axisPointer: {\n        type: \"shadow\"\n      }\n    },\n    legend: {\n      top: 35\n    },\n    title: {\n      text: \"Kế hoạch có/chưa có Báo cáo\",\n      left: \"center\",\n      top: 10,\n      textStyle: {\n        fontSize: 18,\n        fontWeight: \"bold\",\n\t\t\t\tfontFamily: \"Arial, sans-serif\"\n      }\n    },\n    series: [\n      {\n        name: \"Đã có\",\n        type: \"bar\",\n        label: {\n          show: true,\n          position: \"top\"\n        },\n        data: data.map(d => d.da_co_bao_cao),\n        color: \"#553DE9\"\n      },\n      {\n        name: \"Chưa có\",\n        type: \"bar\",\n        label: {\n          show: true,\n          position: \"top\"\n        },\n        data: data.map(d => d.chua_co_bao_cao),\n        color: \"#2BB673\"\n      }\n    ],\n    grid: {\n      left: 20,\n      right: 20,\n      bottom: 20,\n      top: 70,\n      containLabel: true\n    }\n  };\n})()\n))(Chart4.chartType) }}",
   "customFusionChartConfig": {
     "dataSource": {
       "chart": {
@@ -85,7 +85,7 @@
   "isVisible": true,
   "key": "3cu6gegk5t",
   "labelOrientation": "auto",
-  "leftColumn": 23,
+  "leftColumn": 16,
   "minWidth": 450,
   "mobileBottomRow": 70,
   "mobileLeftColumn": 22,
@@ -97,7 +97,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 45,
+  "rightColumn": 32,
   "setAdaptiveYMin": true,
   "showDataPointLabel": true,
   "topRow": 4,

@@ -1,11 +1,11 @@
 -- 1. Cập nhật domain theo hướng
 UPDATE public.muc_tieu
-SET domain = '{{ Table.updatedRow.domain }}'
+SET domain = '{{ TableMucTieu.updatedRow.domain }}'
 WHERE doi_tuong_tc_id IN (
     SELECT id FROM public.doi_tuong_tc
     WHERE huong_id = (
         SELECT id FROM public.huong
-        WHERE ten_huong = '{{ Table.triggeredRow.huong }}'
+        WHERE ten_huong = '{{ TableMucTieu.triggeredRow.huong }}'
     )
 );
 
@@ -14,11 +14,11 @@ UPDATE public.doi_tuong_tc
 SET 
     huong_id = (
         SELECT id FROM public.huong
-        WHERE ten_huong = '{{ Table.updatedRow.huong }}'
+        WHERE ten_huong = '{{ TableMucTieu.updatedRow.huong }}'
     ),
-    ten_to_chuc = '{{ Table.updatedRow.ten_to_chuc }}',
-    ban_nganh = '{{ Table.updatedRow.ban_nganh }}'
+    ten_to_chuc = '{{ TableMucTieu.updatedRow.ten_to_chuc }}',
+    ban_nganh = '{{ TableMucTieu.updatedRow.ban_nganh }}'
 WHERE huong_id = (
     SELECT id FROM public.huong
-    WHERE ten_huong = '{{ Table.triggeredRow.huong }}'
+    WHERE ten_huong = '{{ TableMucTieu.triggeredRow.huong }}'
 );

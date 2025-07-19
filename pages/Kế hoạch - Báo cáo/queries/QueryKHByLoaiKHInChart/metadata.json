@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "682d4d2a92cca105dbc17693_ade96ce7-da3d-4581-90d4-8bcb0210230e",
+  "gitSyncId": "682d4d2a92cca105dbc17693_b8dff208-e093-4929-b795-8bb9e434b694",
   "id": "Kế hoạch - Báo cáo_QueryKHByLoaiKHInChart",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  kh.*,\n\tbk.ten_bo_ke_hoach\nFROM ke_hoach kh\nJOIN bo_ke_hoach bk ON kh.bo_ke_hoach_id = bk.id\nJOIN thoi_gian tg ON bk.thoi_gian_id = tg.id\nJOIN loai_ke_hoach lkh ON kh.loai_ke_hoach_id = lkh.id\nJOIN cap ckh ON kh.cap_ban_hanh_id = ckh.id\nWHERE 1=1\n  {{ SelectNam.selectedOptionValue ? `AND tg.nam = ${SelectNam.selectedOptionValue}` : '' }}\n  {{ SelectQuy.selectedOptionValue ? `AND tg.quy = ${SelectQuy.selectedOptionValue}` : '' }}\n  {{ SelectThang.selectedOptionValue ? `AND tg.thang = ${SelectThang.selectedOptionValue}` : '' }}\n  {{ ChartSL_LKH.selectedDataPoint ? `AND lkh.ten_loai_ke_hoach = '${ChartSL_LKH.selectedDataPoint.rawEventData.name}'` : '' }}\n  {{ ChartSL_LKH.selectedDataPoint ? `AND ckh.ten_cap = '${ChartSL_LKH.selectedDataPoint.rawEventData.seriesName}'` : '' }}\nORDER BY kh.id;\n",
+      "body": "SELECT \n  kh.*,\n\tbk.ten_bo_ke_hoach\nFROM ke_hoach kh\nJOIN bo_ke_hoach bk ON kh.bo_ke_hoach_id = bk.id\nJOIN thoi_gian tg ON bk.thoi_gian_id = tg.id\nJOIN loai_ke_hoach lkh ON kh.loai_ke_hoach_id = lkh.id\nJOIN cap ckh ON kh.cap_ban_hanh_id = ckh.id\nWHERE 1=1\n  {{ MultiSelectNam.selectedOptionValues.length > 0 ? \n    `AND tg.nam = ANY (ARRAY[${MultiSelectNam.selectedOptionValues.join(',')}]::int[])` : '' }}\n  {{ MultiSelectQuy.selectedOptionValues.length > 0 ? \n    `AND tg.quy = ANY (ARRAY[${MultiSelectQuy.selectedOptionValues.join(',')}]::int[])` : '' }}\n  {{ MultiSelectThang.selectedOptionValues.length > 0 ? \n    `AND tg.thang = ANY (ARRAY[${MultiSelectThang.selectedOptionValues.join(',')}]::int[])` : '' }}\n  {{ ChartSL_LKH.selectedDataPoint ? `AND lkh.ten_loai_ke_hoach = '${ChartSL_LKH.selectedDataPoint.rawEventData.name}'` : '' }}\n  {{ ChartSL_LKH.selectedDataPoint ? `AND ckh.ten_cap = '${ChartSL_LKH.selectedDataPoint.rawEventData.seriesName}'` : '' }}\nORDER BY kh.id;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

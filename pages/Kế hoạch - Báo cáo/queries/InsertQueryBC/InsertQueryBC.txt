@@ -14,7 +14,7 @@ VALUES (
 	'{{insert_formBC.formData.loai_bao_cao_id}}',
 	'{{insert_formBC.formData.cap_bao_cao_id}}',
 	'{{insert_formBC.formData.ngay_ban_hanh}}',
-	'{{insert_formBC.formData.ngay_sua_doi}}',
+	{{ insert_formBC.formData.ngay_sua_doi ? `'${insert_formBC.formData.ngay_sua_doi}'` : 'NULL' }},
 	'{{insert_formBC.formData.trang_thai}}',
 	'{{insert_formBC.formData.duong_dan_file}}',
 	'{{insert_formBC.formData.mo_ta}}')
